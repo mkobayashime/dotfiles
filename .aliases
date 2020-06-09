@@ -1,0 +1,35 @@
+# User specific aliases
+
+# directory
+alias ..="cd ../"
+alias ...="cd ../../"
+alias ....="cd ../../../"
+alias ..2="cd ../../"
+alias ..3="cd ../../../"
+alias p="pwd"
+alias u="cd ../"
+alias home="cd ~"
+
+# ls
+
+alias ls="ls --color=auto"
+alias ll="ls -alF"
+alias la="ls -A"
+alias l="ls -CF"
+
+# git
+alias g="git"
+alias ga="git add"
+alias gd="git diff"
+alias gs="git status"
+alias gp="git push"
+alias gb="git branch"
+alias gc="git commit"
+alias gl="git log"
+
+# edit
+alias e="vim"
+
+# ssh
+alias turkey="ssh s2010127@turkey.slis.tsukuba.ac.jp"
+alias sshfsturkey="sshfs s2010127@turkey.slis.tsukuba.ac.jp:/home/2020/s2010127 ~/turkey"
