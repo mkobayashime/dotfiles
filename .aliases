@@ -30,6 +30,5 @@ alias gl="git log"
 # edit
 alias e="vim"
 
-# ssh
-alias turkey="ssh s2010127@turkey.slis.tsukuba.ac.jp"
-alias sshfsturkey="sshfs s2010127@turkey.slis.tsukuba.ac.jp:/home/2020/s2010127 ~/turkey"
+# others
+source ~/.aliases_etc
