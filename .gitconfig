@@ -1,3 +1,9 @@
 [user]
 	email = mkobayashime@gmail.com
 	name = Masaki Kobayashi
+[core]
+	editor = vim -c \"set fenc=utf-8\"
+[color]
+	diff = auto
+	status = auto
+	branch = auto
