@@ -30,5 +30,8 @@ alias gl="git log"
 # edit
 alias e="vim"
 
+# yarn
+alias ya="yarn"
+
 # others
 source ~/.aliases_etc
