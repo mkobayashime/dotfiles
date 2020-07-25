@@ -28,6 +28,7 @@ alias gb="git branch"
 alias gc="git commit"
 alias gch="git checkout"
 alias gl="git log"
+alias gf="git fetch"
 
 # edit
 alias e="vim"
