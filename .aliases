@@ -23,8 +23,10 @@ alias ga="git add"
 alias gd="git diff"
 alias gs="git status"
 alias gp="git push"
+alias gpu="git pull"
 alias gb="git branch"
 alias gc="git commit"
+alias gch="git checkout"
 alias gl="git log"
 
 # edit
