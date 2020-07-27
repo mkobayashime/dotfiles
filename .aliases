@@ -12,10 +12,10 @@ alias home="cd ~"
 
 # ls
 
-alias ls="ls --color=auto"
-alias ll="ls -alF"
-alias la="ls -A"
-alias l="ls -CF"
+alias ls="ls --color=auto --group-directories-first"
+alias ll="ls -alF --group-directories-first"
+alias la="ls -A --group-directories-first"
+alias l="ls -CF --group-directories-first"
 
 # git
 alias g="git"
@@ -24,8 +24,10 @@ alias gd="git diff"
 alias gs="git status"
 alias gp="git push"
 alias gpu="git pull"
+alias gprune="git pull --prune"
 alias gb="git branch"
-alias gc="git commit"
+alias gc="git commit -m"
+alias gca="git commit -am"
 alias gch="git checkout"
 alias gl="git log"
 alias gf="git fetch"
