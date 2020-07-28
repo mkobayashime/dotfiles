@@ -28,9 +28,11 @@ alias gprune="git pull --prune"
 alias gb="git branch"
 alias gc="git commit -m"
 alias gca="git commit -am"
+alias gamend="git commit --amend"
 alias gch="git checkout"
 alias gl="git log"
 alias gf="git fetch"
+alias gm="git merge"
 
 # edit
 alias e="vim"
