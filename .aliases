@@ -38,6 +38,9 @@ alias gr:h="git reset --hard HEAD^"
 # edit
 alias e="vim"
 
+# system monitor
+alias df="df -h"
+
 # yarn
 alias ya="yarn"
 
