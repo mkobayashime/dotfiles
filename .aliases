@@ -11,10 +11,10 @@ alias u="cd ../"
 alias home="cd ~"
 
 # ls
-alias ls="ls --color=auto --group-directories-first"
-alias ll="ls -alF --group-directories-first"
-alias la="ls -A --group-directories-first"
-alias l="ls -CF --group-directories-first"
+alias -g ls="ls --color=auto --group-directories-first"
+alias -g ll="ls -alF --group-directories-first"
+alias -g la="ls -A --group-directories-first"
+alias -g l="ls -CF --group-directories-first"
 
 # git
 alias g="git"
@@ -37,7 +37,7 @@ alias gr:h="git reset --hard HEAD^"
 alias gcl="git clone"
 
 # edit
-alias e="vim"
+alias -g e="vim"
 
 # system defaults
 alias df="df -h"
