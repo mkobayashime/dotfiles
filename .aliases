@@ -34,6 +34,7 @@ alias gf="git fetch"
 alias gm="git merge"
 alias gr:s="git reset --soft HEAD^"
 alias gr:h="git reset --hard HEAD^"
+alias gcl="git clone"
 
 # edit
 alias e="vim"
