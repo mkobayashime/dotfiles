@@ -41,9 +41,12 @@ alias -g e="vim"
 
 # system defaults
 alias df="df -h"
+
+# text format
 alias last="last -w"
 alias -g G="| grep --color=auto"
 alias -g tail="tail -f"
+alias -g JSON="| jq ."
 
 # yarn
 alias ya="yarn"
