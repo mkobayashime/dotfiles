@@ -41,6 +41,7 @@ alias -g e="vim"
 
 # system defaults
 alias df="df -h"
+alias fusermount="fusermount -u"
 
 # text format
 alias last="last -w"
