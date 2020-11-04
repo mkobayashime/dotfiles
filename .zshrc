@@ -26,3 +26,7 @@ zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower
 ### alias
 
 source ~/.aliases
+
+# direnv
+
+eval "$(direnv hook zsh)"
