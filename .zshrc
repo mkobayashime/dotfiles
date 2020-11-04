@@ -22,6 +22,7 @@ prompt pure
 ### auto completion
 
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
+fpath=(~/.zsh/completion $fpath)
 
 ### alias
 
