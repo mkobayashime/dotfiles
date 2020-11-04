@@ -30,3 +30,7 @@ source ~/.aliases
 # direnv
 
 eval "$(direnv hook zsh)"
+
+# brew
+
+export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
