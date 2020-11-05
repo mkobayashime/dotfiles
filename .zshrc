@@ -35,3 +35,16 @@ eval "$(direnv hook zsh)"
 # brew
 
 export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
+
+# nodenv
+
+if [ -e "$HOME/.nodenv" ]
+then
+    export NODENV_ROOT="$HOME/.nodenv"
+    export PATH="$NODENV_ROOT/bin:$PATH"
+    if command -v nodenv 1>/dev/null 2>&1
+    then
+        eval "$(nodenv init -)"
+    fi
+fi
+
