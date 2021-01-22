@@ -10,6 +10,8 @@
 [merge]
   conflictstyle = diff3
   ff = false
+[pull]
+  ff = only
 [rebase]
   autosquash = true
   autostash = true
