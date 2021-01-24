@@ -38,6 +38,8 @@ alias gr:s="git reset --soft HEAD^"
 alias gr:h="git reset --hard HEAD^"
 alias gcl="git clone"
 
+alias remote="gh repo view --web"
+
 # edit
 alias -g e="vim"
 
