@@ -62,4 +62,4 @@ alias -g H="--help"
 alias ya="yarn"
 
 # others
-source ~/.aliases_etc
+source ~/.alias_etc

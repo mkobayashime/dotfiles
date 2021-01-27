@@ -25,6 +25,8 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 ### End of Zinit's installer chunk
 
+zinit light zdharma/history-search-multi-word
+
 setopt auto_list
 setopt auto_menu
 zstyle ':completion:*:default' menu select=1
@@ -40,7 +42,7 @@ fpath=(~/.zsh/completion $fpath)
 
 ### alias
 
-source ~/.aliases
+source ~/.alias
 
 # direnv
 
