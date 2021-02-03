@@ -12,6 +12,8 @@
   ff = false
 [pull]
   ff = only
+[fetch]
+  prune = true
 [rebase]
   autosquash = true
   autostash = true
