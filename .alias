@@ -12,9 +12,13 @@ alias home="cd ~"
 
 # ls
 alias ls="ls --color=auto --group-directories-first"
-alias -g ll="ls -alF --group-directories-first"
-alias -g la="ls -A --group-directories-first"
-alias -g l="ls -CF --group-directories-first"
+alias -g ll="ls -alF"
+alias -g la="ls -A"
+alias -g l="ls -CF"
+
+if [[ `uname` == "Darwin" ]]; then
+  alias ls="ls -G"
+fi
 
 # git
 alias g="git"
