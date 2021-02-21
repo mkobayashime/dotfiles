@@ -52,6 +52,10 @@ eval "$(direnv hook zsh)"
 
 export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
 
+if [[ `uname` == "Darwin" ]]; then
+  eval $(/opt/homebrew/bin/brew shellenv)
+fi
+
 # nodenv
 
 if [ -e "$HOME/.nodenv" ]
