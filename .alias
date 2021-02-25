@@ -62,6 +62,7 @@ alias -g L="| less"
 
 # global utils
 alias -g H="--help"
+alias -g V="--version"
 
 # yarn
 alias ya="yarn"
