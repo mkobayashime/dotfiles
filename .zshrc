@@ -43,10 +43,6 @@ fpath=(~/.zsh/completion $fpath)
 
 source ~/.alias
 
-# direnv
-
-eval "$(direnv hook zsh)"
-
 # brew
 
 export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
@@ -66,6 +62,10 @@ then
         eval "$(nodenv init -)"
     fi
 fi
+
+# direnv
+
+eval "$(direnv hook zsh)"
 
 # nix
 
