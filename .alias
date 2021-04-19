@@ -1,14 +1,9 @@
 # User specific aliases
 
 # directory
-alias ..="cd ../"
-alias ...="cd ../../"
-alias ....="cd ../../../"
-alias ..2="cd ../../"
-alias ..3="cd ../../../"
 alias p="pwd"
 alias u="cd ../"
-alias home="cd ~"
+alias home="cd"
 
 # ls
 alias ls="ls --color=auto --group-directories-first"
@@ -23,6 +18,7 @@ fi
 # git
 alias g="git"
 alias ga="git add"
+alias ga.="git add ."
 alias gd="git diff"
 alias gs="git status"
 alias gp="git push"
@@ -34,6 +30,7 @@ alias gcf="git commit --fixup"
 alias gca="git commit -am"
 alias gamend="git commit --amend"
 alias gch="git checkout"
+alias gchb="git checkout -B"
 alias gl="git log"
 alias gf="git fetch"
 alias gm="git merge"
@@ -41,6 +38,9 @@ alias gr="git reset"
 alias gr:s="git reset --soft HEAD^"
 alias gr:h="git reset --hard HEAD^"
 alias gcl="git clone"
+alias gres="git restore"
+alias grb="git rebase"
+alias grbi="git rebase -i"
 
 alias remote="gh repo view --web"
 
