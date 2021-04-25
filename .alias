@@ -67,5 +67,8 @@ alias -g V="--version"
 # yarn
 alias ya="yarn"
 
+# clipboard
+alias clcopy="xclip -selection clipboard"
+
 # others
 source ~/.alias_etc
