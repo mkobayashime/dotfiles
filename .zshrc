@@ -39,6 +39,10 @@ prompt pure
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 fpath=(~/.zsh/completion $fpath)
 
+### auto cd
+
+setopt auto_cd
+
 ### alias
 
 source ~/.alias
