@@ -43,6 +43,9 @@ alias grb="git rebase"
 alias grbi="git rebase -i"
 
 alias remote="gh repo view --web"
+alias pr="gh pr view -w"
+alias prn="gh pr create"
+alias prnf="gh pr create -f"
 
 # edit
 alias -g e="vim"
