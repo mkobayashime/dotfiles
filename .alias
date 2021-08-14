@@ -41,6 +41,7 @@ alias gcl="git clone"
 alias gres="git restore"
 alias grb="git rebase"
 alias grbi="git rebase -i"
+alias gcp="git cherry-pick"
 
 alias remote="gh repo view --web"
 alias pr="gh pr view -w"
