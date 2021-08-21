@@ -3,6 +3,7 @@
   name = Masaki Kobayashi
 [core]
   editor = vim -c \"set fenc=utf-8\"
+  quotepath = false
 [color]
   diff = auto
   status = auto
