@@ -34,7 +34,7 @@ fpath+=~/.zsh/pure
 autoload -U promptinit; promptinit
 prompt pure
 
-### auto completion
+# auto completion
 
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 fpath=(~/.zsh/completion $fpath)
@@ -47,11 +47,11 @@ if [[ -d "/usr/share/zsh-autosuggestions/" ]]; then
   source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
-### auto cd
+# auto cd
 
 setopt auto_cd
 
-### alias
+# alias
 
 source ~/.alias
 
