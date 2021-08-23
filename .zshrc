@@ -39,6 +39,14 @@ prompt pure
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 fpath=(~/.zsh/completion $fpath)
 
+if [[ -d "/opt/homebrew/share/zsh-autosuggestions" ]]; then
+  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+if [[ -d "/usr/share/zsh-autosuggestions/" ]]; then
+  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
 ### auto cd
 
 setopt auto_cd
