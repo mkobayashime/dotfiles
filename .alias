@@ -7,7 +7,7 @@ alias home="cd"
 
 # ls
 alias ls="ls --color=auto --group-directories-first"
-alias -g ll="ls -alF"
+alias -g ll="ls -alhF"
 alias -g la="ls -A"
 alias -g l="ls -CF"
 
