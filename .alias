@@ -3,7 +3,6 @@
 # directory
 alias p="pwd"
 alias u="cd ../"
-alias home="cd"
 
 # ls
 alias ls="ls --color=auto --group-directories-first"
