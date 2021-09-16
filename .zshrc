@@ -43,6 +43,10 @@ if [[ -d "/opt/homebrew/share/zsh-autosuggestions" ]]; then
   source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
+if [[ -d "/home/linuxbrew/.linuxbrew/share/zsh-autosuggestions" ]]; then
+  source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
 if [[ -d "/usr/share/zsh-autosuggestions/" ]]; then
   source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
