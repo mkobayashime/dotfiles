@@ -59,6 +59,10 @@ setopt auto_cd
 
 source ~/.alias
 
+# bin
+
+export PATH="$HOME/.bin":"$PATH"
+
 # brew
 
 export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
