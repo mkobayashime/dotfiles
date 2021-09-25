@@ -49,6 +49,9 @@ alias pr="gh pr view -w"
 alias prn="gh pr create"
 alias prnf="gh pr create -f"
 
+alias wip="git commit -m 'WIP'"
+alias wipa="git add . && wip"
+
 # edit
 alias -g e="vim"
 
