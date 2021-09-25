@@ -1,0 +1,17 @@
+#!/bin/sh
+
+file=$(mktemp)
+
+git symbolic-ref --short HEAD > $file
+echo "\n\n# Empty line 1 to cancel" >> $file
+vim $file
+
+bname=$(head -n 1 $file)
+if [[ "$bname" == '' ]]; then
+  exit 1;
+else
+  git branch -m $bname;
+fi
+
+rm $file
+
