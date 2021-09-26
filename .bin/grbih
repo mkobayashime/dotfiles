@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+number='^[0-9]+$'
+
+if [[ "$1" =~ $number ]]; then
+  git rebase -i "HEAD~$1";
+else
+  exit 1;
+fi
