@@ -59,6 +59,11 @@ setopt auto_cd
 
 source ~/.alias
 
+# functions
+
+fpath=( "$HOME/.zsh/fn" "${fpath[@]}" )
+autoload -Uz $fpath[1]/*(.:t)
+
 # bin
 
 export PATH="$HOME/.bin":"$PATH"
