@@ -1,0 +1,5 @@
+fgl() {
+  local commit
+  commit=$(git log --oneline -30 | fzf --ansi) &&
+  echo "$commit" | awk '{print $1}' | sed "s/.* //"
+}
