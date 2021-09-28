@@ -1,0 +1,6 @@
+fcf() {
+  local commits commit
+  commits=$(git log --oneline) &&
+  commit=$(echo "$commits" | fzf +m --ansi) &&
+  git commit --fixup $(echo "$commit" | awk '{print $1}' | sed "s/.* //")
+}
