@@ -91,3 +91,7 @@ eval "$(direnv hook zsh)"
 
 if [ -e /Users/mkobayashime/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/mkobayashime/.nix-profile/etc/profile.d/nix.sh; fi
 if [ -e /home/mkobayashime/.nix-profile/etc/profile.d/nix.sh ]; then . /home/mkobayashime/.nix-profile/etc/profile.d/nix.sh; fi
+
+# fzf
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
