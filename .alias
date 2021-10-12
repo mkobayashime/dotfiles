@@ -79,5 +79,9 @@ alias ya="yarn"
 # clipboard
 alias clcopy="xclip -selection clipboard"
 
+# audio
+
+alias monitoraudiosink="arecord -f cd - | aplay -"
+
 # others
 source ~/.alias_etc
