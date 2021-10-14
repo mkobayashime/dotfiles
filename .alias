@@ -84,4 +84,6 @@ alias clcopy="xclip -selection clipboard"
 alias monitoraudiosink="arecord -f cd - | aplay -"
 
 # others
-source ~/.alias_etc
+if [[ -f "~/.alias_etc" ]]; then
+  source ~/.alias_etc
+fi
