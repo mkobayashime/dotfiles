@@ -90,6 +90,6 @@ if [[ -x "$(command -v radian)" ]]; then
 fi
 
 # others
-if [[ -f "~/.alias_etc" ]]; then
+if [[ -f "$HOME/.alias_etc" ]]; then
   source ~/.alias_etc
 fi
