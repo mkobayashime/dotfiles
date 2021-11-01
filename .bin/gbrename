@@ -1,9 +1,11 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 file=$(mktemp)
 
 git symbolic-ref --short HEAD > $file
-echo "\n\n# Empty line 1 to cancel" >> $file
+echo "" >> $file
+echo "" >> $file
+echo "# Empty line 1 to cancel" >> $file
 vim $file
 
 bname=$(head -n 1 $file)
