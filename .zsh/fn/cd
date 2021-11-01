@@ -1,0 +1,9 @@
+function cd() {
+  if [[ "$#" != 0 ]]; then
+      builtin cd "$@";
+      return
+  fi
+
+  cd "$(ls -1 -d */ | fzf)"
+}
+
