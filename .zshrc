@@ -100,3 +100,7 @@ if [ -e /home/mkobayashime/.nix-profile/etc/profile.d/nix.sh ]; then . /home/mko
 # fzf
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# yarn
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
