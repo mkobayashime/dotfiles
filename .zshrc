@@ -104,3 +104,11 @@ if [ -e /home/mkobayashime/.nix-profile/etc/profile.d/nix.sh ]; then . /home/mko
 # yarn
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# deno
+
+export DENO_INSTALL="$HOME/.deno"
+
+if [ -e "$DENO_INSTALL" ]; then
+  export PATH="$DENO_INSTALL/bin:$PATH"
+fi
