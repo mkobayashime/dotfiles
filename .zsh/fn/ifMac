@@ -1,0 +1,7 @@
+function ifMac() {
+  case "$OSTYPE" in
+    darwin*)
+      eval $1;
+    ;;
+  esac
+}
