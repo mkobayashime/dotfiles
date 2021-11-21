@@ -55,14 +55,14 @@ fi
 
 setopt auto_cd
 
-# alias
-
-source ~/.alias
-
 # functions
 
 fpath=( "$HOME/.zsh/fn" "${fpath[@]}" )
 autoload -Uz $fpath[1]/*(.:t)
+
+# alias
+
+source ~/.alias
 
 # bin
 
