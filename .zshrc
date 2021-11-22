@@ -72,9 +72,7 @@ export PATH="$HOME/.bin":"$PATH"
 
 export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
 
-if [[ `uname` == "Darwin" ]]; then
-  eval $(/opt/homebrew/bin/brew shellenv)
-fi
+ifMac 'eval $(/opt/homebrew/bin/brew shellenv)'
 
 # nodenv
 

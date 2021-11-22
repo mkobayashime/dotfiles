@@ -10,10 +10,7 @@ alias ls="ls --color=auto --group-directories-first"
 alias -g ll="ls -alhF"
 alias -g la="ls -A"
 alias -g l="ls -CF"
-
-if [[ `uname` == "Darwin" ]]; then
-  alias ls="ls -G"
-fi
+ifMac 'alias ls="ls -G"'
 
 # git
 alias g="git"
