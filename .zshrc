@@ -47,7 +47,7 @@ if [[ -d "/usr/share/zsh-autosuggestions/" ]]; then
   source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
-autoload -Uz compinit && compinit -u
+autoload -Uz compinit && compinit
 
 # auto cd
 
