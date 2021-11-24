@@ -6,10 +6,6 @@ bindkey -v
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/mkobayashime/.zshrc'
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-
 ## Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
@@ -50,6 +46,8 @@ fi
 if [[ -d "/usr/share/zsh-autosuggestions/" ]]; then
   source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
+
+autoload -Uz compinit && compinit -u
 
 # auto cd
 
