@@ -2,18 +2,18 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -v
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/mkobayashime/.zshrc'
 
 # zsh options
 
 setopt auto_list
 setopt auto_menu
 
+zstyle :compinstall filename '/home/mkobayashime/.zshrc'
 zstyle ':completion:*:default' menu select=1
 
-fpath+=~/.zsh/pure
+# prompt
+
+fpath+="$HOME/.zsh/pure"
 autoload -U promptinit; promptinit
 prompt pure
 
