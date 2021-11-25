@@ -6,8 +6,11 @@ bindkey -v
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/mkobayashime/.zshrc'
 
+# zsh options
+
 setopt auto_list
 setopt auto_menu
+
 zstyle ':completion:*:default' menu select=1
 
 fpath+=~/.zsh/pure
@@ -32,10 +35,6 @@ if [[ -d "/usr/share/zsh-autosuggestions/" ]]; then
 fi
 
 autoload -Uz compinit && compinit
-
-# auto cd
-
-setopt auto_cd
 
 # functions
 
