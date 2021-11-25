@@ -38,8 +38,8 @@ autoload -Uz compinit && compinit
 
 # functions
 
-fpath=( "$HOME/.zsh/fn" "${fpath[@]}" )
-autoload -Uz $fpath[1]/*(.:t)
+fpath+="$HOME/.zsh/fn"
+autoload -Uz $fpath[-1]/*(.:t)
 
 # alias
 
