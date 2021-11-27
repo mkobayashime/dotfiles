@@ -10,6 +10,7 @@ setopt auto_menu
 
 zstyle :compinstall filename '/home/mkobayashime/.zshrc'
 zstyle ':completion:*:default' menu select=1
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 
 # prompt
 
@@ -19,7 +20,6 @@ prompt pure
 
 # auto completion
 
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 fpath=(~/.zsh/completion $fpath)
 
 if [[ -d "/opt/homebrew/share/zsh-autosuggestions" ]]; then
