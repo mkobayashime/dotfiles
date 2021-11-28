@@ -18,24 +18,6 @@ fpath+="$HOME/.zsh/pure"
 autoload -U promptinit; promptinit
 prompt pure
 
-# auto completion
-
-fpath=(~/.zsh/completion $fpath)
-
-if [[ -d "/opt/homebrew/share/zsh-autosuggestions" ]]; then
-  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-fi
-
-if [[ -d "/home/linuxbrew/.linuxbrew/share/zsh-autosuggestions" ]]; then
-  source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-fi
-
-if [[ -d "/usr/share/zsh-autosuggestions/" ]]; then
-  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-fi
-
-autoload -Uz compinit && compinit
-
 # functions
 
 fpath+="$HOME/.zsh/fn"
@@ -52,7 +34,6 @@ export PATH="$HOME/.bin":"$PATH"
 # brew
 
 export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
-
 ifMac 'eval $(/opt/homebrew/bin/brew shellenv)'
 
 # nodenv
@@ -91,3 +72,26 @@ export DENO_INSTALL="$HOME/.deno"
 if [ -e "$DENO_INSTALL" ]; then
   export PATH="$DENO_INSTALL/bin:$PATH"
 fi
+
+# auto completion
+
+fpath=(~/.zsh/completion $fpath)
+
+if [[ -d "/opt/homebrew/share/zsh-autosuggestions" ]]; then
+  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+if [[ -d "/home/linuxbrew/.linuxbrew/share/zsh-autosuggestions" ]]; then
+  source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+if [[ -d "/usr/share/zsh-autosuggestions/" ]]; then
+  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+if type brew &>/dev/null
+then
+  fpath+=("$(brew --prefix)/share/zsh/site-functions")
+fi
+
+autoload -Uz compinit && compinit
