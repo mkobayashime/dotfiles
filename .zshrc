@@ -77,17 +77,17 @@ fi
 
 fpath=(~/.zsh/completion $fpath)
 
-if [[ -d "/opt/homebrew/share/zsh-autosuggestions" ]]; then
-  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-fi
-
-if [[ -d "/home/linuxbrew/.linuxbrew/share/zsh-autosuggestions" ]]; then
-  source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-fi
-
-if [[ -d "/usr/share/zsh-autosuggestions/" ]]; then
-  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-fi
+zshAutosuggestionsPathPrefix=(
+  "/opt/homebrew/share"
+  "/home/linuxbrew/.linuxbrew/share"
+  "/usr/share"
+)
+for i in "${zshAutosuggestionsPathPrefix[@]}"
+do
+  if [[ -d "$i/zsh-autosuggestions" ]]; then
+    source "$i/zsh-autosuggestions/zsh-autosuggestions.zsh"
+  fi
+done
 
 if type brew &>/dev/null
 then
