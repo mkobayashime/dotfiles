@@ -1,0 +1,6 @@
+fdcd() {
+  local file dirname
+  file=$(fd --max-results 1000 $@ | fzf --ansi) &&
+  dirname=$(dirname $file) &&
+  cd $dirname
+}
