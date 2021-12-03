@@ -8,8 +8,6 @@ bindkey -v
 setopt auto_list
 setopt auto_menu
 
-PURE_PROMPT_SYMBOL=$(echo -e '\u2bc8')
-PURE_PROMPT_VICMD_SYMBOL=$(echo -e '\u2bc7')
 zstyle :compinstall filename '/home/mkobayashime/.zshrc'
 zstyle ':completion:*:default' menu select=1
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
