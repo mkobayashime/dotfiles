@@ -11,6 +11,7 @@ setopt auto_menu
 zstyle :compinstall filename '/home/mkobayashime/.zshrc'
 zstyle ':completion:*:default' menu select=1
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' completer _complete _approximate
 
 # prompt
 
