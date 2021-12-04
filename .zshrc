@@ -36,11 +36,17 @@ export PATH="$HOME/.bin":"$PATH"
 export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
 ifMac 'eval $(/opt/homebrew/bin/brew shellenv)'
 
-# nvm
+# nodenv
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+if [ -e "$HOME/.nodenv" ]
+then
+    export NODENV_ROOT="$HOME/.nodenv"
+    export PATH="$NODENV_ROOT/bin:$PATH"
+    if command -v nodenv 1>/dev/null 2>&1
+    then
+        eval "$(nodenv init -)"
+    fi
+fi
 
 # direnv
 
