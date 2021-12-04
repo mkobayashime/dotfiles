@@ -23,6 +23,7 @@ prompt pure
 
 fpath+="$HOME/.zsh/fn"
 autoload -Uz $fpath[-1]/*(.:t)
+autoload -Uz zmv
 
 # alias
 
