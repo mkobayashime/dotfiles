@@ -1,5 +1,6 @@
 syntax enable
 colorscheme molokai
+hi Normal guibg=NONE ctermbg=NONE
 
 filetype plugin indent on
 
