@@ -99,3 +99,11 @@ then
 fi
 
 autoload -Uz compinit && compinit
+
+# plugins
+
+source $HOME/.zsh/antigen.zsh
+
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen apply
