@@ -1,5 +1,7 @@
 # User specific aliases
 
+alias t="tmux"
+
 # directory
 alias p="pwd"
 alias u="cd ../"
