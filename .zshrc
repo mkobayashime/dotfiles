@@ -7,6 +7,7 @@ bindkey -v
 
 setopt auto_list
 setopt auto_menu
+setopt IGNOREEOF
 
 zstyle :compinstall filename '/home/mkobayashime/.zshrc'
 zstyle ':completion:*:default' menu select=1
