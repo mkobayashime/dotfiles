@@ -1,0 +1,12 @@
+unbak() {
+  bak=$1
+  case "$bak" in
+    *.BAK)
+      original=`echo $bak | sed -e 's/.BAK//'`
+      mv $bak $original
+      ;;
+    *)
+      return 1
+      ;;
+  esac
+}

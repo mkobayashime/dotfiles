@@ -1,0 +1,10 @@
+bak() {
+  case $1 in
+    *.BAK)
+      return 1
+      ;;
+    *)
+      mv $1 "$1.BAK"
+      ;;
+  esac
+}
