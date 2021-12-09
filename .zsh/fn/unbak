@@ -2,8 +2,10 @@ unbak() {
   bak=$1
   case "$bak" in
     *.BAK)
-      original=`echo $bak | sed -e 's/.BAK//'`
-      mv $bak $original
+      mv $bak `echo $bak | sed -e 's/.BAK//'`
+      ;;
+    *.bak)
+      mv $bak `echo $bak | sed -e 's/.bak//'`
       ;;
     *)
       return 1

@@ -3,6 +3,9 @@ bak() {
     *.BAK)
       return 1
       ;;
+    *.bak)
+      return 1
+      ;;
     *)
       mv $1 "$1.BAK"
       ;;
