@@ -1,0 +1,5 @@
+function 2mp3() {
+  local file=$1
+  if [[ -z $file ]] return 1
+  ffmpeg -i $file -vn -ac 2 -ar 44100 -ab 256k -acodec libmp3lame -f mp3 "${file%.*}.mp3"
+}
