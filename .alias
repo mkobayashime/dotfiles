@@ -2,6 +2,9 @@
 
 alias t="tmux"
 
+# zsh
+alias zmv="noglob zmv -W"
+
 # directory
 alias p="pwd"
 alias u="cd ../"
