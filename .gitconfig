@@ -24,3 +24,5 @@
   defaultBranch = main
 [submodule]
   recurse = true
+[rerere]
+  enabled = true
