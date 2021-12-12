@@ -1,5 +1,6 @@
 function 2flac() {
-  local file=$1
-  if [[ -z $file ]] return 1
-  ffmpeg -i $file -vn -ar 44100 -ac 2 -acodec flac -f flac "${file%.*}.flac"
+  for file in $@;
+  do
+    ffmpeg -i $file -vn -ar 44100 -ac 2 -acodec flac -f flac "${file%.*}.flac"
+  done
 }
