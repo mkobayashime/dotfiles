@@ -3,7 +3,7 @@
 alias t="tmux"
 
 # zsh
-alias zmv="noglob zmv -W"
+alias zmv="noglob zmv"
 
 # directory
 alias p="pwd"
