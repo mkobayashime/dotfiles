@@ -6,7 +6,7 @@ fi
 
 for f in .??*
 do
-    [ "$f" = ".git" -o "$f" = ".gitignore" ] && continue
+    [ "$f" = ".git" -o "$f" = ".gitignore" -o "$f" = ".gitmodules" ] && continue
 
     ln -snfv "$DOTPATH/$f" "$HOME/$f"
 done
