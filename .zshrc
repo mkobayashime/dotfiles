@@ -107,5 +107,6 @@ autoload -Uz compinit && compinit
 source $HOME/.zsh/antigen.zsh
 
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle git@github.com:spwhitt/nix-zsh-completions.git
 
 antigen apply
