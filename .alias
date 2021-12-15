@@ -15,7 +15,7 @@ alias ls="ls --color=auto --group-directories-first"
 alias -g ll="ls -alhF"
 alias -g la="ls -A"
 alias -g l="ls -CF"
-ifMac 'alias ls="ls -G"'
+ifMac && alias ls="ls -G"
 
 # git
 alias g="git"
@@ -65,7 +65,7 @@ alias fusermount="fusermount -u"
 alias rimraf="rm -rf"
 alias pulseaudiorestart="pulseaudio --check && pulseaudio --kill && pulseaudio --start"
 alias maek="make" # typo tolerance
-ifLinux 'alias open="xdg-open"'
+ifLinux && alias open="xdg-open"
 
 # text format
 alias last="last -w"
@@ -85,8 +85,8 @@ alias alacritty.transparent="sed -i 's/background_opacity: 1/background_opacity:
 alias ya="yarn"
 
 # clipboard
-ifLinux 'alias pbcopy="xclip -selection clipboard"'
-ifLinux 'alias pbpaste="xclip -selection clipboard -o"'
+ifLinux && alias pbcopy="xclip -selection clipboard"
+ifLinux && alias pbpaste="xclip -selection clipboard -o"
 
 # audio
 alias monitoraudiosink="arecord -f cd - | aplay -"

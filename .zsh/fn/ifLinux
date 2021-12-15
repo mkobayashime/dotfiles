@@ -1,7 +1,10 @@
 function ifLinux() {
   case "$OSTYPE" in
     linux*)
-      eval $1;
+      return 0;
+    ;;
+    *)
+      return 1;
     ;;
   esac
 }

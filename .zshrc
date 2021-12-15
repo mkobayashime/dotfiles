@@ -37,7 +37,7 @@ export PATH="$HOME/.bin":"$PATH"
 # brew
 
 export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
-ifMac 'eval $(/opt/homebrew/bin/brew shellenv)'
+ifMac && eval $(/opt/homebrew/bin/brew shellenv)
 
 # nodenv
 
