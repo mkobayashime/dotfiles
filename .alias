@@ -91,6 +91,9 @@ ifLinux && alias pbpaste="xclip -selection clipboard -o"
 # audio
 alias monitoraudiosink="arecord -f cd - | aplay -"
 
+# vlc
+alias vlc.list.append="vlc --one-instance --playlist-enqueue"
+
 # R
 if [[ -x "$(command -v radian)" ]]; then
   alias R="radian"
