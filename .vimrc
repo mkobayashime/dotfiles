@@ -1,5 +1,9 @@
+call plug#begin('~/.vim/plugged')
+Plug 'joshdick/onedark.vim'
+call plug#end()
+
 syntax enable
-colorscheme molokai
+colorscheme onedark
 hi Normal guibg=NONE ctermbg=NONE
 
 filetype plugin indent on
