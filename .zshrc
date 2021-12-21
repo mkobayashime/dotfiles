@@ -80,6 +80,12 @@ if [ -e "$DENO_INSTALL" ]; then
   export PATH="$DENO_INSTALL/bin:$PATH"
 fi
 
+# golang
+
+export GOPATH="$HOME/go"
+export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:$GOPATH/bin"
+
 # auto completion
 
 fpath=(~/.zsh/completion $fpath)
