@@ -10,9 +10,3 @@
 [submodule ".tmux/plugins/tmux-resurrect"]
 	path = .tmux/plugins/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect
-[submodule ".vim/plugged/onedark.vim"]
-	path = .vim/plugged/onedark.vim
-	url = https://github.com/joshdick/onedark.vim.git
-[submodule ".vim/plugged/vim-polyglot"]
-	path = .vim/plugged/vim-polyglot
-	url = https://github.com/sheerun/vim-polyglot.git
