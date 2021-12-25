@@ -4,6 +4,7 @@
 [core]
   editor = vim -c \"set fenc=utf-8\"
   quotepath = false
+  excludesfile = ~/.gitignore-global
 [color]
   diff = auto
   status = auto
