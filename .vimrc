@@ -7,6 +7,9 @@ syntax enable
 colorscheme onedark
 hi Normal guibg=NONE ctermbg=NONE
 
+" workaround for freezes in some TypeScript files
+set re=0
+
 filetype plugin indent on
 
 :set encoding=utf-8
