@@ -1,5 +1,5 @@
 ALIAS_ROOT="$HOME/.alias"
-ALIAS_FILES=(`ls $ALIAS_ROOT -I index`)
+ALIAS_FILES=(`ls $ALIAS_ROOT | grep -v '^index$'`)
 for i in $ALIAS_FILES
 do
   source "$ALIAS_ROOT/$i"
