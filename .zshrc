@@ -29,7 +29,7 @@ autoload -Uz zmv
 
 # alias
 
-source ~/.alias/index
+source ~/.alias/index.zsh
 
 # bin
 
