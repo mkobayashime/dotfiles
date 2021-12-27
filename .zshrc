@@ -91,9 +91,9 @@ export PATH="$HOME/.bin":"$PATH"
 fpath=(~/.zsh/completion $fpath)
 
 zshAutosuggestionsPathPrefix=(
-  "/opt/homebrew/share"
   "/home/linuxbrew/.linuxbrew/share"
   "/usr/share"
+  "$HOME/.nix-profile/share"
 )
 for i in "${zshAutosuggestionsPathPrefix[@]}"
 do
