@@ -16,9 +16,6 @@ alias zmv="noglob zmv"
 alias -g H="--help"
 alias -g V="--version"
 
-# fzf
-alias fzf="fzf --cycle"
-
 # others
 if [[ -f "$HOME/.alias_etc" ]]; then
   source ~/.alias_etc
