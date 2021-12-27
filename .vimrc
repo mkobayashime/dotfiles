@@ -20,6 +20,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+set clipboard+=unnamed
+
 if &term =~ "xterm"
     let &t_ti .= "\e[?2004h"
     let &t_te .= "\e[?2004l"
