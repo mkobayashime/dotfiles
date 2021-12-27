@@ -27,14 +27,6 @@ fpath+="$HOME/.zsh/fn"
 autoload -Uz $fpath[-1]/*(.:t)
 autoload -Uz zmv
 
-# alias
-
-source ~/.alias/index.zsh
-
-# bin
-
-export PATH="$HOME/.bin":"$PATH"
-
 # brew
 
 export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
@@ -85,6 +77,14 @@ fi
 export GOPATH="$HOME/.go"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:$GOPATH/bin"
+
+# alias
+
+source ~/.alias/index.zsh
+
+# bin
+
+export PATH="$HOME/.bin":"$PATH"
 
 # auto completion
 
