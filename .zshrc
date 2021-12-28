@@ -99,7 +99,7 @@ autoload -Uz compinit && compinit
 
 # plugins
 
-source $HOME/.zsh/antigen.zsh
+source $HOME/.zsh/antigen/bin/antigen.zsh
 
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
