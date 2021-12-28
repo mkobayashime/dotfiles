@@ -90,18 +90,6 @@ export PATH="$HOME/.bin":"$PATH"
 
 fpath=(~/.zsh/completion $fpath)
 
-zshAutosuggestionsPathPrefix=(
-  "/home/linuxbrew/.linuxbrew/share"
-  "/usr/share"
-  "$HOME/.nix-profile/share"
-)
-for i in "${zshAutosuggestionsPathPrefix[@]}"
-do
-  if [[ -d "$i/zsh-autosuggestions" ]]; then
-    source "$i/zsh-autosuggestions/zsh-autosuggestions.zsh"
-  fi
-done
-
 if type brew &>/dev/null
 then
   fpath+=("$(brew --prefix)/share/zsh/site-functions")
@@ -113,6 +101,7 @@ autoload -Uz compinit && compinit
 
 source $HOME/.zsh/antigen.zsh
 
+antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle git@github.com:spwhitt/nix-zsh-completions.git
 
