@@ -24,6 +24,10 @@ set number
 
 set clipboard+=unnamed
 
+if has('mac') && executable('swim')
+    autocmd InsertLeave * :call system('swim use com.apple.keylayout.ABC')
+endif
+
 if &term =~ "xterm"
     let &t_ti .= "\e[?2004h"
     let &t_te .= "\e[?2004l"
