@@ -6,8 +6,9 @@ window:
     y: 5
   opacity: 0.9
 font:
+  size: 14
   normal:
-    family: monospace
+    family: JetBrains Mono NL
 colors:
   primary:
     background: '#131313'
