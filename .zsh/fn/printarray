@@ -1,0 +1,3 @@
+printarray() {
+  printf '%s\n' $@
+}
