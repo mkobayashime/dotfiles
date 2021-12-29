@@ -1,5 +1,6 @@
 window:
   startup_mode: Maximized
+  opacity: 0.9
 font:
   normal:
     family: monospace
