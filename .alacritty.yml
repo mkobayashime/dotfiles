@@ -1,3 +1,4 @@
+live_config_reload: true
 window:
   startup_mode: Maximized
   padding:
