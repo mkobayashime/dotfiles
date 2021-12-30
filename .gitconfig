@@ -2,7 +2,7 @@
   email = contact@mkobayashi.me
   name = Masaki Kobayashi
 [core]
-  editor = vim -c \"set fenc=utf-8\"
+  editor = vim -c \"set fenc=utf-8\" -c 'set spell'
   quotepath = false
   excludesfile = ~/.gitignore-global
 [color]
