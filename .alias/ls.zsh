@@ -1,4 +1,4 @@
-alias -g ls='ls -v --color=auto --group-directories-first'
+alias -g ls='ls -v --color=always --group-directories-first'
 
 # BSD
 ls --help &> /dev/null
