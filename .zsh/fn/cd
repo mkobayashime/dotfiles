@@ -4,6 +4,6 @@ function cd() {
       return
   fi
 
-  cd "$(ls -1 -d */ | fzf)"
+  cd "$(ls -1 --color=never -d */ | fzf)"
 }
 
