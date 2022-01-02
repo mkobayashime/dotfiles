@@ -10,7 +10,7 @@ let s:dein_repo_path = s:dein_path . '/repos/github.com/Shougo/dein.vim'
 
 if !isdirectory(s:dein_repo_path)
   echo('Installing dein...')
-  echo system('sh <(curl https://raw.githubusercontent.com/shougo/dein.vim/master/bin/installer.sh) ' . shellescape(s:dein_path))
+  call system('sh <(curl https://raw.githubusercontent.com/shougo/dein.vim/master/bin/installer.sh) ' . shellescape(s:dein_path))
 endif
 execute 'set runtimepath+=' . s:dein_repo_path
 
