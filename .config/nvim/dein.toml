@@ -3,6 +3,7 @@ repo = 'joshdick/onedark.vim'
 
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
+hook_add = 'let g:fern#default_hidden = 1'
 
 # fern.vim dependency as workaround for bug of Neovim
 [[plugins]]
