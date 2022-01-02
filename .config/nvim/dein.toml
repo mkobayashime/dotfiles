@@ -8,3 +8,6 @@ hook_add = 'let g:fern#default_hidden = 1'
 # fern.vim dependency as workaround for bug of Neovim
 [[plugins]]
 repo = 'antoinemadec/FixCursorHold.nvim'
+
+[[plugins]]
+repo = 'lambdalisue/fern-git-status.vim'
