@@ -1,9 +1,5 @@
 [[plugins]]
 repo = 'joshdick/onedark.vim'
-hook_add = '''
-  colorscheme onedark
-  hi Normal guibg=NONE ctermbg=NONE
-'''
 
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
