@@ -1,3 +1,5 @@
+let s:nvim_config_dir = expand('~/.config/nvim')
+
 if &compatible
   set nocompatible
 endif
@@ -29,6 +31,8 @@ set fileencodings=utf-8,sjis,euc-jp,iso-2022-jp
 set fileformats=unix,dos,mac
 
 set number
+
+execute 'source ' . s:nvim_config_dir . '/keymap.vim'
 
 set clipboard+=unnamed
 

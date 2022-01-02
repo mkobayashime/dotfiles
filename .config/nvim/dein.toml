@@ -4,3 +4,10 @@ hook_add = '''
   colorscheme onedark
   hi Normal guibg=NONE ctermbg=NONE
 '''
+
+[[plugins]]
+repo = 'lambdalisue/fern.vim'
+
+# fern.vim dependency as workaround for bug of Neovim
+[[plugins]]
+repo = 'antoinemadec/FixCursorHold.nvim'
