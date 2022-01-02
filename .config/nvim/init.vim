@@ -23,3 +23,18 @@ endif
 if dein#check_install()
   call dein#install()
 endif
+
+" transparent background
+hi Normal guibg=NONE ctermbg=NONE
+
+set encoding=utf-8
+set fileencodings=utf-8,sjis,euc-jp,iso-2022-jp
+set fileformats=unix,dos,mac
+
+set number
+
+set clipboard+=unnamed
+
+if has('mac') && executable('swim')
+    autocmd InsertLeave * :call system('swim use com.apple.keylayout.ABC')
+endif
