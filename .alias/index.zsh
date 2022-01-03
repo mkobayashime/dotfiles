@@ -5,7 +5,7 @@ do
   source "$ALIAS_ROOT/$i"
 done
 
-alias -g e="vim"
+alias -g e="nvim"
 alias t="tmux"
 alias ya="yarn"
 
