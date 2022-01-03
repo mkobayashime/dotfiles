@@ -6,6 +6,7 @@ let g:coc_global_extensions = [
   \ "coc-pairs",
   \ "coc-prettier",
   \ "coc-sh",
+  \ "coc-spell-checker",
   \ "coc-tsserver",
 \ ]
 
