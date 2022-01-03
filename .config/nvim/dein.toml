@@ -2,6 +2,11 @@
 repo = 'joshdick/onedark.vim'
 
 [[plugins]]
+repo = 'neoclide/coc.nvim'
+merged = 0
+rev = 'release'
+
+[[plugins]]
 repo = 'nvim-lua/plenary.nvim'
 
 [[plugins]]
