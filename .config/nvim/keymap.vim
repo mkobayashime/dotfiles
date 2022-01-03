@@ -22,9 +22,6 @@ nnoremap <silent> <Leader>E :<C-u>Fern . -drawer -toggle -reveal=%<CR>
 
 """ coc
 
-" use <cr> to confirm completion
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -37,3 +34,6 @@ inoremap <silent><expr> <Tab>
 
 " use <S-tab> to move back to previous complete item
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Enter when you are in the middle of an paired empty parens
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
