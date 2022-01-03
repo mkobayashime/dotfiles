@@ -2,6 +2,12 @@
 repo = 'joshdick/onedark.vim'
 
 [[plugins]]
+repo = 'nvim-lua/plenary.nvim'
+
+[[plugins]]
+repo = 'nvim-telescope/telescope.nvim'
+
+[[plugins]]
 repo = 'lambdalisue/fern.vim'
 hook_add = 'let g:fern#default_hidden = 1'
 
