@@ -28,7 +28,6 @@ if dein#check_install()
 endif
 
 colorscheme onedark
-hi Normal guibg=NONE ctermbg=NONE
 
 set encoding=utf-8
 set fileencodings=utf-8,sjis,euc-jp,iso-2022-jp
