@@ -16,6 +16,12 @@ zstyle ':completion:*:default' menu select=1
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' completer _complete _approximate
 
+# local
+
+if [ -f "$HOME/.zshrc-local" ]; then
+  source "$HOME/.zshrc-local"
+fi
+
 # prompt
 
 fpath+="$HOME/.zsh/pure"
@@ -88,12 +94,6 @@ source ~/.alias/index.zsh
 # bin
 
 export PATH="$HOME/.bin":"$PATH"
-
-# local
-
-if [ -f "$HOME/.zshrc-local" ]; then
-  source "$HOME/.zshrc-local"
-fi
 
 # auto completion
 
