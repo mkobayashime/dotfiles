@@ -39,6 +39,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+set signcolumn=number
+
 execute 'source ' . s:nvim_config_dir . '/keymap.vim'
 
 set clipboard+=unnamed
