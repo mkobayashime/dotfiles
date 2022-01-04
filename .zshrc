@@ -89,6 +89,12 @@ source ~/.alias/index.zsh
 
 export PATH="$HOME/.bin":"$PATH"
 
+# local
+
+if [ -f "$HOME/.zshrc-local" ]; then
+  source "$HOME/.zshrc-local"
+fi
+
 # auto completion
 
 fpath=(~/.zsh/completion $fpath)
