@@ -2,7 +2,7 @@
   email = contact@mkobayashi.me
   name = Masaki Kobayashi
 [core]
-  editor = nvim -c 'set spell'
+  editor = nvim
   quotepath = false
   excludesfile = ~/.gitignore-global
 [color]
