@@ -6,10 +6,10 @@ bindkey '^?' backward-delete-char
 
 # zsh options
 
-setopt auto_list
-setopt auto_menu
+setopt AUTO_LIST
+setopt AUTO_MENU
 setopt IGNOREEOF
-setopt numeric_glob_sort
+setopt NUMERIC_GLOB_SORT
 
 zstyle :compinstall filename '/home/mkobayashime/.zshrc'
 zstyle ':completion:*:default' menu select=1
