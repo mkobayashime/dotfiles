@@ -31,7 +31,9 @@ autoload -Uz zmv
 # brew
 
 export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
-ifMac && eval $(/opt/homebrew/bin/brew shellenv)
+if [ -e /opt/homebrew/bin/brew ]; then
+  ifMac && eval $(/opt/homebrew/bin/brew shellenv)
+fi
 
 # nodenv
 
