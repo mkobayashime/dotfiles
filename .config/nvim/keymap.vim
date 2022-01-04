@@ -20,7 +20,7 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <silent> <Leader>e :<C-u>Fern . -drawer -toggle<CR>
 nnoremap <silent> <Leader>E :<C-u>Fern . -drawer -toggle -reveal=%<CR>
 
-""" coc
+" === coc
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
@@ -47,3 +47,5 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR
 " coc-spell-checker
 vmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>a <Plug>(coc-codeaction-selected)
+
+" === coc end
