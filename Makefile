@@ -3,5 +3,5 @@ all:
 submodule:
 	git submodule update --init
 
-deploy:
+deploy: submodule
 	./deploy.sh
