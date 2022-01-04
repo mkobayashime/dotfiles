@@ -50,8 +50,7 @@ fi
 
 # direnv
 
-if type direnv &>/dev/null
-then
+if hascommand direnv; then
   eval "$(direnv hook zsh)"
 fi
 
@@ -94,8 +93,7 @@ export PATH="$HOME/.bin":"$PATH"
 
 fpath=(~/.zsh/completion $fpath)
 
-if type brew &>/dev/null
-then
+if hascommand brew; then
   fpath+=("$(brew --prefix)/share/zsh/site-functions")
 fi
 

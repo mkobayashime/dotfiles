@@ -1,3 +1,3 @@
-if [[ -x "$(command -v radian)" ]]; then
+if hascommand radian; then
   alias R="radian"
 fi
