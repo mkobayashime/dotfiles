@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-if [[ $(git log --format="%s" -1) == "WIP" ]]; then
-  git reset --soft HEAD^ && git restore --staged .
-else
-  exit 1;
-fi
-

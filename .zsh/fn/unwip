@@ -1,0 +1,7 @@
+unwip() {
+  if [[ $(git log --format="%s" -1) == "WIP" ]]; then
+    git reset --soft HEAD^ && git restore --staged .
+  else
+    return 1
+  fi
+}
