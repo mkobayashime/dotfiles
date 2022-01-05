@@ -16,9 +16,21 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-" fern
-nnoremap <silent> <Leader>e :<C-u>Fern . -drawer -toggle<CR>
-nnoremap <silent> <Leader>E :<C-u>Fern . -drawer -toggle -reveal=%<CR>
+" === fern
+
+nnoremap <silent> <Leader>e :<C-u>Fern . -drawer<CR>
+nnoremap <silent> <Leader>E :<C-u>Fern . -drawer -reveal=%<CR>
+
+function! s:init_fern() abort
+  nmap <buffer> q :<C-u>quit<CR>
+endfunction
+
+augroup fern-custom
+  autocmd! *
+  autocmd FileType fern call s:init_fern()
+augroup END
+
+" === fern end
 
 " === coc
 
