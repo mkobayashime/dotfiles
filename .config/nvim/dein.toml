@@ -24,3 +24,6 @@ repo = 'antoinemadec/FixCursorHold.nvim'
 
 [[plugins]]
 repo = 'lambdalisue/fern-git-status.vim'
+
+[[plugins]]
+repo = 'tpope/vim-eunuch'
