@@ -1,6 +1,6 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["*"],
-  "cSpell.userWords": ["masaki", "kobayashi", "mkobayashime"],
+  "cSpell.userWords": ["masaki", "kobayashi", "mkobayashime", "signup"],
   "cSpell.enabledLanguageIds": [
     "asciidoc",
     "c",
