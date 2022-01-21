@@ -11,26 +11,26 @@ font:
     family: JetBrains Mono NL
 colors:
   primary:
-    background: '#131313'
-    foreground: '#d6dbe5'
+    background: "#131313"
+    foreground: "#d6dbe5"
   normal:
-    black:   '#1f1f1f'
-    red:     '#f81118'
-    green:   '#2dc55e'
-    yellow:  '#ecba0f'
-    blue:    '#2a84d2'
-    magenta: '#4e5ab7'
-    cyan:    '#1081d6'
-    white:   '#d6dbe5'
+    black: "#1f1f1f"
+    red: "#f81118"
+    green: "#2dc55e"
+    yellow: "#ecba0f"
+    blue: "#2a84d2"
+    magenta: "#4e5ab7"
+    cyan: "#1081d6"
+    white: "#d6dbe5"
   bright:
-    black:   '#c2c7cf'
-    red:     '#de352e'
-    green:   '#1dd361'
-    yellow:  '#f3bd09'
-    blue:    '#1081d6'
-    magenta: '#5350b9'
-    cyan:    '#0f7ddb'
-    white:   '#ffffff'
+    black: "#c2c7cf"
+    red: "#de352e"
+    green: "#1dd361"
+    yellow: "#f3bd09"
+    blue: "#1081d6"
+    magenta: "#5350b9"
+    cyan: "#0f7ddb"
+    white: "#ffffff"
   selection:
     text: CellForeground
     background: "#434547"
