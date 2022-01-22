@@ -45,7 +45,7 @@ set scrolloff=5
 
 execute 'source ' . s:nvim_config_dir . '/keymap.vim'
 
-set clipboard+=unnamed
+set clipboard+=unnamed,unnamedplus
 
 if has('mac') && executable('swim')
     autocmd InsertLeave * :call system('swim use com.apple.keylayout.ABC')
