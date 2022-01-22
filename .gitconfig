@@ -1,6 +1,8 @@
 [user]
   email = contact@mkobayashi.me
   name = Masaki Kobayashi
+[alias]
+  graph = log --oneline --graph --all --decorate --pretty=format:'%C(yellow)%h%Creset %C(green)%d%Creset %s %C(blue)[%an]%Creset %ad' --date=format:'%Y.%m.%d %H:%M:%S'
 [core]
   editor = nvim
   quotepath = false
