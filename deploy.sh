@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 DOTPATH=~/dotfiles
 
 if [ $? -ne 0 ]; then
