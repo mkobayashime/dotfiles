@@ -8,3 +8,8 @@ hook_source = 'source ~/.config/nvim/plugins/nvim-treesitter.lua'
 [[plugins]]
 repo = 'p00f/nvim-ts-rainbow'
 on_source = 'nvim-treesitter'
+
+[[plugins]]
+repo = 'numToStr/Comment.nvim'
+on_event = 'BufRead'
+hook_source = 'source ~/.config/nvim/plugins/comment.nvim.lua'
