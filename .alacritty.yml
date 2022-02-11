@@ -6,7 +6,7 @@ window:
     y: 5
   opacity: 0.9
 font:
-  size: 14
+  size: 12
   normal:
     family: JetBrains Mono NL
 colors:
