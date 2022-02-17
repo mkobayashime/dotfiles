@@ -18,8 +18,8 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " === fern
 
-nnoremap <silent> <Leader>e :<C-u>Fern . -drawer<CR>
-nnoremap <silent> <Leader>E :<C-u>Fern . -drawer -reveal=%<CR>
+nnoremap <silent> <Leader>e :<C-u>Fern . -drawer -reveal=%:p<CR>
+nnoremap <silent> <Leader>E :<C-u>Fern . -drawer -reveal=.<CR>
 
 function! s:init_fern() abort
   nmap <buffer> q :<C-u>quit<CR>
