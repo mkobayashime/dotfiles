@@ -5,10 +5,6 @@ nnoremap [dev]    <Nop>
 xnoremap [dev]    <Nop>
 nmap     m        [dev]
 xmap     m        [dev]
-nnoremap [ff]     <Nop>
-xnoremap [ff]     <Nop>
-nmap     z        [ff]
-xmap     z        [ff]
 
 " telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
