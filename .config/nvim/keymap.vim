@@ -34,6 +34,9 @@ augroup END
 
 " === coc
 
+nmap <silent> [dev]rn <Plug>(coc-rename)
+nmap <silent> [dev]a <Plug>(coc-codeaction-selected)iw
+
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1
