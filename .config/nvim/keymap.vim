@@ -6,6 +6,11 @@ xnoremap [dev]    <Nop>
 nmap     m        [dev]
 xmap     m        [dev]
 
+" disable defaults
+nnoremap ZZ <Nop>
+nnoremap ZQ <Nop>
+nnoremap Q <Nop>
+
 " telescope
 nnoremap <leader>ff <cmd>Telescope find_files find_command=fd,-H,-E,.git<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
