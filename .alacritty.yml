@@ -4,14 +4,14 @@ window:
   padding:
     x: 10
     y: 5
-  opacity: 0.9
+  opacity: 0.85
 font:
   size: 12
   normal:
     family: JetBrains Mono NL
 colors:
   primary:
-    background: "#131313"
+    background: "#000000"
     foreground: "#d6dbe5"
   normal:
     black: "#1f1f1f"
