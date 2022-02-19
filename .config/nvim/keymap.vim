@@ -7,6 +7,9 @@ nnoremap ZZ <Nop>
 nnoremap ZQ <Nop>
 nnoremap Q <Nop>
 
+" clear highlight
+nnoremap <leader>ch <cmd>noh<cr>
+
 " telescope
 nnoremap <leader>ff <cmd>Telescope git_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
