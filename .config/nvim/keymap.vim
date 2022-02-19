@@ -17,6 +17,10 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fc <cmd>Telescope commands<cr>
 nnoremap <leader>ft <cmd>Telescope treesitter<cr>
+nnoremap <leader>gs <cmd>Telescope git_status<cr>
+nnoremap <leader>gb <cmd>Telescope git_branches<cr>
+nnoremap <leader>gl <cmd>Telescope git_commits<cr>
+nnoremap <leader>gfl <cmd>Telescope git_bcommits<cr>
 nnoremap <leader>fe <cmd>Telescope coc diagnostics<cr>
 nnoremap <leader>fr <cmd>Telescope coc references<cr>
 nnoremap <leader>fd <cmd>Telescope coc definitions<cr>
