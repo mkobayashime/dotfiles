@@ -14,6 +14,10 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fc <cmd>Telescope commands<cr>
 nnoremap <leader>ft <cmd>Telescope treesitter<cr>
+nnoremap <leader>fe <cmd>Telescope coc diagnostics<cr>
+nnoremap <leader>fr <cmd>Telescope coc references<cr>
+nnoremap <leader>fd <cmd>Telescope coc definitions<cr>
+nnoremap <leader>fi <cmd>Telescope coc implementations<cr>
 
 " === fern
 

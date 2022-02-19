@@ -12,8 +12,11 @@ hook_add = 'source ~/.config/nvim/plugins/coc.vim'
 repo = 'nvim-lua/plenary.nvim'
 
 [[plugins]]
+repo = 'fannheyward/telescope-coc.nvim'
+
+[[plugins]]
 repo = 'nvim-telescope/telescope.nvim'
-depends = ['plenary.nvim']
+depends = ['plenary.nvim', 'telescope-coc.nvim']
 hook_add = 'source ~/.config/nvim/plugins/telescope.lua'
 
 [[plugins]]
