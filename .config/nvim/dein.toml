@@ -35,5 +35,6 @@ repo = 'antoinemadec/FixCursorHold.nvim'
 [[plugins]]
 repo = 'lambdalisue/fern-git-status.vim'
 
+# Unix shell commands like `:Move`/`:Rename`
 [[plugins]]
 repo = 'tpope/vim-eunuch'
