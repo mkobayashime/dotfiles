@@ -34,6 +34,9 @@ nnoremap <silent> <Leader>E :<C-u>Fern . -drawer -reveal=.<CR>
 
 function! s:init_fern() abort
   nmap <buffer> q :<C-u>quit<CR>
+  nmap <silent> <buffer> <C-p> <Plug>(fern-action-preview:auto:toggle)
+  nmap <silent> <buffer> <C-d> <Plug>(fern-action-preview:scroll:down:half)
+  nmap <silent> <buffer> <C-u> <Plug>(fern-action-preview:scroll:up:half)
 endfunction
 
 augroup fern-custom
