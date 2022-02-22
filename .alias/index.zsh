@@ -5,11 +5,7 @@ do
   source "$ALIAS_ROOT/$i"
 done
 
-if hascommand nvim; then
-  alias -g e="nvim"
-else
-  alias -g e="vim"
-fi
+alias -g e="$EDITOR"
 alias t="tmux"
 alias ya="yarn"
 

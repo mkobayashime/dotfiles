@@ -35,6 +35,9 @@ autoload -Uz $fpath[-1]/*(.:t)
 autoload -Uz zmv
 
 # editor
+
+hascommand vi && export EDITOR=vi
+hascommand vim && export EDITOR=vim
 hascommand nvim && export EDITOR=nvim
 
 # brew
