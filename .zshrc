@@ -34,6 +34,9 @@ fpath+="$HOME/.zsh/fn"
 autoload -Uz $fpath[-1]/*(.:t)
 autoload -Uz zmv
 
+# editor
+hascommand nvim && export EDITOR=nvim
+
 # brew
 
 export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
