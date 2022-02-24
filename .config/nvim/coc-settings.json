@@ -1,6 +1,7 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["*"],
   "cSpell.userWords": ["masaki", "kobayashi", "mkobayashime", "signup"],
+  "eslint.autoFixOnSave": true,
   "cSpell.enabledLanguageIds": [
     "asciidoc",
     "c",
