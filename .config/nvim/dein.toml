@@ -41,3 +41,6 @@ repo = 'yuki-yano/fern-preview.vim'
 # Unix shell commands like `:Move`/`:Rename`
 [[plugins]]
 repo = 'tpope/vim-eunuch'
+
+[[plugins]]
+repo = 'iloginow/vim-stylus'
