@@ -1,6 +1,7 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["*"],
   "eslint.autoFixOnSave": true,
+  "prettier.requireConfig": true,
   "cSpell.userWords": ["masaki", "kobayashi", "mkobayashime", "signup"],
   "cSpell.enabledLanguageIds": [
     "asciidoc",
