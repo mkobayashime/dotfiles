@@ -49,6 +49,9 @@ fi
 
 # nodenv
 
+if [ -d "$HOME/.config/nodenv/bin" ]; then
+  export PATH="$HOME/.config/nodenv/bin:$PATH"
+fi
 if hascommand nodenv; then
   export NODENV_ROOT="$HOME/.config/nodenv"
   eval "$(nodenv init -)"
