@@ -39,7 +39,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-set signcolumn=number
+set signcolumn=yes
 
 set scrolloff=5
 
