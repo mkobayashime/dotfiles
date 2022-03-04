@@ -43,6 +43,8 @@ set signcolumn=number
 
 set scrolloff=5
 
+set updatetime=500
+
 execute 'source ' . s:nvim_config_dir . '/keymap.vim'
 
 set clipboard+=unnamed,unnamedplus
