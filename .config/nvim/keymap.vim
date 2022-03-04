@@ -1,6 +1,10 @@
 let g:mapleader = "\<Space>"
 nnoremap <Leader> <Nop>
 xnoremap <Leader> <Nop>
+nnoremap [git]    <Nop>
+xnoremap [git]    <Nop>
+nmap     gi        [git]
+xmap     gi        [git]
 
 " disable defaults
 nnoremap ZZ <Nop>
@@ -85,5 +89,14 @@ vnoremap <nowait><expr> <C-m> coc#float#has_scroll() ? coc#float#scroll(0) : "\<
 
 " Enter when you are in the middle of an paired empty parens
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" coc-git
+nmap [g <Plug>(coc-git-prevchunk)
+nmap ]g <Plug>(coc-git-nextchunk)
+nmap [c <Plug>(coc-git-prevconflict)
+nmap ]c <Plug>(coc-git-nextconflict)
+nmap [git]s <Plug>(coc-git-chunkinfo)
+nmap [git]l <Plug>(coc-git-commit)
+nmap [git]a <cmd>CocCommand git.chunkStage<cr>
 
 " === coc end
