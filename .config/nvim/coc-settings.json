@@ -1,5 +1,6 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "git.addGBlameToVirtualText": true,
   "eslint.autoFixOnSave": true,
   "prettier.requireConfig": true,
   "cSpell.userWords": ["masaki", "kobayashi", "mkobayashime", "signup"],
