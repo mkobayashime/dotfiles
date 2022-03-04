@@ -43,4 +43,8 @@ repo = 'yuki-yano/fern-preview.vim'
 repo = 'tpope/vim-eunuch'
 
 [[plugins]]
+repo = 'folke/todo-comments.nvim'
+hook_add = 'source ~/.config/nvim/plugins/todo-comments.nvim.lua'
+
+[[plugins]]
 repo = 'iloginow/vim-stylus'
