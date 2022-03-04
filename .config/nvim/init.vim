@@ -33,6 +33,8 @@ set encoding=utf-8
 set fileencodings=utf-8,sjis,euc-jp,iso-2022-jp
 set fileformats=unix,dos,mac
 
+set termguicolors
+
 set number
 
 set tabstop=2
