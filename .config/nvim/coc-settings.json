@@ -3,6 +3,8 @@
   "git.addGBlameToVirtualText": true,
   "eslint.autoFixOnSave": true,
   "prettier.requireConfig": true,
+  "colors.filetypes": ["*"],
+  "highlight.colorNames.enable": false,
   "cSpell.userWords": ["masaki", "kobayashi", "mkobayashime", "signup"],
   "cSpell.enabledLanguageIds": [
     "asciidoc",
