@@ -14,6 +14,30 @@ nnoremap Q <Nop>
 " clear highlight
 nnoremap <leader>ch <cmd>noh<cr>
 
+" === window
+
+nnoremap <C-w>o <Nop>
+nnoremap <C-w><C-o> <Nop>
+nnoremap <C-W>m :call MaximizeToggle()<CR>
+
+function! MaximizeToggle()
+  if exists("s:maximize_session")
+    exec "source " . s:maximize_session
+    call delete(s:maximize_session)
+    unlet s:maximize_session
+    let &hidden=s:maximize_hidden_save
+    unlet s:maximize_hidden_save
+  else
+    let s:maximize_hidden_save = &hidden
+    let s:maximize_session = tempname()
+    set hidden
+    exec "mksession! " . s:maximize_session
+    only
+  endif
+endfunction
+
+" === window end
+
 " telescope
 nnoremap <leader>ff <cmd>Telescope find_files find_command=fd,-H,-E,.git<cr>
 nnoremap <leader>fo <cmd>Telescope oldfiles<cr>
