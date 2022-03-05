@@ -6,6 +6,9 @@ xnoremap [git]    <Nop>
 nmap     gi        [git]
 xmap     gi        [git]
 
+" reload .zshrc
+nnoremap <leader>rc :call reloadConfig#ReloadConfig()<CR>
+
 " disable defaults
 nnoremap ZZ <Nop>
 nnoremap ZQ <Nop>
