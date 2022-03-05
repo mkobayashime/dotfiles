@@ -7,11 +7,11 @@ require('nvim-treesitter.configs').setup {
     enable = true,
     colors = {
       -- https://github.com/joshdick/onedark.vim/blob/main/colors/onedark.vim
-      '#98c379', -- green
-      '#c678dd', -- magenta
-      '#e5c07b', -- yellow
-      '#e06c75', -- light red
-      '#61afef', -- blue
+      '#7ee787', -- green
+      '#da99ff', -- magenta
+      '#e3b341', -- yellow
+      '#ff7b72', -- light red
+      '#58a6ff', -- blue
     },
     termcolors = {
       -- https://github.com/joshdick/onedark.vim/blob/main/autoload/onedark.vim
