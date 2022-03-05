@@ -124,6 +124,8 @@ nmap [c <Plug>(coc-git-prevconflict)
 nmap ]c <Plug>(coc-git-nextconflict)
 nmap [git]s <Plug>(coc-git-chunkinfo)
 nmap [git]l <Plug>(coc-git-commit)
-nmap [git]a <cmd>CocCommand git.chunkStage<cr>
+nmap [git]y <cmd>CocCommand git.copyUrl<CR>
+nmap [git]w <cmd>CocCommand git.browserOpen<CR>
+nmap [git]a <cmd>CocCommand git.chunkStage<CR>
 
 " === coc end
