@@ -127,5 +127,11 @@ nmap [git]l <Plug>(coc-git-commit)
 nmap [git]y <cmd>CocCommand git.copyUrl<CR>
 nmap [git]w <cmd>CocCommand git.browserOpen<CR>
 nmap [git]a <cmd>CocCommand git.chunkStage<CR>
+nmap <silent> [git]u :call ChunkUndo()<CR>
+function ChunkUndo() abort
+  if confirm('Undo this chunk?', "&yes\n&no", 2) == 1
+    CocCommand git.chunkUndo
+  endif
+endfunction
 
 " === coc end
