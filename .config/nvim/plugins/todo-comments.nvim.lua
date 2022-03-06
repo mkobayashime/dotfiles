@@ -1,3 +1,6 @@
 require('todo-comments').setup {
-  signs = false
+  signs = false,
+  highlight = {
+    after = "",
+  },
 }
