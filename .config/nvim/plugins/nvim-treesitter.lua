@@ -10,7 +10,7 @@ require('nvim-treesitter.configs').setup {
       '#7ee787', -- green
       '#da99ff', -- magenta
       '#e3b341', -- yellow
-      '#ff7b72', -- light red
+      '#ff7a90', -- light red
       '#58a6ff', -- blue
     },
     termcolors = {

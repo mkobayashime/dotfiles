@@ -1,5 +1,5 @@
 let g:onedark_color_overrides = {
-  \ "red": { "gui": "#ff7b72", "cterm": "204", "cterm16": "1" },
+  \ "red": { "gui": "#ff7a90", "cterm": "204", "cterm16": "1" },
   \ "green": { "gui": "#7ee787", "cterm": "114", "cterm16": "2" },
   \ "yellow": { "gui": "#e3b341", "cterm": "180", "cterm16": "3" },
   \ "dark_yellow": { "gui": "#e3b341", "cterm": "173", "cterm16": "11" },
