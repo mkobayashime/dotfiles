@@ -14,6 +14,16 @@ nnoremap ZZ <Nop>
 nnoremap ZQ <Nop>
 nnoremap Q <Nop>
 
+" disable yank
+nnoremap x "_x
+nnoremap X "_X
+nnoremap s "_s
+nnoremap S "_S
+nnoremap c "_c
+nnoremap C "_C
+vnoremap p "_xp
+vnoremap P "_xP
+
 " clear highlight
 nnoremap <leader>ch <cmd>noh<cr>
 
