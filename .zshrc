@@ -114,6 +114,6 @@ source $HOME/.zsh/antigen/bin/antigen.zsh
 
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle git@github.com:spwhitt/nix-zsh-completions.git
+antigen bundle spwhitt/nix-zsh-completions
 
 antigen apply
