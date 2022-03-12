@@ -10,6 +10,9 @@ setopt AUTO_LIST
 setopt AUTO_MENU
 setopt IGNOREEOF
 setopt NUMERIC_GLOB_SORT
+DIRSTACKSIZE=100
+setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
 
 zstyle :compinstall filename '/home/mkobayashime/.zshrc'
 zstyle ':completion:*:default' menu select=1
