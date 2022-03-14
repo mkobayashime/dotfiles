@@ -10,6 +10,20 @@ require('telescope').setup {
       n = {
         ["<C-c>"] = "close"
       },
+    },
+    vimgrep_arguments = {
+      "rg",
+      "--hidden",
+      "-g",
+      "!**/.git/**",
+      -- options below are defaults and are required for the functionality
+      -- see :help telescope.defaults.vimgrep_arguments
+      "--color=never",
+      "--no-heading",
+      "--with-filename",
+      "--line-number",
+      "--column",
+      "--smart-case",
     }
   }
 }
