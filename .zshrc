@@ -113,6 +113,7 @@ autoload -Uz compinit && compinit
 
 # plugins
 
+export ADOTDIR="$HOME/.cache/antigen"
 source $HOME/.zsh/antigen/bin/antigen.zsh
 
 antigen bundle zsh-users/zsh-autosuggestions
