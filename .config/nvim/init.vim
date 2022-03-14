@@ -49,6 +49,8 @@ set updatetime=500
 
 execute 'source ' . s:nvim_config_dir . '/keymap.vim'
 
+execute 'source ' . s:nvim_config_dir . '/autocmd.vim'
+
 set clipboard+=unnamed,unnamedplus
 
 if has('unix') && executable('fcitx5-remote')
