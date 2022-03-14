@@ -59,6 +59,7 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fc <cmd>Telescope commands<cr>
 nnoremap <leader>ft <cmd>Telescope treesitter<cr>
+nnoremap <leader>f; <cmd>Telescope registers<cr>
 nnoremap <leader>gs <cmd>Telescope git_status<cr>
 nnoremap <leader>gb <cmd>Telescope git_branches<cr>
 nnoremap <leader>gl <cmd>Telescope git_commits<cr>
