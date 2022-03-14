@@ -25,6 +25,11 @@ require('telescope').setup {
       "--column",
       "--smart-case",
     }
+  },
+  pickers = {
+    oldfiles = {
+      only_cwd = true
+    }
   }
 }
 
