@@ -118,6 +118,6 @@ source $HOME/.zsh/antigen/bin/antigen.zsh
 
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle spwhitt/nix-zsh-completions
+hascommand nix-env && antigen bundle spwhitt/nix-zsh-completions
 
 antigen apply
