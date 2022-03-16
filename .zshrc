@@ -95,7 +95,7 @@ export PATH="$PATH:$GOPATH/bin"
 
 # alias
 
-source ~/.alias/index.zsh
+source ~/.zsh/alias/index.zsh
 
 # bin
 

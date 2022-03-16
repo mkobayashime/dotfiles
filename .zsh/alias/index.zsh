@@ -1,4 +1,4 @@
-ALIAS_ROOT="$HOME/.alias"
+ALIAS_ROOT="$HOME/.zsh/alias"
 ALIAS_FILES=(`ls $ALIAS_ROOT | grep -v '^index.zsh$'`)
 for i in $ALIAS_FILES
 do
