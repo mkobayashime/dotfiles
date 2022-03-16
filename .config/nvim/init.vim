@@ -1,9 +1,5 @@
 let s:nvim_config_dir = expand('~/.config/nvim')
 
-if &compatible
-  set nocompatible
-endif
-
 let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.cache') : $XDG_CACHE_HOME
 let s:dein_path = s:cache_home . '/dein'
 let s:dein_repo_path = s:dein_path . '/repos/github.com/Shougo/dein.vim'
