@@ -1,3 +1,5 @@
+let g:coc_config_home = '~/.config/nvim/plugins'
+
 let g:coc_global_extensions = [
   \ "coc-css",
   \ "coc-eslint",
