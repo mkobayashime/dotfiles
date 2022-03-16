@@ -29,26 +29,6 @@ endif
 
 colorscheme onedark
 
-set encoding=utf-8
-set fileencodings=utf-8,sjis,euc-jp,iso-2022-jp
-set fileformats=unix,dos,mac
-
-set termguicolors
-
-set number
-
-set tabstop=2
-set shiftwidth=2
-set expandtab
-
-set signcolumn=yes
-
-set scrolloff=5
-
-set updatetime=500
-
+execute 'source ' . s:nvim_config_dir . '/basic-options.vim'
 execute 'source ' . s:nvim_config_dir . '/keymap.vim'
-
 execute 'source ' . s:nvim_config_dir . '/autocmd.vim'
-
-set clipboard+=unnamed,unnamedplus
