@@ -47,7 +47,7 @@ hascommand nvim && export EDITOR=nvim
 
 export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
 if [ -e /opt/homebrew/bin/brew ]; then
-  ifMac && eval $(/opt/homebrew/bin/brew shellenv)
+  isMac && eval $(/opt/homebrew/bin/brew shellenv)
 fi
 
 # nodenv

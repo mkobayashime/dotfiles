@@ -1,4 +1,4 @@
-function ifMac() {
+function isMac() {
   case "$OSTYPE" in
     darwin*)
       return 0;
