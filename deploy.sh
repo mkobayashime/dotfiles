@@ -2,8 +2,9 @@
 
 DOTPATH=~/dotfiles
 
-if [ $? -ne 0 ]; then
-    die "not found: $DOTPATH"
+if [[ ! `pwd` -ef "$DOTPATH" ]]; then
+  echo "Locate this repository in $DOTPATH"
+  exit 1
 fi
 
 mkdir -p $HOME/.config
