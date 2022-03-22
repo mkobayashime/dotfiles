@@ -11,7 +11,13 @@
   "prettier.requireConfig": true,
   "colors.filetypes": ["*"],
   "highlight.colorNames.enable": false,
-  "cSpell.userWords": ["masaki", "kobayashi", "mkobayashime", "signup"],
+  "cSpell.userWords": [
+    "kobayashi",
+    "masaki",
+    "mkobayashime",
+    "signup",
+    "typecheck"
+  ],
   "cSpell.enabledLanguageIds": [
     "asciidoc",
     "c",
