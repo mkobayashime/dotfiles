@@ -11,6 +11,7 @@
   "prettier.requireConfig": true,
   "colors.filetypes": ["*"],
   "highlight.colorNames.enable": false,
+  "coc.source.omni.filetypes": ["stylus"],
   "cSpell.userWords": [
     "kobayashi",
     "masaki",

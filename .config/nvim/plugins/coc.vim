@@ -7,6 +7,7 @@ let g:coc_global_extensions = [
   \ "coc-highlight",
   \ "coc-html",
   \ "coc-json",
+  \ "coc-omni",
   \ "coc-pairs",
   \ "coc-prettier",
   \ "coc-sh",
