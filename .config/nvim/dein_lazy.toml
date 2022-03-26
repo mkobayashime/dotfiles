@@ -10,6 +10,11 @@ repo = 'p00f/nvim-ts-rainbow'
 on_source = 'nvim-treesitter'
 
 [[plugins]]
+repo = 'romgrk/nvim-treesitter-context'
+on_source = 'nvim-treesitter'
+hook_source = 'source ~/.config/nvim/plugins/nvim-treesitter-context.lua'
+
+[[plugins]]
 repo = 'windwp/nvim-ts-autotag'
 on_ft = [
   'html',
