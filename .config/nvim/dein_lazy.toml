@@ -10,6 +10,23 @@ repo = 'p00f/nvim-ts-rainbow'
 on_source = 'nvim-treesitter'
 
 [[plugins]]
+repo = 'windwp/nvim-ts-autotag'
+on_ft = [
+  'html',
+  'javascript',
+  'javascriptreact',
+  'jsx',
+  'markdown',
+  'rescript',
+  'svelte',
+  'tsx',
+  'typescript',
+  'typescriptreact',
+  'vue',
+  'xml',
+]
+
+[[plugins]]
 repo = 'numToStr/Comment.nvim'
 on_event = 'BufRead'
 hook_source = 'source ~/.config/nvim/plugins/comment.nvim.lua'
