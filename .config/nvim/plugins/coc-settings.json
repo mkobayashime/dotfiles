@@ -6,7 +6,6 @@
   "diagnostic.warningSign": ">>",
   "diagnostic.infoSign": ">",
   "diagnostic.hintSign": ">",
-  "git.addGBlameToVirtualText": true,
   "eslint.autoFixOnSave": true,
   "prettier.requireConfig": true,
   "colors.filetypes": ["*"],

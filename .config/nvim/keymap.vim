@@ -128,23 +128,6 @@ vnoremap <nowait><expr> <C-m> coc#float#has_scroll() ? coc#float#scroll(0) : "\<
 " Enter when you are in the middle of an paired empty parens
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
-" coc-git
-nmap [g <Plug>(coc-git-prevchunk)
-nmap ]g <Plug>(coc-git-nextchunk)
-nmap [c <Plug>(coc-git-prevconflict)
-nmap ]c <Plug>(coc-git-nextconflict)
-nmap [git]s <Plug>(coc-git-chunkinfo)
-nmap [git]l <Plug>(coc-git-commit)
-nmap [git]y <cmd>CocCommand git.copyUrl<CR>
-nmap [git]w <cmd>CocCommand git.browserOpen<CR>
-nmap [git]a <cmd>CocCommand git.chunkStage<CR>
-nmap <silent> [git]u :call ChunkUndo()<CR>
-function ChunkUndo() abort
-  if confirm('Undo this chunk?', "&yes\n&no", 2) == 1
-    CocCommand git.chunkUndo
-  endif
-endfunction
-
 " === coc end
 
 " alternate-toggler

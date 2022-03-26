@@ -24,6 +24,10 @@ depends = ['plenary.nvim', 'telescope-coc.nvim', 'telescope-fzf-native.nvim']
 hook_add = 'source ~/.config/nvim/plugins/telescope.lua'
 
 [[plugins]]
+repo = 'lewis6991/gitsigns.nvim'
+hook_add = 'source ~/.config/nvim/plugins/gitsigns.nvim.lua'
+
+[[plugins]]
 repo = 'lambdalisue/fern.vim'
 depends = ['FixCursorHold.nvim']
 hook_add = 'let g:fern#default_hidden = 1'
