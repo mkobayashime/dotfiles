@@ -18,3 +18,7 @@ hook_source = 'source ~/.config/nvim/plugins/comment.nvim.lua'
 repo = 'iamcco/markdown-preview.nvim'
 on_ft = ['markdown', 'pandoc.markdown', 'rmd']
 build = 'sh -c "cd app && yarn install"'
+
+[[plugins]]
+repo = 'iloginow/vim-stylus'
+on_ft = ['stylus']

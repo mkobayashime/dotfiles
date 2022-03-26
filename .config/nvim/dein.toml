@@ -48,6 +48,3 @@ hook_add = 'source ~/.config/nvim/plugins/todo-comments.nvim.lua'
 
 [[plugins]]
 repo = 'rmagatti/alternate-toggler'
-
-[[plugins]]
-repo = 'iloginow/vim-stylus'
