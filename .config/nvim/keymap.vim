@@ -146,3 +146,6 @@ function ChunkUndo() abort
 endfunction
 
 " === coc end
+
+" alternate-toggler
+nnoremap <leader>to :ToggleAlternate<CR>
