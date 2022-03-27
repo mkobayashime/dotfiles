@@ -42,6 +42,10 @@ repo = 'lambdalisue/fern-git-status.vim'
 [[plugins]]
 repo = 'yuki-yano/fern-preview.vim'
 
+[[plugins]]
+repo = 'windwp/nvim-autopairs'
+hook_add = 'source ~/.config/nvim/plugins/nvim-autopairs.lua'
+
 # Unix shell commands like `:Move`/`:Rename`
 [[plugins]]
 repo = 'tpope/vim-eunuch'

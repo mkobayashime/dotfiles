@@ -7,7 +7,6 @@ let g:coc_global_extensions = [
   \ "coc-html",
   \ "coc-json",
   \ "coc-omni",
-  \ "coc-pairs",
   \ "coc-prettier",
   \ "coc-sh",
   \ "coc-spell-checker",
