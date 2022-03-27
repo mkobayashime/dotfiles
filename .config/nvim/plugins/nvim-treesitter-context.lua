@@ -1,3 +1,10 @@
+local patterns_typescript = {
+  'export',
+  'type',
+  'interface',
+  'namespace',
+}
+
 require('treesitter-context').setup({
   patterns = {
     default = {
@@ -9,6 +16,8 @@ require('treesitter-context').setup({
       'if',
       'switch',
       'case',
-    }
+    },
+    typescript = patterns_typescript,
+    typescriptreact = patterns_typescript,
   }
 })
