@@ -1,6 +1,5 @@
 require('gitsigns').setup {
   current_line_blame = true,
-  word_diff = true,
 
   on_attach = function(bufnr)
     local function map(mode, lhs, rhs, opts)
