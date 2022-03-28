@@ -44,3 +44,7 @@ build = 'sh -c "cd app && yarn install"'
 [[plugins]]
 repo = 'iloginow/vim-stylus'
 on_ft = ['stylus']
+
+[[plugins]]
+repo = 'mkobayashime/vim-stylus-supremacy'
+on_ft = ['stylus']
