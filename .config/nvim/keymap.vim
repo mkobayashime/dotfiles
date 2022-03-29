@@ -87,6 +87,22 @@ augroup END
 
 " === fern end
 
+" === gitsigns
+
+nnoremap <expr> ]g &diff ? ']g' : ':Gitsigns next_hunk<CR>'
+nnoremap <expr> [g &diff ? '[g' : ':Gitsigns prev_hunk<CR>'
+nnoremap [git]a :Gitsigns stage_hunk<CR>
+vnoremap [git]a :Gitsigns stage_hunk<CR>
+nnoremap [git]A :Gitsigns stage_buffer<CR>
+nnoremap [git]u :Gitsigns undo_stage_hunk<CR>
+nnoremap [git]r :Gitsigns reset_hunk<CR>
+vnoremap [git]r :Gitsigns reset_hunk<CR>
+nnoremap [git]R :Gitsigns reset_buffer<CR>
+nnoremap [git]s :Gitsigns preview_hunk<CR>
+nnoremap [git]b :lua require"gitsigns".blame_line{full=true}<CR>
+
+" === gitsigns end
+
 " === coc
 
 nnoremap <silent> K :<C-u>call <SID>show_documentation()<CR>
