@@ -24,6 +24,12 @@ nnoremap C "_C
 vnoremap p "_xhp
 vnoremap P "_xP
 
+" move cursor in insert mode
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+inoremap <C-j> <Down>
+
 " clear highlight
 nnoremap <leader>ch <cmd>noh<cr>
 
