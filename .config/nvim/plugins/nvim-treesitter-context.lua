@@ -10,6 +10,8 @@ require('treesitter-context').setup({
     default = {
       'class',
       'function',
+      'variable',
+      'return',
       'method',
       'for',
       'while',
