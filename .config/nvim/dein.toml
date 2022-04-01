@@ -1,4 +1,7 @@
 [[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
 repo = 'joshdick/onedark.vim'
 hook_add = 'source ~/.config/nvim/plugins/onedark.vim'
 
