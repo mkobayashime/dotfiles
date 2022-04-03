@@ -5,7 +5,7 @@ gbrename() {
   echo "" >> $file
   echo "" >> $file
   echo "# Empty line 1 to cancel" >> $file
-  vim $file
+  vim $file -c ":set ft=sh"
 
   bname=$(head -n 1 $file)
   if [[ "$bname" == '' ]]; then
