@@ -1,0 +1,11 @@
+docker-login-github() {
+  read -s 'token?Token: '
+
+  echo -e '\n'
+  echo 'Logging in to ghcr.io...'
+  echo $token | docker login ghcr.io -u mkobayashime --password-stdin
+
+  echo -e '\n'
+  echo 'Logging in to docker.pkg.github.com...'
+  echo $token | docker login docker.pkg.github.com -u mkobayashime --password-stdin
+}
