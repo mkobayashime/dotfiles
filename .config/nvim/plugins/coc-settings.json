@@ -1,7 +1,5 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["*"],
-  "coc.source.around.firstMatch": false,
-  "coc.source.buffer.firstMatch": false,
   "diagnostic.errorSign": ">>",
   "diagnostic.warningSign": ">>",
   "diagnostic.infoSign": ">",
