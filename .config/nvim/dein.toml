@@ -49,6 +49,10 @@ repo = 'yuki-yano/fern-preview.vim'
 repo = 'windwp/nvim-autopairs'
 hook_add = 'source ~/.config/nvim/plugins/nvim-autopairs.lua'
 
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+hook_add = 'source ~/.config/nvim/plugins/vim-trailing-whitespace.vim'
+
 # Unix shell commands like `:Move`/`:Rename`
 [[plugins]]
 repo = 'tpope/vim-eunuch'
