@@ -13,9 +13,7 @@ set expandtab
 set signcolumn=yes
 
 set list
-set listchars=
-set listchars+=trail:.
-hi Whitespace ctermbg=204 ctermfg=235 guibg=#E06C75 guifg=#282C34
+set listchars=trail:·,tab:>-,nbsp:␣,precedes:«,extends:»
 
 set scrolloff=5
 
