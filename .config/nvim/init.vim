@@ -23,8 +23,6 @@ if dein#check_install()
   call dein#install()
 endif
 
-colorscheme onedark
-
 execute 'source ' . s:nvim_config_dir . '/basic-options.vim'
 execute 'source ' . s:nvim_config_dir . '/keymap.vim'
 execute 'source ' . s:nvim_config_dir . '/autocmd.vim'

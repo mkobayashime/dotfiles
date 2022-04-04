@@ -1,3 +1,8 @@
+augroup colorscheme
+  au!
+  au VimEnter * nested colorscheme onedark
+augroup END
+
 let g:onedark_color_overrides = {
   \ "red": { "gui": "#ff7a90", "cterm": "204", "cterm16": "1" },
   \ "green": { "gui": "#7ee787", "cterm": "114", "cterm16": "2" },
