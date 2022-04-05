@@ -1,5 +1,11 @@
 fgl() {
-  local commit
-  commit=$(git log --oneline -30 | fzf --ansi) &&
+  number='^[0-9]+$'
+  if [[ "$1" =~ $number ]]; then
+    commit_count=$1
+  else
+    commit_count=30
+  fi
+
+  commit=$(git log --oneline -$commit_count | fzf --ansi)
   echo "$commit" | awk '{print $1}' | sed "s/.* //"
 }
