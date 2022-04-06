@@ -1,13 +1,20 @@
 bak() {
-  case $1 in
-    *.BAK)
-      return 1
-      ;;
-    *.bak)
-      return 1
-      ;;
-    *)
-      mv $1 "$1.BAK"
-      ;;
-  esac
+  local FILE
+
+  for FILE in "$@"
+  do
+    if [[ -e "$FILE" ]]; then
+      case $FILE in
+        *.BAK)
+          ;;
+        *.bak)
+          ;;
+        *)
+          mv $FILE "$FILE.BAK"
+          ;;
+      esac
+    else
+      echo "$FILE not found"
+    fi
+  done
 }
