@@ -1,5 +1,5 @@
 unbak() {
-  bak=$1
+  local bak=$1
   case "$bak" in
     *.BAK)
       mv $bak `echo $bak | sed -e 's/.BAK//'`

@@ -1,4 +1,6 @@
 docker-login-github() {
+  local token
+
   read -s 'token?Token: '
 
   echo -e '\n'

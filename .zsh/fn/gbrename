@@ -1,4 +1,6 @@
 gbrename() {
+  local file bname
+
   file=$(mktemp)
 
   git symbolic-ref --short HEAD > $file

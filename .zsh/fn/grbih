@@ -1,7 +1,5 @@
 grbih() {
-  number='^[0-9]+$'
-
-  if [[ "$1" =~ $number ]]; then
+  if [[ "$1" =~ '^[0-9]+$' ]]; then
     git rebase -i "HEAD~$1";
   else
     return 1;
