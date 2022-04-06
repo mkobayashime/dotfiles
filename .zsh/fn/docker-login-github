@@ -2,6 +2,12 @@ docker-login-github() {
   local token
 
   read -s 'token?Token: '
+  echo ''
+
+  if [[ "$token" == '' ]]; then
+    echo 'Error: Empty token'
+    return 1
+  fi
 
   echo -e '\n'
   echo 'Logging in to ghcr.io...'
