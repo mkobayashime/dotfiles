@@ -1,11 +1,57 @@
 fgl() {
-  number='^[0-9]+$'
-  if [[ "$1" =~ $number ]]; then
-    commit_count=$1
+  local full_hash commit_count hash_abbr
+
+  usage() {
+    echo 'OPTIONS'
+    echo '  -f, --full-hash'
+    echo '  -h, --help'
+
+    echo ''
+
+    echo 'EXAMPLE'
+    echo '  fgl 10'
+    echo '    - Search recent 10 commits and outputs the abbr hash'
+    echo '  fgl 100 -f'
+    echo '    - Search recent 100 commits and outputs the full hash'
+  }
+
+  for OPT in "$@"
+  do
+    case $OPT in
+      -h | --help )
+        usage
+        return 0
+        ;;
+      -f | --full-hash )
+        full_hash=true
+        shift 1
+        ;;
+      -* )
+        echo "Unknown option -- '$(echo $1 | sed 's/^-*//')'" 1>&2
+        return 1
+        ;;
+      * )
+        commit_count=$1
+        shift 1
+        ;;
+    esac
+  done
+
+  if [[ "$commit_count" == '' ]]; then
+    commit_count=30;
+  elif [[ "$commit_count" =~ '^[0-9]+$' ]]; then
+    :
   else
-    commit_count=30
+    echo 'NaN passed as commit count';
+    return 1;
   fi
 
   commit=$(git log --oneline -$commit_count | fzf --ansi)
-  echo "$commit" | awk '{print $1}' | sed "s/.* //"
+  hash_abbr=`echo "$commit" | awk '{print $1}' | sed "s/.* //"`
+
+  if [[ "$full_hash" == true ]]; then
+    echo `git log -1 --pretty='%H' $hash_abbr`;
+  else
+    echo "$hash_abbr";
+  fi
 }
