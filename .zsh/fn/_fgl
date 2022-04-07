@@ -1,0 +1,7 @@
+#compdef fgl
+
+_fgl() {
+  _arguments \
+    {-f,--full-hash}'[outputs the commit hash in full length]' \
+    '(- *)'{-h,--help}'[show help message]'
+}
