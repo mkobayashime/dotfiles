@@ -62,6 +62,7 @@ endfunction
 
 " telescope
 nnoremap <leader>ff <cmd>Telescope find_files find_command=fd,-H,--type,file,-E,.git<cr>
+nnoremap <expr> <leader>fu ":Telescope find_files find_command=fd,-H,--type,file,-E,.git cwd=" . expand('%:p:h') . "<cr>"
 nnoremap <leader>fo <cmd>Telescope oldfiles<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
