@@ -40,6 +40,9 @@ hook_add = 'let g:fern#default_hidden = 1'
 repo = 'antoinemadec/FixCursorHold.nvim'
 
 [[plugins]]
+repo = 'lambdalisue/fern-hijack.vim'
+
+[[plugins]]
 repo = 'lambdalisue/fern-git-status.vim'
 
 [[plugins]]
