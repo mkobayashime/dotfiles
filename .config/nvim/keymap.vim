@@ -7,7 +7,7 @@ nmap     gi        [git]
 xmap     gi        [git]
 
 " reload .zshrc
-nnoremap <leader>rc :call reloadConfig#ReloadConfig()<CR>
+nnoremap <Leader>rc :call reloadConfig#ReloadConfig()<CR>
 
 " save
 nnoremap <Leader>w :w<CR>
@@ -34,7 +34,7 @@ inoremap <C-l> <Right>
 inoremap <C-j> <Down>
 
 " clear highlight
-nnoremap <leader>ch <cmd>noh<cr>
+nnoremap <Leader>ch :noh<CR>
 
 " === window
 
@@ -61,23 +61,23 @@ endfunction
 " === window end
 
 " telescope
-nnoremap <leader>ff <cmd>Telescope find_files find_command=fd,-H,--type,file,-E,.git<cr>
-nnoremap <expr> <leader>fu ":Telescope find_files find_command=fd,-H,--type,file,-E,.git cwd=" . expand('%:p:h') . "<cr>"
-nnoremap <leader>fo <cmd>Telescope oldfiles<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-nnoremap <leader>fc <cmd>Telescope commands<cr>
-nnoremap <leader>ft <cmd>Telescope treesitter<cr>
-nnoremap <leader>f; <cmd>Telescope registers<cr>
-nnoremap <leader>gs <cmd>Telescope git_status<cr>
-nnoremap <leader>gb <cmd>Telescope git_branches<cr>
-nnoremap <leader>gl <cmd>Telescope git_commits<cr>
-nnoremap <leader>gfl <cmd>Telescope git_bcommits<cr>
-nnoremap <leader>fe <cmd>Telescope coc diagnostics<cr>
-nnoremap <leader>fr <cmd>Telescope coc references<cr>
-nnoremap <leader>fd <cmd>Telescope coc definitions<cr>
-nnoremap <leader>fi <cmd>Telescope coc implementations<cr>
+nnoremap <Leader>ff :Telescope find_files find_command=fd,-H,--type,file,-E,.git<CR>
+nnoremap <expr> <Leader>fu ":Telescope find_files find_command=fd,-H,--type,file,-E,.git cwd=" . expand('%:p:h') . "<CR>"
+nnoremap <Leader>fo :Telescope oldfiles<CR>
+nnoremap <Leader>fg :Telescope live_grep<CR>
+nnoremap <Leader>fb :Telescope buffers<CR>
+nnoremap <Leader>fh :Telescope help_tags<CR>
+nnoremap <Leader>fc :Telescope commands<CR>
+nnoremap <Leader>ft :Telescope treesitter<CR>
+nnoremap <Leader>f; :Telescope registers<CR>
+nnoremap <Leader>gs :Telescope git_status<CR>
+nnoremap <Leader>gb :Telescope git_branches<CR>
+nnoremap <Leader>gl :Telescope git_commits<CR>
+nnoremap <Leader>gfl :Telescope git_bcommits<CR>
+nnoremap <Leader>fe :Telescope coc diagnostics<CR>
+nnoremap <Leader>fr :Telescope coc references<CR>
+nnoremap <Leader>fd :Telescope coc definitions<CR>
+nnoremap <Leader>fi :Telescope coc implementations<CR>
 
 " === fern
 
@@ -126,9 +126,9 @@ function! s:show_documentation()
   endif
 endfunction
 
-vmap <leader>a <Plug>(coc-codeaction-selected)
-nmap <leader>a <Plug>(coc-codeaction-selected)
-nmap <leader>rn <Plug>(coc-rename)
+vmap <Leader>a <Plug>(coc-codeaction-selected)
+nmap <Leader>a <Plug>(coc-codeaction-selected)
+nmap <Leader>rn <Plug>(coc-rename)
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
@@ -146,15 +146,15 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " popup scroll
 nnoremap <nowait><expr> <C-n> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-n>"
 nnoremap <nowait><expr> <C-m> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-m>"
-inoremap <nowait><expr> <C-n> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<C-n>"
-inoremap <nowait><expr> <C-m> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<C-m>"
+inoremap <nowait><expr> <C-n> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<CR>" : "\<C-n>"
+inoremap <nowait><expr> <C-m> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<CR>" : "\<C-m>"
 vnoremap <nowait><expr> <C-n> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-n>"
 vnoremap <nowait><expr> <C-m> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-m>"
 
 " Enter when you are in the middle of an paired empty parens
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " === coc end
 
 " alternate-toggler
-nnoremap <leader>to :ToggleAlternate<CR>
+nnoremap <Leader>to :ToggleAlternate<CR>
