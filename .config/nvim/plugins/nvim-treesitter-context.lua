@@ -3,6 +3,8 @@ local patterns_typescript = {
   'type',
   'interface',
   'namespace',
+  'ambient',
+  'jsx',
 }
 
 require('treesitter-context').setup({
