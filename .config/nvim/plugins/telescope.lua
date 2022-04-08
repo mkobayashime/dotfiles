@@ -29,8 +29,15 @@ require('telescope').setup {
   pickers = {
     oldfiles = {
       only_cwd = true
-    }
-  }
+    },
+    buffers = {
+      mappings = {
+        i = {
+          ["<C-w>"] = require("telescope.actions").delete_buffer
+        }
+      }
+    },
+  },
 }
 
 require('telescope').load_extension('coc')
