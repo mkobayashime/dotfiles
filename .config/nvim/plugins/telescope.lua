@@ -27,6 +27,16 @@ require('telescope').setup {
     }
   },
   pickers = {
+    find_files = {
+      find_command = {
+        'fd',
+        '-H',
+        '--type',
+        'file',
+        '-E',
+        '.git',
+      }
+    },
     oldfiles = {
       only_cwd = true
     },

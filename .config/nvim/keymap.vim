@@ -61,8 +61,8 @@ endfunction
 " === window end
 
 " telescope
-nnoremap <Leader>fff :Telescope find_files find_command=fd,-H,--type,file,-E,.git<CR>
-nnoremap <expr> <Leader>ffh ":Telescope find_files find_command=fd,-H,--type,file,-E,.git cwd=" . expand('%:p:h') . "<CR>"
+nnoremap <Leader>fff :Telescope find_files<CR>
+nnoremap <expr> <Leader>ffh ":Telescope find_files cwd=" . expand('%:p:h') . "<CR>"
 nnoremap <Leader>fo :Telescope oldfiles<CR>
 nnoremap <Leader>fgg :Telescope live_grep<CR>
 nnoremap <expr> <Leader>fgh ":Telescope live_grep cwd=" . expand('%:p:h') . "<CR>"
