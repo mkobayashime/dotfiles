@@ -31,6 +31,7 @@ require('telescope').setup {
       only_cwd = true
     },
     buffers = {
+      ignore_current_buffer = true,
       mappings = {
         i = {
           ["<C-w>"] = require("telescope.actions").delete_buffer
