@@ -1,6 +1,5 @@
 function 2mp3() {
-  for file in $@;
-  do
-    ffmpeg -i $file -vn -ac 2 -ar 44100 -ab 256k -acodec libmp3lame -f mp3 "${file%.*}.mp3"
+  for file in "$@"; do
+    ffmpeg -i "$file" -vn -ac 2 -ar 44100 -ab 256k -acodec libmp3lame -f mp3 "${file%.*}.mp3"
   done
 }
