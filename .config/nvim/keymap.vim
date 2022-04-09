@@ -24,7 +24,7 @@ nnoremap s "_s
 nnoremap S "_S
 nnoremap c "_c
 nnoremap C "_C
-vnoremap p "_xhp
+vnoremap p "_xp
 vnoremap P "_xP
 
 " move cursor in insert mode
