@@ -13,6 +13,7 @@ setopt NUMERIC_GLOB_SORT
 DIRSTACKSIZE=100
 setopt AUTO_PUSHD
 setopt PUSHD_IGNORE_DUPS
+setopt BRACECCL
 
 zstyle :compinstall filename '/home/mkobayashime/.zshrc'
 zstyle ':completion:*:default' menu select=1
