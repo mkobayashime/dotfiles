@@ -1,9 +1,19 @@
 function cd() {
+  local target
+
   if [[ "$#" != 0 ]]; then
-      builtin cd "$@";
-      return
+    builtin cd "$@" || return
+    return
   fi
 
-  cd "$(ls -1 --color=never -d */ | fzf)"
-}
+  if ! hascommand fzf; then
+    echo 'Command not found: fzf'
+    return 1
+  fi
 
+  target="$(find . -maxdepth 1 -type d | fzf)" || return
+
+  if [[ "$target" != '' ]]; then
+    cd "$target" || return
+  fi
+}
