@@ -11,9 +11,9 @@ gbrename() {
 
   bname=$(head -n 1 $file)
   if [[ "$bname" == '' ]]; then
-    return 1;
+    return 1
   else
-    git branch -m $bname;
+    git branch -m $bname
   fi
 
   rm $file
