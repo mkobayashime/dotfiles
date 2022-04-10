@@ -15,22 +15,21 @@ fgl() {
     echo '    - Search recent 100 commits and outputs the full hash'
   }
 
-  for OPT in "$@"
-  do
+  for OPT in "$@"; do
     case $OPT in
-      -h | --help )
+      -h | --help)
         usage
         return 0
         ;;
-      -f | --full-hash )
+      -f | --full-hash)
         full_hash=true
         shift 1
         ;;
-      -* )
-        echo "Unknown option -- '$(echo $1 | sed 's/^-*//')'" 1>&2
+      -*)
+        echo "Unknown option -- ${1/-/}" 1>&2
         return 1
         ;;
-      * )
+      *)
         commit_count=$1
         shift 1
         ;;
@@ -38,20 +37,20 @@ fgl() {
   done
 
   if [[ "$commit_count" == '' ]]; then
-    commit_count=30;
-  elif [[ "$commit_count" =~ '^[0-9]+$' ]]; then
+    commit_count=30
+  elif [[ "$commit_count" =~ ^[0-9]+$ ]]; then
     :
   else
-    echo 'NaN passed as commit count';
-    return 1;
+    echo 'NaN passed as commit count'
+    return 1
   fi
 
   commit=$(git log --oneline -$commit_count | fzf --ansi)
-  hash_abbr=`echo "$commit" | awk '{print $1}' | sed "s/.* //"`
+  hash_abbr=$(echo "$commit" | awk '{print $1}' | sed "s/.* //")
 
   if [[ "$full_hash" == true ]]; then
-    echo `git log -1 --pretty='%H' $hash_abbr`;
+    git log -1 --pretty='%H' "$hash_abbr"
   else
-    echo "$hash_abbr";
+    echo "$hash_abbr"
   fi
 }
