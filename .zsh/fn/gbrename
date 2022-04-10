@@ -3,20 +3,19 @@ gbrename() {
 
   file=$(mktemp)
 
-  git symbolic-ref --short HEAD > $file
-  echo "" >> $file
-  echo "" >> $file
-  echo "# Empty line 1 to cancel" >> $file
-  vim $file -c ":set ft=sh"
+  git symbolic-ref --short HEAD > "$file"
+  echo -e "\n\n" >> "$file"
+  echo "# Empty line 1 to cancel" >> "$file"
+  vim "$file" -c ":set ft=sh"
 
-  bname=$(head -n 1 $file)
+  bname=$(head -n 1 "$file")
   if [[ "$bname" == '' ]]; then
     return 1
   else
-    git branch -m $bname
+    git branch -m "$bname"
   fi
 
-  rm $file
+  rm "$file"
 
   return 0
 }
