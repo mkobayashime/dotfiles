@@ -1,0 +1,6 @@
+#compdef unbak
+
+_unbak() {
+  _arguments \
+    '*: :_files -g "*.BAK *.bak"'
+}
