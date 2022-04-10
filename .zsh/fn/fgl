@@ -15,6 +15,11 @@ fgl() {
     echo '    - Search recent 100 commits and outputs the full hash'
   }
 
+  if [[ ! -d '.git' ]]; then
+    echo "Not a directory with git"
+    return 1
+  fi
+
   for OPT in "$@"; do
     case $OPT in
       -h | --help)
