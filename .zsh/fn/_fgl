@@ -2,6 +2,16 @@
 
 _fgl() {
   _arguments \
+    '*:commit count:_commit_counts' \
     {-f,--full-hash}'[outputs the commit hash in full length]' \
     '(- *)'{-h,--help}'[show help message]'
+}
+
+_commit_counts() {
+  _values \
+    'commit count' \
+    '10' \
+    '30' \
+    '50' \
+    '100'
 }
