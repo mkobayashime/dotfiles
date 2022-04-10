@@ -1,16 +1,15 @@
 bak() {
   local FILE
 
-  for FILE in "$@"
-  do
+  for FILE in "$@"; do
     if [[ -e "$FILE" ]]; then
       case $FILE in
-        *.BAK)
-          ;;
-        *.bak)
-          ;;
+        *.BAK) ;;
+
+        *.bak) ;;
+
         *)
-          mv $FILE "$FILE.BAK"
+          mv "$FILE" "$FILE.BAK"
           ;;
       esac
     else

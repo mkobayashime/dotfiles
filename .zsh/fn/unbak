@@ -1,22 +1,21 @@
 unbak() {
   local FILE
 
-  for FILE in "$@"
-  do
+  for FILE in "$@"; do
     if [[ -e "$FILE" ]]; then
       case "$FILE" in
         *.BAK)
-          mv $FILE `echo $FILE | sed -e 's/.BAK//'`
+          mv "$FILE" "${FILE/.BAK/}"
           ;;
         *.bak)
-          mv $FILE `echo $FILE | sed -e 's/.bak//'`
+          mv "$FILE" "${FILE/.bak/}"
           ;;
         *)
           return 1
           ;;
       esac
     else
-      echo "$FILE not found";
+      echo "$FILE not found"
     fi
   done
 }
