@@ -12,25 +12,6 @@ rev = 'release'
 hook_add = 'source ~/.config/nvim/plugins/coc.vim'
 
 [[plugins]]
-repo = 'nvim-lua/plenary.nvim'
-
-[[plugins]]
-repo = 'fannheyward/telescope-coc.nvim'
-
-[[plugins]]
-repo = 'nvim-telescope/telescope-fzf-native.nvim'
-build = 'make'
-
-[[plugins]]
-repo = 'nvim-telescope/telescope.nvim'
-depends = ['plenary.nvim', 'telescope-coc.nvim', 'telescope-fzf-native.nvim']
-hook_add = 'source ~/.config/nvim/plugins/telescope.lua'
-
-[[plugins]]
-repo = 'lewis6991/gitsigns.nvim'
-hook_add = 'source ~/.config/nvim/plugins/gitsigns.nvim.lua'
-
-[[plugins]]
 repo = 'lambdalisue/fern.vim'
 depends = ['FixCursorHold.nvim']
 hook_add = 'let g:fern#default_hidden = 1'
@@ -49,20 +30,12 @@ repo = 'lambdalisue/fern-git-status.vim'
 repo = 'yuki-yano/fern-preview.vim'
 
 [[plugins]]
-repo = 'windwp/nvim-autopairs'
-hook_add = 'source ~/.config/nvim/plugins/nvim-autopairs.lua'
-
-[[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
 hook_add = 'source ~/.config/nvim/plugins/vim-trailing-whitespace.vim'
 
 # Unix shell commands like `:Move`/`:Rename`
 [[plugins]]
 repo = 'tpope/vim-eunuch'
-
-[[plugins]]
-repo = 'folke/todo-comments.nvim'
-hook_add = 'source ~/.config/nvim/plugins/todo-comments.nvim.lua'
 
 [[plugins]]
 repo = 'rmagatti/alternate-toggler'

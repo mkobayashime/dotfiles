@@ -1,7 +1,28 @@
 [[plugins]]
+repo = 'nvim-lua/plenary.nvim'
+
+[[plugins]]
+repo = 'fannheyward/telescope-coc.nvim'
+
+[[plugins]]
+repo = 'nvim-telescope/telescope-fzf-native.nvim'
+build = 'make'
+
+[[plugins]]
+repo = 'nvim-telescope/telescope.nvim'
+on_event = 'VimEnter'
+depends = ['plenary.nvim', 'telescope-coc.nvim', 'telescope-fzf-native.nvim']
+hook_source = 'source ~/.config/nvim/plugins/telescope.lua'
+
+[[plugins]]
+repo = 'lewis6991/gitsigns.nvim'
+on_event = 'VimEnter'
+hook_source = 'source ~/.config/nvim/plugins/gitsigns.nvim.lua'
+
+[[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
 merged = 0
-on_event = 'BufRead'
+on_event = 'VimEnter'
 hook_post_update = 'TSUpdate'
 hook_source = 'source ~/.config/nvim/plugins/nvim-treesitter.lua'
 
@@ -30,6 +51,16 @@ on_ft = [
   'vue',
   'xml',
 ]
+
+[[plugins]]
+repo = 'windwp/nvim-autopairs'
+on_event = 'VimEnter'
+hook_source = 'source ~/.config/nvim/plugins/nvim-autopairs.lua'
+
+[[plugins]]
+repo = 'folke/todo-comments.nvim'
+on_event = 'VimEnter'
+hook_source = 'source ~/.config/nvim/plugins/todo-comments.nvim.lua'
 
 [[plugins]]
 repo = 'numToStr/Comment.nvim'
