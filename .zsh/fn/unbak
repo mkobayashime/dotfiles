@@ -11,7 +11,7 @@ unbak() {
           mv "$FILE" "${FILE/.bak/}"
           ;;
         *)
-          return 1
+          echo "Not a .BAK file: $FILE"
           ;;
       esac
     else
