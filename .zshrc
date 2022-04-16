@@ -1,3 +1,8 @@
+# profiling
+# zmodload zsh/zprof
+
+# misc
+
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -120,3 +125,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 hascommand nix-env && antigen bundle spwhitt/nix-zsh-completions
 
 antigen apply
+
+# profiling
+
+hascommand zprof && zprof
