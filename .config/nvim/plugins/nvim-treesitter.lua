@@ -47,5 +47,8 @@ require('nvim-treesitter.configs').setup {
       '204', -- red
       '39', -- blue
     }
-  }
+  },
+  playground = {
+    enable = true,
+  },
 }
