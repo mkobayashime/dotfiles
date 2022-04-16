@@ -5,10 +5,12 @@
   "diagnostic.infoSign": ">",
   "diagnostic.hintSign": ">",
   "diagnostic-languageserver.filetypes": {
-    "sh": "shellcheck"
+    "sh": "shellcheck",
+    "bash": "shellcheck"
   },
   "diagnostic-languageserver.formatFiletypes": {
-    "sh": "shfmt"
+    "sh": "shfmt",
+    "bash": "shfmt"
   },
   "diagnostic-languageserver.formatters": {
     "shfmt": {
