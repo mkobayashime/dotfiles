@@ -34,13 +34,14 @@ fi
 # prompt
 
 fpath+="$HOME/.zsh/pure"
-autoload -U promptinit; promptinit
+autoload -U promptinit
+promptinit
 prompt pure
 
 # functions
 
 fpath+="$HOME/.zsh/fn"
-autoload -Uz $fpath[-1]/*(.:t)
+autoload -Uz "${fpath[-1]}"/*(.:t)
 autoload -Uz zmv
 
 # editor
@@ -53,7 +54,7 @@ hascommand nvim && export EDITOR=nvim
 
 export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
 if [ -e /opt/homebrew/bin/brew ]; then
-  isMac && eval $(/opt/homebrew/bin/brew shellenv)
+  isMac && eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # nodenv
@@ -101,7 +102,7 @@ export PATH="$PATH:$GOPATH/bin"
 
 # alias
 
-source ~/.zsh/alias/index.zsh
+source "$HOME/.zsh/alias/index.zsh"
 
 # bin
 
@@ -109,7 +110,7 @@ export PATH="$HOME/.bin":"$PATH"
 
 # auto completion
 
-fpath=(~/.zsh/completion $fpath)
+fpath+=("$HOME/.zsh/completion")
 
 if hascommand brew; then
   fpath+=("$(brew --prefix)/share/zsh/site-functions")
@@ -118,7 +119,7 @@ fi
 # plugins
 
 export ADOTDIR="$HOME/.cache/antigen"
-source $HOME/.zsh/antigen/bin/antigen.zsh
+source "$HOME/.zsh/antigen/bin/antigen.zsh"
 
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
