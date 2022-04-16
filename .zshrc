@@ -110,8 +110,6 @@ if hascommand brew; then
   fpath+=("$(brew --prefix)/share/zsh/site-functions")
 fi
 
-autoload -Uz compinit && compinit
-
 # plugins
 
 export ADOTDIR="$HOME/.cache/antigen"
