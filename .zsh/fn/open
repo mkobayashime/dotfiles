@@ -1,0 +1,10 @@
+open() {
+  if hascommand xdg-open; then
+    xdg-open "$@"
+  elif hascommand open; then
+    open "$@"
+  else
+    echo "'open' or 'xdg-open' command needed"
+    return 1
+  fi
+}
