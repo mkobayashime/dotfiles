@@ -1,8 +1,7 @@
-ALIAS_ROOT="$HOME/.zsh/alias"
-ALIAS_FILES=(`ls $ALIAS_ROOT | grep -v '^index.zsh$'`)
-for i in $ALIAS_FILES
-do
-  source "$ALIAS_ROOT/$i"
+for i in "$HOME/.zsh/alias"/*; do
+  if [[ ! "$i" =~ /index.zsh$ ]]; then
+    source "$i"
+  fi
 done
 
 alias -g e="$EDITOR"
