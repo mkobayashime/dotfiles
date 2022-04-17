@@ -61,11 +61,11 @@ endfunction
 " === window end
 
 " telescope
-nnoremap <Leader>fff :Telescope find_files<CR>
-nnoremap <expr> <Leader>ffh ":Telescope find_files cwd=" . expand('%:p:h') . "<CR>"
+nnoremap <Leader>ff :Telescope find_files<CR>
+nnoremap <expr> <Leader>fF ":Telescope find_files cwd=" . expand('%:p:h') . "<CR>"
 nnoremap <Leader>fo :Telescope oldfiles<CR>
-nnoremap <Leader>fgg :Telescope live_grep<CR>
-nnoremap <expr> <Leader>fgh ":Telescope live_grep cwd=" . expand('%:p:h') . "<CR>"
+nnoremap <Leader>fg :Telescope live_grep<CR>
+nnoremap <expr> <Leader>fG ":Telescope live_grep cwd=" . expand('%:p:h') . "<CR>"
 nnoremap <Leader>fb :Telescope buffers<CR>
 nnoremap <Leader>fh :Telescope help_tags<CR>
 nnoremap <Leader>fc :Telescope commands<CR>
