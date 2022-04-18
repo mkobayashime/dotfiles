@@ -18,6 +18,22 @@
       "args": ["-i", "2", "-bn", "-ci", "-sr"]
     }
   },
+  "hover.floatConfig": {
+    "border": true,
+    "highlight": "CocFloatingAdhocTransparent"
+  },
+  "diagnostic.floatConfig": {
+    "border": true,
+    "highlight": "CocFloatingAdhocTransparent"
+  },
+  "signature.floatConfig": {
+    "border": true,
+    "highlight": "CocFloatingAdhocTransparent"
+  },
+  "suggest.floatConfig": {
+    "border": true,
+    "highlight": "CocFloatingAdhocTransparent"
+  },
   "eslint.autoFixOnSave": true,
   "prettier.requireConfig": true,
   "colors.filetypes": ["*"],
