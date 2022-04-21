@@ -27,6 +27,7 @@ alias gres="git restore"
 alias grb="git rebase"
 alias grbi="git rebase -i"
 alias gcp="git cherry-pick"
+alias ggraph="git graph"
 
 alias remote="gh repo view --web"
 alias repo="gh repo view --web"
