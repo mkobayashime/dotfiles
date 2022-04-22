@@ -35,5 +35,5 @@ alias pr="gh pr view -w"
 alias prn="gh pr create"
 alias prnf="gh pr create -f"
 
-alias wip="git commit -m 'WIP'"
+alias wip="git commit -m 'WIP' --no-verify"
 alias wipa="git add . && wip"
