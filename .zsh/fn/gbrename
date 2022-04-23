@@ -6,7 +6,7 @@ gbrename() {
   git symbolic-ref --short HEAD > "$file"
   echo -e "\n\n" >> "$file"
   echo "# Empty line 1 to cancel" >> "$file"
-  vim "$file" -c ":set ft=sh"
+  "${EDITOR:-vim}" "$file" -c ":set ft=sh"
 
   bname=$(head -n 1 "$file")
   if [[ "$bname" == '' ]]; then
