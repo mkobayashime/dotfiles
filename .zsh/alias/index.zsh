@@ -5,7 +5,6 @@ for i in "$HOME/.zsh/alias"/*; do
 done
 
 alias -g e="$EDITOR"
-alias t="tmux"
 alias ya="yarn"
 
 # zsh
