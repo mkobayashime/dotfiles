@@ -34,6 +34,7 @@
     "border": true,
     "highlight": "CocFloatingAdhocTransparent"
   },
+  "dialog.floatHighlight": "CocFloatingAdhocTransparent",
   "eslint.autoFixOnSave": true,
   "prettier.requireConfig": true,
   "colors.filetypes": ["*"],
