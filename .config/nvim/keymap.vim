@@ -7,7 +7,7 @@ nmap     gi        [git]
 xmap     gi        [git]
 
 " reload .zshrc
-nnoremap <Leader>rc :call reloadConfig#ReloadConfig()<CR>
+nnoremap <silent> <Leader>rc :call reloadConfig#ReloadConfig()<CR>
 
 " save
 nnoremap <Leader>w :w<CR>
