@@ -1,0 +1,3 @@
+hascommandlike() {
+  whence "$1" &> /dev/null
+}

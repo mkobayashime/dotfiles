@@ -129,4 +129,4 @@ antigen apply
 
 # profiling
 
-hascommand zprof && zprof
+hascommandlike zprof && zprof
