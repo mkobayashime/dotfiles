@@ -40,3 +40,5 @@ alias prnf="gh pr create -f"
 
 alias wip="git commit -m 'WIP' --no-verify"
 alias wipa="git add . && wip"
+
+alias fgrb='git rebase -i $(fgl)'
