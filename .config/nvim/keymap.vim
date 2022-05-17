@@ -61,6 +61,7 @@ endfunction
 " === window end
 
 " telescope
+nnoremap <Leader>tr :Telescope resume<CR>
 nnoremap <Leader>ff :Telescope find_files<CR>
 nnoremap <expr> <Leader>fF ":Telescope find_files cwd=" . expand('%:p:h') . "<CR>"
 nnoremap <Leader>fo :Telescope oldfiles<CR>
