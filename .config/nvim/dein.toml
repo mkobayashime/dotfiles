@@ -38,4 +38,11 @@ hook_add = 'source ~/.config/nvim/plugins/vim-trailing-whitespace.vim'
 repo = 'tpope/vim-eunuch'
 
 [[plugins]]
+repo = 'kana/vim-textobj-user'
+
+[[plugins]]
+repo = 'kana/vim-textobj-entire'
+depends = ['vim-textobj-user']
+
+[[plugins]]
 repo = 'rmagatti/alternate-toggler'
