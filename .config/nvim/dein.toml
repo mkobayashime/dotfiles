@@ -49,6 +49,10 @@ repo = 'beloglazov/vim-textobj-quotes'
 depends = ['vim-textobj-user']
 
 [[plugins]]
+repo = 'Julian/vim-textobj-brace'
+depends = ['vim-textobj-user']
+
+[[plugins]]
 repo = 'jceb/vim-textobj-uri'
 depends = ['vim-textobj-user']
 
