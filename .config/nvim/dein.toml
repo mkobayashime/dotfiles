@@ -45,4 +45,8 @@ repo = 'kana/vim-textobj-entire'
 depends = ['vim-textobj-user']
 
 [[plugins]]
+repo = 'beloglazov/vim-textobj-quotes'
+depends = ['vim-textobj-user']
+
+[[plugins]]
 repo = 'rmagatti/alternate-toggler'
