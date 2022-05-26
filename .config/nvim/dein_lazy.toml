@@ -59,6 +59,14 @@ on_event = 'BufRead'
 hook_source = 'source ~/.config/nvim/plugins/comment.nvim.lua'
 
 [[plugins]]
+repo = 'akinsho/git-conflict.nvim'
+on_event = 'BufRead'
+hook_source = '''
+source ~/.config/nvim/plugins/git-conflict.nvim.lua
+source ~/.config/nvim/plugins/git-conflict.nvim.vim
+'''
+
+[[plugins]]
 repo = 'iamcco/markdown-preview.nvim'
 on_ft = ['markdown', 'pandoc.markdown', 'rmd']
 build = 'sh -c "cd app && yarn install"'
