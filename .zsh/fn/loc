@@ -1,0 +1,19 @@
+loc() {
+  local command_name command
+
+  if [[ "$1" == '' ]]; then
+    echo 'Command name not passed'
+    return 1
+  else
+    command_name=${1:u}
+  fi
+
+  command=$(printenv | grep "^LOC_CMD_$command_name=" | sed 's/.*=//')
+
+  if [[ "$command" == '' ]]; then
+    echo "Command not found: LOC_CMD_$command_name"
+    return 1
+  else
+    eval "$command"
+  fi
+}
