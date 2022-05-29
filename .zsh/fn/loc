@@ -6,6 +6,7 @@ loc() {
     return 1
   else
     command_name=${1:u}
+    shift
   fi
 
   command=$(printenv | grep "^LOC_CMD_$command_name=" | sed 's/.*=//')
@@ -14,6 +15,6 @@ loc() {
     echo "Command not found: LOC_CMD_$command_name"
     return 1
   else
-    eval "$command"
+    eval "$command" "$@"
   fi
 }
