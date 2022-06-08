@@ -1,0 +1,14 @@
+gp() {
+  local OPT
+
+  for OPT in "$@"; do
+    case $OPT in
+      -f)
+        echo "DON'T DO THAT AGAIN"
+        return 1
+        ;;
+    esac
+  done
+
+  git push "$@"
+}
