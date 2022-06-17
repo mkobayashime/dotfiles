@@ -36,6 +36,7 @@ alias repo="gh repo view --web"
 alias pr="gh pr view -w"
 alias prn="gh pr create"
 alias prnf="gh pr create -f"
+alias automerge='gh pr merge --auto'
 
 alias wip="git commit -m 'WIP' --no-verify"
 alias wipa="git add . && wip"
