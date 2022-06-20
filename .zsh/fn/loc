@@ -1,6 +1,48 @@
 loc() {
   local command_name command
 
+  usage() {
+    echo 'USAGE'
+    echo '  loc <command_name>'
+
+    echo ''
+
+    echo 'AVAILABLE COMMANDS'
+    if [[ $(loc -l) == '' ]]; then
+      echo '  No command is available here'
+    fi
+    for CMD in $(loc -l); do
+      echo "  - $CMD"
+    done
+
+    echo ''
+
+    echo 'OPTIONS'
+    echo '  -l, --list-commands'
+    echo '  -h, --help'
+  }
+
+  list_loc_cmds() {
+    printenv | grep '^LOC_CMD_' | sed 's/^LOC_CMD_//' | sed 's/=.*//' | sed 's/.*/\L&/'
+  }
+
+  for OPT in "$@"; do
+    case $OPT in
+      -h | --help)
+        usage
+        return 0
+        ;;
+      -l | --list-commands)
+        list_loc_cmds
+        return 0
+        ;;
+      -*)
+        echo "Unknown option -- ${1/-/}" 1>&2
+        return 1
+        ;;
+    esac
+  done
+
   if [[ "$1" == '' ]]; then
     echo 'Command name not passed'
     return 1
