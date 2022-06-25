@@ -68,6 +68,16 @@ if hascommand nodenv; then
   eval "$(nodenv init -)"
 fi
 
+# rbenv
+
+if [ -d "$HOME/.config/rbenv/bin" ]; then
+  export PATH="$HOME/.config/rbenv/bin:$PATH"
+fi
+if hascommand rbenv; then
+  export RBENV_ROOT="$HOME/.config/rbenv"
+  eval "$(rbenv init -)"
+fi
+
 # direnv
 
 if hascommand direnv; then
