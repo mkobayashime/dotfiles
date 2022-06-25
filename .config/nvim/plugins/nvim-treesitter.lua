@@ -15,6 +15,7 @@ require('nvim-treesitter.configs').setup {
     'lua',
     'make',
     'regex',
+    'ruby',
     'scss',
     'toml',
     'tsx',
