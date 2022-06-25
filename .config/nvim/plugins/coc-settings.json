@@ -40,6 +40,8 @@
   "colors.filetypes": ["*"],
   "highlight.colorNames.enable": false,
   "coc.source.omni.filetypes": ["stylus"],
+  "solargraph.useBundler": true,
+  "solargraph.formatting": true,
   "cSpell.userWords": [
     "kobayashi",
     "masaki",
