@@ -11,6 +11,11 @@ function cd() {
     return 1
   fi
 
+  if ! hascommand fd; then
+    echo 'Command not found: fd'
+    return 1
+  fi
+
   target="$(fd -L . --exact-depth 1 -t d | fzf)" || return
 
   if [[ "$target" != '' ]]; then
