@@ -17,3 +17,5 @@ do
   alias -g "$key"="$value"
   alias -g "${key}1"="$value -1"
 done
+
+alias lsall='ls *'
