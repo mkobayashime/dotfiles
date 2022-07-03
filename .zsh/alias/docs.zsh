@@ -1,1 +1,1 @@
-alias mdpdf='npx mdpdf --gh-style --style ~/.config/mdpdf/custom.css'
+alias mdpdf='npx --yes mdpdf --gh-style --style ~/.config/mdpdf/custom.css'
