@@ -40,15 +40,21 @@ loc() {
         echo "Unknown option -- ${1/-/}" 1>&2
         return 1
         ;;
+      *)
+        # this should be the command name
+        command_name=${1:u}
+        shift
+
+        # the rest will be the free args
+        # so we can pass them as they are
+        break
+        ;;
     esac
   done
 
-  if [[ "$1" == '' ]]; then
+  if [[ "$command_name" == '' ]]; then
     echo 'Command name not passed'
     return 1
-  else
-    command_name=${1:u}
-    shift
   fi
 
   command=$(printenv | grep "^LOC_CMD_$command_name=" | sed 's/.*=//')
