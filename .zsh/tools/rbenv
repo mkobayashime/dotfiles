@@ -1,0 +1,7 @@
+if [ -d "$HOME/.config/rbenv/bin" ]; then
+  export PATH="$HOME/.config/rbenv/bin:$PATH"
+fi
+if hascommand rbenv; then
+  export RBENV_ROOT="$HOME/.config/rbenv"
+  eval "$(rbenv init -)"
+fi

@@ -45,71 +45,11 @@ fpath+="$HOME/.zsh/fn"
 autoload -Uz "${fpath[-1]}"/*(.:t)
 autoload -Uz zmv
 
-# editor
+# tools
 
-hascommand vi && export EDITOR=vi
-hascommand vim && export EDITOR=vim
-hascommand nvim && export EDITOR=nvim
-
-# brew
-
-export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
-if [ -e /opt/homebrew/bin/brew ]; then
-  isMac && eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-
-# nodenv
-
-if [ -d "$HOME/.config/nodenv/bin" ]; then
-  export PATH="$HOME/.config/nodenv/bin:$PATH"
-fi
-if hascommand nodenv; then
-  export NODENV_ROOT="$HOME/.config/nodenv"
-  eval "$(nodenv init -)"
-fi
-
-# rbenv
-
-if [ -d "$HOME/.config/rbenv/bin" ]; then
-  export PATH="$HOME/.config/rbenv/bin:$PATH"
-fi
-if hascommand rbenv; then
-  export RBENV_ROOT="$HOME/.config/rbenv"
-  eval "$(rbenv init -)"
-fi
-
-# direnv
-
-if hascommand direnv; then
-  eval "$(direnv hook zsh)"
-fi
-
-# nix
-
-if [ -e /Users/mkobayashime/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/mkobayashime/.nix-profile/etc/profile.d/nix.sh; fi
-if [ -e /home/mkobayashime/.nix-profile/etc/profile.d/nix.sh ]; then . /home/mkobayashime/.nix-profile/etc/profile.d/nix.sh; fi
-
-# fzf
-
-export FZF_DEFAULT_OPTS="--cycle"
-
-# yarn
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-# deno
-
-export DENO_INSTALL="$HOME/.deno"
-
-if [ -e "$DENO_INSTALL" ]; then
-  export PATH="$DENO_INSTALL/bin:$PATH"
-fi
-
-# golang
-
-export GOPATH="$HOME/.go"
-export PATH="$PATH:/usr/local/go/bin"
-export PATH="$PATH:$GOPATH/bin"
+for f in ~/.zsh/tools/*; do
+  source "$f"
+done
 
 # alias
 
