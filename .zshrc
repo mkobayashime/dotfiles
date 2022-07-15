@@ -1,6 +1,8 @@
 # profiling
 # zmodload zsh/zprof
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # misc
 
 HISTFILE=~/.histfile
