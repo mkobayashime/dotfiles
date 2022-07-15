@@ -46,6 +46,7 @@
   // Ruby
   "solargraph.useBundler": true,
   "solargraph.formatting": true,
+  "solargraph.diagnostics": true,
 
   // cSpell
   "cSpell.userWords": [
