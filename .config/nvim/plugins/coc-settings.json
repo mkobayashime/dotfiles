@@ -35,13 +35,19 @@
     "highlight": "CocFloatingAdhocTransparent"
   },
   "dialog.floatHighlight": "CocFloatingAdhocTransparent",
-  "eslint.autoFixOnSave": true,
-  "prettier.requireConfig": true,
   "colors.filetypes": ["*"],
   "highlight.colorNames.enable": false,
   "coc.source.omni.filetypes": ["stylus"],
+
+  // JavaScript
+  "eslint.autoFixOnSave": true,
+  "prettier.requireConfig": true,
+
+  // Ruby
   "solargraph.useBundler": true,
   "solargraph.formatting": true,
+
+  // cSpell
   "cSpell.userWords": [
     "kobayashi",
     "masaki",
