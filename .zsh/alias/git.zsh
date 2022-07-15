@@ -42,3 +42,6 @@ alias wip="git commit -m 'WIP' --no-verify"
 alias wipa="git add . && wip"
 
 alias fgrb='git rebase -i $(fgl)'
+
+alias commitmessage='git log -n 1 --format="%s" '
+alias cmsg='commitmessage'
