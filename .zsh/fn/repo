@@ -1,5 +1,7 @@
 repo() {
-  local origin_url repo_url
+  local url_pattern origin_url repo_url
+
+  url_pattern='[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)'
 
   origin_url=$(git config --local remote.origin.url)
 
@@ -8,12 +10,14 @@ repo() {
     return 1
   fi
 
-  if [[ "$origin_url" =~ ^git@(github|GitHub|Github) ]]; then
+  if [[ "$origin_url" =~ $url_pattern ]]; then
+    open "$origin_url"
+  elif [[ "$origin_url" =~ ^git@(github|GitHub|Github) ]]; then
     repo_url=$(echo "$origin_url" | sed 's#^git@.*:#https://github.com/#g' | sed 's/.git$//g')
-    open "$repo_url"
+    [[ "$repo_url" =~ $url_pattern ]] && open "$repo_url"
   elif [[ "$origin_url" =~ ^git@(gitlab|GitLab|Gitlab) ]]; then
     repo_url=$(echo "$origin_url" | sed 's#^git@.*:#https://gitlab.com/#g' | sed 's/.git$//g')
-    open "$repo_url"
+    [[ "$repo_url" =~ $url_pattern ]] && open "$repo_url"
   else
     echo 'Error: Not supported hostname'
     return 1
