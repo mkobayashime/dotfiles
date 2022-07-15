@@ -5,7 +5,7 @@
   graph = log --oneline --graph --all --decorate --pretty=format:'%C(yellow)%h%Creset %C(green)%d%Creset %s %C(blue)[%an]%Creset %ad' --date=format:'%Y.%m.%d %H:%M:%S'
 [core]
   quotepath = false
-  excludesfile = ~/.gitignore-global
+  excludesfile = ~/.config/git/ignore
 [color]
   diff = auto
   status = auto
