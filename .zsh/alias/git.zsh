@@ -31,8 +31,6 @@ alias gcp="git cherry-pick"
 alias ggraph="git graph"
 alias gg="git graph"
 
-alias remote="gh repo view --web"
-alias repo="gh repo view --web"
 alias pr="gh pr view -w"
 alias prn="gh pr create"
 alias prnf="gh pr create -f"

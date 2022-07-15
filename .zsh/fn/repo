@@ -1,0 +1,21 @@
+repo() {
+  local origin_url repo_url
+
+  origin_url=$(git config --local remote.origin.url)
+
+  if [[ "$origin_url" == '' ]]; then
+    echo 'Error: No origin url found'
+    return 1
+  fi
+
+  if [[ "$origin_url" =~ ^git@(github|GitHub|Github) ]]; then
+    repo_url=$(echo "$origin_url" | sed 's#^git@.*:#https://github.com/#g' | sed 's/.git$//g')
+    open "$repo_url"
+  elif [[ "$origin_url" =~ ^git@(gitlab|GitLab|Gitlab) ]]; then
+    repo_url=$(echo "$origin_url" | sed 's#^git@.*:#https://gitlab.com/#g' | sed 's/.git$//g')
+    open "$repo_url"
+  else
+    echo 'Error: Not supported hostname'
+    return 1
+  fi
+}
