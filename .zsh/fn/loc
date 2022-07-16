@@ -57,7 +57,7 @@ loc() {
     return 1
   fi
 
-  command=$(printenv | grep "^LOC_CMD_$command_name=" | sed 's/.*=//')
+  command=$(printenv | grep "^LOC_CMD_$command_name=" | sed "s/^LOC_CMD_$command_name=//")
 
   if [[ "$command" == '' ]]; then
     echo "Command not found: LOC_CMD_$command_name"
