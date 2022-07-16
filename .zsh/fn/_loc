@@ -3,15 +3,27 @@
 _loc() {
   _arguments \
     '1: :->commands' \
+    {-w,--which}'[print the command]: :->which' \
     '(- *)'{-l,--list-commands}'[list available commands]' \
     '(- *)'{-h,--help}'[show help message]'
 
   case "$state" in
     commands)
-      cmds=($(loc -l))
-      if [[ "${#cmds[@]}" != 0 ]]; then
-        _values 'commands' "${cmds[@]}"
-      fi
+      _commands
+      ;;
+    which)
+      _which
       ;;
   esac
+}
+
+_commands() {
+  cmds=($(loc -l))
+  if [[ "${#cmds[@]}" != 0 ]]; then
+    _values 'commands' "${cmds[@]}"
+  fi
+}
+
+_which() {
+  _commands
 }

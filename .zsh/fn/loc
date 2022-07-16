@@ -19,11 +19,17 @@ loc() {
 
     echo 'OPTIONS'
     echo '  -l, --list-commands'
+    echo '  -w, --which'
     echo '  -h, --help'
   }
 
   list_loc_cmds() {
     printenv | grep '^LOC_CMD_' | sed 's/^LOC_CMD_//' | sed 's/=.*//' | sed 's/.*/\L&/'
+  }
+
+  get_cmd_body() {
+    local cmd_name=$1
+    printenv | grep "^LOC_CMD_$cmd_name=" | sed "s/^LOC_CMD_$cmd_name=//"
   }
 
   for OPT in "$@"; do
@@ -34,6 +40,10 @@ loc() {
         ;;
       -l | --list-commands)
         list_loc_cmds
+        return 0
+        ;;
+      -w | --which)
+        get_cmd_body "${2:u}"
         return 0
         ;;
       -*)
@@ -57,7 +67,7 @@ loc() {
     return 1
   fi
 
-  command=$(printenv | grep "^LOC_CMD_$command_name=" | sed "s/^LOC_CMD_$command_name=//")
+  command=$(get_cmd_body "$command_name")
 
   if [[ "$command" == '' ]]; then
     echo "Command not found: LOC_CMD_$command_name"
