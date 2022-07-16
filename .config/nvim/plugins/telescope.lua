@@ -8,7 +8,9 @@ require('telescope').setup {
         ["<C-k>"] = "move_selection_previous",
       },
       n = {
-        ["<C-c>"] = "close"
+        ["<C-c>"] = "close",
+        ["<C-j>"] = "move_selection_next",
+        ["<C-k>"] = "move_selection_previous",
       },
     },
     vimgrep_arguments = {
