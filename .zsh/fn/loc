@@ -28,7 +28,7 @@ loc() {
   }
 
   get_cmd_body() {
-    local cmd_name=$1
+    local cmd_name=${1:u}
     printenv | grep "^LOC_CMD_$cmd_name=" | sed "s/^LOC_CMD_$cmd_name=//"
   }
 
@@ -43,7 +43,7 @@ loc() {
         return 0
         ;;
       -w | --which)
-        get_cmd_body "${2:u}"
+        get_cmd_body "$2"
         return 0
         ;;
       -*)
@@ -52,7 +52,7 @@ loc() {
         ;;
       *)
         # this should be the command name
-        command_name=${1:u}
+        command_name=$1
         shift
 
         # the rest will be the free args
