@@ -3,6 +3,7 @@
 _loc() {
   _arguments \
     '1: :->commands' \
+    '(*): :->files' \
     {-w,--which}'[print the command]: :->which' \
     '(- *)'{-l,--list-commands}'[list available commands]' \
     '(- *)'{-h,--help}'[show help message]'
@@ -10,6 +11,9 @@ _loc() {
   case "$state" in
     commands)
       _commands
+      ;;
+    files)
+      _files -W "$(pwd)"
       ;;
     which)
       _which
