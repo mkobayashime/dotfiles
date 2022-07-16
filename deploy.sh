@@ -10,7 +10,7 @@ fi
 mkdir -p "$HOME/.config"
 
 for f in .??* .config/*; do
-  [[ "$f" = ".git" ]] || [[ "$f" = ".gitignore" ]] || [[ "$f" = ".gitmodules" ]] || [[ "$f" = ".config" ]] && continue
+  [[ "$f" = ".git" ]] || [[ "$f" = ".gitignore" ]] || [[ "$f" = ".gitmodules" ]] || [[ "$f" = ".config" ]] || [[ "$f" = "installers" ]] && continue
 
   ln -snfv "$DOTPATH/$f" "$HOME/$f"
 done
