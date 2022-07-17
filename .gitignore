@@ -1,5 +1,4 @@
 .vim/.netrwhist
 .vim/plugged
 
-.tmux/plugins
-.tmux/resurrect/
+.config/tmux/plugins
