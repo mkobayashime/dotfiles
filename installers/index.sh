@@ -15,7 +15,11 @@ logger_end() {
 
   echo ''
   echo ''
-  echo "SUCCESSFULLY INSTALLED $1"
+  if [[ "$2" == 1 ]]; then
+    echo "COULDN'T INSTALL $1"
+  else
+    echo "SUCCESSFULLY INSTALLED $1"
+  fi
   echo '####################'
   echo ''
 }
@@ -28,6 +32,9 @@ for f in "$base_dir"/*; do
   toolname=$(basename "$f" | sed -e 's@\..*@@')
 
   logger_begin "$toolname"
-  $f
-  logger_end "$toolname"
+  if $f; then
+    logger_end "$toolname"
+  else
+    logger_end "$toolname" 1
+  fi
 done
