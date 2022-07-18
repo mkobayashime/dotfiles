@@ -9,8 +9,15 @@ fi
 
 mkdir -p "$HOME/.config"
 
-for f in .??* .config/*; do
-  [[ "$f" = ".git" ]] || [[ "$f" = ".gitignore" ]] || [[ "$f" = ".gitmodules" ]] || [[ "$f" = ".config" ]] || [[ "$f" = "installers" ]] && continue
+deploy_targets=(
+  .bin
+  .vim
+  .zsh
+  .config/*
+  .vimrc
+  .zshrc
+)
 
+for f in "${deploy_targets[@]}"; do
   ln -snfv "$DOTPATH/$f" "$HOME/$f"
 done
