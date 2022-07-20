@@ -5,3 +5,8 @@ submodule:
 
 deploy: submodule
 	./deploy.sh
+
+tools:
+	./installers/index.sh
+
+setup: deploy tools
