@@ -9,4 +9,7 @@ deploy: submodule
 tools:
 	./installers/index.sh
 
+packages:
+	zsh -ci 'source ./install-packages.zsh'
+
 setup: deploy tools
