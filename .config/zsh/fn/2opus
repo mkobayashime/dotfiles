@@ -1,0 +1,5 @@
+2opus() {
+  for file in "$@"; do
+    ffmpeg -i "$file" -acodec libopus -b:a 256k "${file%.*}.opus"
+  done
+}
