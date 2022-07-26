@@ -12,7 +12,6 @@ mkdir -p "$HOME/.config"
 deploy_targets=(
   .bin
   .vim
-  .zsh
   .config/*
   .vimrc
   .zshrc

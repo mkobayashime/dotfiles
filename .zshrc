@@ -36,26 +36,26 @@ fi
 
 # prompt
 
-fpath+="$HOME/.zsh/pure"
+fpath+="$HOME/.config/zsh/pure"
 autoload -U promptinit
 promptinit
 prompt pure
 
 # functions
 
-fpath+="$HOME/.zsh/fn"
+fpath+="$HOME/.config/zsh/fn"
 autoload -Uz "${fpath[-1]}"/*(.:t)
 autoload -Uz zmv
 
 # tools
 
-for f in ~/.zsh/tools/*; do
+for f in ~/.config/zsh/tools/*; do
   source "$f"
 done
 
 # alias
 
-source "$HOME/.zsh/alias/index.zsh"
+source "$HOME/.config/zsh/alias/index.zsh"
 
 # bin
 
@@ -63,7 +63,7 @@ export PATH="$HOME/.bin":"$PATH"
 
 # auto completion
 
-fpath+=("$HOME/.zsh/completion")
+fpath+=("$HOME/.config/zsh/completion")
 
 if hascommand brew; then
   fpath+=("$(brew --prefix)/share/zsh/site-functions")
@@ -72,7 +72,7 @@ fi
 # plugins
 
 export ADOTDIR="$HOME/.cache/antigen"
-source "$HOME/.zsh/antigen/bin/antigen.zsh"
+source "$HOME/.config/zsh/antigen/bin/antigen.zsh"
 
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting

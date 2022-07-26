@@ -1,4 +1,4 @@
-for i in "$HOME/.zsh/alias"/*; do
+for i in "$HOME/.config/zsh/alias"/*; do
   if [[ ! "$i" =~ /index.zsh$ ]]; then
     source "$i"
   fi
