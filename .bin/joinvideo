@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -eu
+
+list=$(mktemp)
+
+trap '{ rm -f "$list" ; }' EXIT
+
+for f in "$@"; do
+  echo "file '$(realpath $f)'" >> "$list"
+done
+
+ffmpeg -f concat -safe 0 -i "$list" -c copy joined.mp4
