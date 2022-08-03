@@ -12,6 +12,9 @@ set expandtab
 
 set signcolumn=yes
 
+set ignorecase
+set smartcase
+
 set list
 set listchars=trail:·,tab:>-,nbsp:␣,precedes:«,extends:»
 
