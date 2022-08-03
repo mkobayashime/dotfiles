@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -eu
+
+filename=$1
+
+[[ "$filename" == '' ]] && exit 1
+
+filename=$(basename "$filename")
+echo "${filename%.*}"
