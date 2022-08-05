@@ -2,7 +2,7 @@ main() {
   local nix_packages
 
   if ! hascommand nix-env &> /dev/null; then
-    echo 'Maybe you have to run this from zsh, exiting...'
+    echo 'Command not found: nix-env. Maybe you have to run this from zsh, exiting...'
     exit 1
   fi
 
