@@ -1,5 +1,5 @@
 main() {
-  local nix_packages nix_prefixed_packages
+  local nix_packages
 
   if ! hascommand nix-env &> /dev/null; then
     echo 'Maybe you have to run this from zsh, exiting...'
@@ -27,12 +27,9 @@ main() {
     yt-dlp
   )
 
-  nix_prefixed_packages=()
   for p in "${nix_packages[@]}"; do
-    nix_prefixed_packages+=("nixpkgs.$p")
+    nix-env -iA "nixpkgs.$p"
   done
-
-  nix-env -iA "${nix_prefixed_packages[@]}"
 }
 
 main
