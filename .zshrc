@@ -61,6 +61,8 @@ source "$HOME/.config/zsh/alias/index.zsh"
 
 export PATH="$HOME/.bin":"$PATH"
 
+[[ -d "$HOME/.dotfiles-private/bin" ]] && export PATH="$HOME/.dotfiles-private/bin:$PATH"
+
 # auto completion
 
 fpath+=("$HOME/.config/zsh/completion")
