@@ -43,6 +43,12 @@ loc() {
         return 0
         ;;
       -w | --which)
+        if [[ -z "$2" ]]; then
+          echo 'Command name not provided for -w option'
+          echo 'Usage: loc -w <command_name>'
+          return 1
+        fi
+
         get_cmd_body "$2"
         return 0
         ;;
