@@ -1,6 +1,10 @@
 open() {
   if hascommand xdg-open; then
-    xdg-open "$@"
+    local args=()
+    for f in "$@"; do
+      args+=("$(printf '%q' "$f")")
+    done
+    echo "${args[@]}" | xargs -n 1 xdg-open
   elif hascommand open; then
     command open "$@"
   else
