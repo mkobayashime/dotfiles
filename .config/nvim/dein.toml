@@ -58,3 +58,6 @@ depends = ['vim-textobj-user']
 
 [[plugins]]
 repo = 'rmagatti/alternate-toggler'
+
+[[plugins]]
+repo = 'chrisbra/csv.vim'
