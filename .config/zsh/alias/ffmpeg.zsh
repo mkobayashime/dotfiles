@@ -1,0 +1,1 @@
+alias ffi='ffmpeg -i'
