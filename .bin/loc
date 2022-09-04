@@ -1,12 +1,15 @@
 #!/usr/bin/env bash
 
 usage() {
-  echo 'USAGE'
-  echo '  loc <command_name>'
+  cat << EOF
+USAGE
 
-  echo ''
+  loc <command_name>
 
-  echo 'AVAILABLE COMMANDS'
+AVAILABLE COMMANDS
+
+EOF
+
   if [[ $(loc -l) == '' ]]; then
     echo '  No command is available here'
   fi
@@ -14,12 +17,32 @@ usage() {
     echo "  - $CMD"
   done
 
-  echo ''
+  cat << EOF
 
-  echo 'OPTIONS'
-  echo '  -l, --list-commands'
-  echo '  -w, --which'
-  echo '  -h, --help'
+OPTIONS
+
+  -l, --list-commands
+  -w, --which
+  -h, --help
+
+COMMAND DEFINITION
+
+  Export env variables prefixed with LOC_CMD_, like LOC_CMD_DO_SOMETHING.
+
+    export LOC_CMD_DO_SOMETHING='echo hello'
+
+  The command above can be executed with the form "loc do_something".
+
+    loc do_something world
+    # -> echo hello world
+
+  If the command starts with -I{}, all additional args will be inserted
+  to the position of {} like the option with the same name of xargs.
+
+    export LOC_CMD_FOO='-I{} mv {} ./dest'
+    loc foo aa bb
+    # -> mv aa bb ./dest
+EOF
 }
 
 list_loc_cmds() {
