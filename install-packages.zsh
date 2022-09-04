@@ -27,9 +27,20 @@ main() {
     yt-dlp
   )
 
+  nix_packages_mac=(
+    bash
+    gnused
+  )
+
   for p in "${nix_packages[@]}"; do
     nix-env -iA "nixpkgs.$p"
   done
+
+  isMac && {
+    for p in "${nix_packages_mac[@]}"; do
+      nix-env -iA "nixpkgs.$p"
+    done
+  }
 }
 
 main
