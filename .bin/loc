@@ -77,6 +77,14 @@ command=$(get_cmd_body "$command_name")
 if [[ "$command" == '' ]]; then
   echo "Command not found: LOC_CMD_$command_name"
   exit 1
+elif [[ "$command" =~ ^-I\{\} ]]; then
+  command_body=$(echo $command | sed -e 's/-I{}\s*//')
+  command_head=${command_body%\{\}*}
+  command_tail=${command_body#*\{\} }
+
+  eval "$command_head" "$@" "$command_tail"
+  exit 0
 else
   eval "$command" "$@"
+  exit 0
 fi
