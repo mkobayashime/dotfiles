@@ -6,6 +6,8 @@ USAGE
 
   loc <command_name>
 
+  loc --which <command_name>
+
 AVAILABLE COMMANDS
 
 EOF
@@ -21,9 +23,9 @@ EOF
 
 OPTIONS
 
-  -l, --list-commands
-  -w, --which
-  -h, --help
+  -l, --list-commands   List available commands
+  -w, --which           Print command body defined with the command name
+  -h, --help            Print this help message
 
 COMMAND DEFINITION
 
