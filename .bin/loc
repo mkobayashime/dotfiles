@@ -107,9 +107,9 @@ elif [[ "$command" =~ ^-I\{\} ]]; then
   command_head=${command_body%\{\}*}
   command_tail=${command_body#*\{\} }
 
-  eval "$command_head" "$@" "$command_tail"
+  eval "$command_head" "$(printf '%q ' "$@")" "$command_tail"
   exit 0
 else
-  eval "$command" "$@"
+  eval "$command" "$(printf '%q ' "$@")"
   exit 0
 fi
