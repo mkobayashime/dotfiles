@@ -2,20 +2,11 @@
 
 _loc() {
   _arguments \
-    '1: :->commands' \
+    '1: :_commands' \
     '*: :_files' \
-    {-w,--which}'[print the command]: :->which' \
-    '(- *)'{-l,--list-commands}'[list available commands]' \
-    '(- *)'{-h,--help}'[show help message]'
-
-  case "$state" in
-    commands)
-      _commands
-      ;;
-    which)
-      _which
-      ;;
-  esac
+    {-w,--which}'[print the command]: :_commands' \
+    '(- *)'{-l,--list-commands}'[list available commands]: :->noop' \
+    '(- *)'{-h,--help}'[show help message]: :->noop'
 }
 
 _commands() {
@@ -23,8 +14,4 @@ _commands() {
   if [[ "${#cmds[@]}" != 0 ]]; then
     _values 'commands' "${cmds[@]}"
   fi
-}
-
-_which() {
-  _commands
 }
