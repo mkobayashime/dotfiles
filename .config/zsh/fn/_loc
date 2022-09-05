@@ -3,7 +3,7 @@
 _loc() {
   _arguments \
     '1: :->commands' \
-    '(*): :->files' \
+    '*: :->files' \
     {-w,--which}'[print the command]: :->which' \
     '(- *)'{-l,--list-commands}'[list available commands]' \
     '(- *)'{-h,--help}'[show help message]'
