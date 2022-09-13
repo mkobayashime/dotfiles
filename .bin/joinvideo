@@ -6,6 +6,12 @@ list=$(mktemp)
 
 trap '{ rm -f "$list" ; }' EXIT
 
+if [[ -f joined.mp4 ]]; then
+  echo -n 'joined.mp4 already exists. Overwrite? [y/N] '
+  read -r overwrite
+  [[ "$overwrite" != 'y' ]] && exit 0
+fi
+
 for f in "$@"; do
   echo "file '$(realpath $f)'" >> "$list"
 done
