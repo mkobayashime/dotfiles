@@ -42,7 +42,7 @@ fgl() {
   done
 
   if [[ "$commit_count" == '' ]]; then
-    commit_count=30
+    commit_count=100
   elif [[ "$commit_count" =~ ^[0-9]+$ ]]; then
     :
   else
