@@ -12,6 +12,7 @@ main() {
     fd
     ffmpeg
     fzf
+    gawk
     gh
     gotop
     icdiff
