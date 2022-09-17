@@ -1,3 +1,0 @@
-fcf() {
-  git commit --fixup "$(fgl)"
-}
