@@ -1,5 +1,0 @@
-function 2aac() {
-  for file in "$@"; do
-    ffmpeg -i "$file" -c:a aac -b:a 256k "${file%.*}.m4a"
-  done
-}
