@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+file=$(mktemp)
+
+git symbolic-ref --short HEAD > "$file"
+echo -e "\n\n" >> "$file"
+echo "# Empty line 1 to cancel" >> "$file"
+"${EDITOR:-vim}" "$file"
+
+bname=$(head -n 1 "$file")
+if [[ "$bname" == '' ]]; then
+  echo 'Error: New branch name must not be empty' 1>&2
+  exit 1
+else
+  git branch -m "$bname"
+fi
+
+rm "$file"
+
+exit 0
