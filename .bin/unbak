@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+for FILE in "$@"; do
+  if [[ -e "$FILE" ]]; then
+    case "$FILE" in
+      *.BAK)
+        mv "$FILE" "${FILE/.BAK/}"
+        ;;
+      *.bak)
+        mv "$FILE" "${FILE/.bak/}"
+        ;;
+      *)
+        echo "Not a .BAK file: $FILE"
+        ;;
+    esac
+  else
+    echo "$FILE not found"
+  fi
+done
