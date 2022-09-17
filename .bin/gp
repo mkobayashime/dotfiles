@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -eu
+
+for OPT in "$@"; do
+  case $OPT in
+    -f)
+      echo "DON'T DO THAT AGAIN" 1>&2
+      exit 1
+      ;;
+  esac
+done
+
+git push "$@"
