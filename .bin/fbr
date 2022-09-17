@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -eu
+
+branches=$(git branch -vv)
+branch=$(echo "$branches" | fzf --ansi | awk '{print $1}' | sed "s/.* //")
+if [[ "$branch" != '*' ]]; then
+  git switch "$branch"
+fi
