@@ -2,18 +2,18 @@
 
 usage() {
   cat << EOF
-USAGE
+USAGE:
 
   loc <command_name>
 
   loc --which <command_name>
 
-AVAILABLE COMMANDS
+AVAILABLE COMMANDS:
 
 EOF
 
   if [[ $(loc -l) == '' ]]; then
-    echo '  No command is available here'
+    echo '  No commands are available here'
   fi
   for CMD in $(loc -l); do
     echo "  - $CMD"
@@ -21,13 +21,13 @@ EOF
 
   cat << EOF
 
-OPTIONS
+OPTIONS:
 
   -l, --list-commands   List available commands
   -w, --which           Print command body defined with the command name
   -h, --help            Print this help message
 
-COMMAND DEFINITION
+COMMAND DEFINITION:
 
   Export env variables prefixed with LOC_CMD_, like LOC_CMD_DO_SOMETHING.
 
