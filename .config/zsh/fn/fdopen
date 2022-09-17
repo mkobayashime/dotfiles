@@ -1,6 +1,0 @@
-fdopen() {
-  local file
-
-  file=$(fd "$@" | fzf)
-  [[ "$file" != '' ]] && open "$file"
-}
