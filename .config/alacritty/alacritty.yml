@@ -1,36 +1,3 @@
-live_config_reload: true
-window:
-  startup_mode: Maximized
-  padding:
-    x: 10
-    y: 5
-  opacity: 0.8
-font:
-  size: 12
-  normal:
-    family: JetBrains Mono NL
-colors:
-  primary:
-    background: "#000000"
-    foreground: "#d6dbe5"
-  normal:
-    black: "#1f1f1f"
-    red: "#f81118"
-    green: "#2dc55e"
-    yellow: "#ecba0f"
-    blue: "#2a84d2"
-    magenta: "#4e5ab7"
-    cyan: "#1081d6"
-    white: "#d6dbe5"
-  bright:
-    black: "#c2c7cf"
-    red: "#de352e"
-    green: "#1dd361"
-    yellow: "#f3bd09"
-    blue: "#1081d6"
-    magenta: "#5350b9"
-    cyan: "#0f7ddb"
-    white: "#ffffff"
-  selection:
-    text: CellForeground
-    background: "#434547"
+import:
+  - ~/.config/alacritty/default.yaml
+  - ~/.config/alacritty/local.yaml
