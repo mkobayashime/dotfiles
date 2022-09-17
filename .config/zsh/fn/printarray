@@ -1,3 +1,0 @@
-printarray() {
-  printf '%s\n' "$@"
-}
