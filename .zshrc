@@ -53,16 +53,16 @@ for f in ~/.config/zsh/tools/*; do
   source "$f"
 done
 
-# alias
-
-source "$HOME/.config/zsh/alias/index.zsh"
-
 # bin
 
 export PATH="$HOME/.bin":"$PATH"
 export PATH="$HOME/.local/bin":"$PATH"
 
 [[ -d "$HOME/.dotfiles-private/bin" ]] && export PATH="$HOME/.dotfiles-private/bin:$PATH"
+
+# alias
+
+source "$HOME/.config/zsh/alias/index.zsh"
 
 # auto completion
 
