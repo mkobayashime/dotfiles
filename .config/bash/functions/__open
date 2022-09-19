@@ -2,11 +2,7 @@ source ~/.config/bash/functions/__hascommand
 
 __open() {
   if __hascommand xdg-open; then
-    local args=()
-    for f in "$@"; do
-      args+=("$(printf '%q' "$f")")
-    done
-    echo "${args[@]}" | xargs -n 1 xdg-open
+    printf '%q ' "$@" | xargs -n 1 xdg-open
   elif __hascommand open; then
     command open "$@"
   else
