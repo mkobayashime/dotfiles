@@ -102,6 +102,10 @@ command_body=$(get_cmd_body "$command_name")
 if [[ "$command_body" == '' ]]; then
   echo "Command not found: LOC_CMD_$command_name"
   exit 1
+elif [[ $# -eq 0 ]]; then
+  echo "$command_body"
+  eval "$command_body"
+  exit 0
 elif [[ "$command_body" =~ ^-I\{\} ]]; then
   command_body_without_keyword=$(echo $command_body | sed -e 's/-I{}\s*//')
   command_head=${command_body_without_keyword%\{\}*}
