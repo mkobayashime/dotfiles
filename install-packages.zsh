@@ -16,6 +16,7 @@ main() {
     gh
     gotop
     icdiff
+    jq
     pdftk
     ripgrep
     saml2aws
