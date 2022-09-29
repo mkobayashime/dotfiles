@@ -9,6 +9,7 @@ alias gpf="git push --force-with-lease"
 alias gpu="git pull"
 alias gprune="git pull --prune"
 alias gb="git branch"
+alias gbd='git branch -D'
 alias gc="git commit -m"
 alias gcv="INSERT=true git commit -v"
 alias gcf="git commit --fixup"
