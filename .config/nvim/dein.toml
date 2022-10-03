@@ -57,6 +57,9 @@ repo = 'jceb/vim-textobj-uri'
 depends = ['vim-textobj-user']
 
 [[plugins]]
+repo = 'machakann/vim-sandwich'
+
+[[plugins]]
 repo = 'rmagatti/alternate-toggler'
 
 [[plugins]]
