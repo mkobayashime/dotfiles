@@ -58,6 +58,7 @@ depends = ['vim-textobj-user']
 
 [[plugins]]
 repo = 'machakann/vim-sandwich'
+hook_add = 'source ~/.config/nvim/plugins/vim-sandwich.vim'
 
 [[plugins]]
 repo = 'rmagatti/alternate-toggler'

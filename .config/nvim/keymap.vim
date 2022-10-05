@@ -163,3 +163,19 @@ vnoremap <nowait><expr> <C-m> coc#float#has_scroll() ? coc#float#scroll(0) : "\<
 
 " alternate-toggler
 nnoremap <Leader>to :ToggleAlternate<CR>
+
+" vim-sandwich
+nmap <nowait> ds <Plug>(sandwich-delete)
+nmap <nowait> dsb <Plug>(sandwich-delete-auto)
+nmap <nowait> ys <Plug>(sandwich-add)
+vmap <nowait> ys <Plug>(sandwich-add)
+nmap <nowait> cs <Plug>(sandwich-replace)
+nmap <nowait> csb <Plug>(sandwich-replace-auto)
+omap ib <Plug>(textobj-sandwich-auto-i)
+xmap ib <Plug>(textobj-sandwich-auto-i)
+omap ab <Plug>(textobj-sandwich-auto-a)
+xmap ab <Plug>(textobj-sandwich-auto-a)
+omap is <Plug>(textobj-sandwich-query-i)
+xmap is <Plug>(textobj-sandwich-query-i)
+omap as <Plug>(textobj-sandwich-query-a)
+xmap as <Plug>(textobj-sandwich-query-a)
