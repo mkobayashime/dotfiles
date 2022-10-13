@@ -49,6 +49,7 @@ repo = 'vim-denops/denops.vim'
 [[plugins]]
 repo = 'yuki-yano/fuzzy-motion.vim'
 on_cmd = 'FuzzyMotion'
+hook_source = 'source ~/.config/nvim/plugins/fuzzy-motion.vim'
 depends = ['denops.vim']
 
 [[plugins]]
