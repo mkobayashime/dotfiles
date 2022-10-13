@@ -81,6 +81,9 @@ nnoremap <Leader>fr :Telescope coc references<CR>
 nnoremap <Leader>fd :Telescope coc definitions<CR>
 nnoremap <Leader>fi :Telescope coc implementations<CR>
 
+" fuzzy-motion.vim
+nnoremap <Leader>fm :FuzzyMotion<CR>
+
 " === fern
 
 nnoremap <silent> <Leader>e :<C-u>Fern . -reveal=%:p<CR>
