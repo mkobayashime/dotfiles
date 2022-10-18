@@ -2,12 +2,12 @@ fdcd() {
   local file dirname
 
   if ! hascommand fd; then
-    echo 'Command not found: fd'
+    echo 'Command not found: fd' 1>&2
     return 1
   fi
 
   if ! hascommand fzf; then
-    echo 'Command not found: fzf'
+    echo 'Command not found: fzf' 1>&2
     return 1
   fi
 

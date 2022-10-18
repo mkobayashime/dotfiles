@@ -68,8 +68,8 @@ for OPT in "$@"; do
       ;;
     -w | --which)
       if [[ -z "$2" ]]; then
-        echo 'Command name not provided for -w option'
-        echo 'Usage: loc -w <command_name>'
+        echo 'Command name not provided for -w option' 1>&2
+        echo 'Usage: loc -w <command_name>' 1>&2
         exit 1
       fi
 
@@ -93,14 +93,14 @@ for OPT in "$@"; do
 done
 
 if [[ "$command_name" == '' ]]; then
-  echo 'Command name not passed'
+  echo 'Command name not passed' 1>&2
   exit 1
 fi
 
 command_body=$(get_cmd_body "$command_name")
 
 if [[ "$command_body" == '' ]]; then
-  echo "Command not found: LOC_CMD_$command_name"
+  echo "Command not found: LOC_CMD_$command_name" 1>&2
   exit 1
 elif [[ $# -eq 0 ]]; then
   echo "$command_body"

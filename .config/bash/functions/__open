@@ -6,7 +6,7 @@ __open() {
   elif __hascommand open; then
     command open "$@"
   else
-    echo "'open' or 'xdg-open' command needed"
+    echo "'open' or 'xdg-open' command needed" 1>&2
     return 1
   fi
 }
