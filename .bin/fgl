@@ -30,7 +30,7 @@ for OPT in "$@"; do
       shift 1
       ;;
     -*)
-      echo "Unknown option -- $1" 1>&2
+      echo "Unknown option: $1" 1>&2
       exit 1
       ;;
     *)
