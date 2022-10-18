@@ -45,3 +45,4 @@ alias fcf='git commit --fixup $(fgl)'
 
 alias commitmessage='git log -n 1 --format="%s" '
 alias cmsg='commitmessage'
+alias fcmsg='commitmessage $(fgl)'
