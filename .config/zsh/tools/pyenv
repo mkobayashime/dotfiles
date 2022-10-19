@@ -1,0 +1,7 @@
+if [ -d "$HOME/.config/pyenv/bin" ]; then
+  export PATH="$HOME/.config/pyenv/bin:$PATH"
+fi
+if hascommand pyenv; then
+  export PYENV_ROOT="$HOME/.config/pyenv"
+  eval "$(pyenv init -)"
+fi
