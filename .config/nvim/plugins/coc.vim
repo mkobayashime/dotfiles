@@ -10,6 +10,7 @@ let g:coc_global_extensions = [
   \ "coc-json",
   \ "coc-omni",
   \ "coc-prettier",
+  \ "coc-pyright",
   \ "coc-sh",
   \ "coc-solargraph",
   \ "coc-spell-checker",
