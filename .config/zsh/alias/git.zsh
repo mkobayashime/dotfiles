@@ -2,6 +2,7 @@ alias g="git"
 alias ginit="git init && gcinit"
 alias ga="git add"
 alias ga.="git add ."
+alias gan='git add -N'
 alias gd="git diff"
 alias gdw="git diff -w"
 alias gs="git status"
