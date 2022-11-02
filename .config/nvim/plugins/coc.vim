@@ -14,6 +14,7 @@ let g:coc_global_extensions = [
   \ "coc-sh",
   \ "coc-solargraph",
   \ "coc-spell-checker",
+  \ "coc-stylelintplus",
   \ "coc-tsserver",
   \ "coc-yaml",
 \ ]

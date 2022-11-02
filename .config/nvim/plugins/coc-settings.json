@@ -43,6 +43,15 @@
   "eslint.autoFixOnSave": true,
   "prettier.requireConfig": true,
 
+  // CSS
+  "stylelintplus.autoFixOnFormat": true,
+  "stylelintplus.autoFixOnSave": true,
+  "stylelintplus.validateOnType": true,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "wxss.validate": false,
+
   // Ruby
   "solargraph.useBundler": true,
   "solargraph.formatting": true,
