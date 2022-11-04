@@ -10,6 +10,7 @@ _yarn() {
   case "$state" in
     commands)
       _commands
+      _scripts
       ;;
     args)
       case ${line[1]} in
