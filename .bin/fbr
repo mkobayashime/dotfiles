@@ -2,7 +2,7 @@
 
 set -eu
 
-branches=$(git branch -vv)
+branches=$(git branch -vv | grep '^[^*]')
 branch=$(echo "$branches" | fzf --ansi | awk '{print $1}' | sed "s/.* //")
 if [[ "$branch" != '*' ]]; then
   git switch "$branch"
