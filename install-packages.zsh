@@ -19,7 +19,6 @@ main() {
     jq
     pdftk
     ripgrep
-    saml2aws
     shellcheck
     shfmt
     tmux
