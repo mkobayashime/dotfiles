@@ -30,8 +30,8 @@ zstyle ':completion:*' completer _complete _approximate
 
 # local
 
-if [ -f "$HOME/.zshrc-local" ]; then
-  source "$HOME/.zshrc-local"
+if [ -f "$HOME/.zshrc.local" ]; then
+  source "$HOME/.zshrc.local"
 fi
 
 # prompt
