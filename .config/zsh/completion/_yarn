@@ -73,14 +73,36 @@ _commands() {
     'workspaces'
 }
 
-_scripts() {
-  local scripts
+find_package_json() {
+  depth=0
 
-  if [[ -f "package.json" ]]; then
+  check_current_dir() {
+    if [[ -f "package.json" ]]; then
+      pwd
+    else
+      if [[ "$depth" -lt 30 ]] && [[ "$PWD" != '/' ]]; then
+        depth=$((depth + 1))
+        cd ..
+        check_current_dir
+      else
+        echo ''
+      fi
+    fi
+  }
+
+  check_current_dir
+}
+
+_scripts() {
+  local package_json_dir scripts
+
+  package_json_dir=$(find_package_json)
+
+  if [[ -d "$package_json_dir" ]]; then
     scripts=()
     while IFS='' read -r line; do scripts+=("$line"); done < <(
       jq -r 'if .scripts then . else .scripts = {} end |
-        .scripts | keys | .[]' package.json \
+        .scripts | keys | .[]' "$package_json_dir/package.json" \
         | grep '\S' | sed -e 's#:#\\:#'
     )
     if [[ "${#scripts[@]}" != 0 ]]; then
@@ -90,14 +112,16 @@ _scripts() {
 }
 
 _deps() {
-  local deps
+  local package_json_dir deps
 
-  if [[ -f "package.json" ]]; then
+  package_json_dir=$(find_package_json)
+
+  if [[ -d "$package_json_dir" ]]; then
     deps=()
     while IFS='' read -r line; do deps+=("$line"); done < <(
       jq -r 'if .dependencies then . else .dependencies = {} end |
         if .devDependencies then . else .devDependencies = {} end |
-        [.dependencies, .devDependencies] | .[] | keys | .[]' package.json \
+        [.dependencies, .devDependencies] | .[] | keys | .[]' "$package_json_dir/package.json" \
         | grep '\S' | sed -e 's#:#\\:#'
     )
     if [[ "${#deps[@]}" != 0 ]]; then
