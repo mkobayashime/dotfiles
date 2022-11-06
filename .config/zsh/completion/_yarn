@@ -98,7 +98,7 @@ _scripts() {
 
   package_json_dir=$(__find_package_json)
 
-  if [[ -d "$package_json_dir" ]]; then
+  if [[ -f "$package_json_dir/package.json" ]]; then
     scripts=()
     while IFS='' read -r line; do scripts+=("$line"); done < <(
       jq -r 'if .scripts then . else .scripts = {} end |
@@ -116,7 +116,7 @@ _deps() {
 
   package_json_dir=$(__find_package_json)
 
-  if [[ -d "$package_json_dir" ]]; then
+  if [[ -f "$package_json_dir/package.json" ]]; then
     deps=()
     while IFS='' read -r line; do deps+=("$line"); done < <(
       jq -r 'if .dependencies then . else .dependencies = {} end |
