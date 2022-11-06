@@ -73,30 +73,30 @@ _commands() {
     'workspaces'
 }
 
-find_package_json() {
+__find_package_json() {
   depth=0
 
-  check_current_dir() {
+  __check_current_dir() {
     if [[ -f "package.json" ]]; then
       pwd
     else
       if [[ "$depth" -lt 30 ]] && [[ "$PWD" != '/' ]]; then
         depth=$((depth + 1))
         cd ..
-        check_current_dir
+        __check_current_dir
       else
         echo ''
       fi
     fi
   }
 
-  check_current_dir
+  __check_current_dir
 }
 
 _scripts() {
   local package_json_dir scripts
 
-  package_json_dir=$(find_package_json)
+  package_json_dir=$(__find_package_json)
 
   if [[ -d "$package_json_dir" ]]; then
     scripts=()
@@ -114,7 +114,7 @@ _scripts() {
 _deps() {
   local package_json_dir deps
 
-  package_json_dir=$(find_package_json)
+  package_json_dir=$(__find_package_json)
 
   if [[ -d "$package_json_dir" ]]; then
     deps=()
