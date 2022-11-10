@@ -8,7 +8,7 @@ url_pattern='^(https?)://[-A-Za-z0-9\+&@#/%?=~_|!:,.;]*[-A-Za-z0-9\+&@#/%=~_|]\.
 
 origin_url=$(git config --local remote.origin.url)
 
-if [[ "$origin_url" == '' ]]; then
+if [[ -z "$origin_url" ]]; then
   echo 'Error: No origin url found' 1>&2
   exit 1
 fi
