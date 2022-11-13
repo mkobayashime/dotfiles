@@ -38,7 +38,7 @@ alias prn="gh pr create"
 alias prnf="gh pr create -f"
 alias automerge='gh pr merge --auto'
 
-alias wip="git commit -m 'WIP' --no-verify"
+alias wip="git commit -m 'WIP [skip ci]' --no-verify"
 alias wipa="git add . && wip"
 
 alias fgrb='git rebase -i $(fgl)'
