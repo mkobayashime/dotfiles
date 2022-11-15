@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ -f ~/.nix-profile/bin/nix ]]; then
+if [[ -d ~/.nix-profile ]]; then
   echo 'nix already installed'
   exit 0
 else
