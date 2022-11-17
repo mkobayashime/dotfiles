@@ -1,5 +1,5 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "coc.preferences.formatOnSave": true,
   "diagnostic.errorSign": ">>",
   "diagnostic.warningSign": ">>",
   "diagnostic.infoSign": ">",
@@ -35,7 +35,7 @@
     "highlight": "CocFloatingAdhocTransparent"
   },
   "dialog.floatHighlight": "CocFloatingAdhocTransparent",
-  "colors.filetypes": ["*"],
+  "colors.enable": true,
   "highlight.colorNames.enable": false,
   "coc.source.omni.filetypes": ["stylus"],
 
