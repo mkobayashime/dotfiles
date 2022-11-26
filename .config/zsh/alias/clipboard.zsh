@@ -1,2 +1,2 @@
-hascommand xclip && alias pbcopy="xclip -selection clipboard"
-hascommand xclip && alias pbpaste="xclip -selection clipboard -o"
+isLinux && alias pbcopy="xclip -selection clipboard"
+isLinux && alias pbpaste="xclip -selection clipboard -o"
