@@ -1,6 +1,6 @@
 augroup colorscheme
   au!
-  au VimEnter * nested colorscheme onedark
+  au VimEnter * ++nested colorscheme onedark
 augroup END
 
 let g:onedark_color_overrides = {
