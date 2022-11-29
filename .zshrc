@@ -28,12 +28,6 @@ zstyle ':completion:*:default' menu select=1
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' completer _complete _approximate
 
-# local
-
-if [ -f "$HOME/.zshrc.local" ]; then
-  source "$HOME/.zshrc.local"
-fi
-
 # prompt
 
 fpath+="$HOME/.config/zsh/pure"
@@ -70,6 +64,12 @@ fpath+=("$HOME/.config/zsh/completion")
 
 if hascommand brew; then
   fpath+=("$(brew --prefix)/share/zsh/site-functions")
+fi
+
+# local
+
+if [ -f "$HOME/.zshrc.local" ]; then
+  source "$HOME/.zshrc.local"
 fi
 
 # plugins
