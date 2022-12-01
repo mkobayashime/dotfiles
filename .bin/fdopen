@@ -3,4 +3,4 @@
 source ~/.config/bash/functions/__open
 
 file=$(fd "$@" | fzf)
-[[ "$file" != '' ]] && __open "$file"
+[[ -e "$file" ]] && __open "$file"
