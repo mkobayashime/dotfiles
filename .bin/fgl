@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
 usage() {
-  echo 'OPTIONS'
-  echo '  -f, --full-hash'
-  echo '  -h, --help'
+  cat << EOL
+OPTIONS
+  -f, --full-hash
+  -h, --help
 
-  echo ''
-
-  echo 'EXAMPLE'
-  echo '  fgl 10'
-  echo '    - Search recent 10 commits and outputs the abbr hash'
-  echo '  fgl 100 -f'
-  echo '    - Search recent 100 commits and outputs the full hash'
+EXAMPLE
+  fgl 10
+    - Search recent 10 commits and outputs the abbr hash
+  fgl 100 -f
+    - Search recent 100 commits and outputs the full hash
+EOL
 }
 
 if [[ ! -d '.git' ]]; then
