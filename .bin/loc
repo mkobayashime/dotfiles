@@ -12,7 +12,7 @@ AVAILABLE COMMANDS:
 
 EOF
 
-  if [[ $(loc -l) == '' ]]; then
+  if [[ ! $(loc -l) ]]; then
     echo '  No commands are available here'
   fi
   for CMD in $(loc -l); do
@@ -67,7 +67,7 @@ for OPT in "$@"; do
       exit 0
       ;;
     -w | --which)
-      if [[ -z "$2" ]]; then
+      if [[ ! "$2" ]]; then
         echo 'Command name not provided for -w option' 1>&2
         echo 'Usage: loc -w <command_name>' 1>&2
         exit 1
@@ -92,7 +92,7 @@ for OPT in "$@"; do
   esac
 done
 
-if [[ "$command_name" == '' ]]; then
+if [[ ! "$command_name" ]]; then
   echo 'Command name not passed' 1>&2
   exit 1
 fi
