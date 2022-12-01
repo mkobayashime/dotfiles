@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+set -e
+
+source=$1
+
+if [[ ! "$1" ]]; then
+  cat << ERR
+Source zip file not provided.
+
+USAGE:
+    unziptodir <source.zip>
+ERR
+  exit 1
+fi
+
+filename=$(trimext "$source")
+filedir=$(dirname "$source")
+
+if [[ ! "$filename" ]] || [[ ! -d "$filedir" ]]; then
+  echo "Failed to get where to unzip." 1>&2
+  exit 1
+fi
+
+destdir="$filedir/$filename"
+
+if [[ -e "$destdir" ]]; then
+  echo -n "$destdir already exists. Overwrite? [y/N] "
+  read -r overwrite
+  [[ "$overwrite" != 'y' ]] && exit 0
+fi
+
+mkdir -p "$destdir"
+
+unzip "$source" -d "$destdir"
