@@ -4,6 +4,6 @@ set -eu
 
 branches=$(git branch -vv | grep '^[^*]')
 branch=$(echo "$branches" | fzf --ansi | awk '{print $1}' | sed "s/.* //")
-if [[ "$branch" != '*' ]] && [[ -n "$branch" ]]; then
+if [[ "$branch" != '*' ]] && [[ "$branch" ]]; then
   git switch "$branch"
 fi
