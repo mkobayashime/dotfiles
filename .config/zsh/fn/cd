@@ -1,24 +1,24 @@
 function cd() {
-  local target
+  setopt local_options
+  setopt err_return
+  setopt pipe_fail
+
+  local dirs target
 
   if [[ "$#" != 0 ]]; then
     builtin cd "$@" || return
     return
   fi
 
-  if ! hascommand fzf; then
-    echo 'Command not found: fzf' 1>&2
+  dirs="$(fd -L . --exact-depth 1 -t d | sort -V)"
+
+  # Ensure the function stops without calling `fzf`
+  # when some error happen in setting `$dirs`
+  target="$(echo $dirs | fzf)"
+
+  if [[ ! "$target" ]]; then
     return 1
   fi
 
-  if ! hascommand fd; then
-    echo 'Command not found: fd' 1>&2
-    return 1
-  fi
-
-  target="$(fd -L . --exact-depth 1 -t d | sort -V | fzf)" || return
-
-  if [[ "$target" != '' ]]; then
-    cd "$target" || return
-  fi
+  cd "$target" || return $?
 }
