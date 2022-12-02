@@ -1,0 +1,6 @@
+#compdef unziptodir
+
+_unziptodir() {
+  _arguments \
+    '*: :_files -g "*.zip *.ZIP"'
+}
