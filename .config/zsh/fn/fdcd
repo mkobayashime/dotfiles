@@ -1,21 +1,16 @@
 fdcd() {
-  local file dirname
+  setopt local_options
+  setopt err_return
+  setopt pipe_fail
 
-  if ! hascommand fd; then
-    echo 'Command not found: fd' 1>&2
-    return 1
-  fi
+  local files file dirname
 
-  if ! hascommand fzf; then
-    echo 'Command not found: fzf' 1>&2
-    return 1
-  fi
-
-  file=$(fd --max-results 1000 "$@" | fzf --ansi)
-  [[ "$file" == "" ]] && return 1
+  files=$(fd --max-results 1000 "$@")
+  file=$(echo "$files" | fzf --ansi)
+  [[ ! "$file" ]] && return 1
 
   dirname=$(dirname "$file")
-  [[ "$dirname" == '' ]] && return 1
+  [[ ! "$dirname" ]] && return 1
 
   cd "$dirname" || return
 }
