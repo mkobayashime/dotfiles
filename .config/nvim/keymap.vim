@@ -60,9 +60,15 @@ endfunction
 
 " === window end
 
-" telescope
+" === telescope
+
+function! IsInGitDir()
+  call system("git rev-parse --is-inside-work-tree")
+  return ! v:shell_error
+endfunction
+
 nnoremap <Leader>tr :Telescope resume<CR>
-nnoremap <Leader>ff :Telescope find_files<CR>
+nnoremap <expr> <Leader>ff IsInGitDir() ? ":Telescope git_files<CR>" : ":Telescope find_files<CR>"
 nnoremap <expr> <Leader>fF ":Telescope find_files cwd=" . expand('%:p:h') . "<CR>"
 nnoremap <Leader>fo :Telescope oldfiles<CR>
 nnoremap <Leader>fg :Telescope live_grep<CR>
@@ -80,6 +86,8 @@ nnoremap <Leader>fe :Telescope coc diagnostics<CR>
 nnoremap <Leader>fr :Telescope coc references<CR>
 nnoremap <Leader>fd :Telescope coc definitions<CR>
 nnoremap <Leader>fi :Telescope coc implementations<CR>
+
+" === telescope end
 
 " fuzzy-motion.vim
 nnoremap <Leader>fm :FuzzyMotion<CR>
