@@ -1,6 +1,7 @@
 augroup colorscheme
   au!
   au VimEnter * ++nested colorscheme onedark
+  au ColorScheme * call onedark#extend_highlight("StatusLine", { "bg": { "gui": "None", "cterm": "None", "cterm16": "None" } })
 augroup END
 
 let g:onedark_color_overrides = {
