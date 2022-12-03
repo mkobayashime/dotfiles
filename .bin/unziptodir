@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-set -e
+set -eu
 
-source=$1
+source=${1:-}
 
-if [[ ! "$1" ]]; then
+if [[ ! "$source" ]]; then
   cat << ERR
 Source zip file not provided.
 
