@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source=${1:-}
+
+npx --yes mdpdf --gh-style --style ~/.config/mdpdf/custom.css "$source"
