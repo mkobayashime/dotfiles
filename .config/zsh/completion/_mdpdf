@@ -1,0 +1,6 @@
+#compdef mdpdf
+
+_mdpdf() {
+  _arguments \
+    '*: :_files -g "*.md"'
+}
