@@ -7,6 +7,7 @@ main() {
   fi
 
   nix_packages=(
+    bat
     deno
     direnv
     fd
