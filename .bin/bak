@@ -12,6 +12,6 @@ for FILE in "$@"; do
         ;;
     esac
   else
-    echo "$FILE not found"
+    echo "$FILE not found" 1>&2
   fi
 done
