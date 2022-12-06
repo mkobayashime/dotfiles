@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 source ~/.config/bash/functions/__open
 
-file=$(fd "$@" | fzf)
+files=$(fd "$@")
+file=$(echo "$files" | fzf)
 [[ -e "$file" ]] && __open "$file"

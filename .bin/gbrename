@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+set -euo pipefail
 
 file=$(mktemp)
 
@@ -11,8 +11,7 @@ echo "# Empty line 1 to cancel" >> "$file"
 
 bname=$(head -n 1 "$file")
 if [[ ! "$bname" ]]; then
-  echo 'Error: New branch name must not be empty' 1>&2
-  exit 1
+  exit 0
 else
   git branch -m "$bname"
 fi

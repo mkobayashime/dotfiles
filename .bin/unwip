@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 recent_commit=$(git log --format="%s" -1)
 
 if [[ "$recent_commit" == "WIP" ]] || [[ "$recent_commit" == "WIP [skip ci]" ]]; then
