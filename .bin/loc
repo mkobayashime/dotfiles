@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -eo pipefail
+set -euo pipefail
 
 usage() {
   cat << EOF
@@ -50,12 +50,25 @@ EOF
 }
 
 list_loc_cmds() {
-  printenv | grep '^LOC_CMD_' | sed 's/^LOC_CMD_//' | sed 's/=.*//' | sed 's/.*/\L&/'
+  printenv | grep '^LOC_CMD_' | sed 's/^LOC_CMD_//' | sed 's/=.*//' | sed 's/.*/\L&/' || echo ''
 }
 
 get_cmd_body() {
-  local cmd_name=$1
-  printenv | grep "^LOC_CMD_$cmd_name=" | sed "s/^LOC_CMD_$cmd_name=//"
+  local cmd_name cmd_body
+
+  cmd_name=${1:-}
+  if [[ ! "$cmd_name" ]]; then
+    echo "Command name not passed for get_cmd_body" 1>&2
+    exit 1
+  fi
+
+  cmd_body=$(printenv | grep "^LOC_CMD_$cmd_name=" | sed "s/^LOC_CMD_$cmd_name=//" || echo '')
+  if [[ ! "$cmd_body" ]]; then
+    echo "Command not defined: LOC_CMD_$cmd_name" 1>&2
+    exit 1
+  fi
+
+  echo "$cmd_body"
 }
 
 for OPT in "$@"; do
@@ -69,13 +82,15 @@ for OPT in "$@"; do
       exit 0
       ;;
     -w | --which)
-      if [[ ! "$2" ]]; then
+      command_name_which=${2:-}
+      command_name_which=${command_name_which^^}
+      if [[ ! "$command_name_which" ]]; then
         echo 'Command name not provided for -w option' 1>&2
         echo 'Usage: loc -w <command_name>' 1>&2
         exit 1
       fi
 
-      get_cmd_body "${2^^}"
+      get_cmd_body "$command_name_which"
       exit 0
       ;;
     -*)
@@ -84,7 +99,8 @@ for OPT in "$@"; do
       ;;
     *)
       # this should be the command name
-      command_name=${1^^}
+      command_name=${1:-}
+      command_name=${command_name^^}
       shift
 
       # the rest will be the free args
@@ -94,21 +110,14 @@ for OPT in "$@"; do
   esac
 done
 
-if [[ ! "$command_name" ]]; then
+if [[ ! "${command_name:-}" ]]; then
   echo 'Command name not passed' 1>&2
   exit 1
 fi
 
 command_body=$(get_cmd_body "$command_name")
 
-if [[ "$command_body" == '' ]]; then
-  echo "Command not found: LOC_CMD_$command_name" 1>&2
-  exit 1
-elif [[ $# -eq 0 ]]; then
-  echo "$command_body"
-  eval "$command_body"
-  exit 0
-elif [[ "$command_body" =~ ^-I\{\} ]]; then
+if [[ "$command_body" =~ ^-I\{\} ]]; then
   command_body_without_keyword=$(echo $command_body | sed -e 's/-I{}\s*//')
   command_head=${command_body_without_keyword%\{\}*}
   command_tail=${command_body_without_keyword#*\{\} }
@@ -116,6 +125,10 @@ elif [[ "$command_body" =~ ^-I\{\} ]]; then
 
   echo "$command"
   eval "$command"
+  exit 0
+elif [[ $# -eq 0 ]]; then
+  echo "$command_body"
+  eval "$command_body"
   exit 0
 else
   command="$command_body $(printf '%q ' "$@")"
