@@ -6,22 +6,54 @@ source ~/.config/bash/functions/__open
 
 url_pattern='^(https?)://[-A-Za-z0-9\+&@#/%?=~_|!:,.;]*[-A-Za-z0-9\+&@#/%=~_|]\.[-A-Za-z0-9\+&@#/%?=~_|!:,.;]*[-A-Za-z0-9\+&@#/%=~_|]$'
 
-origin_url=$(git config --local remote.origin.url)
+open() {
+  local repo
+  repo=${1:-}
 
-if [[ -z "$origin_url" ]]; then
-  echo 'Error: No origin url found' 1>&2
-  exit 1
-fi
+  if [[ ! "$repo" ]]; then
+    echo 'Repo not provided' 1>&2
+    exit 1
+  fi
 
-if [[ "$origin_url" =~ $url_pattern ]]; then
-  __open "${origin_url%.git}"
-elif [[ "$origin_url" =~ ^git@(github|GitHub|Github) ]]; then
-  repo_url=$(echo "$origin_url" | sed 's#^git@.*:#https://github.com/#g' | sed 's/.git$//g')
-  [[ "$repo_url" =~ $url_pattern ]] && __open "$repo_url"
-elif [[ "$origin_url" =~ ^git@(gitlab|GitLab|Gitlab) ]]; then
-  repo_url=$(echo "$origin_url" | sed 's#^git@.*:#https://gitlab.com/#g' | sed 's/.git$//g')
-  [[ "$repo_url" =~ $url_pattern ]] && __open "$repo_url"
-else
-  echo 'Error: Not supported hostname' 1>&2
-  exit 1
-fi
+  if "${stdout:-false}"; then
+    echo "$repo"
+  else
+    __open "$repo"
+  fi
+}
+
+main() {
+  origin_url=$(git config --local remote.origin.url)
+
+  if [[ -z "$origin_url" ]]; then
+    echo 'Error: No origin url found' 1>&2
+    exit 1
+  fi
+
+  if [[ "$origin_url" =~ $url_pattern ]]; then
+    open "${origin_url%.git}"
+  elif [[ "$origin_url" =~ ^git@(github|GitHub|Github) ]]; then
+    repo_url=$(echo "$origin_url" | sed 's#^git@.*:#https://github.com/#g' | sed 's/.git$//g')
+    [[ "$repo_url" =~ $url_pattern ]] && open "$repo_url"
+  elif [[ "$origin_url" =~ ^git@(gitlab|GitLab|Gitlab) ]]; then
+    repo_url=$(echo "$origin_url" | sed 's#^git@.*:#https://gitlab.com/#g' | sed 's/.git$//g')
+    [[ "$repo_url" =~ $url_pattern ]] && open "$repo_url"
+  else
+    echo 'Error: Not supported hostname' 1>&2
+    exit 1
+  fi
+}
+
+for OPT in "$@"; do
+  case $OPT in
+    -o | --stdout)
+      stdout=true
+      ;;
+    -*)
+      echo "Unknown option: $1" 1>&2
+      exit 1
+      ;;
+  esac
+done
+
+main

@@ -1,0 +1,6 @@
+#compdef repo
+
+_repo() {
+  _arguments \
+    {-o,--stdout}'[output to stdout]' \
+}
