@@ -68,7 +68,7 @@ function! IsInGitDir()
 endfunction
 
 nnoremap <Leader>tr :Telescope resume<CR>
-nnoremap <expr> <Leader>ff IsInGitDir() ? ":Telescope git_files<CR>" : ":Telescope find_files<CR>"
+nnoremap <expr> <Leader>ff IsInGitDir() ? ":Telescope git_files show_untracked=true<CR>" : ":Telescope find_files<CR>"
 nnoremap <expr> <Leader>fF ":Telescope find_files cwd=" . expand('%:p:h') . "<CR>"
 nnoremap <Leader>fo :Telescope oldfiles<CR>
 nnoremap <Leader>fg :Telescope live_grep<CR>
