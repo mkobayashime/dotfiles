@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 node_version=18.12.1
 
 if [[ -d ~/.config/nodenv ]]; then

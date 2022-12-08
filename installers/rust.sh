@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 source ~/.config/bash/functions/__hascommand
 
 if __hascommand rustup; then

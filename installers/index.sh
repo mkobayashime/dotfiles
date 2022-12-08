@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 logger_begin() {
-  [[ "$1" == '' ]] && exit 1
+  [[ ! "${1:-}" ]] && return 1
 
   echo ''
   echo '####################'
@@ -11,11 +13,11 @@ logger_begin() {
 }
 
 logger_end() {
-  [[ "$1" == '' ]] && exit 1
+  [[ ! "${1:-}" ]] && return 1
 
   echo ''
   echo ''
-  if [[ "$2" == 1 ]]; then
+  if [[ "${2:-0}" == 1 ]]; then
     echo "COULDN'T INSTALL $1"
   else
     echo "SUCCESSFULLY INSTALLED $1"
@@ -29,7 +31,12 @@ base_dir=$(dirname "$0")
 for f in "$base_dir"/*; do
   [[ "$f" =~ index.sh$ ]] && continue
 
-  toolname=$(basename "$f" | sed -e 's@\..*@@')
+  toolname=$(basename "$f" | sed -e 's@\..*@@' || echo '')
+
+  if [[ ! "$toolname" ]]; then
+    echo "Failed to get toolname of $f" 1>&2
+    continue
+  fi
 
   logger_begin "$toolname"
   if $f; then

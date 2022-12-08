@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 ruby_version=3.1.2
 
 if [[ -d ~/.config/rbenv ]]; then
