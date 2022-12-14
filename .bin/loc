@@ -119,21 +119,17 @@ command_body=$(get_cmd_body "$command_name")
 
 if [[ "$command_body" =~ ^-I\{\} ]]; then
   command_body_without_keyword=$(echo $command_body | sed -e 's/-I{}\s*//')
+
   command_head=${command_body_without_keyword%\{\}*}
   command_tail=${command_body_without_keyword#*\{\} }
-  command="$command_head $(printf '%q ' "$@") $command_tail"
 
-  echo "$command"
-  eval "$command"
-  exit 0
+  command="$command_head $(printf '%q ' "$@") $command_tail"
 elif [[ $# -eq 0 ]]; then
-  echo "$command_body"
-  eval "$command_body"
-  exit 0
+  command="$command_body"
 else
   command="$command_body $(printf '%q ' "$@")"
-
-  echo "$command"
-  eval "$command"
-  exit 0
 fi
+
+echo "$command"
+eval "$command"
+exit 0
