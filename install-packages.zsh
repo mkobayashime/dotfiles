@@ -34,15 +34,19 @@ main() {
     gnused
   )
 
+  prefixed_nix_packages=()
+
   for p in "${nix_packages[@]}"; do
-    nix-env -iA "nixpkgs.$p"
+    prefixed_nix_packages+=("nixpkgs.$p")
   done
 
   isMac && {
     for p in "${nix_packages_mac[@]}"; do
-      nix-env -iA "nixpkgs.$p"
+      prefixed_nix_packages+=("nixpkgs.$p")
     done
   }
+
+  nix-env -iA "${prefixed_nix_packages[@]}"
 }
 
 main
