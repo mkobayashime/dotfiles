@@ -15,7 +15,7 @@ AVAILABLE COMMANDS:
 EOF
 
   if [[ ! $(loc -l) ]]; then
-    echo '  No commands are available here'
+    echo '  No command available here'
   fi
   for CMD in $(loc -l); do
     echo "  - $CMD"
