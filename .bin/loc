@@ -123,7 +123,11 @@ if [[ "$command_body" =~ ^-I\{\} ]]; then
   command_head=${command_body_without_keyword%\{\}*}
   command_tail=${command_body_without_keyword#*\{\} }
 
-  command="$command_head $(printf '%q ' "$@") $command_tail"
+  if [[ $# -eq 0 ]]; then
+    command="$command_head $command_tail"
+  else
+    command="$command_head $(printf '%q ' "$@") $command_tail"
+  fi
 elif [[ $# -eq 0 ]]; then
   command="$command_body"
 else
