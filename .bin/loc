@@ -27,6 +27,7 @@ OPTIONS:
 
   -l, --list-commands   List available commands
   -w, --which           Print command body defined with the command name
+  -v, --verbose         Print the command body before execution
   -h, --help            Print this help message
 
 COMMAND DEFINITION:
@@ -81,6 +82,10 @@ for OPT in "$@"; do
       list_loc_cmds
       exit 0
       ;;
+    -v | --verbose)
+      verbose=true
+      shift 1
+      ;;
     -w | --which)
       command_name_which=${2:-}
       command_name_which=${command_name_which^^}
@@ -134,6 +139,6 @@ else
   command="$command_body $(printf '%q ' "$@")"
 fi
 
-echo "$command"
+[[ "${verbose:-false}" == true ]] && echo "$command"
 eval "$command"
 exit 0

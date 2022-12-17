@@ -6,6 +6,7 @@ _loc() {
     '*: :_files' \
     {-w,--which}'[print the command]: :_commands' \
     '(- *)'{-l,--list-commands}'[list available commands]: :->noop' \
+    {-v,--verbose}'[print the command body before execution]' \
     '(- *)'{-h,--help}'[show help message]: :->noop'
 }
 
