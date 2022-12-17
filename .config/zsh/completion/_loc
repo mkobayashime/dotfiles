@@ -1,12 +1,28 @@
 #compdef loc
 
 _loc() {
+  # local state
+
   _arguments \
-    '1: :_commands' \
-    '*: :_files' \
-    {-w,--which}'[print the command]: :_commands' \
-    '(- *)'{-l,--list-commands}'[list available commands]: :->noop' \
-    '(- *)'{-h,--help}'[show help message]: :->noop'
+    '1: :->commands' \
+    '*: :->rest' \
+    {-w,--which}'[print the command]: :->which' \
+    {-l,--list-commands}'[list available commands]: :->noop' \
+    {-h,--help}'[show help message]: :->noop'
+
+  case "$state" in
+    commands)
+      [[ ${#words[@]} == 2 ]] && _commands
+      ;;
+    rest)
+      _files
+      ;;
+    which)
+      _commands
+      ;;
+    noop) ;;
+
+  esac
 }
 
 _commands() {
