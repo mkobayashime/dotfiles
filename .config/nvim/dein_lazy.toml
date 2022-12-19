@@ -88,3 +88,8 @@ on_ft = ['stylus']
 [[plugins]]
 repo = 'mkobayashime/vim-stylus-supremacy'
 on_ft = ['stylus']
+
+[[plugins]]
+repo = 'petertriho/nvim-scrollbar'
+on_event = 'BufReadPost'
+hook_source = 'source ~/.config/nvim/plugins/nvim-scrollbar.lua'
