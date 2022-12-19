@@ -51,7 +51,7 @@ EOF
 }
 
 list_loc_cmds() {
-  printenv | grep '^LOC_CMD_' | sed 's/^LOC_CMD_//' | sed 's/=.*//' | sed 's/.*/\L&/' || echo ''
+  printenv | grep '^LOC_CMD_' | sed 's/^LOC_CMD_//' | sed 's/=.*//' | sed 's/.*/\L&/' | sort || echo ''
 }
 
 get_cmd_body() {
