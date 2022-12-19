@@ -4,7 +4,7 @@ for i in "$HOME/.config/zsh/alias"/*; do
   fi
 done
 
-alias -g e="$EDITOR"
+alias e="$EDITOR"
 alias ya="yarn"
 
 # zsh
