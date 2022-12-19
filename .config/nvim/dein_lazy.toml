@@ -78,6 +78,7 @@ source ~/.config/nvim/plugins/git-conflict.nvim.vim
 
 [[plugins]]
 repo = 'iamcco/markdown-preview.nvim'
+rev = '*'
 on_ft = ['markdown', 'pandoc.markdown', 'rmd']
 build = 'sh -c "cd app && yarn install"'
 
