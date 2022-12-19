@@ -1,8 +1,8 @@
 alias ls='ls -v --color=always --group-directories-first'
 
 # BSD
-ls --help &> /dev/null
-if [[ $? -ne 0 ]]; then
+
+if ! ls --help &> /dev/null; then
   alias ls='ls -G'
 fi
 
