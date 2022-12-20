@@ -32,4 +32,23 @@ fi
 
 mkdir -p "$destdir"
 
-unzip "$source" -d "$destdir"
+unzip -o "$source" -d "$destdir"
+
+mapfile -t files_in_dest < <(fd --max-depth 1 -H '' "$destdir")
+
+if [[ "${#files_in_dest[@]}" == 1 ]] && [[ -d "${files_in_dest[0]}" ]]; then
+  inner_dir_in_dest=$(basename "${files_in_dest[0]}")
+  inner_dir_in_dest_tmp="__TMP_$inner_dir_in_dest"
+
+  echo "The zip has a top level directory: $inner_dir_in_dest"
+  echo "Moving the files inside to the destination..."
+
+  cd "$destdir"
+
+  mv "$inner_dir_in_dest" "$inner_dir_in_dest_tmp"
+
+  shopt -s dotglob
+  mv -- "$inner_dir_in_dest_tmp"/* .
+
+  rmdir "$inner_dir_in_dest_tmp"
+fi
