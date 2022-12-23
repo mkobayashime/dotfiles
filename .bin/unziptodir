@@ -6,7 +6,7 @@ source=${1:-}
 
 if [[ ! "$source" ]]; then
   cat << ERR
-Source zip file not provided.
+Missing source zip file.
 
 USAGE:
     unziptodir <source.zip>
