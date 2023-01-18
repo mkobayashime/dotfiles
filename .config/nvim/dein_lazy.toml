@@ -84,6 +84,10 @@ build = 'sh -c "cd app && yarn install"'
 hook_source = 'source ~/.config/nvim/plugins/markdown-preview.vim'
 
 [[plugins]]
+repo = 'rust-lang/rust.vim'
+on_ft = ['rust']
+
+[[plugins]]
 repo = 'iloginow/vim-stylus'
 on_ft = ['stylus']
 

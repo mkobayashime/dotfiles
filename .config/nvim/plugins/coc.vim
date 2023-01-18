@@ -11,6 +11,7 @@ let g:coc_global_extensions = [
   \ "coc-omni",
   \ "coc-prettier",
   \ "coc-pyright",
+  \ "coc-rust-analyzer",
   \ "coc-sh",
   \ "coc-solargraph",
   \ "coc-spell-checker",
