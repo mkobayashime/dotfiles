@@ -2,6 +2,7 @@ let g:coc_config_home = '~/.config/nvim/plugins'
 
 let g:coc_global_extensions = [
   \ "coc-css",
+  \ "coc-deno",
   \ "coc-diagnostic",
   \ "coc-docker",
   \ "coc-eslint",
