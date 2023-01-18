@@ -1,4 +1,4 @@
-augroup colorscheme
+augroup onedark
   au!
   au VimEnter * ++nested colorscheme onedark
   au ColorScheme * call onedark#extend_highlight("StatusLine", { "bg": { "gui": "None", "cterm": "None", "cterm16": "None" } })

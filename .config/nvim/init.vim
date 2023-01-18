@@ -25,3 +25,4 @@ endif
 execute 'source ' . s:nvim_config_dir . '/basic-options.vim'
 execute 'source ' . s:nvim_config_dir . '/keymap.vim'
 execute 'source ' . s:nvim_config_dir . '/autocmd.vim'
+execute 'source ' . s:nvim_config_dir . '/highlight.vim'

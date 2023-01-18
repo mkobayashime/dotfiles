@@ -20,21 +20,16 @@
   },
   "hover.floatConfig": {
     "border": true,
-    "highlight": "CocFloatingAdhocTransparent"
   },
   "diagnostic.floatConfig": {
     "border": true,
-    "highlight": "CocFloatingAdhocTransparent"
   },
   "signature.floatConfig": {
     "border": true,
-    "highlight": "CocFloatingAdhocTransparent"
   },
   "suggest.floatConfig": {
     "border": true,
-    "highlight": "CocFloatingAdhocTransparent"
   },
-  "dialog.floatHighlight": "CocFloatingAdhocTransparent",
   "colors.enable": true,
   "highlight.colorNames.enable": false,
   "coc.source.omni.filetypes": ["stylus"],
