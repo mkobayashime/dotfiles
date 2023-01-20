@@ -34,6 +34,22 @@
   "highlight.colorNames.enable": false,
   "coc.source.omni.filetypes": ["stylus"],
 
+  "languageserver": {
+    // Haskell
+    "haskell": {
+      "command": "haskell-language-server-wrapper",
+      "args": ["--lsp"],
+      "rootPatterns": [
+        ".stack.yaml",
+        ".hie-bios",
+        "BUILD.bazel",
+        "cabal.config",
+        "package.yaml"
+      ],
+      "filetypes": ["hs", "lhs", "haskell"]
+    }
+  },
+
   // JavaScript
   "eslint.autoFixOnSave": true,
   "prettier.requireConfig": true,
