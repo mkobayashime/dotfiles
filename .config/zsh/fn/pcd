@@ -1,0 +1,9 @@
+function pcd() {
+  target=$(fproject)
+
+  if [[ -d "$target" ]]; then
+    cd "$target" || return 1
+  else
+    return 1
+  fi
+}
