@@ -1,17 +1,26 @@
 let s:nvim_config_dir = expand('~/.config/nvim')
 
-let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.cache') : $XDG_CACHE_HOME
-let s:dein_path = s:cache_home . '/dein'
-let s:dein_repo_path = s:dein_path . '/repos/github.com/Shougo/dein.vim'
-
-if !isdirectory(s:dein_repo_path)
-  echo('Installing dein...')
-  call system('sh <(curl https://raw.githubusercontent.com/shougo/dein.vim/master/bin/installer.sh) ' . shellescape(s:dein_path))
+let $CACHE = expand('~/.cache')
+if !isdirectory($CACHE)
+  call mkdir($CACHE, 'p')
 endif
-execute 'set runtimepath+=' . s:dein_repo_path
 
-if dein#load_state(s:dein_path)
-  call dein#begin(s:dein_path)
+let s:dein_base = $CACHE . '/dein/'
+let s:dein_src = s:dein_base . '/repos/github.com/Shougo/dein.vim'
+
+if &runtimepath !~# '/dein.vim'
+  let s:dein_dir = fnamemodify('dein.vim', ':p')
+  if !isdirectory(s:dein_dir)
+    if !isdirectory(s:dein_src)
+      execute '!git clone https://github.com/Shougo/dein.vim' s:dein_src
+    endif
+  endif
+  execute 'set runtimepath^=' . substitute(
+        \ fnamemodify(s:dein_src, ':p') , '[/\\]$', '', '')
+endif
+
+if dein#load_state(s:dein_base)
+  call dein#begin(s:dein_base)
   call dein#load_toml('~/.config/nvim/dein.toml', {'lazy': 0})
   call dein#load_toml('~/.config/nvim/dein_lazy.toml', {'lazy': 1})
   call dein#end()
