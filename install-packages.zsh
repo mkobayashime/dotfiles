@@ -17,6 +17,7 @@ main() {
     gh
     gotop
     icdiff
+    imagemagick
     jq
     pdftk
     ripgrep
