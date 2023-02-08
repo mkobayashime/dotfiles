@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+case "$OSTYPE" in
+  darwin*)
+    cat - | iconv -f UTF8 -t UTF8-MAC
+    ;;
+  *)
+    cat -
+    ;;
+esac
