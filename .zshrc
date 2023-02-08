@@ -60,6 +60,8 @@ source "$HOME/.config/zsh/alias/index.zsh"
 
 # auto completion
 
+autoload -Uz compinit && compinit
+
 fpath+=("$HOME/.config/zsh/completion")
 
 if hascommand brew; then
