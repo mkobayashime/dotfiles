@@ -15,7 +15,6 @@ main() {
     fzf
     gawk
     gh
-    gotop
     icdiff
     imagemagick
     jq
@@ -24,7 +23,6 @@ main() {
     shellcheck
     shfmt
     tmux
-    vlc
     whois
     xclip
     yt-dlp
