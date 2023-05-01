@@ -75,7 +75,9 @@
     "mkdir",
     "mkobayashime",
     "signup",
-    "typecheck"
+    "typecheck",
+    "noreferrer",
+    "noopener",
   ],
   "cSpell.enabledLanguageIds": [
     "asciidoc",
