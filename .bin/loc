@@ -125,8 +125,8 @@ command_body=$(get_cmd_body "$command_name")
 if [[ "$command_body" =~ ^-I\{\} ]]; then
   command_body_without_keyword=$(echo $command_body | sed -e 's/-I{}\s*//')
 
-  command_head=${command_body_without_keyword%\{\}*}
-  command_tail=${command_body_without_keyword#*\{\} }
+  command_head=$(sed -e 's@{}.*@@' <<< "$command_body_without_keyword")
+  command_tail=$(sed -e 's@.*{}@@' <<< "$command_body_without_keyword")
 
   if [[ $# -eq 0 ]]; then
     command="$command_head $command_tail"
