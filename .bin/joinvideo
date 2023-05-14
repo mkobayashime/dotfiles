@@ -12,8 +12,12 @@ if [[ -f joined.mp4 ]]; then
   [[ "$overwrite" != 'y' ]] && exit 0
 fi
 
+IFS=$'\n'
+
 for f in "$@"; do
   echo "file '$(realpath $f)'" >> "$list"
 done
+
+unset IFS
 
 ffmpeg -f concat -safe 0 -i "$list" -c copy joined.mp4
