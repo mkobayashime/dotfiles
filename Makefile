@@ -1,20 +1,17 @@
 all:
 
-.PHONY: submodule
-submodule:
+submodule: PHONY
 	git submodule update --init
 
-.PHONY: deploy
-deploy: submodule
+deploy: submodule PHONY
 	./deploy.sh
 
-.PHONY: tools
-tools:
+tools: PHONY
 	./installers/index.sh
 
-.PHONY: packages
-packages:
+packages: PHONY
 	zsh -ci 'source ./install-packages.zsh'
 
-.PHONY: setup
-setup: deploy tools
+setup: deploy tools PHONY
+
+PHONY:
