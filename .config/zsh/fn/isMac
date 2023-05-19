@@ -1,0 +1,10 @@
+function isMac() {
+  case "$OSTYPE" in
+    darwin*)
+      return 0
+      ;;
+    *)
+      return 1
+      ;;
+  esac
+}

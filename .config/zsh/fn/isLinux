@@ -1,0 +1,10 @@
+function isLinux() {
+  case "$OSTYPE" in
+    linux*)
+      return 0
+      ;;
+    *)
+      return 1
+      ;;
+  esac
+}
