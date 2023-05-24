@@ -1,0 +1,6 @@
+#compdef fbr
+
+_fbr() {
+  _arguments \
+    {-o,--stdout}'[output to stdout]' \
+}

@@ -2,8 +2,25 @@
 
 set -euo pipefail
 
+for OPT in "$@"; do
+  case $OPT in
+    -o | --stdout)
+      stdout=true
+      ;;
+    -*)
+      echo "Unknown option: $1" 1>&2
+      exit 1
+      ;;
+  esac
+done
+
 branches=$(git branch -vv | grep '^[^*]')
 branch=$(echo "$branches" | fzf --ansi | awk '{print $1}' | sed "s/.* //")
+
 if [[ "$branch" != '*' ]] && [[ "$branch" ]]; then
-  git switch "$branch"
+  if "${stdout:-false}"; then
+    echo "$branch"
+  else
+    git switch "$branch"
+  fi
 fi
