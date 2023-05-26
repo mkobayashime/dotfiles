@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if [[ "$#" == 0 ]]; then
+  exit 0
+fi
+
+filename_mode_original='Original'
+filename_mode_index='Indexed'
+
+filename_mode=$(printf "%s\n%s" \
+  "$filename_mode_original" "$filename_mode_index" \
+  | fzf --prompt 'Filename mode: ')
+
+if [[ ! "$filename_mode" ]]; then
+  exit 0
+fi
+
+tmpdir=$(mktemp -d -p .)
+
+i=0
+for url in "$@"; do
+  if [[ "$filename_mode" == "$filename_mode_original" ]]; then
+    curl -O -J "$url"
+  elif [[ "$filename_mode" == "$filename_mode_index" ]]; then
+    indexed_dir="$tmpdir/$i"
+    mkdir -p "$indexed_dir"
+    curl --output-dir "$indexed_dir" -O -J "$url"
+  else
+    exit 1
+  fi
+
+  i=$((i + 1))
+done
+
+if [[ "$filename_mode" == "$filename_mode_index" ]]; then
+  pushd "$tmpdir" > /dev/null
+
+  dirs_output=$(fd -t d -d 1)
+  mapfile -t dirs <<< "$dirs_output"
+
+  for dir in "${dirs[@]}"; do
+    dir=$(sed 's@/$@@' <<< "$dir")
+
+    pushd "$dir" > /dev/null
+
+    files_output=$(fd -t f)
+    mapfile -t files <<< "$files_output"
+
+    for file in "${files[@]}"; do
+      mv "$file" "../$dir-$file"
+    done
+
+    popd > /dev/null
+
+    rmdir "$dir"
+  done
+
+  popd > /dev/null
+
+  mv "$tmpdir"/* .
+  rmdir "$tmpdir"
+fi
