@@ -30,6 +30,8 @@ vnoremap P "_xP
 " intuitive j/k
 nnoremap j gj
 nnoremap k gk
+nnoremap 0 g0
+nnoremap $ g$
 
 " move cursor in insert mode
 inoremap <C-k> <Up>
