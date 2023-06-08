@@ -10,6 +10,7 @@ main() {
     bat
     deno
     direnv
+    exiftool
     fd
     ffmpeg
     fzf
