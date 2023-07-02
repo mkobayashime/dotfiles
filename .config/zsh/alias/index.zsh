@@ -5,7 +5,6 @@ for i in "$HOME/.config/zsh/alias"/*; do
 done
 
 alias e="$EDITOR"
-alias ya="yarn"
 
 # zsh
 alias zmv="noglob zmv"
