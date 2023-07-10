@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+for file in "$@"; do
+  ffmpeg -i "$file" "${file%.*}.mp4"
+done
