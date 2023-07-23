@@ -45,12 +45,23 @@ on_source = 'nvim-treesitter'
 
 [[plugins]]
 repo = 'vim-denops/denops.vim'
+on_event = 'CursorHold'
 
 [[plugins]]
 repo = 'yuki-yano/fuzzy-motion.vim'
 on_cmd = 'FuzzyMotion'
 hook_source = 'source ~/.config/nvim/plugins/fuzzy-motion.vim'
 depends = ['denops.vim']
+
+[[plugins]]
+repo = 'lambdalisue/kensaku.vim'
+depends = ['denops.vim']
+
+[[plugins]]
+repo = 'lambdalisue/kensaku-search.vim'
+on_event = 'CursorHold'
+hook_source = 'cnoremap <CR> <Plug>(kensaku-search-replace)<CR>'
+depends = ['kensaku.vim']
 
 [[plugins]]
 repo = 'windwp/nvim-autopairs'
