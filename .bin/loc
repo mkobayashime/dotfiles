@@ -6,9 +6,10 @@ usage() {
   cat << EOF
 USAGE:
 
-  loc <command_name>
-
-  loc --which <command_name>
+  loc [OPTIONS] COMMAND_NAME
+  loc --which COMMAND_NAME
+  loc --list-commands
+  loc --help
 
 AVAILABLE COMMANDS:
 
@@ -90,8 +91,9 @@ for OPT in "$@"; do
       command_name_which=${2:-}
       command_name_which=${command_name_which^^}
       if [[ ! "$command_name_which" ]]; then
-        echo 'Missing command name for -w option' 1>&2
-        echo 'USAGE: loc -w <command_name>' 1>&2
+        echo 'Fatal: Missing command name for -w option' 1>&2
+        echo
+        usage
         exit 1
       fi
 
@@ -116,7 +118,9 @@ for OPT in "$@"; do
 done
 
 if [[ ! "${command_name:-}" ]]; then
-  echo 'Missing command name' 1>&2
+  echo 'Fatal: Missing command name' 1>&2
+  echo
+  usage
   exit 1
 fi
 
