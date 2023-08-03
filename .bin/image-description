@@ -13,7 +13,15 @@ echoerr() {
 usage() {
   cat << EOF
 USAGE:
-  $cmd -d [description_text] FILE...
+  $cmd [-d DESCRIPTION_TEXT] [FILE...]
+  $cmd --help
+
+OPTIONS:
+  -d, --description DESCRIPTION_TEXT
+    Set this text to images as description
+
+  -h, --help
+    Show this message
 EOF
 }
 
