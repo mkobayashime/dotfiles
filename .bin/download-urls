@@ -136,4 +136,6 @@ if [[ "$filename_mode" == "$filename_mode_index" ]]; then
 
   mv "$tmpdir"/* .
   rmdir "$tmpdir"
+else
+  rmdir "$tmpdir"
 fi
