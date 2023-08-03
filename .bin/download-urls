@@ -10,6 +10,29 @@ filename_mode=''
 
 urls_not_cached=()
 
+usage() {
+  cat << EOL
+USAGE:
+  download-urls [OPTIONS] [URLS...]
+  download-urls [-O|-I] [--cache CACHE_FILE] [URLS...]
+  download-urls --help
+
+OPTIONS:
+  -O, --original-filename
+    Save with original filename
+
+  -I, --indexed
+    Save with original filename with leading index number
+
+  --cache CACHE_FILE
+    Cache successfully downloaded URLs to the cache file and
+    skip download from next time
+
+  --help
+    Show this message
+EOL
+}
+
 check_cache() {
   url=${1:-}
 
@@ -34,6 +57,10 @@ check_cache() {
 
 for OPT in "$@"; do
   case $OPT in
+    --help)
+      usage
+      exit 0
+      ;;
     --cache)
       cache_file=${2:-}
       if [[ ! -f "$cache_file" ]]; then
@@ -58,6 +85,7 @@ for OPT in "$@"; do
 done
 
 if [[ "$#" == 0 ]]; then
+  usage
   exit 0
 fi
 
