@@ -6,6 +6,7 @@ cache_file=''
 
 filename_mode_original='Original'
 filename_mode_index='Indexed'
+filename_mode=''
 
 urls_not_cached=()
 
@@ -41,6 +42,14 @@ for OPT in "$@"; do
 
       shift 2
       ;;
+    --original-filename | -O)
+      filename_mode="$filename_mode_original"
+      shift 1
+      ;;
+    --indexed | -I)
+      filename_mode="$filename_mode_index"
+      shift 1
+      ;;
     -*)
       echo "Unknown option: $1" 1>&2
       exit 1
@@ -69,9 +78,11 @@ if [[ "${#urls_not_cached[@]}" == 0 ]]; then
   exit 0
 fi
 
-filename_mode=$(printf "%s\n%s" \
-  "$filename_mode_original" "$filename_mode_index" \
-  | fzf --prompt 'Filename mode: ')
+if [[ ! "$filename_mode" ]]; then
+  filename_mode=$(printf "%s\n%s" \
+    "$filename_mode_original" "$filename_mode_index" \
+    | fzf --prompt 'Filename mode: ')
+fi
 
 if [[ ! "$filename_mode" ]]; then
   exit 0
