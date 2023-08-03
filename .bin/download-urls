@@ -2,6 +2,10 @@
 
 set -euo pipefail
 
+BOLD=$(tput bold)
+UNDERLINE=$(tput smul)
+NORMAL=$(tput sgr0)
+
 cache_file=''
 
 filename_mode_original='Original'
@@ -12,23 +16,23 @@ urls_not_cached=()
 
 usage() {
   cat << EOL
-USAGE:
-  download-urls [OPTIONS] [URLS...]
-  download-urls [-O|-I] [--cache CACHE_FILE] [URLS...]
+${BOLD}USAGE:${NORMAL}
+  download-urls [${UNDERLINE}OPTIONS${NORMAL}] [${UNDERLINE}URLS${NORMAL}...]
+  download-urls [-O|-I] [--cache ${UNDERLINE}CACHE_FILE${NORMAL}] [${UNDERLINE}URLS${NORMAL}...]
   download-urls --help
 
-OPTIONS:
-  -O, --original-filename
+${BOLD}OPTIONS:${NORMAL}
+  ${BOLD}-O, --original-filename${NORMAL}
     Save with original filename
 
-  -I, --indexed
+  ${BOLD}-I, --indexed${NORMAL}
     Save with original filename with leading index number
 
-  --cache CACHE_FILE
+  ${BOLD}--cache${NORMAL} ${UNDERLINE}CACHE_FILE${NORMAL}
     Cache successfully downloaded URLs to the cache file and
     skip download from next time
 
-  --help
+  ${BOLD}--help${NORMAL}
     Show this message
 EOL
 }

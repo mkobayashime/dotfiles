@@ -2,6 +2,10 @@
 
 set -euo pipefail
 
+BOLD=$(tput bold)
+UNDERLINE=$(tput smul)
+NORMAL=$(tput sgr0)
+
 cmd=$(basename "$0")
 
 description=
@@ -12,15 +16,15 @@ echoerr() {
 
 usage() {
   cat << EOF
-USAGE:
-  $cmd [-d DESCRIPTION_TEXT] [FILE...]
+${BOLD}USAGE:${NORMAL}
+  $cmd [-d ${UNDERLINE}DESCRIPTION_TEXT${NORMAL}] [${UNDERLINE}FILE...${NORMAL}]
   $cmd --help
 
-OPTIONS:
-  -d, --description DESCRIPTION_TEXT
+${BOLD}OPTIONS:${NORMAL}
+  ${BOLD}-d, --description${NORMAL} ${UNDERLINE}DESCRIPTION_TEXT${NORMAL}
     Set this text to images as description
 
-  -h, --help
+  ${BOLD}-h, --help${NORMAL}
     Show this message
 EOF
 }

@@ -2,16 +2,20 @@
 
 set -euo pipefail
 
+BOLD=$(tput bold)
+UNDERLINE=$(tput smul)
+NORMAL=$(tput sgr0)
+
 usage() {
   cat << EOF
-USAGE:
+${BOLD}USAGE:${NORMAL}
 
-  loc [OPTIONS] COMMAND_NAME
-  loc --which COMMAND_NAME
+  loc [${UNDERLINE}OPTIONS${NORMAL}] ${UNDERLINE}COMMAND_NAME${NORMAL}
+  loc --which ${UNDERLINE}COMMAND_NAME${NORMAL}
   loc --list-commands
   loc --help
 
-AVAILABLE COMMANDS:
+${BOLD}AVAILABLE COMMANDS:${NORMAL}
 
 EOF
 
@@ -24,14 +28,14 @@ EOF
 
   cat << EOF
 
-OPTIONS:
+${BOLD}OPTIONS:${NORMAL}
 
   -l, --list-commands   List available commands
   -w, --which           Print command body defined with the command name
   -v, --verbose         Print the command body before execution
   -h, --help            Print this help message
 
-COMMAND DEFINITION:
+${BOLD}COMMAND DEFINITION:${NORMAL}
 
   Export env variables prefixed with LOC_CMD_, like LOC_CMD_DO_SOMETHING.
 
