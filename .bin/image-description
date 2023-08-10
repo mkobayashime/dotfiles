@@ -17,7 +17,7 @@ echoerr() {
 usage() {
   cat << EOF
 ${BOLD}USAGE:${NORMAL}
-  $cmd [-d ${UNDERLINE}DESCRIPTION_TEXT${NORMAL}] [${UNDERLINE}FILE...${NORMAL}]
+  $cmd -d ${UNDERLINE}DESCRIPTION_TEXT${NORMAL} [${UNDERLINE}FILE...${NORMAL}]
   $cmd --help
 
 ${BOLD}OPTIONS:${NORMAL}
