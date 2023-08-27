@@ -1,3 +1,4 @@
+alias cp='cp -p'
 alias df="df -h"
 alias fusermount="fusermount -u"
 alias rimraf="rm -rf"
