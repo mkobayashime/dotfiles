@@ -45,6 +45,10 @@ repo = 'kana/vim-textobj-entire'
 depends = ['vim-textobj-user']
 
 [[plugins]]
+repo = 'glts/vim-textobj-comment'
+depends = ['vim-textobj-user']
+
+[[plugins]]
 repo = 'jceb/vim-textobj-uri'
 depends = ['vim-textobj-user']
 
