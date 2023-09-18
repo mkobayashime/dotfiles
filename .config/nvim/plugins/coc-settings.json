@@ -68,6 +68,12 @@
   "solargraph.formatting": true,
   "solargraph.diagnostics": true,
 
+  // Lua
+  "Lua.format.defaultConfig": {
+    "quote_style": "double"
+  },
+  "Lua.hint.enable": false,
+
   // cSpell
   "cSpell.userWords": [
     "kobayashi",
