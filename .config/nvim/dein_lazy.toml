@@ -110,3 +110,8 @@ on_ft = ['stylus']
 repo = 'petertriho/nvim-scrollbar'
 on_event = 'BufReadPost'
 hook_source = 'source ~/.config/nvim/plugins/nvim-scrollbar.lua'
+
+[[plugins]]
+repo = 'lukas-reineke/indent-blankline.nvim'
+on_event = 'BufReadPost'
+hook_source = 'source ~/.config/nvim/plugins/indent-blankline.nvim.lua'
