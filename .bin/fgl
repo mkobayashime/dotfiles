@@ -43,7 +43,7 @@ if [[ ! "$commit_count" =~ ^[0-9]+$ ]]; then
   exit 1
 fi
 
-commits=$(git log --oneline -$commit_count)
+commits=$(git log --oneline -"$commit_count")
 commit=$(echo "$commits" | fzf --ansi)
 hash_abbr=$(echo "$commit" | awk '{print $1}' | sed "s/.* //")
 
