@@ -1,10 +1,10 @@
 let g:mapleader = "\<Space>"
 nnoremap <Leader> <Nop>
 xnoremap <Leader> <Nop>
-nnoremap [git]    <Nop>
-xnoremap [git]    <Nop>
-nmap     gi        [git]
-xmap     gi        [git]
+nnoremap [_git]   <Nop>
+xnoremap [_git]   <Nop>
+nmap     gi        [_git]
+xmap     gi        [_git]
 nnoremap [_quickfix]    <Nop>
 xnoremap [_quickfix]    <Nop>
 nmap     gl        [_quickfix]
@@ -132,15 +132,15 @@ augroup END
 
 nnoremap <expr> ]g &diff ? ']g' : ':Gitsigns next_hunk<CR>'
 nnoremap <expr> [g &diff ? '[g' : ':Gitsigns prev_hunk<CR>'
-nnoremap [git]a :Gitsigns stage_hunk<CR>
-vnoremap [git]a :Gitsigns stage_hunk<CR>
-nnoremap [git]A :Gitsigns stage_buffer<CR>
-nnoremap [git]u :Gitsigns undo_stage_hunk<CR>
-nnoremap [git]r :Gitsigns reset_hunk<CR>
-vnoremap [git]r :Gitsigns reset_hunk<CR>
-nnoremap [git]R :Gitsigns reset_buffer<CR>
-nnoremap [git]s :Gitsigns preview_hunk<CR>
-nnoremap [git]b :lua require"gitsigns".blame_line{full=true}<CR>
+nnoremap [_git]a :Gitsigns stage_hunk<CR>
+vnoremap [_git]a :Gitsigns stage_hunk<CR>
+nnoremap [_git]A :Gitsigns stage_buffer<CR>
+nnoremap [_git]u :Gitsigns undo_stage_hunk<CR>
+nnoremap [_git]r :Gitsigns reset_hunk<CR>
+vnoremap [_git]r :Gitsigns reset_hunk<CR>
+nnoremap [_git]R :Gitsigns reset_buffer<CR>
+nnoremap [_git]s :Gitsigns preview_hunk<CR>
+nnoremap [_git]b :lua require"gitsigns".blame_line{full=true}<CR>
 
 " === gitsigns end
 
