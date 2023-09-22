@@ -5,6 +5,10 @@ nnoremap [git]    <Nop>
 xnoremap [git]    <Nop>
 nmap     gi        [git]
 xmap     gi        [git]
+nnoremap [_quickfix]    <Nop>
+xnoremap [_quickfix]    <Nop>
+nmap     gl        [_quickfix]
+xmap     gl        [_quickfix]
 
 " reload .zshrc
 nnoremap <silent> <Leader>rc :call reloadConfig#ReloadConfig()<CR>
@@ -38,6 +42,14 @@ inoremap <C-k> <Up>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 inoremap <C-j> <Down>
+
+" quickfix list
+nnoremap ]q :cn<CR>
+nnoremap [q :cp<CR>
+nnoremap [_quickfix]f :cfirst<CR>
+nnoremap [_quickfix]l :clast<CR>
+nnoremap [_quickfix]o :copen<CR>
+nnoremap [_quickfix]c :cclose<CR>
 
 " clear highlight
 nnoremap <Leader>ch :noh<CR>
