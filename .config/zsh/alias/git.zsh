@@ -41,7 +41,7 @@ alias automerge='gh pr merge --auto'
 alias wip="git commit -m 'WIP [skip ci]' --no-verify"
 alias wipa="git add . && wip"
 
-alias fgrb='git rebase -i $(fgl)'
+alias fgrb='git rebase -i "$(fgl)~1"'
 alias fcf='git commit --fixup $(fgl)'
 
 alias commitmessage='git log -n 1 --format="%s" '
