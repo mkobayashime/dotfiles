@@ -4,5 +4,8 @@
     "esac",
     "keymap",
     "pipefail"
+  ],
+  "Lua.diagnostics.globals": [
+    "vim"
   ]
 }
