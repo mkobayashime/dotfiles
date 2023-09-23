@@ -70,7 +70,8 @@
 
   // Lua
   "Lua.format.defaultConfig": {
-    "quote_style": "double"
+    "quote_style": "double",
+    "trailing_table_separator": "smart"
   },
   "Lua.hint.enable": false,
 
