@@ -5,6 +5,7 @@ for i in "$HOME/.config/zsh/alias"/*; do
 done
 
 alias e="$EDITOR"
+alias el='NVIM_APPNAME=nvim-lua nvim'
 
 # zsh
 alias zmv="noglob zmv"
