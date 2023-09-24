@@ -12,6 +12,9 @@ local function overrideHighlights()
   vim.api.nvim_set_hl(0, "NormalFloat", {})
   vim.api.nvim_set_hl(0, "CocFloating", { link = "NormalFloat" })
 
+  -- treesitter-context
+  vim.api.nvim_set_hl(0, "TreesitterContextBottom", { underline = true })
+
   -- fuzzy-motion
   vim.api.nvim_set_hl(0, "FuzzyMotionShade", { fg = "#5C6370" })
   vim.api.nvim_set_hl(0, "FuzzyMotionChar", { fg = "#282C34", bg = "#ff7a90", bold = true, underline = true })
