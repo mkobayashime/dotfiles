@@ -19,6 +19,11 @@ require("lazy").setup(require("plugins"),
       lazy = true,
     },
     ui = {
+      size = {
+        width = 0.8,
+        height = 0.9,
+      },
+      border = "rounded",
       icons = {
         cmd = "",
         config = "",
