@@ -10,7 +10,7 @@ return {
     branch = "release",
     event = "VimEnter",
     init = function()
-      vim.cmd("source " .. vim.g.plugins_dir .. "/coc.vim")
+      require("plugins/coc")
     end,
   },
   {
