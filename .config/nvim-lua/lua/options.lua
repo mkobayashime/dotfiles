@@ -30,3 +30,6 @@ vim.opt.updatetime = 500
 
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.clipboard:append("unnamed")
+
+vim.opt.modeline = true
+vim.opt.modelines = 3
