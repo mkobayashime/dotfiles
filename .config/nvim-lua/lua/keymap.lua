@@ -26,6 +26,10 @@ vim.keymap.set("n", "C", '"_C')
 vim.keymap.set("v", "p", '"_xp')
 vim.keymap.set("v", "P", '"_xP')
 
+-- scroll
+vim.keymap.set({ "n", "v" }, "<C-j>", "<C-e>")
+vim.keymap.set({ "n", "v" }, "<C-k>", "<C-y>")
+
 -- intuitive j/k/0/$
 vim.keymap.set("n", "j", "gj")
 vim.keymap.set("n", "k", "gk")
