@@ -1,4 +1,5 @@
 vim.g.coc_config_home = vim.fn.stdpath("config") .. "/lua/plugins"
+vim.g.coc_data_home = vim.fn.stdpath("data") .. "/coc"
 
 vim.g.coc_global_extensions = {
   "coc-css",
