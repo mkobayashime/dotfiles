@@ -14,7 +14,7 @@ vim.keymap.set({ "n", "x" }, "gl", "[_quickfix]", { remap = true })
 
 -- save {{{2
 
-vim.keymap.set("n", "<Leader>w", ":w<CR>")
+vim.keymap.set("n", "<Leader>w", ":w<CR>", { desc = "Save" })
 
 -- disable defaults {{{2
 
@@ -54,16 +54,16 @@ vim.keymap.set("!", "<C-j>", "<Down>")
 
 -- quickfix list {{{2
 
-vim.keymap.set("n", "]q", ":cn<CR>")
-vim.keymap.set("n", "[q", ":cp<CR>")
-vim.keymap.set("n", "[_quickfix]f", ":cfirst<CR>")
-vim.keymap.set("n", "[_quickfix]l", ":clast<CR>")
-vim.keymap.set("n", "[_quickfix]o", ":copen<CR>")
-vim.keymap.set("n", "[_quickfix]c", ":cclose<CR>")
+vim.keymap.set("n", "]q", ":cn<CR>", { desc = "Next quickfix location" })
+vim.keymap.set("n", "[q", ":cp<CR>", { desc = "Previous quickfix location" })
+vim.keymap.set("n", "[_quickfix]f", ":cfirst<CR>", { desc = "First quickfix location" })
+vim.keymap.set("n", "[_quickfix]l", ":clast<CR>", { desc = "Last quickfix location" })
+vim.keymap.set("n", "[_quickfix]o", ":copen<CR>", { desc = "Open quickfix list" })
+vim.keymap.set("n", "[_quickfix]c", ":cclose<CR>", { desc = "Close quickfix list" })
 
 -- clear highlight {{{2
 
-vim.keymap.set("n", "<Leader>ch", ":noh<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>ch", ":noh<CR>", { silent = true, desc = "Clear highlight" })
 
 -- plugins {{{1
 
@@ -79,17 +79,17 @@ vim.keymap.set("n", "<Leader>ff",
   function()
     return isInGitDir() and ":Telescope git_files show_untracked=true<CR>" or ":Telescope find_files<CR>"
   end,
-  { silent = true, expr = true }
+  { silent = true, expr = true, desc = ":Telescope git_files / find_files" }
 )
 vim.keymap.set("n", "<Leader>fF",
   ":Telescope find_files cwd=" .. vim.fn.expand("%:p:h") .. "<CR>",
-  { silent = true }
+  { silent = true, desc = ":Telescope find_files in the same directory" }
 )
 vim.keymap.set("n", "<Leader>fo", ":Telescope oldfiles<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>fg", ":Telescope live_grep<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>fG",
   ":Telescope live_grep cwd=" .. vim.fn.expand("%:p:h") .. "<CR>",
-  { silent = true }
+  { silent = true, desc = ":Telescope live_grep in the same directory" }
 )
 vim.keymap.set("n", "<Leader>fb", ":Telescope buffers<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>fh", ":Telescope help_tags<CR>", { silent = true })
@@ -159,7 +159,7 @@ vim.keymap.set("n", "K",
     end
     return "K"
   end,
-  { silent = true }
+  { silent = true, desc = "Hover" }
 )
 
 -- popup scroll {{{3
@@ -192,13 +192,17 @@ vim.keymap.set("n", "<Leader>rn", "<Plug>(coc-rename)")
 
 -- fern {{{2
 
-vim.keymap.set({ "n", "x" }, "<Leader>e", ":<C-u>Fern . -reveal=%:p<CR>", { silent = true })
-vim.keymap.set({ "n", "x" }, "<Leader>E", ":<C-u>Fern . -reveal=.<CR>", { silent = true })
+vim.keymap.set({ "n", "x" }, "<Leader>e", ":<C-u>Fern . -reveal=%:p<CR>", { silent = true, desc = "Open Fern" })
+vim.keymap.set(
+  { "n", "x" },
+  "<Leader>E", ":<C-u>Fern . -reveal=.<CR>",
+  { silent = true, desc = "Open Fern in project root dir" }
+)
 
 local function initfern()
   vim.keymap.set(
     "n", "<C-p>", "<Plug>(fern-action-preview:auto:toggle)",
-    { silent = true, buffer = true }
+    { silent = true, buffer = true, desc = "Toggle file preview" }
   )
   vim.keymap.set("n", "<C-d>",
     function()
@@ -230,14 +234,16 @@ vim.keymap.set("n", "]g",
     if vim.wo.diff then return "]g" end
     vim.schedule(function() require("gitsigns").next_hunk() end)
     return "<Nop>"
-  end
+  end,
+  { desc = "Next git hunk" }
 )
 vim.keymap.set("n", "[g",
   function()
     if vim.wo.diff then return "[g" end
     vim.schedule(function() require("gitsigns").prev_hunk() end)
     return "<Nop>"
-  end
+  end,
+  { desc = "Previous git hunk" }
 )
 vim.keymap.set({ "n", "v" }, "[_git]a", ":Gitsigns stage_hunk<CR>")
 vim.keymap.set("n", "[_git]A", ":Gitsigns stage_buffer<CR>")
