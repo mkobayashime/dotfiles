@@ -1,5 +1,9 @@
 require("utils/bool_fn")
 
+-- basic {{{1
+
+-- leader/prefix {{{2
+
 vim.g.mapleader = " "
 
 vim.keymap.set({ "n", "x" }, "<Leader>", "<Nop>")
@@ -8,15 +12,18 @@ vim.keymap.set({ "n", "x" }, "gi", "[_git]", { remap = true })
 vim.keymap.set({ "n", "x" }, "[_quickfix]", "<Nop>")
 vim.keymap.set({ "n", "x" }, "gl", "[_quickfix]", { remap = true })
 
--- save
+-- save {{{2
+
 vim.keymap.set("n", "<Leader>w", ":w<CR>")
 
--- disable defaults
+-- disable defaults {{{2
+
 vim.keymap.set("n", "ZZ", "<Nop>")
 vim.keymap.set("n", "ZQ", "<Nop>")
 vim.keymap.set("n", "Q", "<Nop>")
 
--- disable yank
+-- disable yank {{{2
+
 vim.keymap.set("n", "x", '"_x')
 vim.keymap.set("n", "X", '"_X')
 vim.keymap.set("n", "s", '"_s')
@@ -26,23 +33,27 @@ vim.keymap.set("n", "C", '"_C')
 vim.keymap.set("v", "p", '"_xp')
 vim.keymap.set("v", "P", '"_xP')
 
--- scroll
+-- scroll {{{2
+
 vim.keymap.set({ "n", "v" }, "<C-j>", "<C-e>")
 vim.keymap.set({ "n", "v" }, "<C-k>", "<C-y>")
 
--- intuitive j/k/0/$
+-- intuitive j/k/0/$ {{{2
+
 vim.keymap.set("n", "j", "gj")
 vim.keymap.set("n", "k", "gk")
 vim.keymap.set("n", "0", "g0")
 vim.keymap.set("n", "$", "g$")
 
--- move cursor in insert mode
+-- move cursor in insert mode {{{2
+
 vim.keymap.set("!", "<C-k>", "<Up>")
 vim.keymap.set("!", "<C-h>", "<Left>")
 vim.keymap.set("!", "<C-l>", "<Right>")
 vim.keymap.set("!", "<C-j>", "<Down>")
 
--- quickfix list
+-- quickfix list {{{2
+
 vim.keymap.set("n", "]q", ":cn<CR>")
 vim.keymap.set("n", "[q", ":cp<CR>")
 vim.keymap.set("n", "[_quickfix]f", ":cfirst<CR>")
@@ -50,10 +61,13 @@ vim.keymap.set("n", "[_quickfix]l", ":clast<CR>")
 vim.keymap.set("n", "[_quickfix]o", ":copen<CR>")
 vim.keymap.set("n", "[_quickfix]c", ":cclose<CR>")
 
--- clear highlight
+-- clear highlight {{{2
+
 vim.keymap.set("n", "<Leader>ch", ":noh<CR>", { silent = true })
 
--- === telescope
+-- plugins {{{1
+
+-- telescope {{{2
 
 local function isInGitDir()
   vim.fn.system("git rev-parse --is-inside-work-tree")
@@ -92,11 +106,10 @@ vim.keymap.set("n", "<Leader>fr", ":Telescope coc references<CR>", { silent = tr
 vim.keymap.set("n", "<Leader>fd", ":Telescope coc definitions<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>fi", ":Telescope coc implementations<CR>", { silent = true })
 
--- === telescope end
+-- coc {{{2
 
--- === coc
+-- popup menu {{{3
 
--- popup menu
 vim.cmd [[
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 ]]
@@ -136,7 +149,8 @@ inoremap <silent><expr> <TAB>
 inoremap <expr> <S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 ]]
 
--- hover
+-- hover {{{3
+
 vim.keymap.set("n", "K",
   function()
     if vim.bool_fn.CocAction("hasProvider", "hover") then
@@ -148,7 +162,8 @@ vim.keymap.set("n", "K",
   { silent = true }
 )
 
--- popup scroll
+-- popup scroll {{{3
+
 vim.keymap.set("n", "<C-y>",
   function()
     if vim.bool_fn["coc#float#has_scroll"]() then
@@ -170,13 +185,12 @@ vim.keymap.set("n", "<C-e>",
   { expr = true }
 )
 
--- others
+-- others {{{3
+
 vim.keymap.set({ "n", "v" }, "<Leader>a", "<Plug>(coc-codeaction-selected)")
 vim.keymap.set("n", "<Leader>rn", "<Plug>(coc-rename)")
 
--- === coc end
-
--- === fern
+-- fern {{{2
 
 vim.keymap.set({ "n", "x" }, "<Leader>e", ":<C-u>Fern . -reveal=%:p<CR>", { silent = true })
 vim.keymap.set({ "n", "x" }, "<Leader>E", ":<C-u>Fern . -reveal=.<CR>", { silent = true })
@@ -209,9 +223,8 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   end,
 })
 
--- === fern end
+-- gitsigns {{{2
 
--- gitsigns
 vim.keymap.set("n", "]g",
   function()
     if vim.wo.diff then return "]g" end
@@ -238,7 +251,8 @@ vim.keymap.set("n", "[_git]b",
   end
 )
 
--- vim-sandwich
+-- vim-sandwich {{{2
+
 vim.keymap.set("n", "ds", "<Plug>(sandwich-delete)", { nowait = true })
 vim.keymap.set("n", "dsb", "<Plug>(sandwich-delete-auto)", { nowait = true })
 vim.keymap.set({ "n", "v" }, "ys", "<Plug>(sandwich-add)", { nowait = true })
@@ -249,8 +263,16 @@ vim.keymap.set({ "o", "v" }, "ab", "<Plug>(textobj-sandwich-auto-a)")
 vim.keymap.set({ "o", "v" }, "is", "<Plug>(textobj-sandwich-query-i)")
 vim.keymap.set({ "o", "v" }, "as", "<Plug>(textobj-sandwich-query-a)")
 
--- fuzzy-motion.vim
+-- fuzzy-motion.vim {{{2
+
 vim.keymap.set("n", "<Leader>fm", ":FuzzyMotion<CR>")
 
--- alternate-toggler
+-- alternate-toggler {{{2
+
 vim.keymap.set("n", "<Leader>to", ":ToggleAlternate<CR>")
+
+-- {{{1
+
+-- vim: foldmethod=marker
+-- vim: foldcolumn=3
+-- vim: foldlevel=1
