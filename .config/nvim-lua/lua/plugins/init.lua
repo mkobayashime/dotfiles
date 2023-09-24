@@ -90,6 +90,9 @@ return {
   {
     "machakann/vim-sandwich",
     event = "CursorHold",
+    init = function()
+      vim.g.sandwich_no_default_key_mappings = 1
+    end,
     config = function()
       require("plugins/vim-sandwich")
     end,
