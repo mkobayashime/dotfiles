@@ -29,9 +29,7 @@ return {
       },
       {
         "romgrk/nvim-treesitter-context",
-        config = function()
-          require("plugins/nvim-treesitter-context")
-        end,
+        opts = {},
       },
       { "windwp/nvim-ts-autotag" },
       -- {
