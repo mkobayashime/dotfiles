@@ -15,6 +15,7 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter",
+    version = "*",
     event = "VimEnter",
     build = ":TSUpdate",
     config = function()
