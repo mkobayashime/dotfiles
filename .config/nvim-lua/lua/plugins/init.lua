@@ -32,6 +32,7 @@ return {
         "romgrk/nvim-treesitter-context",
         opts = {},
       },
+      { "andersevenrud/nvim_context_vt" },
       { "windwp/nvim-ts-autotag" },
       -- {
       --   "nvim-treesitter/playground",
