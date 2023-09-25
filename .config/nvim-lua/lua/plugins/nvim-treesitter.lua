@@ -39,6 +39,9 @@ require("nvim-treesitter.configs").setup({
     enable = true,
     enable_autocmd = false,
   },
+  textsubjects = {
+    enable = true,
+  },
   autotag = {
     enable = true,
   },

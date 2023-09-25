@@ -34,6 +34,7 @@ return {
         opts = {},
       },
       { "andersevenrud/nvim_context_vt" },
+      { "RRethy/nvim-treesitter-textsubjects" },
       { "windwp/nvim-ts-autotag" },
       -- {
       --   "nvim-treesitter/playground",
