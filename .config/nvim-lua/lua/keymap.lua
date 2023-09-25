@@ -272,6 +272,16 @@ vim.keymap.set({ "o", "v" }, "ab", "<Plug>(textobj-sandwich-auto-a)")
 vim.keymap.set({ "o", "v" }, "is", "<Plug>(textobj-sandwich-query-i)")
 vim.keymap.set({ "o", "v" }, "as", "<Plug>(textobj-sandwich-query-a)")
 
+-- yanky.nvim {{{2
+
+vim.keymap.set({ "n", "x" }, "y", "<Plug>(YankyYank)")
+vim.keymap.set({ "n", "x" }, "p", "<Plug>(YankyPutAfter)")
+vim.keymap.set({ "n", "x" }, "P", "<Plug>(YankyPutBefore)")
+vim.keymap.set({ "n", "x" }, "gp", "<Plug>(YankyGPutAfter)")
+vim.keymap.set({ "n", "x" }, "gP", "<Plug>(YankyGPutBefore)")
+vim.keymap.set("n", "<c-n>", "<Plug>(YankyCycleBackward)")
+vim.keymap.set("n", "<c-p>", "<Plug>(YankyCycleForward)")
+
 -- hlslens {{{2
 
 vim.keymap.set("n", "n",

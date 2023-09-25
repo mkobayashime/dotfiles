@@ -105,6 +105,15 @@ return {
     end,
   },
   {
+    "gbprod/yanky.nvim",
+    event = "CursorHold",
+    opts = {
+      highlight = {
+        timer = 250,
+      },
+    },
+  },
+  {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
     opts = {
