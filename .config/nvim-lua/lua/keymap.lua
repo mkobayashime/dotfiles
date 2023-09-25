@@ -256,7 +256,7 @@ vim.keymap.set("n", "[_git]R", ":Gitsigns reset_buffer<CR>")
 vim.keymap.set("n", "[_git]s", ":Gitsigns preview_hunk<CR>")
 vim.keymap.set("n", "[_git]b",
   function()
-    require("gitsigns").blame_line({ full = true })
+    require("gitsigns").blame_line({ full = true, ignore_whitespace = true })
   end
 )
 
