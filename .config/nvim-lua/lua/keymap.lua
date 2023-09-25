@@ -264,7 +264,7 @@ vim.keymap.set("n", "[_git]b",
 
 vim.keymap.set("n", "ds", "<Plug>(sandwich-delete)", { nowait = true })
 vim.keymap.set("n", "dsb", "<Plug>(sandwich-delete-auto)", { nowait = true })
-vim.keymap.set({ "n", "v" }, "ys", "<Plug>(sandwich-add)", { nowait = true })
+vim.keymap.set({ "n", "v" }, "<Leader>s", "<Plug>(sandwich-add)", { nowait = true })
 vim.keymap.set("n", "cs", "<Plug>(sandwich-replace)", { nowait = true })
 vim.keymap.set("n", "csb", "<Plug>(sandwich-replace-auto)", { nowait = true })
 vim.keymap.set({ "o", "v" }, "ib", "<Plug>(textobj-sandwich-auto-i)")
