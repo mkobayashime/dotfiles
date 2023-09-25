@@ -7,6 +7,7 @@ vim.filetype.add {
     sh = "bash",
     styl = "stylus",
     zsh = "bash",
+    log = "log",
   },
   filename = {
     [".envrc"] = "bash",

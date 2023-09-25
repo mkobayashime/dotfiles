@@ -233,6 +233,10 @@ return {
     end,
   },
   {
+    "MTDL9/vim-log-highlighting",
+    ft = "log",
+  },
+  {
     "chrisbra/csv.vim",
     ft = "csv",
   },
