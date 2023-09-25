@@ -71,7 +71,17 @@ return {
     event = "VimEnter",
     opts = {
       current_line_blame = true,
+      current_line_blame_opts = {
+        virt_text_priority = 2000,
+      },
     },
+  },
+  {
+    "kevinhwang91/nvim-hlslens",
+    event = "VimEnter",
+    config = function()
+      require("plugins/hlslens")
+    end,
   },
   {
     "akinsho/git-conflict.nvim",

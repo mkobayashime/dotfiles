@@ -11,6 +11,9 @@ vim.api.nvim_create_autocmd({ "ColorScheme" }, {
       },
     })
 
+    -- basic
+    vim.api.nvim_set_hl(0, "IncSearch", { link = "DiffAdd" })
+
     -- coc
     vim.api.nvim_set_hl(0, "NormalFloat", {})
     vim.api.nvim_set_hl(0, "CocFloating", { link = "NormalFloat" })
@@ -28,6 +31,10 @@ vim.api.nvim_create_autocmd({ "ColorScheme" }, {
     vim.api.nvim_set_hl(0, "ExtraWhitespace",
       { bg = "#E06C75", fg = "#282C34", ctermbg = 204, ctermfg = 235 }
     )
+
+    -- hlslens
+    vim.api.nvim_set_hl(0, "HlSearchLensNear", { link = "DiffAdd" })
+    vim.api.nvim_set_hl(0, "HlSearchLens", { link = "Visual" })
 
     -- git-conflict
     vim.api.nvim_set_hl(0, "GitConflictCurrent", { bg = "#22403a" })
