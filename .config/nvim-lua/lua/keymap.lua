@@ -268,11 +268,11 @@ vim.keymap.set({ "o", "v" }, "as", "<Plug>(textobj-sandwich-query-a)")
 -- hlslens {{{2
 
 vim.keymap.set("n", "n",
-  "<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>",
+  "<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>zz",
   { silent = true }
 )
 vim.keymap.set("n", "N",
-  "<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>",
+  "<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>zz",
   { silent = true }
 )
 vim.keymap.set("n", "*", "*<Cmd>lua require('hlslens').start()<CR>", { silent = true })
