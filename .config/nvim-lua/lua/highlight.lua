@@ -13,6 +13,7 @@ vim.api.nvim_create_autocmd({ "ColorScheme" }, {
 
     -- basic
     vim.api.nvim_set_hl(0, "IncSearch", { link = "DiffAdd" })
+    vim.api.nvim_set_hl(0, "Search", { link = "Visual" })
 
     -- coc
     vim.api.nvim_set_hl(0, "NormalFloat", {})
