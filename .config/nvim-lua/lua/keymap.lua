@@ -199,31 +199,27 @@ vim.keymap.set(
   { silent = true, desc = "Open Fern in project root dir" }
 )
 
-local function initfern()
-  vim.keymap.set(
-    "n", "<C-p>", "<Plug>(fern-action-preview:auto:toggle)",
-    { silent = true, buffer = true, desc = "Toggle file preview" }
-  )
-  vim.keymap.set("n", "<C-d>",
-    function()
-      return vim.g.fern_auto_preview and "<Plug>(fern-action-preview:scroll:down:half)" or "<C-d>"
-    end,
-    { silent = true, buffer = true, expr = true }
-  )
-  vim.keymap.set("n", "<C-u>",
-    function()
-      return vim.g.fern_auto_preview and "<Plug>(fern-action-preview:scroll:up:half)" or "<C-u>"
-    end,
-    { silent = true, buffer = true, expr = true }
-  )
-end
-
 vim.api.nvim_create_augroup("fern_custom", { clear = true })
 vim.api.nvim_create_autocmd({ "FileType" }, {
   group = "fern_custom",
   pattern = "fern",
   callback = function()
-    initfern()
+    vim.keymap.set(
+      "n", "<C-p>", "<Plug>(fern-action-preview:auto:toggle)",
+      { silent = true, buffer = true, desc = "Toggle file preview" }
+    )
+    vim.keymap.set("n", "<C-d>",
+      function()
+        return vim.g.fern_auto_preview and "<Plug>(fern-action-preview:scroll:down:half)" or "<C-d>"
+      end,
+      { silent = true, buffer = true, expr = true }
+    )
+    vim.keymap.set("n", "<C-u>",
+      function()
+        return vim.g.fern_auto_preview and "<Plug>(fern-action-preview:scroll:up:half)" or "<C-u>"
+      end,
+      { silent = true, buffer = true, expr = true }
+    )
   end,
 })
 

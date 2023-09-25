@@ -29,18 +29,14 @@ vim.api.nvim_create_user_command(
   { nargs = 0 }
 )
 
-
 local timer_id = 0
-local function onCursorMove()
-  if timer_id ~= 0 then
-    vim.fn.timer_stop(timer_id)
-  end
-  timer_id = vim.fn.timer_start(500, function()
-    vim.fn["CocActionAsync"]("highlight")
-  end)
-end
 vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
   callback = function()
-    onCursorMove()
+    if timer_id ~= 0 then
+      vim.fn.timer_stop(timer_id)
+    end
+    timer_id = vim.fn.timer_start(500, function()
+      vim.fn["CocActionAsync"]("highlight")
+    end)
   end,
 })
