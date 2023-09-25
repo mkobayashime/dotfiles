@@ -27,6 +27,7 @@ return {
           require("plugins/rainbow-delimiters")
         end,
       },
+      { "JoosepAlviste/nvim-ts-context-commentstring" },
       {
         "romgrk/nvim-treesitter-context",
         opts = {},
@@ -83,7 +84,9 @@ return {
     dependencies = {
       { "nvim-treesitter/nvim-treesitter" },
     },
-    opts = {},
+    config = function()
+      require("plugins/Comment")
+    end,
   },
   {
     "machakann/vim-sandwich",
