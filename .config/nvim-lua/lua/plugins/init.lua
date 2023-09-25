@@ -114,6 +114,13 @@ return {
     },
   },
   {
+    "mizlan/iswap.nvim",
+    event = "CursorHold",
+    opts = {
+      hl_snipe = "DiffText",
+    },
+  },
+  {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
     opts = {
