@@ -69,12 +69,7 @@ return {
   {
     "lewis6991/gitsigns.nvim",
     event = "VimEnter",
-    opts = {
-      current_line_blame = true,
-      current_line_blame_opts = {
-        virt_text_priority = 2000,
-      },
-    },
+    opts = {},
   },
   {
     "kevinhwang91/nvim-hlslens",
