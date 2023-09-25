@@ -79,9 +79,7 @@ return {
   {
     "kevinhwang91/nvim-hlslens",
     event = "VimEnter",
-    config = function()
-      require("plugins/hlslens")
-    end,
+    opts = {},
   },
   {
     "akinsho/git-conflict.nvim",
