@@ -214,6 +214,19 @@ return {
     },
   },
   {
+    "kevinhwang91/nvim-bqf",
+    event = "CursorHold",
+    opts = {
+      preview = {
+        win_height = 25,
+      },
+      func_map = {
+        pscrollup = "<C-k>",
+        pscrolldown = "<C-j>",
+      },
+    },
+  },
+  {
     "itchyny/vim-qfedit",
     ft = "qf",
   },
