@@ -129,7 +129,6 @@ return {
   },
   {
     "vim-denops/denops.vim",
-    event = "CursorHold",
   },
   {
     "yuki-yano/fuzzy-motion.vim",
