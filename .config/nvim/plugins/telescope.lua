@@ -1,1 +1,0 @@
-../../nvim-lua/lua/plugins/telescope.lua
