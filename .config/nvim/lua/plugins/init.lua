@@ -193,10 +193,17 @@ return {
   },
   {
     "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
     event = "VimEnter",
     opts = {
-      show_current_context = true,
-      use_treesitter = true,
+      indent = {
+        char = "▏",
+      },
+      scope = {
+        show_start = false,
+        show_end = false,
+        highlight = "Label",
+      },
     },
   },
   {

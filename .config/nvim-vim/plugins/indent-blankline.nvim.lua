@@ -1,4 +1,9 @@
-require("indent_blankline").setup({
-  show_current_context = true,
-  use_treesitter = true
+require("ibl").setup({
+  indent = {
+    char = "▏",
+  },
+  scope = {
+    show_start = false,
+    highlight = "Label",
+  },
 })
