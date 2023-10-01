@@ -3,13 +3,13 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'joshdick/onedark.vim'
-hook_add = 'source ~/.config/nvim/plugins/onedark.vim'
+hook_add = 'exec "source" stdpath("config") . "/plugins/onedark.vim"'
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 merged = 0
 rev = 'release'
-hook_add = 'source ~/.config/nvim/plugins/coc.vim'
+hook_add = 'exec "source" stdpath("config") . "/plugins/coc.vim"'
 
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
@@ -31,7 +31,7 @@ repo = 'yuki-yano/fern-preview.vim'
 
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
-hook_add = 'source ~/.config/nvim/plugins/vim-trailing-whitespace.vim'
+hook_add = 'exec "source" stdpath("config") . "/plugins/vim-trailing-whitespace.vim"'
 
 # Unix shell commands like `:Move`/`:Rename`
 [[plugins]]
@@ -54,7 +54,7 @@ depends = ['vim-textobj-user']
 
 [[plugins]]
 repo = 'machakann/vim-sandwich'
-hook_add = 'source ~/.config/nvim/plugins/vim-sandwich.vim'
+hook_add = 'exec "source" stdpath("config") . "/plugins/vim-sandwich.vim"'
 
 [[plugins]]
 repo = 'rmagatti/alternate-toggler'

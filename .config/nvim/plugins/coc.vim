@@ -1,4 +1,5 @@
-let g:coc_config_home = '~/.config/nvim/plugins'
+let g:coc_config_home = stdpath('config') . '/plugins'
+let g:coc_data_home = stdpath('data') . '/coc'
 
 let g:coc_global_extensions = [
   \ "coc-css",
