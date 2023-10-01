@@ -122,42 +122,41 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<C
 --   end,
 --   { expr = true, silent = true }
 -- )
+
+function _G.check_back_space()
+  local col = vim.fn.col(".") - 1
+  return col == 0 or vim.fn.getline("."):sub(col, col):match("%s") ~= nil
+end
+
+vim.keymap.set("i", "<TAB>",
+  'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()',
+  { silent = true, expr = true, replace_keycodes = false }
+)
 vim.keymap.set("i", "<C-j>",
-  function()
-    return vim.bool_fn["coc#pum#visible"]() and
-        vim.fn["coc#pum#next"](1) or "<C-j>"
-  end,
-  { expr = true, silent = true }
+  'coc#pum#visible() ? coc#pum#next(1) : "<C-j>"',
+  { silent = true, expr = true, replace_keycodes = false }
+)
+vim.keymap.set("i", "<S-TAB>",
+  [[coc#pum#visible() ? coc#pum#prev(1) : "<C-h>"]],
+  { silent = true, expr = true, replace_keycodes = false }
 )
 vim.keymap.set("i", "<C-k>",
-  function()
-    return vim.bool_fn["coc#pum#visible"]() and
-        vim.fn["coc#pum#prev"](1) or "<C-k>"
-  end,
-  { expr = true, silent = true }
+  [[coc#pum#visible() ? coc#pum#prev(1) : "<C-k>"]],
+  { silent = true, expr = true, replace_keycodes = false }
 )
-vim.cmd [[
-function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-inoremap <silent><expr> <TAB>
-  \ coc#pum#visible() ? coc#pum#next(1):
-  \ CheckBackspace() ? "\<Tab>" :
-  \ coc#refresh()
-inoremap <expr> <S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-]]
 
 -- hover {{{3
 
 vim.keymap.set("n", "K",
   function()
-    if vim.bool_fn.CocAction("hasProvider", "hover") then
+    local cw = vim.fn.expand("<cword>")
+    if vim.fn.index({ "vim", "help" }, vim.bo.filetype) >= 0 then
+      vim.api.nvim_command("h " .. cw)
+    elseif vim.api.nvim_eval("coc#rpc#ready()") then
       vim.fn.CocActionAsync("doHover")
-      return
+    else
+      vim.api.nvim_command("!" .. vim.o.keywordprg .. " " .. cw)
     end
-    return "K"
   end,
   { silent = true, desc = "Hover" }
 )
