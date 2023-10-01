@@ -2,18 +2,31 @@
 
 set -euo pipefail
 
+echoerr() {
+  echo "${1:-}" 1>&2
+}
+
 file=$(mktemp)
 
-git symbolic-ref --short HEAD > "$file"
-echo -e "\n\n" >> "$file"
-echo "# Empty line 1 to cancel" >> "$file"
+original_branch_name=$(git symbolic-ref --short HEAD)
+if [[ ! "$original_branch_name" ]]; then
+  echoerr 'Fatal: Failed to get name of the current branch'
+fi
+
+cat << EOF >> "$file"
+$original_branch_name
+
+# gbrename - Rename branch
+# Empty line 1 to cancel
+EOF
+
 "${EDITOR:-vim}" "$file"
 
-bname=$(head -n 1 "$file")
-if [[ ! "$bname" ]]; then
+branch_name=$(head -n 1 "$file")
+if [[ ! "$branch_name" ]]; then
   exit 0
 else
-  git branch -m "$bname"
+  git branch -m "$branch_name"
 fi
 
 rm "$file"
