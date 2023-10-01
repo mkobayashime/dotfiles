@@ -128,6 +128,13 @@ return {
     },
   },
   {
+    "rhysd/clever-f.vim",
+    keys = { "f", "F", "t", "T" },
+    config = function()
+      require("plugins/clever-f")
+    end,
+  },
+  {
     "vim-denops/denops.vim",
   },
   {
