@@ -2,14 +2,8 @@ vim.api.nvim_create_augroup("colorscheme", { clear = true })
 vim.api.nvim_create_autocmd({ "ColorScheme" }, {
   group = "colorscheme",
   callback = function()
-    -- extend onedark
-    vim.fn["onedark#extend_highlight"]("StatusLine", {
-      bg = {
-        gui = "None",
-        cterm = "None",
-        cterm16 = "None",
-      },
-    })
+    -- Transparent background in status line
+    vim.api.nvim_set_hl(0, "StatusLine", {})
 
     -- basic
     vim.api.nvim_set_hl(0, "IncSearch", { link = "DiffAdd" })
