@@ -82,13 +82,21 @@ vim.keymap.set("n", "<Leader>ff",
   { silent = true, expr = true, desc = ":Telescope git_files / find_files" }
 )
 vim.keymap.set("n", "<Leader>fF",
-  ":Telescope find_files cwd=" .. vim.fn.expand("%:p:h") .. "<CR>",
+  function()
+    require("telescope.builtin").find_files({
+      cwd = vim.fn.expand("%:p:h"),
+    })
+  end,
   { silent = true, desc = ":Telescope find_files in the same directory" }
 )
 vim.keymap.set("n", "<Leader>fo", ":Telescope oldfiles<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>fg", ":Telescope live_grep<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>fG",
-  ":Telescope live_grep cwd=" .. vim.fn.expand("%:p:h") .. "<CR>",
+  function()
+    require("telescope.builtin").live_grep({
+      cwd = vim.fn.expand("%:p:h"),
+    })
+  end,
   { silent = true, desc = ":Telescope live_grep in the same directory" }
 )
 vim.keymap.set("n", "<Leader>fb", ":Telescope buffers<CR>", { silent = true })
