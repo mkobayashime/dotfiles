@@ -29,6 +29,9 @@
   defaultBranch = main
 [submodule]
   recurse = true
+[stash]
+  showStat = false
+  showPatch = true
 [interactive]
   diffFilter = delta --color-only
 [diff]
