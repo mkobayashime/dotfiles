@@ -8,6 +8,7 @@ main() {
 
   nix_packages=(
     bat
+    delta
     deno
     direnv
     exiftool

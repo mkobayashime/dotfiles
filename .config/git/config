@@ -8,6 +8,7 @@
 [core]
   quotepath = false
   excludesfile = ~/.config/git/ignore
+  pager = delta
 [color]
   diff = auto
   status = auto
@@ -28,6 +29,15 @@
   defaultBranch = main
 [submodule]
   recurse = true
+[interactive]
+  diffFilter = delta --color-only
+[diff]
+  colorMoved = default
+[delta]
+  navigate = true
+  line-numbers = true
+  file-modified-label =
+  hunk-header-decoration-style = blue ul
 [rerere]
   enabled = true
 [url "git@github.com:"]
