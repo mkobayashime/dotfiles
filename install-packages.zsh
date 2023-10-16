@@ -32,6 +32,7 @@ main() {
 
   nix_packages_mac=(
     bash
+    coreutils
     gnused
   )
 
