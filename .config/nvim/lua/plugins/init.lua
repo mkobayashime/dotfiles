@@ -219,6 +219,14 @@ return {
     opts = {},
   },
   {
+    "karb94/neoscroll.nvim",
+    event = "VimEnter",
+    enabled = true,
+    config = function()
+      require("plugins/neoscroll")
+    end,
+  },
+  {
     "folke/todo-comments.nvim",
     event = "CursorHold",
     opts = {
