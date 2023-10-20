@@ -4,7 +4,9 @@ alias ga="git add"
 alias ga.="git add ."
 alias gan='git add -N'
 alias gd="git diff"
+alias gds='DELTA_FEATURES=side-by-side git diff'
 alias gdw="git diff -w"
+alias gdws='gds -w'
 alias gs="git status"
 alias gpf="git push --force-with-lease"
 alias gpu="git pull"
