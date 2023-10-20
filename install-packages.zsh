@@ -33,7 +33,10 @@ main() {
   nix_packages_mac=(
     bash
     coreutils
+    findutils
+    gnugrep
     gnused
+    wget
   )
 
   prefixed_nix_packages=()
