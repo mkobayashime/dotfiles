@@ -81,10 +81,10 @@
     "masaki",
     "mkdir",
     "mkobayashime",
-    "signup",
-    "typecheck",
-    "noreferrer",
     "noopener",
+    "noreferrer",
+    "signup",
+    "typecheck"
   ],
   "cSpell.enabledLanguageIds": [
     "asciidoc",
