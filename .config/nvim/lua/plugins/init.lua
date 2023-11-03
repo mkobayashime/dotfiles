@@ -31,7 +31,9 @@ return {
       { "JoosepAlviste/nvim-ts-context-commentstring" },
       {
         "romgrk/nvim-treesitter-context",
-        opts = {},
+        opts = {
+          max_lines = 10,
+        },
       },
       { "andersevenrud/nvim_context_vt" },
       { "RRethy/nvim-treesitter-textsubjects" },
