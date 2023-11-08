@@ -53,4 +53,4 @@ if [[ ! "$description" ]]; then
   exit 1
 fi
 
-exiftool -overwrite_original -IPTC:Caption-Abstract="$description" "$@"
+exiftool -overwrite_original -IPTC:Caption-Abstract="$description" -codedcharacterset=utf8 -charset iptc=latin2 "$@"
