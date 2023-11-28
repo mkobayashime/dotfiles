@@ -16,7 +16,7 @@
   "iswap.nvim": { "branch": "master", "commit": "8b038cb10585713b4c3918d44d6c329effad2a5d" },
   "kensaku-search.vim": { "branch": "main", "commit": "8fefbd7db9af99414896c5837feec13a02606550" },
   "kensaku.vim": { "branch": "main", "commit": "7ddad2f355a3678597ebbac666e2ee6dda6b9cf3" },
-  "lazy.nvim": { "branch": "main", "commit": "5aaafcb3019e04dd38a011b3d4c8a0f130c422ef" },
+  "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
   "markdown-preview.nvim": { "branch": "master", "commit": "9becceee5740b7db6914da87358a183ad11b2049" },
   "neoscroll.nvim": { "branch": "master", "commit": "4bc0212e9f2a7bc7fe7a6bceb15b33e39f0f41fb" },
   "nvim-autopairs": { "branch": "master", "commit": "de4f7138a68d5d5063170f2182fd27faf06b0b54" },
