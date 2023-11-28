@@ -68,6 +68,12 @@ if hascommand brew; then
   fpath+=("$(brew --prefix)/share/zsh/site-functions")
 fi
 
+# private
+
+if [[ -f "$HOME/.dotfiles-private/.zshrc.private" ]]; then
+  source "$HOME/.dotfiles-private/.zshrc.private"
+fi
+
 # local
 
 if [[ -f "$HOME/.zshrc.local" ]]; then
