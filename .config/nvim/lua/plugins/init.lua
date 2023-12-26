@@ -28,7 +28,12 @@ return {
           require("plugins/rainbow-delimiters")
         end,
       },
-      { "JoosepAlviste/nvim-ts-context-commentstring" },
+      {
+        "JoosepAlviste/nvim-ts-context-commentstring",
+        config = function()
+          require("plugins/nvim-ts-context-commentstring")
+        end,
+      },
       {
         "romgrk/nvim-treesitter-context",
         opts = {
