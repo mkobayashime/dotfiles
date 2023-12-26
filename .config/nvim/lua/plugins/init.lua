@@ -78,7 +78,9 @@ return {
   {
     "lewis6991/gitsigns.nvim",
     event = "VimEnter",
-    opts = {},
+    opts = {
+      current_line_blame = true,
+    },
   },
   {
     "kevinhwang91/nvim-hlslens",
