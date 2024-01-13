@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-node_version=20.9.0
+node_version=20.11.0
 
 if [[ -d ~/.config/nodenv ]]; then
   echo 'nodenv already installed'
