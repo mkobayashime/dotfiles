@@ -19,6 +19,7 @@ vim.g.coc_global_extensions = {
   "coc-spell-checker",
   "coc-stylelintplus",
   "coc-sumneko-lua",
+  "coc-texlab",
   "coc-tsserver",
   "coc-yaml",
 }
