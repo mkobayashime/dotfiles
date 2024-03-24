@@ -1,0 +1,38 @@
+live_config_reload = true
+
+[window]
+opacity = 0.8
+startup_mode = "Maximized"
+padding = { x = 10, y = 5 }
+
+[font]
+size = 12
+normal = { family = "JetBrains Mono NL" }
+
+[colors.primary]
+background = "#000000"
+foreground = "#d6dbe5"
+
+[colors.normal]
+black = "#1f1f1f"
+blue = "#2a84d2"
+cyan = "#1081d6"
+green = "#2dc55e"
+magenta = "#4e5ab7"
+red = "#f81118"
+white = "#d6dbe5"
+yellow = "#ecba0f"
+
+[colors.bright]
+black = "#c2c7cf"
+blue = "#1081d6"
+cyan = "#0f7ddb"
+green = "#1dd361"
+magenta = "#5350b9"
+red = "#de352e"
+white = "#ffffff"
+yellow = "#f3bd09"
+
+[colors.selection]
+text = "CellForeground"
+background = "#434547"
