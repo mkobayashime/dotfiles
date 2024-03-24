@@ -94,6 +94,17 @@ return {
     opts = {},
   },
   {
+    "sindrets/diffview.nvim",
+    event = "VimEnter",
+    opts = {
+      view = {
+        merge_tool = {
+          layout = "diff3_mixed",
+        },
+      },
+    },
+  },
+  {
     "numToStr/Comment.nvim",
     event = "VimEnter",
     dependencies = {
