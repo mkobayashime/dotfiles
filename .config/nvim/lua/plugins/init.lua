@@ -305,4 +305,8 @@ return {
     "chrisbra/csv.vim",
     ft = "csv",
   },
+  {
+    "digitaltoad/vim-pug",
+    ft = "pug",
+  },
 }
