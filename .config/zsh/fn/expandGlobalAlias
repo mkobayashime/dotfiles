@@ -1,0 +1,14 @@
+# ref: https://qiita.com/sho-t/items/13f185539b3cb6c8c6ad
+
+function main() {
+  emulate -L zsh
+  setopt aliases
+  local -a global_aliases=(${(@f)"$(alias -g)"})
+  local -a characters=(${global_aliases%%\=*})
+  if (($characters[(I)${(q)LBUFFER##* }])); then
+     zle _expand_alias
+     zle expand-word
+  fi
+}
+
+main

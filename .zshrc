@@ -58,6 +58,10 @@ export PATH="$HOME/.local/bin":"$PATH"
 
 source "$HOME/.config/zsh/alias/index.zsh"
 
+autoload -Uz expandGlobalAlias
+zle -N expandGlobalAlias
+bindkey '^ ' expandGlobalAlias
+
 # auto completion
 
 autoload -Uz compinit && compinit
