@@ -126,7 +126,7 @@ return {
   },
   {
     "gbprod/yanky.nvim",
-    event = "CursorHold",
+    event = "VimEnter",
     opts = {
       highlight = {
         timer = 250,
