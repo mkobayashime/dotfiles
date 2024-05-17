@@ -1,8 +1,8 @@
 main() {
   local nix_packages
 
-  if ! hascommand nix-env &> /dev/null; then
-    echo 'Command not found: nix-env. Maybe you have to run this from zsh, exiting...'
+  if ! hascommand nix &> /dev/null; then
+    echo 'Command not found: nix. Maybe you have to run this from zsh, exiting...'
     exit 1
   fi
 
@@ -42,16 +42,16 @@ main() {
   prefixed_nix_packages=()
 
   for p in "${nix_packages[@]}"; do
-    prefixed_nix_packages+=("nixpkgs.$p")
+    prefixed_nix_packages+=("nixpkgs#$p")
   done
 
   isMac && {
     for p in "${nix_packages_mac[@]}"; do
-      prefixed_nix_packages+=("nixpkgs.$p")
+      prefixed_nix_packages+=("nixpkgs#$p")
     done
   }
 
-  nix-env -iA "${prefixed_nix_packages[@]}"
+  nix profile install "${prefixed_nix_packages[@]}"
 }
 
 main
