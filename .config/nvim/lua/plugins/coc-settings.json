@@ -35,6 +35,16 @@
   "coc.source.omni.filetypes": ["stylus"],
 
   "languageserver": {
+    "nix": {
+      "command": "nil",
+      "filetypes": ["nix"],
+      "rootPatterns":  ["flake.nix"],
+      "settings": {
+        "nil": {
+          "formatting": { "command": ["nixpkgs-fmt"] }
+        }
+      }
+    },
     // Haskell
     "haskell": {
       "command": "haskell-language-server-wrapper",
