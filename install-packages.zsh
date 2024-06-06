@@ -20,6 +20,7 @@ main() {
     icdiff
     imagemagick
     jq
+    nil
     pdftk
     ripgrep
     shellcheck
