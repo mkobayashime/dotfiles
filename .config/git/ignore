@@ -2,3 +2,4 @@
 .envrc
 *.swp
 .DS_Store
+.direnv
