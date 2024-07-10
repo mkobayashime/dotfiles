@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+for file in "$@"; do
+  ffmpeg -i "$file" -r 15 "${file%.*}.gif"
+done
