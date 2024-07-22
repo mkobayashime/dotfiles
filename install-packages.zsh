@@ -21,6 +21,7 @@ main() {
     imagemagick
     jq
     nil
+    nix-direnv
     pdftk
     ripgrep
     shellcheck
