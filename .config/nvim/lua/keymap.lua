@@ -52,6 +52,10 @@ vim.keymap.set("!", "<C-h>", "<Left>")
 vim.keymap.set("!", "<C-l>", "<Right>")
 vim.keymap.set("!", "<C-j>", "<Down>")
 
+-- sort {{{2
+
+vim.keymap.set("x", "<Leader>o", ":sort<CR>")
+
 -- quickfix list {{{2
 
 vim.keymap.set("n", "]q", ":cn<CR>", { desc = "Next quickfix location" })
