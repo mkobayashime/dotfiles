@@ -290,7 +290,6 @@ return {
   },
   {
     "iamcco/markdown-preview.nvim",
-    version = "*",
     ft = { "markdown", "pandoc.markdown", "rmd" },
     build = 'sh -c "cd app && yarn install"',
     config = function()
