@@ -1,3 +1,5 @@
+local actions = require("telescope.actions")
+
 require("telescope").setup({
   defaults = {
     mappings = {
@@ -6,11 +8,13 @@ require("telescope").setup({
         ["<C-p>"] = false,
         ["<C-j>"] = "move_selection_next",
         ["<C-k>"] = "move_selection_previous",
+        ["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
       },
       n = {
         ["<C-c>"] = "close",
         ["<C-j>"] = "move_selection_next",
         ["<C-k>"] = "move_selection_previous",
+        ["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
       },
     },
     vimgrep_arguments = {
