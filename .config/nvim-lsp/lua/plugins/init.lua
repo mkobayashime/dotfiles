@@ -6,12 +6,35 @@ return {
     end,
   },
   {
+    "neovim/nvim-lspconfig",
+  },
+  {
+    "williamboman/mason.nvim",
+    opts = {},
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    init = function()
+      require("plugins/mason-lspconfig")
+    end,
+    dependencies = {
+      "neovim/nvim-lspconfig",
+      "williamboman/mason.nvim",
+    },
+  },
+  {
+    "j-hui/fidget.nvim",
+    event = "VimEnter",
+    opts = {},
+  },
+  {
     "neoclide/coc.nvim",
     branch = "release",
     event = "VimEnter",
     init = function()
       require("plugins/coc")
     end,
+    enabled = false,
   },
   {
     "nvim-treesitter/nvim-treesitter",
