@@ -28,6 +28,7 @@ main() {
     shellcheck
     shfmt
     tmux
+    tree-sitter
     whois
     xclip
     yt-dlp
