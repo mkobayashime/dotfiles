@@ -8,7 +8,7 @@ alias gds='DELTA_FEATURES=side-by-side git diff'
 alias gdw="git diff -w"
 alias gdws='gds -w'
 alias gs="git status"
-alias gpf="git push --force-with-lease"
+alias gpf="git push --force-with-lease --force-if-includes"
 alias gpu="git pull"
 alias gprune="git pull --prune"
 alias gb="git branch"
