@@ -52,6 +52,10 @@ vim.keymap.set("!", "<C-h>", "<Left>")
 vim.keymap.set("!", "<C-l>", "<Right>")
 vim.keymap.set("!", "<C-j>", "<Down>")
 
+-- parens motion {{{2
+
+vim.keymap.set({ "n", "v" }, "M", "%")
+
 -- sort {{{2
 
 vim.keymap.set("x", "<Leader>o", ":sort<CR>")
