@@ -15,7 +15,6 @@ mkdir plugins
 cd plugins || exit 1
 git clone https://github.com/nodenv/node-build.git
 git clone https://github.com/ouchxp/nodenv-nvmrc.git
-git clone https://github.com/pine/nodenv-yarn-install.git
 
 export PATH="$HOME/.config/nodenv/bin:$PATH"
 export NODENV_ROOT="$HOME/.config/nodenv"
