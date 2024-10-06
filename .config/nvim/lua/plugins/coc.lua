@@ -13,6 +13,7 @@ vim.g.coc_global_extensions = {
   "coc-json",
   "coc-omni",
   "coc-prettier",
+  "coc-prisma",
   "coc-pyright",
   "coc-rust-analyzer",
   "coc-sh",

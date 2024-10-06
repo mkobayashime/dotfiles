@@ -17,6 +17,7 @@ require("nvim-treesitter.configs").setup({
     "latex",
     "lua",
     "make",
+    "prisma",
     "regex",
     "ruby",
     "rust",
