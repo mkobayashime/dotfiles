@@ -8,6 +8,7 @@ main() {
 
   nix_packages=(
     bat
+    bun
     delta
     deno
     direnv
