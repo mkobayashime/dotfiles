@@ -38,6 +38,7 @@ alias gg="git graph"
 alias pr="gh pr view -w"
 alias prn="gh pr create"
 alias prnf="gh pr create -f"
+alias prnb='gh pr create -B $(fbr --stdout)'
 alias automerge='gh pr merge --auto'
 
 alias wip="git commit -m 'WIP [skip ci]' --no-verify"
