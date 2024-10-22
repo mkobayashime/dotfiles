@@ -32,7 +32,9 @@
   },
   "colors.enable": true,
   "highlight.colorNames.enable": false,
-  "coc.source.omni.filetypes": ["stylus"],
+  "coc.source.omni.filetypes": [
+    // "stylus"
+  ],
 
   "languageserver": {
     "nix": {
