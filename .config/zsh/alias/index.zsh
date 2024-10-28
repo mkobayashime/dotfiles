@@ -18,3 +18,5 @@ alias -g V="--version"
 if [[ -f "$HOME/.alias_etc" ]]; then
   source ~/.alias_etc
 fi
+
+alias '$'=''
