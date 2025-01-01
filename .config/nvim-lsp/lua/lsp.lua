@@ -17,6 +17,10 @@ vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
 
 vim.diagnostic.config({
   virtual_text = false,
+  float = {
+    border = "single",
+    focusable = false,
+  },
 })
 
 OnLSPAttach(function(client, buffer)
@@ -27,6 +31,7 @@ OnLSPAttach(function(client, buffer)
       buffer = buffer,
       callback = function()
         vim.lsp.buf.document_highlight()
+        vim.diagnostic.open_float({ scope = "cursor" })
       end,
     })
     vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
