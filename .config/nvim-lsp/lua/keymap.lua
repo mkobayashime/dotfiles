@@ -120,18 +120,8 @@ vim.keymap.set("n", "<Leader>fi", ":Telescope lsp_implementations<CR>", { silent
 
 -- LSP {{{2
 
-function on_lsp_attach(on_attach)
-  vim.api.nvim_create_autocmd("LspAttach", {
-    callback = function(args)
-      local buffer = args.buf
-      local client = vim.lsp.get_client_by_id(args.data.client_id)
-      on_attach(client, buffer)
-    end,
-  })
-end
-
 -- Toggle hover
-on_lsp_attach(function(_, buffer)
+OnLSPAttach(function(_, buffer)
   vim.keymap.set("n", "K", function()
     local base_win_id = vim.api.nvim_get_current_win()
     local windows = vim.api.nvim_tabpage_list_wins(0)
@@ -148,7 +138,7 @@ on_lsp_attach(function(_, buffer)
   end, { remap = false, silent = true, buffer = buffer })
 end)
 
-on_lsp_attach(function()
+OnLSPAttach(function()
   vim.keymap.set({ "n", "v" }, "<Leader>a", ":lua vim.lsp.buf.code_action()<CR>")
   vim.keymap.set("n", "<Leader>rn", ":lua vim.lsp.buf.rename()<CR>")
 end)
