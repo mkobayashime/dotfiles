@@ -113,18 +113,53 @@ vim.keymap.set("n", "<Leader>gs", ":Telescope git_status<CR>", { silent = true }
 vim.keymap.set("n", "<Leader>gb", ":Telescope git_branches<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>gl", ":Telescope git_commits<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>gfl", ":Telescope git_bcommits<CR>", { silent = true })
-vim.keymap.set("n", "<Leader>fe", ":Telescope coc diagnostics<CR>", { silent = true })
-vim.keymap.set("n", "<Leader>fr", ":Telescope coc references<CR>", { silent = true })
-vim.keymap.set("n", "<Leader>fd", ":Telescope coc definitions<CR>", { silent = true })
-vim.keymap.set("n", "<Leader>fi", ":Telescope coc implementations<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>fe", ":Telescope diagnostics<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>fr", ":Telescope lsp_references<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>fd", ":Telescope lsp_definitions<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>fi", ":Telescope lsp_implementations<CR>", { silent = true })
+
+-- LSP {{{2
+
+function on_lsp_attach(on_attach)
+  vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function(args)
+      local buffer = args.buf
+      local client = vim.lsp.get_client_by_id(args.data.client_id)
+      on_attach(client, buffer)
+    end,
+  })
+end
+
+-- Toggle hover
+on_lsp_attach(function(_, buffer)
+  vim.keymap.set("n", "K", function()
+    local base_win_id = vim.api.nvim_get_current_win()
+    local windows = vim.api.nvim_tabpage_list_wins(0)
+    for _, win_id in ipairs(windows) do
+      if win_id ~= base_win_id then
+        local win_cfg = vim.api.nvim_win_get_config(win_id)
+        if win_cfg.relative == "win" and win_cfg.win == base_win_id then
+          vim.api.nvim_win_close(win_id, {})
+          return
+        end
+      end
+    end
+    vim.lsp.buf.hover()
+  end, { remap = false, silent = true, buffer = buffer })
+end)
+
+on_lsp_attach(function()
+  vim.keymap.set({ "n", "v" }, "<Leader>a", ":lua vim.lsp.buf.code_action()<CR>")
+  vim.keymap.set("n", "<Leader>rn", ":lua vim.lsp.buf.rename()<CR>")
+end)
 
 -- coc {{{2
 
 -- popup menu {{{3
 
-vim.cmd [[
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-]]
+-- vim.cmd [[
+-- inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+-- ]]
 -- doesn't work with vim-eunuch
 -- vim.keymap.set("i", "<CR>",
 --   function()
@@ -156,50 +191,6 @@ vim.keymap.set("i", "<C-k>",
   [[coc#pum#visible() ? coc#pum#prev(1) : "<C-k>"]],
   { silent = true, expr = true, replace_keycodes = false }
 )
-
--- hover {{{3
-
-vim.keymap.set("n", "K",
-  function()
-    local cw = vim.fn.expand("<cword>")
-    if vim.fn.index({ "vim", "help" }, vim.bo.filetype) >= 0 then
-      vim.api.nvim_command("h " .. cw)
-    elseif vim.api.nvim_eval("coc#rpc#ready()") then
-      vim.fn.CocActionAsync("doHover")
-    else
-      vim.api.nvim_command("!" .. vim.o.keywordprg .. " " .. cw)
-    end
-  end,
-  { silent = true, desc = "Hover" }
-)
-
--- popup scroll {{{3
-
-vim.keymap.set("n", "<C-y>",
-  function()
-    if vim.bool_fn["coc#float#has_scroll"]() then
-      vim.fn["coc#float#scroll"](1, 1)
-    else
-      return "<C-y>"
-    end
-  end,
-  { expr = true }
-)
-vim.keymap.set("n", "<C-e>",
-  function()
-    if vim.bool_fn["coc#float#has_scroll"]() then
-      vim.fn["coc#float#scroll"](0, 1)
-    else
-      return "<C-e>"
-    end
-  end,
-  { expr = true }
-)
-
--- others {{{3
-
-vim.keymap.set({ "n", "v" }, "<Leader>a", "<Plug>(coc-codeaction-selected)")
-vim.keymap.set("n", "<Leader>rn", "<Plug>(coc-rename)")
 
 -- fern {{{2
 
