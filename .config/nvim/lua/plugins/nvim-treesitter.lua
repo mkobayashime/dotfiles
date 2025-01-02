@@ -26,6 +26,7 @@ require("nvim-treesitter.configs").setup({
     "tsx",
     "typescript",
     "vim",
+    "vimdoc",
     "yaml",
   },
   highlight = {
