@@ -1,7 +1,8 @@
 local cmp = require("cmp")
 
-local window = cmp.config.window.bordered()
-window.border = "single"
+local window = cmp.config.window.bordered({
+  border = "single",
+})
 
 cmp.setup({
   sources = {
