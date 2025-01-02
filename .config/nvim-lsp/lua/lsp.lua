@@ -38,16 +38,16 @@ OnLSPAttach(function(client, buffer)
   end
 
   if client.supports_method "textDocument/documentHighlight" then
-    local lsp_document_highlight = vim.api.nvim_create_augroup("lsp_document_highlight", {})
+    local augroup_lsp_document_highlight = vim.api.nvim_create_augroup("lsp_document_highlight", {})
     vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
-      group = lsp_document_highlight,
+      group = augroup_lsp_document_highlight,
       buffer = buffer,
       callback = function()
         vim.lsp.buf.document_highlight()
       end,
     })
     vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
-      group = lsp_document_highlight,
+      group = augroup_lsp_document_highlight,
       buffer = buffer,
       callback = function()
         vim.lsp.buf.clear_references()
