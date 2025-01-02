@@ -120,8 +120,9 @@ vim.keymap.set("n", "<Leader>fi", ":Telescope lsp_implementations<CR>", { silent
 
 -- LSP {{{2
 
--- Toggle hover
 OnLSPAttach(function(_, buffer)
+  local options = { remap = false, silent = true, buffer = buffer }
+
   vim.keymap.set("n", "K", function()
     local base_win_id = vim.api.nvim_get_current_win()
     local windows = vim.api.nvim_tabpage_list_wins(0)
@@ -135,12 +136,10 @@ OnLSPAttach(function(_, buffer)
       end
     end
     vim.lsp.buf.hover()
-  end, { remap = false, silent = true, buffer = buffer })
-end)
+  end, options)
 
-OnLSPAttach(function()
-  vim.keymap.set({ "n", "v" }, "<Leader>a", ":lua vim.lsp.buf.code_action()<CR>")
-  vim.keymap.set("n", "<Leader>rn", ":lua vim.lsp.buf.rename()<CR>")
+  vim.keymap.set({ "n", "v" }, "<Leader>a", ":Lspsaga code_action<CR>", options)
+  vim.keymap.set({ "n", "v" }, "<Leader>rn", ":Lspsaga rename<CR>", options)
 end)
 
 -- fern {{{2

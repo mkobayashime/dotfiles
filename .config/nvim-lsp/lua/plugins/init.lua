@@ -23,6 +23,13 @@ return {
     },
   },
   {
+    "nvimdev/lspsaga.nvim",
+    event = "LspAttach",
+    init = function()
+      require("plugins/lspsaga")
+    end,
+  },
+  {
     "j-hui/fidget.nvim",
     event = "LspAttach",
     opts = {},
