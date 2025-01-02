@@ -31,6 +31,7 @@ require("telescope").setup({
       "--column",
       "--smart-case",
     },
+    borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
   },
   pickers = {
     find_files = {
