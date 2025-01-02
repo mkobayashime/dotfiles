@@ -54,4 +54,29 @@ OnLSPAttach(function(client, buffer)
       end,
     })
   end
+
+  -- https://eiji.page/blog/neovim-dynamic-capabilities/
+  local function format()
+    vim.lsp.buf.format({
+      timeout_ms = 2000,
+      filter = function(clientt)
+        return clientt.name ~= "ts_ls"
+      end,
+    })
+  end
+
+  if client.supports_method("textDocument/formatting") then
+    local augroup_formatter = vim.api.nvim_create_augroup("lsp_formatter", {})
+
+    vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+      group = augroup_formatter,
+      buffer = buffer,
+      callback = function()
+        format()
+      end,
+    })
+    vim.api.nvim_create_user_command("Format", function()
+      format()
+    end, {})
+  end
 end)
