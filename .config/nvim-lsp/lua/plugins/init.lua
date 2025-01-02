@@ -24,7 +24,7 @@ return {
   },
   {
     "j-hui/fidget.nvim",
-    event = "VimEnter",
+    event = "LspAttach",
     opts = {},
   },
   {
