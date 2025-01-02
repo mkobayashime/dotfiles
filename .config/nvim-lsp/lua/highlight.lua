@@ -9,9 +9,8 @@ vim.api.nvim_create_autocmd({ "ColorScheme" }, {
     vim.api.nvim_set_hl(0, "IncSearch", { link = "DiffAdd" })
     vim.api.nvim_set_hl(0, "Search", { link = "Visual" })
 
-    -- coc
+    -- Transparent background in float
     vim.api.nvim_set_hl(0, "NormalFloat", {})
-    vim.api.nvim_set_hl(0, "CocFloating", { link = "NormalFloat" })
 
     -- treesitter-context
     vim.api.nvim_set_hl(0, "TreesitterContextBottom", { underline = true })

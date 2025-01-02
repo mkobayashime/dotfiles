@@ -35,15 +35,6 @@ return {
     opts = {},
   },
   {
-    "neoclide/coc.nvim",
-    branch = "release",
-    event = "VimEnter",
-    init = function()
-      require("plugins/coc")
-    end,
-    enabled = false,
-  },
-  {
     "nvim-treesitter/nvim-treesitter",
     version = "*",
     event = "VimEnter",
@@ -86,7 +77,6 @@ return {
     end,
     dependencies = {
       { "nvim-lua/plenary.nvim" },
-      { "fannheyward/telescope-coc.nvim" },
       {
         "nvim-telescope/telescope-fzf-native.nvim",
         build = "make",
