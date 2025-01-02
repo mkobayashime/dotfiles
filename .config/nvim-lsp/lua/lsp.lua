@@ -26,6 +26,17 @@ vim.diagnostic.config({
 })
 
 OnLSPAttach(function(client, buffer)
+  if client.supports_method "textDocument/publishDiagnostics" then
+    local augroup_diagnostic = vim.api.nvim_create_augroup("lsp_diagnostic", {})
+    vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+      group = augroup_diagnostic,
+      buffer = buffer,
+      callback = function()
+        vim.diagnostic.open_float({ scope = "cursor" })
+      end,
+    })
+  end
+
   if client.supports_method "textDocument/documentHighlight" then
     local lsp_document_highlight = vim.api.nvim_create_augroup("lsp_document_highlight", {})
     vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
@@ -33,7 +44,6 @@ OnLSPAttach(function(client, buffer)
       buffer = buffer,
       callback = function()
         vim.lsp.buf.document_highlight()
-        vim.diagnostic.open_float({ scope = "cursor" })
       end,
     })
     vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
