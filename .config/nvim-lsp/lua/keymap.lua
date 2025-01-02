@@ -143,45 +143,6 @@ OnLSPAttach(function()
   vim.keymap.set("n", "<Leader>rn", ":lua vim.lsp.buf.rename()<CR>")
 end)
 
--- coc {{{2
-
--- popup menu {{{3
-
--- vim.cmd [[
--- inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
--- ]]
--- doesn't work with vim-eunuch
--- vim.keymap.set("i", "<CR>",
---   function()
---     return vim.bool_fn["coc#pum#visible"]() and
---         vim.fn["coc#pum#confirm"]() or
---         "<C-g>u<CR><c-r>=coc#on_enter()<CR>"
---   end,
---   { expr = true, silent = true }
--- )
-
-function _G.check_back_space()
-  local col = vim.fn.col(".") - 1
-  return col == 0 or vim.fn.getline("."):sub(col, col):match("%s") ~= nil
-end
-
-vim.keymap.set("i", "<TAB>",
-  'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()',
-  { silent = true, expr = true, replace_keycodes = false }
-)
-vim.keymap.set("i", "<C-j>",
-  'coc#pum#visible() ? coc#pum#next(1) : "<C-j>"',
-  { silent = true, expr = true, replace_keycodes = false }
-)
-vim.keymap.set("i", "<S-TAB>",
-  [[coc#pum#visible() ? coc#pum#prev(1) : "<C-h>"]],
-  { silent = true, expr = true, replace_keycodes = false }
-)
-vim.keymap.set("i", "<C-k>",
-  [[coc#pum#visible() ? coc#pum#prev(1) : "<C-k>"]],
-  { silent = true, expr = true, replace_keycodes = false }
-)
-
 -- fern {{{2
 
 vim.keymap.set({ "n", "x" }, "<Leader>e", ":<C-u>Fern . -reveal=%:p<CR>", { silent = true, desc = "Open Fern" })
