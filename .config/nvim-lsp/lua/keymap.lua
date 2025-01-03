@@ -127,21 +127,6 @@ vim.keymap.set("n", "<Leader>fi", ":Telescope lsp_implementations<CR>", { silent
 OnLSPAttach(function(_, buffer)
   local options = { remap = false, silent = true, buffer = buffer }
 
-  vim.keymap.set("n", "K", function()
-    local base_win_id = vim.api.nvim_get_current_win()
-    local windows = vim.api.nvim_tabpage_list_wins(0)
-    for _, win_id in ipairs(windows) do
-      if win_id ~= base_win_id then
-        local win_cfg = vim.api.nvim_win_get_config(win_id)
-        if win_cfg.relative == "win" and win_cfg.win == base_win_id then
-          vim.api.nvim_win_close(win_id, {})
-          return
-        end
-      end
-    end
-    vim.lsp.buf.hover()
-  end, options)
-
   vim.keymap.set({ "n", "v" }, "<Leader>a", ":lua vim.lsp.buf.code_action()<CR>", options)
   vim.keymap.set({ "n", "v" }, "<Leader>rn", ":lua vim.lsp.buf.rename()<CR>", options)
 end)
