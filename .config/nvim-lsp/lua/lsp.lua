@@ -73,8 +73,8 @@ OnLSPAttach(function(client, buffer)
   local function format()
     vim.lsp.buf.format({
       timeout_ms = 2000,
-      filter = function(clientt)
-        return clientt.name ~= "ts_ls"
+      filter = function(client_)
+        return client_.name ~= "ts_ls"
       end,
     })
   end
