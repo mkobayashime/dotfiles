@@ -23,16 +23,16 @@ return {
     },
   },
   {
-    "nvimdev/lspsaga.nvim",
-    event = "LspAttach",
-    init = function()
-      require("plugins/lspsaga")
-    end,
-  },
-  {
     "j-hui/fidget.nvim",
     event = "LspAttach",
     opts = {},
+  },
+  {
+    "stevearc/dressing.nvim",
+    event = "VimEnter",
+    config = function()
+      require("plugins/dressing")
+    end,
   },
   {
     "nvim-treesitter/nvim-treesitter",

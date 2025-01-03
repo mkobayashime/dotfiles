@@ -142,8 +142,8 @@ OnLSPAttach(function(_, buffer)
     vim.lsp.buf.hover()
   end, options)
 
-  vim.keymap.set({ "n", "v" }, "<Leader>a", ":Lspsaga code_action<CR>", options)
-  vim.keymap.set({ "n", "v" }, "<Leader>rn", ":Lspsaga rename<CR>", options)
+  vim.keymap.set({ "n", "v" }, "<Leader>a", ":lua vim.lsp.buf.code_action()<CR>", options)
+  vim.keymap.set({ "n", "v" }, "<Leader>rn", ":lua vim.lsp.buf.rename()<CR>", options)
 end)
 
 -- fern {{{2
