@@ -11,4 +11,10 @@ require("gitgraph").setup({
       vim.cmd(":DiffviewOpen " .. from.hash .. "~1.." .. to.hash)
     end,
   },
+  symbols = {
+    merge_commit = "○",
+    commit = "●",
+    merge_commit_end = "○",
+    commit_end = "●",
+  },
 })
