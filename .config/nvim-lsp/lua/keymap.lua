@@ -131,6 +131,12 @@ OnLSPAttach(function(_, buffer)
   vim.keymap.set({ "n", "v" }, "<Leader>rn", ":lua vim.lsp.buf.rename()<CR>", options)
 end)
 
+-- lsp_signature {{{2
+
+vim.keymap.set({ "i" }, "<C-i>", function()
+  require("lsp_signature").toggle_float_win()
+end, { silent = true, noremap = true, desc = "toggle signature" })
+
 -- fern {{{2
 
 vim.keymap.set({ "n", "x" }, "<Leader>e", ":<C-u>Fern . -reveal=%:p<CR>", { silent = true, desc = "Open Fern" })

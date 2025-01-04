@@ -119,6 +119,17 @@ return {
     end,
   },
   {
+    "ray-x/lsp_signature.nvim",
+    event = "BufEnter",
+    opts = {
+      bind = true,
+      handler_opts = {
+        border = "single",
+      },
+      hint_prefix = "",
+    },
+  },
+  {
     "lewis6991/gitsigns.nvim",
     event = "VimEnter",
     opts = {
