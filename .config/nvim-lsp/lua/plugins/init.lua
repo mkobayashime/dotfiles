@@ -163,13 +163,9 @@ return {
   {
     "sindrets/diffview.nvim",
     event = "VimEnter",
-    opts = {
-      view = {
-        merge_tool = {
-          layout = "diff3_mixed",
-        },
-      },
-    },
+    config = function()
+      require("plugins/diffview")
+    end,
   },
   {
     "numToStr/Comment.nvim",
