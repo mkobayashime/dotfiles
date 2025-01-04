@@ -23,6 +23,7 @@ main() {
     jq
     nil
     nix-direnv
+    nodePackages.cspell
     pdftk
     ripgrep
     shellcheck
