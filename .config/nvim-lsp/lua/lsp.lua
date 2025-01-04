@@ -40,7 +40,9 @@ vim.diagnostic.config({
 })
 
 OnLSPAttach(function(client, buffer)
-  if client.supports_method "textDocument/publishDiagnostics" then
+  if client.supports_method "textDocument/publishDiagnostics"
+      or client.name == "null-ls"
+  then
     local augroup_diagnostic = vim.api.nvim_create_augroup("lsp_diagnostic", {})
     vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
       group = augroup_diagnostic,

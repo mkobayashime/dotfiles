@@ -23,6 +23,16 @@ return {
     },
   },
   {
+    "nvimtools/none-ls.nvim",
+    event = "BufEnter",
+    dependencies = {
+      { "davidmh/cspell.nvim" },
+    },
+    config = function()
+      require("plugins/none-ls")
+    end,
+  },
+  {
     "j-hui/fidget.nvim",
     event = "LspAttach",
     opts = {},
