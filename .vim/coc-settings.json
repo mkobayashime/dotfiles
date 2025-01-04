@@ -1,10 +1,4 @@
 {
-  "cSpell.words": [
-    "elif",
-    "esac",
-    "keymap",
-    "pipefail"
-  ],
   "Lua.diagnostics.globals": [
     "vim"
   ]
