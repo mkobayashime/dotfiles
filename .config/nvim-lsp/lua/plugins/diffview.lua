@@ -1,3 +1,5 @@
+local actions = require("diffview.actions")
+
 require("diffview").setup({
   view = {
     merge_tool = {
@@ -10,6 +12,8 @@ require("diffview").setup({
     },
     file_panel = {
       ["q"] = ":DiffviewClose<CR>",
+      ["<C-j>"] = actions.select_next_entry,
+      ["<C-k>"] = actions.select_prev_entry,
     },
   },
 })
