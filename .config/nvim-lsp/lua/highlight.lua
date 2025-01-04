@@ -30,6 +30,19 @@ vim.api.nvim_create_autocmd({ "ColorScheme" }, {
     vim.api.nvim_set_hl(0, "HlSearchLensNear", { link = "DiffAdd" })
     vim.api.nvim_set_hl(0, "HlSearchLens", { link = "Visual" })
 
+    -- gitgraph
+    vim.api.nvim_set_hl(0, "GitGraphHash", { link = "Number" })
+    vim.api.nvim_set_hl(0, "GitGraphTimestamp", { link = "Title" })
+    vim.api.nvim_set_hl(0, "GitGraphAuthor", { link = "Special" })
+    vim.api.nvim_set_hl(0, "GitGraphBranchName", { link = "Title" })
+    vim.api.nvim_set_hl(0, "GitGraphBranchTag", { link = "Title" })
+    vim.api.nvim_set_hl(0, "GitGraphBranchMsg", { link = "Normal" })
+    vim.api.nvim_set_hl(0, "GitGraphBranch1", { link = "Special" })
+    vim.api.nvim_set_hl(0, "GitGraphBranch2", { link = "ErrorMsg" })
+    vim.api.nvim_set_hl(0, "GitGraphBranch3", { link = "Number" })
+    vim.api.nvim_set_hl(0, "GitGraphBranch4", { link = "Title" })
+    vim.api.nvim_set_hl(0, "GitGraphBranch5", { link = "Label" })
+
     -- git-conflict
     vim.api.nvim_set_hl(0, "GitConflictCurrent", { bg = "#22403a" })
     vim.api.nvim_set_hl(0, "GitConflictCurrentLabel", { bg = "#266156" })

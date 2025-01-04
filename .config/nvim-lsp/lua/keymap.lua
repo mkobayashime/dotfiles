@@ -177,6 +177,14 @@ vim.keymap.set(
   ':lua require("nvim-treesitter.textsubjects").select("textsubjects-smart", true, vim.fn.getpos("\'<"), vim.fn.getpos("\'>"))<CR>'
 )
 
+-- gitgraph {{{2
+
+vim.keymap.set({ "n", "v" }, "<Leader>gg", function()
+  require("gitgraph").draw({}, { all = true, max_count = 5000 })
+end, {
+  remap = false,
+})
+
 -- gitsigns {{{2
 
 vim.keymap.set("n", "]g",

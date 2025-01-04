@@ -143,6 +143,13 @@ return {
     },
   },
   {
+    "isakbm/gitgraph.nvim",
+    event = "CursorHold",
+    config = function()
+      require("plugins/gitgraph")
+    end,
+  },
+  {
     "kevinhwang91/nvim-hlslens",
     event = "VimEnter",
     opts = {},
