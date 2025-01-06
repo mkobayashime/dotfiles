@@ -44,7 +44,7 @@ OnLSPAttach(function(client, buffer)
       or client.name == "null-ls"
   then
     local augroup_diagnostic = vim.api.nvim_create_augroup("lsp_diagnostic", {})
-    vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
+    vim.api.nvim_create_autocmd({ "CursorMoved" }, {
       group = augroup_diagnostic,
       buffer = buffer,
       callback = function()
