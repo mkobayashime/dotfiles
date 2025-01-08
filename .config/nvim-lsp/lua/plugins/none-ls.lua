@@ -14,5 +14,7 @@ null_ls.setup({
       config = cspell_config,
     }),
     cspell.code_actions.with({ config = cspell_config }),
+
+    null_ls.builtins.formatting.prettier
   },
 })
