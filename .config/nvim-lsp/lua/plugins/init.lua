@@ -289,6 +289,7 @@ return {
     opts = {
       indent = {
         char = "▏",
+        tab_char = "▏",
       },
       scope = {
         show_start = false,
