@@ -92,7 +92,6 @@ source "$HOME/.config/zsh/antigen/bin/antigen.zsh"
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 hascommand nix-env && antigen bundle spwhitt/nix-zsh-completions
-antigen bundle mkobayashime/zsh-yarn-completion
 
 antigen apply
 
