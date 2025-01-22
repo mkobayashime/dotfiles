@@ -41,6 +41,7 @@
   line-numbers = true
   file-modified-label =
   hunk-header-decoration-style = blue ul
+  tabs = 2
 [rerere]
   enabled = true
 [include]
