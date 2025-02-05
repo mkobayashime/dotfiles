@@ -15,6 +15,20 @@ null_ls.setup({
     }),
     cspell.code_actions.with({ config = cspell_config }),
 
-    null_ls.builtins.formatting.prettier
+    null_ls.builtins.formatting.prettier.with({
+      condition = function(utils)
+        return utils.root_has_file({
+          ".prettierrc",
+          ".prettierrc.json",
+          ".prettierrc.yaml",
+          ".prettierrc.yml",
+          ".prettierrc.js",
+          ".prettierrc.cjs",
+          "prettier.config.js",
+          "prettier.config.cjs",
+          ".prettierrc.toml",
+        })
+      end,
+    }),
   },
 })
