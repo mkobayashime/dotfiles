@@ -1,1 +1,1 @@
-alias trimvideo='pnpm dlx @mkobayashime/trimvideo'
+alias trimvideo='bunx @mkobayashime/trimvideo'
