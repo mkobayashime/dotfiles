@@ -265,7 +265,6 @@ vim.keymap.set("n", "[g",
 )
 vim.keymap.set({ "n", "v" }, "[_git]a", ":Gitsigns stage_hunk<CR>")
 vim.keymap.set("n", "[_git]A", ":Gitsigns stage_buffer<CR>")
-vim.keymap.set("n", "[_git]u", ":Gitsigns undo_stage_hunk<CR>")
 vim.keymap.set({ "n", "v" }, "[_git]r", ":Gitsigns reset_hunk<CR>")
 vim.keymap.set("n", "[_git]R", ":Gitsigns reset_buffer<CR>")
 vim.keymap.set("n", "[_git]s", ":Gitsigns preview_hunk<CR>")
