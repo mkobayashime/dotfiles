@@ -10,7 +10,12 @@ void (async () => {
 
 	const [url] = positionals;
 
-	const tryFetch = async ({ url }: { url: string }) => {
+	const tryFetch = async ({ url, count }: { url: string; count: number }) => {
+		if (count > 19) {
+			console.error("Error: Max number of redirection exceeded");
+			return;
+		}
+
 		const response = await fetch(url, { redirect: "manual" });
 
 		console.log(response.status, response.url);
@@ -20,11 +25,12 @@ void (async () => {
 
 			if (!location) {
 				console.error("Error: No location header found");
-			} else {
-				tryFetch({ url: location });
+				return;
 			}
+
+			tryFetch({ url: location, count: count + 1 });
 		}
 	};
 
-	await tryFetch({ url });
+	await tryFetch({ url, count: 0 });
 })();
