@@ -1,0 +1,30 @@
+#!/usr/bin/env bun
+
+import { parseArgs } from "node:util";
+
+void (async () => {
+	const { positionals } = parseArgs({
+		args: process.argv.slice(2),
+		allowPositionals: true,
+	});
+
+	const [url] = positionals;
+
+	const tryFetch = async ({ url }: { url: string }) => {
+		const response = await fetch(url, { redirect: "manual" });
+
+		console.log(response.status, response.url);
+
+		if (response.status.toString().startsWith("3")) {
+			const location = response.headers.get("location");
+
+			if (!location) {
+				console.error("Error: No location header found");
+			} else {
+				tryFetch({ url: location });
+			}
+		}
+	};
+
+	await tryFetch({ url });
+})();
