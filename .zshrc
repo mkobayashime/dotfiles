@@ -50,6 +50,7 @@ done
 # bin
 
 export PATH="$HOME/.bin":"$PATH"
+export PATH="$HOME/.bin/typescript":"$PATH"
 export PATH="$HOME/.local/bin":"$PATH"
 
 [[ -d "$HOME/.dotfiles-private/bin" ]] && export PATH="$HOME/.dotfiles-private/bin:$PATH"
