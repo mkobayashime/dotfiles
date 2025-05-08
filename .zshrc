@@ -3,6 +3,8 @@
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
+PRIVATE_DOTFILES_ROOT="$HOME/.dotfiles-private"
+
 # misc
 
 HISTFILE=~/.histfile
@@ -53,7 +55,9 @@ export PATH="$HOME/.bin":"$PATH"
 export PATH="$HOME/.bin/typescript":"$PATH"
 export PATH="$HOME/.local/bin":"$PATH"
 
-[[ -d "$HOME/.dotfiles-private/bin" ]] && export PATH="$HOME/.dotfiles-private/bin:$PATH"
+if [[ -d "$PRIVATE_DOTFILES_ROOT/bin" ]]; then
+  export PATH="$PRIVATE_DOTFILES_ROOT/bin:$PATH"
+fi
 
 # alias
 
@@ -75,8 +79,8 @@ fi
 
 # private
 
-if [[ -f "$HOME/.dotfiles-private/.zshrc.private" ]]; then
-  source "$HOME/.dotfiles-private/.zshrc.private"
+if [[ -f "$PRIVATE_DOTFILES_ROOT/.zshrc.private" ]]; then
+  source "$PRIVATE_DOTFILES_ROOT/.zshrc.private"
 fi
 
 # local
