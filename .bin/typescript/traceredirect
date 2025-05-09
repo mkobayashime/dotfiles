@@ -28,7 +28,7 @@ void (async () => {
 				return;
 			}
 
-			tryFetch({ url: location, count: count + 1 });
+			tryFetch({ url: new URL(location, url).toString(), count: count + 1 });
 		}
 	};
 
