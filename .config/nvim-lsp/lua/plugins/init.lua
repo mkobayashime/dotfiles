@@ -9,12 +9,12 @@ return {
     "neovim/nvim-lspconfig",
   },
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     build = ':MasonUpdate',
     opts = {},
   },
   {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
     init = function()
       require("plugins/mason-lspconfig")
     end,
