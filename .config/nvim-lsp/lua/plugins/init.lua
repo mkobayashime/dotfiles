@@ -126,6 +126,10 @@ return {
     end,
   },
   {
+    "github/copilot.vim",
+    event = "BufEnter",
+  },
+  {
     "ray-x/lsp_signature.nvim",
     event = "BufEnter",
     opts = {
