@@ -8,14 +8,6 @@ function OnLSPAttach(on_attach)
   })
 end
 
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-  vim.lsp.handlers.hover,
-  {
-    border = "single",
-    focusable = false,
-  }
-)
-
 vim.diagnostic.config({
   virtual_text = false,
   severity_sort = true,
@@ -40,7 +32,7 @@ vim.diagnostic.config({
 })
 
 OnLSPAttach(function(client, buffer)
-  if client.supports_method "textDocument/publishDiagnostics"
+  if client:supports_method("textDocument/publishDiagnostics")
       or client.name == "null-ls"
   then
     local augroup_diagnostic = vim.api.nvim_create_augroup("lsp_diagnostic", {})
@@ -53,7 +45,7 @@ OnLSPAttach(function(client, buffer)
     })
   end
 
-  if client.supports_method "textDocument/documentHighlight" then
+  if client:supports_method("textDocument/documentHighlight") then
     local augroup_lsp_document_highlight = vim.api.nvim_create_augroup("lsp_document_highlight", {})
     vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
       group = augroup_lsp_document_highlight,
@@ -81,7 +73,7 @@ OnLSPAttach(function(client, buffer)
     })
   end
 
-  if client.supports_method("textDocument/formatting") then
+  if client:supports_method("textDocument/formatting") then
     local augroup_formatter = vim.api.nvim_create_augroup("lsp_formatter", {})
 
     vim.api.nvim_create_autocmd({ "BufWritePre" }, {
