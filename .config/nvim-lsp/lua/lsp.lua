@@ -12,7 +12,6 @@ vim.diagnostic.config({
   virtual_text = false,
   severity_sort = true,
   float = {
-    border = "single",
     focusable = false,
   },
   signs = {
