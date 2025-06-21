@@ -30,6 +30,8 @@ vim.diagnostic.config({
   },
 })
 
+vim.lsp.enable('biome')
+
 OnLSPAttach(function(client, buffer)
   if client:supports_method("textDocument/publishDiagnostics")
       or client.name == "null-ls"
