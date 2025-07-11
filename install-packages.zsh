@@ -55,7 +55,7 @@ main() {
     done
   }
 
-  nix profile install "${prefixed_nix_packages[@]}"
+  nix profile add "${prefixed_nix_packages[@]}"
 }
 
 main
