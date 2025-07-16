@@ -51,6 +51,7 @@ done
 
 # bin
 
+export PATH="$HOME/.nix-profile/bin:$PATH"
 export PATH="$HOME/.bin":"$PATH"
 export PATH="$HOME/.bin/typescript":"$PATH"
 export PATH="$HOME/.local/bin":"$PATH"
