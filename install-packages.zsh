@@ -1,7 +1,7 @@
 main() {
   local nix_packages
 
-  if ! hascommand nix &> /dev/null; then
+  if ! hascommand nix &>/dev/null; then
     echo 'Command not found: nix. Maybe you have to run this from zsh, exiting...'
     exit 1
   fi
@@ -15,6 +15,7 @@ main() {
     exiftool
     fd
     ffmpeg
+    fx
     fzf
     gawk
     gh
