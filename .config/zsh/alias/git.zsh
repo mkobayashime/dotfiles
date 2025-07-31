@@ -35,6 +35,7 @@ alias gcp="git cherry-pick"
 alias ggraph="git graph"
 alias gg="git graph"
 
+alias gh='ghautoswitch && gh'
 alias pr="gh pr view -w"
 alias prn="gh pr create"
 alias prnf="gh pr create -f"
