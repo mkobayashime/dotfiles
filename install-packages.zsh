@@ -23,6 +23,7 @@ main() {
     icdiff
     imagemagick
     jq
+    mpv
     nil
     nix-direnv
     nodePackages.cspell
