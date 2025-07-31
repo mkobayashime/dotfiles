@@ -19,6 +19,7 @@ main() {
     fzf
     gawk
     gh
+    gotop
     icdiff
     imagemagick
     jq
