@@ -1,0 +1,42 @@
+{
+  "includeCoAuthoredBy": false,
+  "permissions": {
+    "allow": [],
+    "deny": [
+      "Bash(rm:*)",
+      "Read(./.env)",
+      "Read(./.env.*)"
+    ],
+    "ask": [
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
+    ]
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "terminal-notifier -title 'Claude Code' -message 'Permission request' -sound Glass -activate org.alacritty"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "terminal-notifier -title 'Claude Code' -message 'Task completed' -sound Glass -activate org.alacritty"
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "dig@kuu-marketplace": true
+  }
+}
