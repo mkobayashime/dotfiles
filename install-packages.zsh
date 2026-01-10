@@ -31,6 +31,7 @@ main() {
     ripgrep
     shellcheck
     shfmt
+    terminal-notifier
     tmux
     whois
     xclip
