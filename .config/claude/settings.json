@@ -36,6 +36,10 @@
       }
     ]
   },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.config/claude/statusline.ts"
+  },
   "enabledPlugins": {
     "dig@kuu-marketplace": true
   }
