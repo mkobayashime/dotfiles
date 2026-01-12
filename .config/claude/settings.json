@@ -19,7 +19,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "terminal-notifier -title 'Claude Code' -message 'Permission request' -sound Glass -activate org.alacritty"
+            "command": "jq -r '.message' | terminal-notifier -title \"Claude Code: $(basename ${CLAUDE_PROJECT_DIR})\" -sound Glass -activate org.alacritty"
           }
         ]
       }
@@ -30,7 +30,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "terminal-notifier -title 'Claude Code' -message 'Task completed' -sound Glass -activate org.alacritty"
+            "command": "terminal-notifier -title \"Claude Code: $(basename ${CLAUDE_PROJECT_DIR})\" -message 'Task completed' -sound Glass -activate org.alacritty"
           }
         ]
       }
