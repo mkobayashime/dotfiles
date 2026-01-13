@@ -58,6 +58,7 @@ export PATH="$HOME/.local/bin":"$PATH"
 
 if [[ -d "$PRIVATE_DOTFILES_ROOT/bin" ]]; then
   export PATH="$PRIVATE_DOTFILES_ROOT/bin:$PATH"
+  export PATH="$PRIVATE_DOTFILES_ROOT/bin/typescript:$PATH"
 fi
 
 # alias
