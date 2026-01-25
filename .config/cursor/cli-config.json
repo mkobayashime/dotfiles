@@ -1,0 +1,10 @@
+{
+	"version": 1,
+	"editor": {
+		"vimMode": true
+	},
+	"permissions": {
+		"allow": ["Shell(ls)"],
+		"deny": []
+	}
+}
