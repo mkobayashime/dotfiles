@@ -359,11 +359,11 @@ return {
     ft = { "stylus" },
   },
   {
-    "iamcco/markdown-preview.nvim",
+    "toppair/peek.nvim",
     ft = { "markdown", "pandoc.markdown", "rmd" },
-    build = 'sh -c "cd app && yarn install"',
+    build = "deno task --quiet build:fast",
     config = function()
-      require("plugins/markdown-preview")
+      require("plugins/peek")
     end,
   },
   {
