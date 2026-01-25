@@ -18,6 +18,7 @@ main() {
     fx
     fzf
     gawk
+    gemini-cli
     gh
     gotop
     icdiff
