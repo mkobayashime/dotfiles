@@ -1,8 +1,3 @@
 {
-  "words": [
-    "elif",
-    "esac",
-    "keymap",
-    "pipefail"
-  ]
+	"words": ["elif", "esac", "keymap", "pipefail"]
 }
