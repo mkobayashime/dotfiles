@@ -8,6 +8,6 @@
     "@tsconfig/bun": "1.0.7",
     "@tsconfig/recommended": "1.0.8",
     "@types/bun": "latest",
-    "typescript": "^5.0.0"
+    "typescript": "5.9.3"
   }
 }
