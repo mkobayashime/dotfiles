@@ -1,6 +1,6 @@
 ---
 name: pr-create
-description: Create a new Pull Request from current branch
+description: Creates a Pull Request from the current branch to the target. Use when asked to create a PR. Writes a title summarizing all branch changes (not a single commit), respects PR templates, and ignores uncommitted changes.
 allowed-tools: Bash(git rev-parse:*) Bash(git log:*) Bash(git show:*) Bash(git diff:*) Bash(git push:*) Bash(gh pr:*)
 ---
 

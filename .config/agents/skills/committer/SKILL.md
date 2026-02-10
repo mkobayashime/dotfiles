@@ -1,6 +1,6 @@
 ---
 name: committer
-description: Commit uncommitted codebase changes
+description: Groups staged or unstaged changes into semantically distinct commits. Use when asked to commit changes. Splits by feature, work phase, and docs vs. code; commits in the right order.
 allowed-tools: Bash(git rev-parse:*) Bash(git log:*) Bash(git show:*) Bash(git diff:*) Bash(git commit:*)
 ---
 
