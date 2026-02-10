@@ -1,3 +1,7 @@
+if [[ -n "${WO_DIRENV:-}" ]]; then
+  return
+fi
+
 if hascommand direnv; then
   eval "$(direnv hook zsh)"
 fi
