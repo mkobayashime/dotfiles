@@ -5,6 +5,9 @@
 	},
 	"permissions": {
 		"allow": ["Shell(ls)"],
-		"deny": []
+		"deny": ["Read(./.env)", "Read(./.env.*)"]
+	},
+	"attribution": {
+		"attributeCommitsToAgent": false
 	}
 }
