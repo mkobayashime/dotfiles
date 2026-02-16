@@ -1,17 +1,17 @@
 {
   "includeCoAuthoredBy": false,
   "permissions": {
-    "allow": [],
     "deny": [
-      "Bash(rm:*)",
       "Read(./.env)",
       "Read(./.env.*)"
     ],
     "ask": [
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(rm:*)"
     ]
   },
+  "model": "opusplan",
   "hooks": {
     "Notification": [
       {
