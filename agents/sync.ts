@@ -1,11 +1,8 @@
 #!/usr/bin/env bun
 
 import { readFileSync, writeFileSync } from "node:fs";
-import { homedir } from "node:os";
 import path from "node:path";
-
-const DOTPATH = path.join(homedir(), "dotfiles");
-const HOME = homedir();
+import { agents } from "./profiles.ts";
 
 const syncConfig = ({
 	livePath,
@@ -36,35 +33,38 @@ const syncConfig = ({
 	console.log(`  local -> ${localPath}`);
 };
 
-const syncClaude = ({ src }: { src: string }) =>
+const syncTarget = ({ target, name }: { target: string; name: string }) => {
+	const agent = agents.find((a) => a.name === name);
+	if (!agent?.sync) return;
+	const { configFile, basePath, excludeKeys } = agent.sync;
 	syncConfig({
-		livePath: path.join(src, "settings.json"),
-		basePath: path.join(DOTPATH, "agents/claude/settings.base.json"),
-		localPath: path.join(src, "settings.local.json"),
-		excludeKeys: ["env", "model"],
+		livePath: path.join(target, configFile),
+		basePath,
+		localPath: path.join(
+			target,
+			`${configFile.replace(/\.json$/, "")}.local.json`,
+		),
+		excludeKeys,
 	});
-
-const syncCursor = ({ src }: { src: string }) =>
-	syncConfig({
-		livePath: path.join(src, "cli-config.json"),
-		basePath: path.join(DOTPATH, "agents/cursor/cli-config.base.json"),
-		localPath: path.join(src, "cli-config.local.json"),
-		excludeKeys: ["authInfo", "privacyCache", "model"],
-	});
+};
 
 const [command, sourceDir] = process.argv.slice(2);
 
 switch (command) {
 	case "claude":
-		syncClaude({ src: sourceDir ?? path.join(HOME, ".config/claude") });
+	case "cursor": {
+		const agent = agents.find((a) => a.name === command);
+		if (!agent) break;
+		syncTarget({ target: sourceDir ?? agent.targets[0], name: command });
 		break;
-	case "cursor":
-		syncCursor({ src: sourceDir ?? path.join(HOME, ".cursor") });
-		break;
+	}
 	case "all":
-		syncClaude({ src: path.join(HOME, ".config/claude") });
-		syncClaude({ src: path.join(HOME, ".config/claude-herp") });
-		syncCursor({ src: path.join(HOME, ".cursor") });
+		for (const agent of agents) {
+			if (!agent.sync) continue;
+			for (const target of agent.targets) {
+				syncTarget({ target, name: agent.name });
+			}
+		}
 		break;
 	default:
 		console.log("Usage: sync.ts {claude|cursor|all} [source_dir]");

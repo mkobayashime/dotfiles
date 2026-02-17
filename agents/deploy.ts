@@ -9,11 +9,8 @@ import {
 	symlinkSync,
 	writeFileSync,
 } from "node:fs";
-import { homedir } from "node:os";
 import { join } from "node:path";
-
-const DOTPATH = join(homedir(), "dotfiles");
-const HOME = homedir();
+import { agents, DOTPATH } from "./profiles.ts";
 
 const forceSymlink = ({ source, dest }: { source: string; dest: string }) => {
 	try {
@@ -58,12 +55,14 @@ const deploySharedSkills = ({
 	}
 };
 
+const claudeTargets = agents.find((a) => a.name === "claude")?.targets ?? [];
+const cursorTargets = agents.find((a) => a.name === "cursor")?.targets ?? [];
+const opencodeTargets =
+	agents.find((a) => a.name === "opencode")?.targets ?? [];
+
 // --- Claude Code ---
 console.log("=== Claude Code ===");
-for (const target of [
-	join(HOME, ".config/claude"),
-	join(HOME, ".config/claude-herp"),
-]) {
+for (const target of claudeTargets) {
 	console.log(`[${target}]`);
 	mkdirSync(join(target, "skills"), { recursive: true });
 
@@ -85,7 +84,7 @@ for (const target of [
 
 // --- Cursor ---
 console.log("=== Cursor ===");
-for (const target of [join(HOME, ".cursor")]) {
+for (const target of cursorTargets) {
 	console.log(`[${target}]`);
 	mkdirSync(join(target, "skills"), { recursive: true });
 
@@ -109,7 +108,7 @@ for (const target of [join(HOME, ".cursor")]) {
 
 // --- opencode ---
 console.log("=== opencode ===");
-for (const target of [join(HOME, ".config/opencode")]) {
+for (const target of opencodeTargets) {
 	console.log(`[${target}]`);
 	mkdirSync(target, { recursive: true });
 
