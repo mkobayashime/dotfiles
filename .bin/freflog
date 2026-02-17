@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+for OPT in "$@"; do
+  case $OPT in
+  --reset-hard)
+    resetHard=true
+    ;;
+  -*)
+    echo "Unknown option: $1" 1>&2
+    exit 1
+    ;;
+  esac
+done
+
+sha=$(git reflog -n 100 | fzf --ansi | awk '{print $1}')
+
+if [[ ! "$sha" ]]; then
+  exit
+fi
+
+if "${resetHard:-false}"; then
+  echo -n "Hard reset? [y/N] "
+  read -r confirm
+  [[ "$confirm" != 'y' && "$confirm" != 'Y' ]] && exit 0
+
+  git reset --hard "$sha"
+else
+  echo "$sha"
+fi

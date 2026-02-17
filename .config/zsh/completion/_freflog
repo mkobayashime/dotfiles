@@ -1,0 +1,6 @@
+#compdef freflog
+
+_freflog() {
+  _arguments \
+    "--reset-hard[Execute 'git reset --hard' with the specified sha]"
+}
