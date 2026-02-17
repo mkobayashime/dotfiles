@@ -1,4 +1,5 @@
 biome = bunx biome
+typecheck = bunx --bun tsc --noEmit
 
 all:
 
@@ -10,6 +11,12 @@ lint: deps PHONY
 
 lint.fix: deps PHONY
 	$(biome) check --write .
+
+typecheck: deps PHONY
+	$(typecheck)
+
+typecheck.watch: deps PHONY
+	$(typecheck) --watch
 
 submodule: PHONY
 	git submodule update --init
