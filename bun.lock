@@ -6,7 +6,7 @@
       "name": "dotfiles",
       "devDependencies": {
         "@biomejs/biome": "2.3.14",
-        "@mkobayashime/shared-config": "1.1.0",
+        "@mkobayashime/shared-config": "1.2.0",
         "@tsconfig/bun": "1.0.7",
         "@tsconfig/recommended": "1.0.8",
         "@types/bun": "latest",
@@ -59,7 +59,7 @@
 
     "@humanwhocodes/retry": ["@humanwhocodes/retry@0.4.2", "", {}, "sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ=="],
 
-    "@mkobayashime/shared-config": ["@mkobayashime/shared-config@1.1.0", "", { "peerDependencies": { "eslint": "^9.18.0", "typescript": "^5.0.0", "typescript-eslint": "^8.20.0" } }, "sha512-5PszVS83dUP6APbHRJXWd8rzTq8u+lAB65DJymq6RrxhS3t3PRfxG0QZK/r8vRJ48//0fSY0T6IqQnCEjjeeLA=="],
+    "@mkobayashime/shared-config": ["@mkobayashime/shared-config@1.2.0", "", { "peerDependencies": { "@biomejs/biome": "^1.9.4", "eslint": "^9.29.0", "typescript": "^5.8.3", "typescript-eslint": "^8.34.1" } }, "sha512-ky00w8xp+S3XcMGBNOytDVTmWhLt5nYmTXsS34QolmD/dPaZ9PHpBQt+i1YLz8GbB5cHD8t//UxQ5zKE45ZK4Q=="],
 
     "@modelcontextprotocol/sdk": ["@modelcontextprotocol/sdk@1.11.0", "", { "dependencies": { "content-type": "^1.0.5", "cors": "^2.8.5", "cross-spawn": "^7.0.3", "eventsource": "^3.0.2", "express": "^5.0.1", "express-rate-limit": "^7.5.0", "pkce-challenge": "^5.0.0", "raw-body": "^3.0.0", "zod": "^3.23.8", "zod-to-json-schema": "^3.24.1" } }, "sha512-k/1pb70eD638anoi0e8wUGAlbMJXyvdV4p62Ko+EZ7eBe1xMx8Uhak1R5DgfoofsK5IBBnRwsYGTaLZl+6/+RQ=="],
 
