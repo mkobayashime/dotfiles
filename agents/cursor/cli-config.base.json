@@ -1,0 +1,24 @@
+{
+	"permissions": {
+		"allow": ["Shell(ls)"],
+		"deny": ["Read(./.env)", "Read(./.env.*)"]
+	},
+	"version": 1,
+	"editor": {
+		"vimMode": true
+	},
+	"display": {
+		"showLineNumbers": true,
+		"showThinkingBlocks": false
+	},
+	"hasChangedDefaultModel": true,
+	"maxMode": false,
+	"approvalMode": "allowlist",
+	"sandbox": {
+		"mode": "disabled",
+		"networkAccess": "user_config_with_defaults"
+	},
+	"attribution": {
+		"attributeCommitsToAgent": false
+	}
+}
