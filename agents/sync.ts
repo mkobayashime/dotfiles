@@ -2,7 +2,8 @@
 
 import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { agents } from "./profiles.ts";
+import { $ } from "bun";
+import { agents, DOTPATH } from "./profiles.ts";
 
 const syncConfig = ({
 	livePath,
@@ -73,3 +74,5 @@ switch (command) {
 		console.log("  all     - sync all profiles");
 		process.exit(1);
 }
+
+await $`bunx --bun biome check --write ${path.join(DOTPATH, "agents")}`;
