@@ -31,7 +31,7 @@ export const agents: AgentProfile[] = [
 	},
 	{
 		name: "cursor",
-		targets: [path.join(HOME, ".cursor")],
+		targets: [path.join(HOME, ".config/cursor")],
 		sync: {
 			configFile: "cli-config.json",
 			basePath: path.join(DOTPATH, "agents/cursor/cli-config.base.json"),
