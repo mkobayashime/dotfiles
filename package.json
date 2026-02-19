@@ -3,10 +3,10 @@
 	"type": "module",
 	"private": true,
 	"devDependencies": {
-		"@biomejs/biome": "2.3.14",
+		"@biomejs/biome": "2.3.15",
 		"@mkobayashime/shared-config": "1.1.0",
-		"@tsconfig/bun": "1.0.7",
-		"@tsconfig/recommended": "1.0.8",
+		"@tsconfig/bun": "1.0.10",
+		"@tsconfig/recommended": "1.0.13",
 		"@types/bun": "latest",
 		"typescript": "5.9.3"
 	}
