@@ -1,0 +1,5 @@
+{
+	"name": "@dotfiles/agents",
+	"type": "module",
+	"private": true
+}
