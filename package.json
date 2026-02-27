@@ -6,7 +6,7 @@
 		"agents"
 	],
 	"devDependencies": {
-		"@biomejs/biome": "2.3.14",
+		"@biomejs/biome": "2.4.4",
 		"@mkobayashime/shared-config": "4.0.0",
 		"@tsconfig/bun": "1.0.7",
 		"@tsconfig/recommended": "1.0.8",
