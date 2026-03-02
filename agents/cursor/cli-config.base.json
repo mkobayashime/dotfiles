@@ -9,7 +9,8 @@
 	},
 	"display": {
 		"showLineNumbers": true,
-		"showThinkingBlocks": false
+		"showThinkingBlocks": false,
+		"showStatusIndicators": false
 	},
 	"hasChangedDefaultModel": true,
 	"maxMode": false,
