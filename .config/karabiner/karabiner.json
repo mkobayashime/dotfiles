@@ -5,6 +5,19 @@
 			"complex_modifications": {
 				"rules": [
 					{
+						"description": "Disable Ctrl+↓",
+						"manipulators": [
+							{
+								"description": "",
+								"from": {
+									"key_code": "down_arrow",
+									"modifiers": { "mandatory": ["control"] }
+								},
+								"type": "basic"
+							}
+						]
+					},
+					{
 						"description": "Disable Cmd+M",
 						"manipulators": [
 							{
