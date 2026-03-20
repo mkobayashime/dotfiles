@@ -56,7 +56,9 @@ switch (command) {
 	case "cursor": {
 		const agent = agents.find((a) => a.name === command);
 		if (!agent) break;
-		syncTarget({ target: sourceDir ?? agent.targets[0], name: command });
+		const target = sourceDir ?? agent.targets[0];
+		if (!target) break;
+		syncTarget({ target, name: command });
 		break;
 	}
 	case "all":
