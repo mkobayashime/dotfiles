@@ -60,7 +60,7 @@ main() {
     done
   }
 
-  nix profile add "${prefixed_nix_packages[@]}"
+  nix profile install "${prefixed_nix_packages[@]}"
 }
 
 main
