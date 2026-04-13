@@ -23,3 +23,4 @@ Split the changes into separate commits based on these criteria:
 
 - If there are uncommitted docs related to the current task, commit them first as a standalone commit.
 - Then commit the remaining groups in a logical sequence.
+- Write the commit message in English, unless other language like Japanese is specified.
