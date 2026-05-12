@@ -27,7 +27,6 @@ main() {
     mpv
     nil
     nix-direnv
-    nodePackages.cspell
     pdftk
     ripgrep
     shellcheck
