@@ -35,7 +35,6 @@ main() {
     tmux
     whois
     xclip
-    yt-dlp
   )
 
   nix_packages_mac=(
