@@ -66,7 +66,12 @@ for (const target of claudeTargets) {
 	console.log(`[${target}]`);
 	mkdirSync(join(target, "skills"), { recursive: true });
 
-	for (const name of ["statusline.ts", "agents", "commands"] as const) {
+	for (const name of [
+		"statusline.ts",
+		"agents",
+		"commands",
+		"CLAUDE.md",
+	] as const) {
 		forceSymlink({
 			source: join(DOTPATH, "agents/claude", name),
 			dest: join(target, name),
