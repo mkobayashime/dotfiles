@@ -2,7 +2,8 @@
 	"includeCoAuthoredBy": false,
 	"permissions": {
 		"deny": ["Read(./.env)", "Read(./.env.*)"],
-		"ask": ["Bash(git commit:*)", "Bash(git push:*)", "Bash(rm:*)"]
+		"ask": ["Bash(git push:*)", "Bash(rm:*)"],
+		"defaultMode": "auto"
 	},
 	"hooks": {
 		"Notification": [
@@ -37,5 +38,8 @@
 		"deslop@kuu-marketplace": true,
 		"document-skills@anthropic-agent-skills": true
 	},
-	"skipDangerousModePermissionPrompt": true
+	"effortLevel": "high",
+	"skipDangerousModePermissionPrompt": true,
+	"editorMode": "vim",
+	"skipAutoPermissionPrompt": true
 }
