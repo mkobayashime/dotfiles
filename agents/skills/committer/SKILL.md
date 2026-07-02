@@ -6,6 +6,11 @@ allowed-tools: Bash(git rev-parse:*) Bash(git log:*) Bash(git show:*) Bash(git d
 
 Commit changes in multiple, semantically distinct commits. Follow the steps below in order.
 
+## Context
+
+- Log: !`git log --no-merges -10`
+- Status: !`git status`
+
 ## 1. Determine scope
 
 - If the user has staged specific files, commit only those staged changes — unless they explicitly ask to include more.
@@ -24,3 +29,4 @@ Split the changes into separate commits based on these criteria:
 - If there are uncommitted docs related to the current task, commit them first as a standalone commit.
 - Then commit the remaining groups in a logical sequence.
 - Write the commit message **in English**, unless other language like Japanese is specified.
+- Decide whether to use [Conventional Commits](https://www.conventionalcommits.org/) based on the recent 10 commits in the Context above: if a majority of them follow Conventional Commits, follow that style; otherwise, do not adopt it.
