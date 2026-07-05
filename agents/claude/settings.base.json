@@ -41,5 +41,6 @@
 	"effortLevel": "high",
 	"skipDangerousModePermissionPrompt": true,
 	"editorMode": "vim",
-	"skipAutoPermissionPrompt": true
+	"skipAutoPermissionPrompt": true,
+	"tui": "default"
 }
