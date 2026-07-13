@@ -4,13 +4,27 @@ description: Creates a Pull Request from the current branch to the target. Use w
 allowed-tools: Bash(git rev-parse:*) Bash(git log:*) Bash(git show:*) Bash(git diff:*) Bash(git push:*) Bash(gh pr:*)
 ---
 
-## Context
+# Context
 
-- Log: !`git log`
-- Status: !`git status`
-- Pull Request template: !`fd --hidden pull_request_template.md "$(git rev-parse --show-toplevel)" | grep . || echo "no template"`
+##  Log
 
-## Task
+```
+!`git log -20`
+```
+
+## Status
+
+```
+!`git status`
+```
+
+## Pull Request template
+
+```
+!`fd --hidden pull_request_template.md "$(git rev-parse --show-toplevel)" | grep . || echo "no template"`
+```
+
+# Task
 
 When prompted to create a new Pull Request from current branch,
 

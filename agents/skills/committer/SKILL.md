@@ -6,10 +6,21 @@ allowed-tools: Bash(git rev-parse:*) Bash(git log:*) Bash(git show:*) Bash(git d
 
 Commit changes in multiple, semantically distinct commits. Follow the steps below in order.
 
-## Context
+# Context
 
-- Log: !`git log --no-merges -10`
-- Status: !`git status`
+## Log
+
+```
+!`git log --no-merges -10`
+```
+
+## Status
+
+```
+!`git status`
+```
+
+# Steps
 
 ## 1. Determine scope
 
