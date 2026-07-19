@@ -2,7 +2,7 @@
 	"includeCoAuthoredBy": false,
 	"permissions": {
 		"deny": ["Read(./.env)", "Read(./.env.*)"],
-		"ask": ["Bash(git push:*)", "Bash(rm:*)"],
+		"ask": [],
 		"defaultMode": "auto"
 	},
 	"hooks": {
@@ -39,8 +39,8 @@
 		"document-skills@anthropic-agent-skills": true
 	},
 	"effortLevel": "high",
+	"tui": "default",
 	"skipDangerousModePermissionPrompt": true,
 	"editorMode": "vim",
-	"skipAutoPermissionPrompt": true,
-	"tui": "default"
+	"skipAutoPermissionPrompt": true
 }
