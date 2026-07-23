@@ -1,0 +1,5 @@
+BIN=~/.local/bin/mise
+
+if [ -e $BIN ]; then
+  eval "$($BIN activate zsh)"
+fi

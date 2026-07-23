@@ -7,38 +7,11 @@ main() {
   fi
 
   nix_packages=(
-    bat
-    bun
-    delta
-    deno
-    direnv
     exiftool
-    fd
-    ffmpeg
-    fx
-    fzf
     gawk
-    gemini-cli
-    gh
-    gotop
-    icdiff
-    imagemagick
-    jq
-    mpv
-    nil
-    nix-direnv
-    pdftk
-    ripgrep
-    shellcheck
-    shfmt
-    terminal-notifier
-    tmux
-    whois
-    xclip
   )
 
   nix_packages_mac=(
-    bash
     coreutils
     findutils
     gnugrep
