@@ -20,6 +20,8 @@ yt-dlp = "2026.07.04"
 
 [settings]
 lockfile = true
+minimum_release_age = "7d"
+pin = true
 
 [settings.npm]
 package_manager = "bun"
