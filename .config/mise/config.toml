@@ -15,6 +15,7 @@ shellcheck = "0.11.0"
 shfmt = "3.13.1"
 tmux = "3.7b"
 yt-dlp = "2026.07.04"
+"aqua:ogulcancelik/herdr" = "0.7.3"
 "github:julienxx/terminal-notifier" = "2.0.0"
 "npm:@playwright/cli" = "0.1.17"
 
