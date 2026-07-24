@@ -8,7 +8,7 @@ jobs:
   ci:
     runs-on: ubuntu-slim
     steps:
-      - uses: actions/checkout@v6.0.3
+      - uses: actions/checkout@v7.0.0
       - uses: oven-sh/setup-bun@v2.2.0
         with:
           bun-version: latest
