@@ -17,6 +17,7 @@
 "core:bun" = "1.3.14"
 "core:deno" = "2.9.3"
 "core:ffmpeg" = "8.1.2"
+"core:node" = "26.5.0"
 "github:julienxx/terminal-notifier" = "2.0.0"
 "github:yt-dlp/yt-dlp" = "2026.07.04"
 "npm:@playwright/cli" = "0.1.17"
