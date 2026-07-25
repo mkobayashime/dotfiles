@@ -32,11 +32,32 @@ vim.diagnostic.config({
 
 vim.lsp.enable('biome')
 
+-- Created once: `nvim_create_augroup` clears the group by default, so creating
+-- them inside the LspAttach callback would drop the autocmds of every buffer
+-- that attached earlier.
+local augroup_diagnostic = vim.api.nvim_create_augroup("lsp_diagnostic", {})
+local augroup_lsp_document_highlight = vim.api.nvim_create_augroup("lsp_document_highlight", {})
+local augroup_formatter = vim.api.nvim_create_augroup("lsp_formatter", {})
+
+-- https://eiji.page/blog/neovim-dynamic-capabilities/
+local function format()
+  vim.lsp.buf.format({
+    timeout_ms = 2000,
+    filter = function(client_)
+      return client_.name ~= "ts_ls"
+    end,
+  })
+end
+
+vim.api.nvim_create_user_command("Format", function()
+  format()
+end, {})
+
 OnLSPAttach(function(client, buffer)
   if client:supports_method("textDocument/publishDiagnostics")
       or client.name == "null-ls"
   then
-    local augroup_diagnostic = vim.api.nvim_create_augroup("lsp_diagnostic", {})
+    vim.api.nvim_clear_autocmds({ group = augroup_diagnostic, buffer = buffer })
     vim.api.nvim_create_autocmd({ "CursorMoved" }, {
       group = augroup_diagnostic,
       buffer = buffer,
@@ -47,7 +68,7 @@ OnLSPAttach(function(client, buffer)
   end
 
   if client:supports_method("textDocument/documentHighlight") then
-    local augroup_lsp_document_highlight = vim.api.nvim_create_augroup("lsp_document_highlight", {})
+    vim.api.nvim_clear_autocmds({ group = augroup_lsp_document_highlight, buffer = buffer })
     vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
       group = augroup_lsp_document_highlight,
       buffer = buffer,
@@ -64,19 +85,8 @@ OnLSPAttach(function(client, buffer)
     })
   end
 
-  -- https://eiji.page/blog/neovim-dynamic-capabilities/
-  local function format()
-    vim.lsp.buf.format({
-      timeout_ms = 2000,
-      filter = function(client_)
-        return client_.name ~= "ts_ls"
-      end,
-    })
-  end
-
   if client:supports_method("textDocument/formatting") then
-    local augroup_formatter = vim.api.nvim_create_augroup("lsp_formatter", {})
-
+    vim.api.nvim_clear_autocmds({ group = augroup_formatter, buffer = buffer })
     vim.api.nvim_create_autocmd({ "BufWritePre" }, {
       group = augroup_formatter,
       buffer = buffer,
@@ -84,8 +94,5 @@ OnLSPAttach(function(client, buffer)
         format()
       end,
     })
-    vim.api.nvim_create_user_command("Format", function()
-      format()
-    end, {})
   end
 end)
