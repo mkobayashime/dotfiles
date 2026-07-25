@@ -6,8 +6,6 @@ local root_markers = { '.oxlintrc.json', 'oxlint.config.ts' }
 
 ---@type vim.lsp.Config
 return {
-  -- nvim-lspconfig defaults to the standalone `oxc_language_server` binary,
-  -- but the npm package (which mason installs) exposes the LSP via `oxlint --lsp`.
   cmd = function(dispatchers, config)
     return vim.lsp.rpc.start(package_runner.wrap(config.root_dir, { 'oxlint', '--lsp' }), dispatchers)
   end,
