@@ -40,6 +40,7 @@ vim.lsp.enable({
   'lua_ls',
   'oxfmt',
   'oxlint',
+  'tailwindcss',
   'ts_ls',
   'yamlls',
 })
