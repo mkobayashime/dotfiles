@@ -5477,6 +5477,10 @@ url = "https://nodejs.org/dist/v26.5.0/node-v26.5.0-win-x64.zip"
 version = "0.1.17"
 backend = "npm:@playwright/cli"
 
+[[tools."npm:@tailwindcss/language-server"]]
+version = "0.16.0"
+backend = "npm:@tailwindcss/language-server"
+
 [[tools."npm:bash-language-server"]]
 version = "5.6.0"
 backend = "npm:bash-language-server"
