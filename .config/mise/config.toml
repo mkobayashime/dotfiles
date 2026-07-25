@@ -21,6 +21,7 @@
 "github:yt-dlp/yt-dlp" = "2026.07.04"
 "npm:@playwright/cli" = "0.1.17"
 "npm:bash-language-server" = "5.6.0"
+"npm:cspell" = "10.0.1"
 "npm:typescript-language-server" = "5.3.0"
 "npm:vscode-langservers-extracted" = "4.10.0"
 "npm:yaml-language-server" = "1.24.0"
