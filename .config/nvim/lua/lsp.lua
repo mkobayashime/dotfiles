@@ -30,7 +30,19 @@ vim.diagnostic.config({
   },
 })
 
-vim.lsp.enable('biome')
+vim.lsp.enable({
+  'bashls',
+  'biome',
+  'cssls',
+  'eslint',
+  'html',
+  'jsonls',
+  'lua_ls',
+  'oxfmt',
+  'oxlint',
+  'ts_ls',
+  'yamlls',
+})
 
 -- Created once: `nvim_create_augroup` clears the group by default, so creating
 -- them inside the LspAttach callback would drop the autocmds of every buffer

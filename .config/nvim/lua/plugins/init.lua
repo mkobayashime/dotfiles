@@ -7,21 +7,7 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
-  },
-  {
-    "mason-org/mason.nvim",
-    build = ':MasonUpdate',
-    opts = {},
-  },
-  {
-    "mason-org/mason-lspconfig.nvim",
-    init = function()
-      require("plugins/mason-lspconfig")
-    end,
-    dependencies = {
-      "neovim/nvim-lspconfig",
-      "williamboman/mason.nvim",
-    },
+    event = 'VimEnter'
   },
   {
     "nvimtools/none-ls.nvim",
