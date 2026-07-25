@@ -7,7 +7,12 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
-    event = 'VimEnter'
+    -- Not lazy: `vim.lsp.enable()` in `lua/lsp.lua` resolves and *caches* every
+    -- enabled config as soon as a file is opened from the command line, so the
+    -- `lsp/` directory has to be on the runtimepath before then. On `VimEnter`
+    -- it was already too late, and the servers with an `after/lsp/` file of
+    -- their own kept a resolution missing lspconfig's `cmd` and `filetypes`.
+    lazy = false,
   },
   {
     "nvimtools/none-ls.nvim",
