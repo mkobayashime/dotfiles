@@ -1,11 +1,10 @@
-local lspconfig = require('lspconfig')
-
-local isBun = lspconfig.util.root_pattern('bun.lockb', 'bun.lock')(vim.api.nvim_buf_get_name(0))
-local isPnpm = lspconfig.util.root_pattern('pnpm-lock.yaml', 'pnpm-lock.json')(vim.api.nvim_buf_get_name(0))
+local package_runner = require("utils/package_runner")
 
 ---@type vim.lsp.Config
 return {
-  cmd = isBun and { 'bunx', 'biome', 'lsp-proxy' } or
-      isPnpm and { 'pnpm', 'biome', 'lsp-proxy' } or
-      { 'biome', 'lsp-proxy' },
+  -- Resolved per client start rather than at config load, so switching between
+  -- projects within one session picks the right binary.
+  cmd = function(dispatchers, config)
+    return vim.lsp.rpc.start(package_runner.wrap(config.root_dir, { 'biome', 'lsp-proxy' }), dispatchers)
+  end,
 }
