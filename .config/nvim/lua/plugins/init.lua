@@ -44,8 +44,9 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter",
-    version = "*",
-    event = "VimEnter",
+    branch = "main",
+    -- it explicitly does not support lazy-loading.
+    lazy = false,
     build = ":TSUpdate",
     config = function()
       require("plugins/nvim-treesitter")
@@ -64,11 +65,10 @@ return {
         },
       },
       { "andersevenrud/nvim_context_vt" },
-      { "RRethy/nvim-treesitter-textsubjects" },
-      { "windwp/nvim-ts-autotag" },
-      -- {
-      --   "nvim-treesitter/playground",
-      -- },
+      {
+        "windwp/nvim-ts-autotag",
+        opts = {}
+      },
     },
   },
   {

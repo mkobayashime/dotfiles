@@ -203,13 +203,6 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   end,
 })
 
--- nvim-treesitter-textsubjects {{{2
-
-vim.keymap.set(
-  "v", "<CR>",
-  ':lua require("nvim-treesitter.textsubjects").select("textsubjects-smart", true, vim.fn.getpos("\'<"), vim.fn.getpos("\'>"))<CR>'
-)
-
 -- gitgraph {{{2
 
 vim.keymap.set({ "n", "v" }, "<Leader>gg", function()
