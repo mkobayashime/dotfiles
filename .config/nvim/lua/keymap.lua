@@ -97,13 +97,14 @@ vim.keymap.set("i", "<S-Tab>", complete_or("<S-Tab>", -1),
   { expr = true, silent = true, desc = "Previous completion item / snippet tabstop" }
 )
 
--- CTRL-Y on its own dismisses the menu when nothing is selected, so the first
--- item is selected first. This keeps nvim-cmp's `confirm({ select = true })`.
+-- Only an explicitly selected item is confirmed. With nothing selected the menu
+-- is dismissed and the newline goes through, so <CR> never picks a candidate on
+-- its own.
 vim.keymap.set("i", "<CR>", function()
-  if not vim.bool_fn.pumvisible() then
-    return "<CR>"
+  if vim.bool_fn.pumvisible() and vim.fn.complete_info({ "selected" }).selected ~= -1 then
+    return "<C-y>"
   end
-  return vim.fn.complete_info({ "selected" }).selected == -1 and "<C-n><C-y>" or "<C-y>"
+  return "<CR>"
 end, { expr = true, silent = true, desc = "Confirm completion" })
 
 -- plugins {{{1
