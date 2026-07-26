@@ -33,6 +33,10 @@ vim.opt.smartcase = true
 
 vim.opt.winborder = "single"
 
+-- The completion popup is not a floating window, so 'winborder' does not cover
+-- it.
+vim.opt.pumborder = "single"
+
 vim.opt.list = true
 vim.opt.listchars = {
   trail = "·",

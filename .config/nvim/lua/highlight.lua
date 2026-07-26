@@ -12,6 +12,11 @@ vim.api.nvim_create_autocmd({ "ColorScheme" }, {
     -- Transparent background in float
     vim.api.nvim_set_hl(0, "NormalFloat", {})
 
+    -- Same for the completion popup, which has its own highlight groups.
+    -- PmenuBorder links to Pmenu by default, which would keep the background.
+    vim.api.nvim_set_hl(0, "Pmenu", { link = "NormalFloat" })
+    vim.api.nvim_set_hl(0, "PmenuBorder", { link = "FloatBorder" })
+
     -- treesitter-context
     vim.api.nvim_set_hl(0, "TreesitterContextBottom", { underline = true })
 
