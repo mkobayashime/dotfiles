@@ -9,7 +9,6 @@ cmp.setup({
     { name = "nvim_lsp" },
     { name = "buffer" },
     { name = "path" },
-    { name = "vsnip" },
   },
   mapping = cmp.mapping.preset.insert({
     ["<Tab>"] = function(fallback)
@@ -43,7 +42,7 @@ cmp.setup({
   },
   snippet = {
     expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body)
+      vim.snippet.expand(args.body)
     end,
   },
 })
