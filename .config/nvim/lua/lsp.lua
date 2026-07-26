@@ -30,6 +30,19 @@ vim.diagnostic.config({
   },
 })
 
+-- `cmp_nvim_lsp` only ships the completion slice of the capabilities, and
+-- `vim.lsp.config` replaces `capabilities` rather than merging it into the
+-- defaults, so the two have to be folded together by hand. Without this the
+-- servers never learn about commit characters or the extra
+-- `completionItem/resolve` properties cmp asks for.
+vim.lsp.config('*', {
+  capabilities = vim.tbl_deep_extend(
+    'force',
+    vim.lsp.protocol.make_client_capabilities(),
+    require('cmp_nvim_lsp').default_capabilities()
+  ),
+})
+
 vim.lsp.enable({
   'bashls',
   'biome',

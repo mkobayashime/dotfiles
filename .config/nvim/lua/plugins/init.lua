@@ -94,7 +94,10 @@ return {
   },
   {
     "hrsh7th/nvim-cmp",
-    event = "InsertEnter",
+    -- Not lazy: `lua/lsp.lua` reaches for `cmp_nvim_lsp` to build the LSP
+    -- capabilities, and that has to happen before `vim.lsp.enable()` starts a
+    -- server. `init.lua` requires `lazy_nvim` before `lsp`, so this lands first.
+    lazy = false,
     dependencies = {
       { "hrsh7th/cmp-nvim-lsp" },
       { "hrsh7th/cmp-buffer" },

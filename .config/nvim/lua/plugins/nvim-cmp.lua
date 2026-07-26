@@ -10,6 +10,7 @@ cmp.setup({
     { name = "buffer" },
     { name = "path" },
   },
+  preselect = cmp.PreselectMode.None,
   mapping = cmp.mapping.preset.insert({
     ["<Tab>"] = function(fallback)
       if cmp.visible() then
