@@ -73,6 +73,39 @@ vim.keymap.set("n", "[_quickfix]c", ":cclose<CR>", { desc = "Close quickfix list
 
 vim.keymap.set("n", "<Leader>ch", ":noh<CR>", { silent = true, desc = "Clear highlight" })
 
+-- completion {{{2
+
+-- Neovim maps <Tab>/<S-Tab> to `vim.snippet.jump()` by default, and that has to
+-- be kept: a `noremap` mapping returning "<Tab>" inserts a literal tab and would
+-- otherwise strand every snippet tabstop.
+local function complete_or(key, direction)
+  return function()
+    if vim.bool_fn.pumvisible() then
+      return direction == 1 and "<C-n>" or "<C-p>"
+    end
+    if vim.snippet.active({ direction = direction }) then
+      return ("<Cmd>lua vim.snippet.jump(%d)<CR>"):format(direction)
+    end
+    return key
+  end
+end
+
+vim.keymap.set("i", "<Tab>", complete_or("<Tab>", 1),
+  { expr = true, silent = true, desc = "Next completion item / snippet tabstop" }
+)
+vim.keymap.set("i", "<S-Tab>", complete_or("<S-Tab>", -1),
+  { expr = true, silent = true, desc = "Previous completion item / snippet tabstop" }
+)
+
+-- CTRL-Y on its own dismisses the menu when nothing is selected, so the first
+-- item is selected first. This keeps nvim-cmp's `confirm({ select = true })`.
+vim.keymap.set("i", "<CR>", function()
+  if not vim.bool_fn.pumvisible() then
+    return "<CR>"
+  end
+  return vim.fn.complete_info({ "selected" }).selected == -1 and "<C-n><C-y>" or "<C-y>"
+end, { expr = true, silent = true, desc = "Confirm completion" })
+
 -- plugins {{{1
 
 -- telescope {{{2
