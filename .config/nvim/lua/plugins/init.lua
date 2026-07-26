@@ -52,12 +52,6 @@ return {
     end,
     dependencies = {
       {
-        url = "https://gitlab.com/HiPhish/rainbow-delimiters.nvim.git",
-        config = function()
-          require("plugins/rainbow-delimiters")
-        end,
-      },
-      {
         "JoosepAlviste/nvim-ts-context-commentstring",
         config = function()
           require("plugins/nvim-ts-context-commentstring")
@@ -76,6 +70,13 @@ return {
       --   "nvim-treesitter/playground",
       -- },
     },
+  },
+  {
+    "hiphish/rainbow-delimiters.nvim",
+    config = function()
+      require("plugins/rainbow-delimiters")
+    end,
+    event = 'BufEnter'
   },
   {
     "nvim-telescope/telescope.nvim",
