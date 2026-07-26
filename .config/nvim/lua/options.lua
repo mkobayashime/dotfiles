@@ -12,12 +12,14 @@ vim.opt.expandtab = true
 
 vim.opt.signcolumn = "yes"
 
+require("utils/complete_path")
+
 vim.opt.autocomplete = true
 
 -- The LSP comes first because sources earlier in 'complete' are given more of
 -- the decaying time slice. Buffer words are scanned in the current buffer only,
 -- which is the extent cmp-buffer covered.
-vim.opt.complete = { "o", "." }
+vim.opt.complete = { "o", "Fv:lua.CompletePath", "." }
 
 -- `noselect` leaves the buffer untouched until an item is chosen, `popup` shows
 -- the documentation of the selected item and is also what makes
