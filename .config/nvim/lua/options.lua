@@ -12,10 +12,30 @@ vim.opt.expandtab = true
 
 vim.opt.signcolumn = "yes"
 
+require("utils/complete_path")
+
+vim.opt.autocomplete = true
+
+-- The LSP comes first because sources earlier in 'complete' are given more of
+-- the decaying time slice. Buffer words are scanned in the current buffer only,
+-- which is the extent cmp-buffer covered.
+vim.opt.complete = { "o", "Fv:lua.CompletePath", "." }
+
+-- `noselect` leaves the buffer untouched until an item is chosen, `popup` shows
+-- the documentation of the selected item and is also what makes
+-- `vim.lsp.completion` request `completionItem/resolve`, and `fuzzy` replaces
+-- nvim-cmp's matcher. `preinsert` is deliberately absent: nvim-cmp ran with
+-- `ghost_text = false`.
+vim.opt.completeopt = { "menu", "menuone", "noselect", "popup", "fuzzy" }
+
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 vim.opt.winborder = "single"
+
+-- The completion popup is not a floating window, so 'winborder' does not cover
+-- it.
+vim.opt.pumborder = "single"
 
 vim.opt.list = true
 vim.opt.listchars = {

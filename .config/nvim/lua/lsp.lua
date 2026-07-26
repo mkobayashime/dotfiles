@@ -67,6 +67,18 @@ vim.api.nvim_create_user_command("Format", function()
 end, {})
 
 OnLSPAttach(function(client, buffer)
+  -- Sets 'omnifunc', which the "o" flag in 'complete' feeds into
+  -- |ins-autocompletion|, and makes CTRL-Y apply the side effects of an item:
+  -- snippet expansion, additional text edits such as auto-imports, and any
+  -- associated command.
+  --
+  -- `autotrigger` stays off on purpose: it fires only on the server's
+  -- `triggerCharacters`, whereas 'autocomplete' polls every source on every
+  -- keypress, which is how nvim-cmp behaved.
+  if client:supports_method("textDocument/completion") then
+    vim.lsp.completion.enable(true, client.id, buffer)
+  end
+
   if client:supports_method("textDocument/publishDiagnostics")
       or client.name == "null-ls"
   then
