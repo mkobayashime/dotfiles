@@ -35,6 +35,14 @@ tmpspace() {
   fi
 
   d=$(mktemp -d "${TMPDIR:-/tmp}/tmpspace.XXX") && cd "$d" || exit 1
+
+  if [ "${HERDR_ENV:-}" = 1 ]; then
+    pane_count=$(herdr pane list --workspace "$HERDR_WORKSPACE_ID" | grep -c '"pane_id"')
+    if [ "$pane_count" -lt 2 ]; then
+      herdr workspace rename "$HERDR_WORKSPACE_ID" "$(basename "$d")" 1> /dev/null
+    fi
+  fi
+
   set +e
   "$shell"
   s=$?
