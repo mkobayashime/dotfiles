@@ -9,7 +9,7 @@
 "aqua:koalaman/shellcheck" = "0.11.0"
 "aqua:mvdan/sh" = "3.13.1"
 "aqua:neovim/neovim" = "0.12.4"
-"aqua:ogulcancelik/herdr" = "0.7.4"
+"aqua:ogulcancelik/herdr" = "0.7.5"
 "aqua:sharkdp/bat" = "0.26.1"
 "aqua:sharkdp/fd" = "10.4.2"
 "aqua:tmux/tmux-builds" = "3.7b"
