@@ -1,4 +1,11 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": ["local>mkobayashime/renovate-config"]
+	"extends": ["local>mkobayashime/renovate-config"],
+	"packageRules": [
+		{
+			"matchManagers": ["mise"],
+			"matchUpdateTypes": ["patch"],
+			"groupName": null
+		}
+	]
 }
