@@ -62,7 +62,11 @@ vim.lsp.enable({
 -- contributes cspell's through a client that never publishes any, and a
 -- formatting-only server publishes none at all. So this is not per-client and
 -- not per-buffer -- one global autocmd covers every source.
-vim.api.nvim_create_autocmd({ "CursorMoved" }, {
+--
+-- CursorHold rather than CursorMoved: 'updatetime' is 500ms, and the float
+-- dismisses itself on CursorMoved anyway, so the only thing lost is a float
+-- while the cursor is still travelling.
+vim.api.nvim_create_autocmd({ "CursorHold" }, {
   group = vim.api.nvim_create_augroup("diagnostic_float", { clear = true }),
   callback = function()
     vim.diagnostic.open_float({ scope = "cursor" })
