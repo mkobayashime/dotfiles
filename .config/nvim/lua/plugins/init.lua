@@ -80,7 +80,7 @@ return {
   },
   {
     "nvim-telescope/telescope.nvim",
-    event = "BufEnter",
+    cmd = "Telescope",
     config = function()
       require("plugins/telescope")
     end,
@@ -157,7 +157,7 @@ return {
   },
   {
     "sindrets/diffview.nvim",
-    event = "VimEnter",
+    cmd = { "DiffviewOpen", "DiffviewFileHistory", "DiffviewClose" },
     config = function()
       require("plugins/diffview")
     end,
@@ -237,7 +237,11 @@ return {
   },
   {
     "tpope/vim-eunuch",
-    event = "CursorHold",
+    cmd = {
+      "Mkdir", "Unlink", "Remove", "Delete", "Copy", "Move", "Duplicate",
+      "Rename", "Chmod", "Cfind", "Clocate", "Lfind", "Llocate",
+      "SudoEdit", "SudoWrite", "Wall", "W",
+    },
   },
   {
     "bronson/vim-trailing-whitespace",
