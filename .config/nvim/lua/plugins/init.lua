@@ -121,7 +121,7 @@ return {
   },
   {
     "ray-x/lsp_signature.nvim",
-    event = "BufEnter",
+    event = "LspAttach",
     opts = {
       bind = true,
       handler_opts = {
