@@ -213,9 +213,6 @@ return {
     end,
   },
   {
-    "vim-denops/denops.vim",
-  },
-  {
     "yuki-yano/fuzzy-motion.vim",
     event = "CursorHold",
     dependencies = {
@@ -251,9 +248,6 @@ return {
     init = function()
       require("plugins/vim-trailing-whitespace")
     end,
-  },
-  {
-    "kana/vim-textobj-user",
   },
   {
     "kana/vim-textobj-entire",
