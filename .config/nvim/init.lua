@@ -1,6 +1,6 @@
 require("lazy_nvim")
-require("lsp")
 require("options")
+require("lsp")
 require("autocmd")
 require("highlight")
 require("keymap")
