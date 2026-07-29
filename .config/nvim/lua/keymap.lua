@@ -180,21 +180,27 @@ end, {
 
 -- gitsigns {{{2
 
+-- In diff mode gitsigns has nothing to say, so these fall back to the built-in
+-- `]c` / `[c` diff hops rather than to themselves.
+--
+-- The "do nothing" return is `<Ignore>`, not `<Nop>`: `nvim_replace_termcodes`
+-- leaves the latter as literal text, so the mapping would type `<`, `N`, `o`,
+-- `p`, `>` -- an indent operator over a backwards search.
 vim.keymap.set("n", "]g",
   function()
-    if vim.wo.diff then return "]g" end
+    if vim.wo.diff then return "]c" end
     vim.schedule(function() require("gitsigns").next_hunk() end)
-    return "<Nop>"
+    return "<Ignore>"
   end,
-  { desc = "Next git hunk" }
+  { expr = true, desc = "Next git hunk" }
 )
 vim.keymap.set("n", "[g",
   function()
-    if vim.wo.diff then return "[g" end
+    if vim.wo.diff then return "[c" end
     vim.schedule(function() require("gitsigns").prev_hunk() end)
-    return "<Nop>"
+    return "<Ignore>"
   end,
-  { desc = "Previous git hunk" }
+  { expr = true, desc = "Previous git hunk" }
 )
 vim.keymap.set({ "n", "v" }, "[_git]a", ":Gitsigns stage_hunk<CR>")
 vim.keymap.set("n", "[_git]A", ":Gitsigns stage_buffer<CR>")
