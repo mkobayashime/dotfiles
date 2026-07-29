@@ -64,7 +64,6 @@ return {
           max_lines = 10,
         },
       },
-      { "andersevenrud/nvim_context_vt" },
       {
         "windwp/nvim-ts-autotag",
         opts = {}
