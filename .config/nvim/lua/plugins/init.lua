@@ -16,7 +16,7 @@ return {
   },
   {
     "nvimtools/none-ls.nvim",
-    event = "BufEnter",
+    event = "BufReadPre",
     dependencies = {
       { "davidmh/cspell.nvim" },
     },
@@ -76,7 +76,7 @@ return {
     config = function()
       require("plugins/rainbow-delimiters")
     end,
-    event = 'BufEnter'
+    event = 'BufReadPost'
   },
   {
     "nvim-telescope/telescope.nvim",
@@ -132,7 +132,7 @@ return {
   },
   {
     "lewis6991/gitsigns.nvim",
-    event = "VimEnter",
+    event = "BufReadPost",
     opts = {
       current_line_blame = true,
     },
@@ -146,13 +146,13 @@ return {
   },
   {
     "kevinhwang91/nvim-hlslens",
-    event = "VimEnter",
+    event = "BufReadPost",
     opts = {},
   },
   {
     "akinsho/git-conflict.nvim",
     version = "*",
-    event = "VimEnter",
+    event = "BufReadPost",
     opts = {},
   },
   {
@@ -181,7 +181,7 @@ return {
   },
   {
     "gbprod/yanky.nvim",
-    event = "VimEnter",
+    event = "BufReadPost",
     opts = {
       highlight = {
         timer = 250,
@@ -190,7 +190,7 @@ return {
   },
   {
     "mizlan/iswap.nvim",
-    event = "CursorHold",
+    event = "BufReadPost",
     opts = {
       hl_snipe = "DiffText",
     },
@@ -270,7 +270,7 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
-    event = "VimEnter",
+    event = "BufReadPost",
     opts = {
       indent = {
         char = "▏",
@@ -285,7 +285,7 @@ return {
   },
   {
     "petertriho/nvim-scrollbar",
-    event = "VimEnter",
+    event = "BufReadPost",
     opts = {},
   },
   {
@@ -297,7 +297,7 @@ return {
   },
   {
     "folke/todo-comments.nvim",
-    event = "CursorHold",
+    event = "BufReadPost",
     opts = {
       signs = false,
       highlight = { after = "" },
@@ -305,7 +305,7 @@ return {
   },
   {
     "kevinhwang91/nvim-bqf",
-    event = "CursorHold",
+    event = "BufReadPost",
     opts = {
       preview = {
         win_height = 25,
