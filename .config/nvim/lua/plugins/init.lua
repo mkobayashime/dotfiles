@@ -251,16 +251,6 @@ return {
     end,
   },
   {
-    "kana/vim-textobj-entire",
-    keys = {
-      { "ae", mode = { "o", "x" } },
-      { "ie", mode = { "o", "x" } },
-    },
-    dependencies = {
-      { "kana/vim-textobj-user" },
-    },
-  },
-  {
     -- Neovim's own `gc` text object only takes a run of whole-line comments,
     -- and only in the line-comment style: a trailing `// ...` and a `/* ... */`
     -- block are both invisible to it. `ic` / `ac` / `aC` still are not.
@@ -269,16 +259,6 @@ return {
       { "ac", mode = { "o", "x" } },
       { "ic", mode = { "o", "x" } },
       { "aC", mode = { "o", "x" } },
-    },
-    dependencies = {
-      { "kana/vim-textobj-user" },
-    },
-  },
-  {
-    "jceb/vim-textobj-uri",
-    keys = {
-      { "au", mode = { "o", "x" } },
-      { "iu", mode = { "o", "x" } },
     },
     dependencies = {
       { "kana/vim-textobj-user" },

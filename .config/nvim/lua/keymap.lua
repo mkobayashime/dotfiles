@@ -69,6 +69,35 @@ vim.keymap.set("n", "[_quickfix]c", ":cclose<CR>", { desc = "Close quickfix list
 
 vim.keymap.set("n", "<Leader>ch", ":noh<CR>", { silent = true, desc = "Clear highlight" })
 
+-- entire buffer text object {{{2
+
+--- @param inner boolean Skip the blank lines at either end of the buffer
+local function select_entire(inner)
+  local first, last = 1, vim.api.nvim_buf_line_count(0)
+
+  if inner then
+    while first < last and vim.fn.getline(first):match("^%s*$") do
+      first = first + 1
+    end
+    while last > first and vim.fn.getline(last):match("^%s*$") do
+      last = last - 1
+    end
+  end
+
+  -- `V` leaves visual mode when one is already active, which is what happens
+  -- when this is reached from a visual-mode mapping rather than a pending
+  -- operator. Drop out of it first so the `V` below always enters.
+  vim.cmd("normal! \27")
+  vim.cmd(("normal! %dGV%dG"):format(first, last))
+end
+
+vim.keymap.set({ "o", "x" }, "ae", function()
+  select_entire(false)
+end, { desc = "Entire buffer" })
+vim.keymap.set({ "o", "x" }, "ie", function()
+  select_entire(true)
+end, { desc = "Entire buffer without surrounding blank lines" })
+
 -- plugins {{{1
 
 -- telescope {{{2
