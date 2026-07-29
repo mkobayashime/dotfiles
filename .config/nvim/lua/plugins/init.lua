@@ -343,10 +343,6 @@ return {
     opts = {},
   },
   {
-    "rust-lang/rust.vim",
-    ft = { "rust" },
-  },
-  {
     "iloginow/vim-stylus",
     ft = { "stylus" },
   },
@@ -361,10 +357,6 @@ return {
     config = function()
       require("plugins/peek")
     end,
-  },
-  {
-    "MTDL9/vim-log-highlighting",
-    ft = "log",
   },
   {
     "chrisbra/csv.vim",
