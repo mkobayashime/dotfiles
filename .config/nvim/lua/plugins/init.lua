@@ -283,6 +283,8 @@ return {
   {
     "petertriho/nvim-scrollbar",
     event = "BufReadPost",
+    -- The gitsigns and search handlers stay off: the scrollbar carries the
+    -- cursor and diagnostics only.
     opts = {},
   },
   {
