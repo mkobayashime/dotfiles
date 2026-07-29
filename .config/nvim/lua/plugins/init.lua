@@ -139,7 +139,10 @@ return {
   },
   {
     "isakbm/gitgraph.nvim",
-    event = "CursorHold",
+    -- No event/cmd/keys: it defines no user commands, and the only entry
+    -- point is `require("gitgraph").draw(...)` inside the <Leader>gg mapping
+    -- in `keymap.lua`. lazy.nvim hooks `require`, so that call alone loads
+    -- this plugin on demand -- an explicit trigger would be redundant.
     config = function()
       require("plugins/gitgraph")
     end,
