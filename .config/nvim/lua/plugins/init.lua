@@ -252,21 +252,31 @@ return {
   },
   {
     "kana/vim-textobj-entire",
-    event = "CursorHold",
+    keys = {
+      { "ae", mode = { "o", "x" } },
+      { "ie", mode = { "o", "x" } },
+    },
     dependencies = {
       { "kana/vim-textobj-user" },
     },
   },
   {
     "glts/vim-textobj-comment",
-    event = "CursorHold",
+    keys = {
+      { "ac", mode = { "o", "x" } },
+      { "ic", mode = { "o", "x" } },
+      { "aC", mode = { "o", "x" } },
+    },
     dependencies = {
       { "kana/vim-textobj-user" },
     },
   },
   {
     "jceb/vim-textobj-uri",
-    event = "CursorHold",
+    keys = {
+      { "au", mode = { "o", "x" } },
+      { "iu", mode = { "o", "x" } },
+    },
     dependencies = {
       { "kana/vim-textobj-user" },
     },
