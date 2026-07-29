@@ -54,6 +54,11 @@ return {
     dependencies = {
       {
         "JoosepAlviste/nvim-ts-context-commentstring",
+        init = function()
+          -- The nvim-treesitter module it would otherwise register is gone on
+          -- the `main` branch, so skipping it only saves the lookup.
+          vim.g.skip_ts_context_commentstring_module = true
+        end,
         config = function()
           require("plugins/nvim-ts-context-commentstring")
         end,
@@ -165,13 +170,6 @@ return {
     end,
   },
   {
-    "numToStr/Comment.nvim",
-    event = "VimEnter",
-    config = function()
-      require("plugins/Comment")
-    end,
-  },
-  {
     "machakann/vim-sandwich",
     event = "CursorHold",
     init = function()
@@ -263,6 +261,9 @@ return {
     },
   },
   {
+    -- Neovim's own `gc` text object only takes a run of whole-line comments,
+    -- and only in the line-comment style: a trailing `// ...` and a `/* ... */`
+    -- block are both invisible to it. `ic` / `ac` / `aC` still are not.
     "glts/vim-textobj-comment",
     keys = {
       { "ac", mode = { "o", "x" } },
