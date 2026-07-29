@@ -1,5 +1,3 @@
-require("utils/bool_fn")
-
 -- basic {{{1
 
 -- leader/prefix {{{2

@@ -11,8 +11,6 @@ if not vim.uv.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-vim.g.plugins_dir = vim.fn.stdpath("config") .. "/lua/plugins"
-
 require("lazy").setup(require("plugins"),
   {
     defaults = {
