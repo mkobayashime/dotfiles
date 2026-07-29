@@ -218,7 +218,7 @@ return {
   {
     "yuki-yano/fuzzy-motion.vim",
     event = "CursorHold",
-    dependencis = {
+    dependencies = {
       { "vim-denops/denops.vim" },
     },
   },
