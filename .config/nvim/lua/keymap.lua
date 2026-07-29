@@ -132,7 +132,7 @@ OnLSPAttach(function(_, buffer)
 
   vim.keymap.set('n', 'K', function()
     vim.lsp.buf.hover { focusable = false, }
-  end)
+  end, options)
   vim.keymap.set({ "n", "v" }, "<Leader>a", ":lua vim.lsp.buf.code_action()<CR>", options)
   vim.keymap.set({ "n", "v" }, "<Leader>rn", ":lua vim.lsp.buf.rename()<CR>", options)
 end)
