@@ -1,11 +1,9 @@
 vim.filetype.add {
   extension = {
-    csv = "csv",
     dat = "csv",
     json = "jsonc",
     mdx = "markdown",
     sh = "bash",
-    styl = "stylus",
     zsh = "bash",
     log = "log",
   },
