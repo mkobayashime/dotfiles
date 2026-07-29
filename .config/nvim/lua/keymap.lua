@@ -30,8 +30,6 @@ vim.keymap.set("n", "s", '"_s')
 vim.keymap.set("n", "S", '"_S')
 vim.keymap.set("n", "c", '"_c')
 vim.keymap.set("n", "C", '"_C')
-vim.keymap.set("v", "p", '"_xp')
-vim.keymap.set("v", "P", '"_xP')
 
 -- scroll {{{2
 
