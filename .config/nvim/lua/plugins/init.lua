@@ -165,9 +165,6 @@ return {
   {
     "numToStr/Comment.nvim",
     event = "VimEnter",
-    dependencies = {
-      { "nvim-treesitter/nvim-treesitter" },
-    },
     config = function()
       require("plugins/Comment")
     end,
@@ -294,7 +291,6 @@ return {
   {
     "karb94/neoscroll.nvim",
     event = "VimEnter",
-    enabled = true,
     config = function()
       require("plugins/neoscroll")
     end,
