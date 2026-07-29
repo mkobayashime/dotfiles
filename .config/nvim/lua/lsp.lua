@@ -58,10 +58,20 @@ vim.lsp.enable({
   'yamlls',
 })
 
+-- Diagnostics live in `vim.diagnostic`, not in any one client: none-ls
+-- contributes cspell's through a client that never publishes any, and a
+-- formatting-only server publishes none at all. So this is not per-client and
+-- not per-buffer -- one global autocmd covers every source.
+vim.api.nvim_create_autocmd({ "CursorMoved" }, {
+  group = vim.api.nvim_create_augroup("diagnostic_float", { clear = true }),
+  callback = function()
+    vim.diagnostic.open_float({ scope = "cursor" })
+  end,
+})
+
 -- Created once: `nvim_create_augroup` clears the group by default, so creating
 -- them inside the LspAttach callback would drop the autocmds of every buffer
 -- that attached earlier.
-local augroup_diagnostic = vim.api.nvim_create_augroup("lsp_diagnostic", {})
 local augroup_lsp_document_highlight = vim.api.nvim_create_augroup("lsp_document_highlight", {})
 local augroup_formatter = vim.api.nvim_create_augroup("lsp_formatter", {})
 
@@ -80,19 +90,6 @@ vim.api.nvim_create_user_command("Format", function()
 end, {})
 
 OnLSPAttach(function(client, buffer)
-  if client:supports_method("textDocument/publishDiagnostics")
-      or client.name == "null-ls"
-  then
-    vim.api.nvim_clear_autocmds({ group = augroup_diagnostic, buffer = buffer })
-    vim.api.nvim_create_autocmd({ "CursorMoved" }, {
-      group = augroup_diagnostic,
-      buffer = buffer,
-      callback = function()
-        vim.diagnostic.open_float({ scope = "cursor" })
-      end,
-    })
-  end
-
   if client:supports_method("textDocument/documentHighlight") then
     vim.api.nvim_clear_autocmds({ group = augroup_lsp_document_highlight, buffer = buffer })
     vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
