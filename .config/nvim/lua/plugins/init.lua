@@ -171,7 +171,7 @@ return {
   },
   {
     "machakann/vim-sandwich",
-    event = "CursorHold",
+    event = "VeryLazy",
     init = function()
       vim.g.sandwich_no_default_key_mappings = 1
     end,
@@ -181,7 +181,7 @@ return {
   },
   {
     "gbprod/yanky.nvim",
-    event = "BufReadPost",
+    event = "VeryLazy",
     opts = {
       highlight = {
         timer = 250,
