@@ -16,6 +16,7 @@ zoom = 'prefix+m'
 [ui]
 prompt_new_tab_name = false
 pane_gaps = false
+agent_panel_sort = "priority"
 
 [ui.toast]
 delivery = "system"
