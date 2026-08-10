@@ -5,30 +5,6 @@
 		"ask": [],
 		"defaultMode": "auto"
 	},
-	"hooks": {
-		"Notification": [
-			{
-				"matcher": "",
-				"hooks": [
-					{
-						"type": "command",
-						"command": "jq -r '.message' | terminal-notifier -title \"Claude Code: $(basename ${CLAUDE_PROJECT_DIR})\" -sound Glass -activate org.alacritty"
-					}
-				]
-			}
-		],
-		"Stop": [
-			{
-				"matcher": "",
-				"hooks": [
-					{
-						"type": "command",
-						"command": "terminal-notifier -title \"Claude Code: $(basename ${CLAUDE_PROJECT_DIR})\" -message 'Task completed' -sound Glass -activate org.alacritty"
-					}
-				]
-			}
-		]
-	},
 	"statusLine": {
 		"type": "command",
 		"command": "~/.config/claude/statusline.ts"
