@@ -5496,52 +5496,52 @@ url_api = "https://api.github.com/repos/jqlang/jq/releases/assets/453012788"
 provenance = "github-attestations"
 
 [[tools.node]]
-version = "26.5.0"
+version = "26.6.0"
 backend = "core:node"
 
 [tools.node."platforms.linux-arm64"]
-checksum = "sha256:308e5fe89a82461ba5a6cf15ff5221b2cdbd7ae87600aa72bb3c3fbdc66412d1"
-url = "https://nodejs.org/dist/v26.5.0/node-v26.5.0-linux-arm64.tar.gz"
+checksum = "sha256:51c59de738843677a3c97bccbdbf9895141cb308bf25a95daeafd1aade09f0d5"
+url = "https://nodejs.org/dist/v26.6.0/node-v26.6.0-linux-arm64.tar.gz"
 
 [tools.node."platforms.linux-arm64-musl"]
-checksum = "sha256:1ab31aef6561191693f366cacd75bbcefa0301e49a18bc05554c21893bbdb490"
-url = "https://unofficial-builds.nodejs.org/download/release/v26.5.0/node-v26.5.0-linux-arm64-musl.tar.gz"
+checksum = "sha256:a4ad7beedb23618d1febb55b02b4e96b19f90d61e80a3d8bb52d621b8acf3f82"
+url = "https://unofficial-builds.nodejs.org/download/release/v26.6.0/node-v26.6.0-linux-arm64-musl.tar.gz"
 
 [tools.node."platforms.linux-x64"]
-checksum = "sha256:22b5f47ad6ae78837e4c2b846019965ce1a06ba143de176102294a1bf44fc677"
-url = "https://nodejs.org/dist/v26.5.0/node-v26.5.0-linux-x64.tar.gz"
+checksum = "sha256:714f352a7539c5ce09af15e440cbaadbe935bb23ba23fcee66b066d00a063822"
+url = "https://nodejs.org/dist/v26.6.0/node-v26.6.0-linux-x64.tar.gz"
 
 [tools.node."platforms.linux-x64-baseline"]
-checksum = "sha256:22b5f47ad6ae78837e4c2b846019965ce1a06ba143de176102294a1bf44fc677"
-url = "https://nodejs.org/dist/v26.5.0/node-v26.5.0-linux-x64.tar.gz"
+checksum = "sha256:714f352a7539c5ce09af15e440cbaadbe935bb23ba23fcee66b066d00a063822"
+url = "https://nodejs.org/dist/v26.6.0/node-v26.6.0-linux-x64.tar.gz"
 
 [tools.node."platforms.linux-x64-musl"]
-checksum = "sha256:00f1398411a4216c5a6ecaad3b825a0da5ec00e79ee8c173ab65a094d97b9ad8"
-url = "https://unofficial-builds.nodejs.org/download/release/v26.5.0/node-v26.5.0-linux-x64-musl.tar.gz"
+checksum = "sha256:60e6a77f6fc69f77925f15c1af78e70320c9a64fe541668c7662906ef5adf3c0"
+url = "https://unofficial-builds.nodejs.org/download/release/v26.6.0/node-v26.6.0-linux-x64-musl.tar.gz"
 
 [tools.node."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:00f1398411a4216c5a6ecaad3b825a0da5ec00e79ee8c173ab65a094d97b9ad8"
-url = "https://unofficial-builds.nodejs.org/download/release/v26.5.0/node-v26.5.0-linux-x64-musl.tar.gz"
+checksum = "sha256:60e6a77f6fc69f77925f15c1af78e70320c9a64fe541668c7662906ef5adf3c0"
+url = "https://unofficial-builds.nodejs.org/download/release/v26.6.0/node-v26.6.0-linux-x64-musl.tar.gz"
 
 [tools.node."platforms.macos-arm64"]
-checksum = "sha256:ee920559aaa2391569cff4d737e3b83963430e3a14dedd91bfe0ff53171b5af9"
-url = "https://nodejs.org/dist/v26.5.0/node-v26.5.0-darwin-arm64.tar.gz"
+checksum = "sha256:75480cd43b6fcb35d8e772dd18983fbd9f691b2f03b1c94393206098e9944b5e"
+url = "https://nodejs.org/dist/v26.6.0/node-v26.6.0-darwin-arm64.tar.gz"
 
 [tools.node."platforms.macos-x64"]
-checksum = "sha256:98293394c945a24e64e00b4177bf075ec963ea70b34d1d2e24bd4a71716d334f"
-url = "https://nodejs.org/dist/v26.5.0/node-v26.5.0-darwin-x64.tar.gz"
+checksum = "sha256:de075ffc09f33cc4b44ed38e1e4b2ef71f699b986f6d5952329da4973220726d"
+url = "https://nodejs.org/dist/v26.6.0/node-v26.6.0-darwin-x64.tar.gz"
 
 [tools.node."platforms.macos-x64-baseline"]
-checksum = "sha256:98293394c945a24e64e00b4177bf075ec963ea70b34d1d2e24bd4a71716d334f"
-url = "https://nodejs.org/dist/v26.5.0/node-v26.5.0-darwin-x64.tar.gz"
+checksum = "sha256:de075ffc09f33cc4b44ed38e1e4b2ef71f699b986f6d5952329da4973220726d"
+url = "https://nodejs.org/dist/v26.6.0/node-v26.6.0-darwin-x64.tar.gz"
 
 [tools.node."platforms.windows-x64"]
-checksum = "sha256:d3b2277dbcccfdf24ef6302928f64f484cff1d77a6d3caa3a28f4d20ce9158f6"
-url = "https://nodejs.org/dist/v26.5.0/node-v26.5.0-win-x64.zip"
+checksum = "sha256:aa81c8552f251ff280134985ccdaf16d336e2961b1e2c3eeb7b7b2221509f723"
+url = "https://nodejs.org/dist/v26.6.0/node-v26.6.0-win-x64.zip"
 
 [tools.node."platforms.windows-x64-baseline"]
-checksum = "sha256:d3b2277dbcccfdf24ef6302928f64f484cff1d77a6d3caa3a28f4d20ce9158f6"
-url = "https://nodejs.org/dist/v26.5.0/node-v26.5.0-win-x64.zip"
+checksum = "sha256:aa81c8552f251ff280134985ccdaf16d336e2961b1e2c3eeb7b7b2221509f723"
+url = "https://nodejs.org/dist/v26.6.0/node-v26.6.0-win-x64.zip"
 
 [[tools."npm:@playwright/cli"]]
 version = "0.1.17"
