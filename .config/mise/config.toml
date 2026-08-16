@@ -13,7 +13,7 @@
 "aqua:sharkdp/bat" = "0.26.1"
 "aqua:sharkdp/fd" = "10.4.2"
 "aqua:tmux/tmux-builds" = "3.7b"
-"aqua:tree-sitter/tree-sitter" = "0.26.11"
+"aqua:tree-sitter/tree-sitter" = "0.26.12"
 "conda:imagemagick" = "7.1.2_27"
 "core:bun" = "1.3.14"
 "core:deno" = "2.9.5"
