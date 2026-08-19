@@ -5,7 +5,7 @@
 "aqua:cli/cli" = "2.97.0"
 "aqua:dandavison/delta" = "0.19.2"
 "aqua:jqlang/jq" = "1.8.2"
-"aqua:junegunn/fzf" = "0.74.1"
+"aqua:junegunn/fzf" = "0.74.2"
 "aqua:koalaman/shellcheck" = "0.11.0"
 "aqua:mvdan/sh" = "3.13.1"
 "aqua:neovim/neovim" = "0.12.4"
