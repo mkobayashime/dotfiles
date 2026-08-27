@@ -6456,7 +6456,7 @@ version = "10.0.1"
 backend = "npm:cspell"
 
 [[tools."npm:typescript-language-server"]]
-version = "5.3.0"
+version = "6.0.0"
 backend = "npm:typescript-language-server"
 
 [[tools."npm:vscode-langservers-extracted"]]
