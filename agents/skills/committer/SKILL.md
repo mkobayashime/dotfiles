@@ -1,10 +1,15 @@
 ---
 name: committer
-description: Groups staged or unstaged changes into semantically distinct commits. Use when asked to commit changes. Splits by feature, work phase, and docs vs. code; commits in the right order.
+description: The required path for every commit — use it whenever the user asks to commit, including compound requests ("branch, commit, and push", "commit then PR") and changes that only need a single commit. Never run `git commit` directly. Groups staged or unstaged changes into semantically distinct commits, splitting by feature, work phase, and docs vs. code, and commits in the right order.
 allowed-tools: Bash(git rev-parse:*) Bash(git log:*) Bash(git show:*) Bash(git diff:*) Bash(git commit:*)
 ---
 
-Commit changes in multiple, semantically distinct commits. Follow the steps below in order.
+Create one or more semantically distinct commits. Follow the steps below in order.
+
+This skill is **always** the path for committing — including when the request is one step
+of a larger sequence (e.g. "branch, commit, PR") and when the change is small. A single
+commit is a valid outcome when the change is one cohesive unit; splitting is a tool to
+apply when it helps, not a requirement.
 
 # Context
 
@@ -29,7 +34,9 @@ Commit changes in multiple, semantically distinct commits. Follow the steps belo
 
 ## 2. Group changes into logical commits
 
-Split the changes into separate commits based on these criteria:
+If the changes are all one cohesive concern, a single commit is correct — do not split
+just to produce more commits. Otherwise, split into separate commits based on these
+criteria:
 
 - **Functionality** — group changes that belong to the same feature or concern together.
 - **Phase of work** — separate changes that represent different stages (e.g. implementation vs. refinement).
