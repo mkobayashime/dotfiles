@@ -1,4 +1,9 @@
 {
+	"attribution": {
+		"commit": "",
+		"pr": "",
+		"sessionUrl": false
+	},
 	"permissions": {
 		"deny": ["Read(./.env)", "Read(./.env.*)"],
 		"ask": [],
@@ -7,11 +12,6 @@
 	"statusLine": {
 		"type": "command",
 		"command": "~/.config/claude/statusline.ts"
-	},
-	"attribution": {
-		"commit": "",
-		"pr": "",
-		"sessionUrl": false
 	},
 	"enabledPlugins": {
 		"dig@kuu-marketplace": true,
@@ -22,5 +22,6 @@
 	"tui": "default",
 	"skipDangerousModePermissionPrompt": true,
 	"editorMode": "vim",
-	"skipAutoPermissionPrompt": true
+	"skipAutoPermissionPrompt": true,
+	"autoMemoryEnabled": false
 }
