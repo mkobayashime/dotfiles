@@ -4260,73 +4260,73 @@ url = "https://github.com/tmux/tmux-builds/releases/download/v3.7b/tmux-3.7b-mac
 url_api = "https://api.github.com/repos/tmux/tmux-builds/releases/assets/465072865"
 
 [[tools."aqua:tree-sitter/tree-sitter"]]
-version = "0.26.12"
+version = "0.26.13"
 backend = "aqua:tree-sitter/tree-sitter"
 
 [tools."aqua:tree-sitter/tree-sitter"."platforms.linux-arm64"]
-checksum = "sha256:cfbf3d9aad8e326878ab1846885a9c2b782a0333273591616f34bf556d525586"
-url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.12/tree-sitter-linux-arm64.gz"
-url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/506408041"
+checksum = "sha256:088c5ebf4b4b558c8abfd167c9c4f9669c2f9070da3edd9c0157dc051d77ac5d"
+url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.13/tree-sitter-linux-arm64.gz"
+url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/526034724"
 provenance = "github-attestations"
 
 [tools."aqua:tree-sitter/tree-sitter"."platforms.linux-arm64-musl"]
-checksum = "sha256:cfbf3d9aad8e326878ab1846885a9c2b782a0333273591616f34bf556d525586"
-url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.12/tree-sitter-linux-arm64.gz"
-url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/506408041"
+checksum = "sha256:088c5ebf4b4b558c8abfd167c9c4f9669c2f9070da3edd9c0157dc051d77ac5d"
+url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.13/tree-sitter-linux-arm64.gz"
+url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/526034724"
 provenance = "github-attestations"
 
 [tools."aqua:tree-sitter/tree-sitter"."platforms.linux-x64"]
-checksum = "sha256:d00ac0daefc4bf8c4b57842a5c0509927232faad1d83157b64fbad4e2e8d9a8b"
-url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.12/tree-sitter-linux-x64.gz"
-url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/506408040"
+checksum = "sha256:c9c8bef027658d60249ca4fc0663578ceb2e2029346bb8702e091e20d7716475"
+url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.13/tree-sitter-linux-x64.gz"
+url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/526034722"
 provenance = "github-attestations"
 
 [tools."aqua:tree-sitter/tree-sitter"."platforms.linux-x64-baseline"]
-checksum = "sha256:d00ac0daefc4bf8c4b57842a5c0509927232faad1d83157b64fbad4e2e8d9a8b"
-url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.12/tree-sitter-linux-x64.gz"
-url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/506408040"
+checksum = "sha256:c9c8bef027658d60249ca4fc0663578ceb2e2029346bb8702e091e20d7716475"
+url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.13/tree-sitter-linux-x64.gz"
+url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/526034722"
 provenance = "github-attestations"
 
 [tools."aqua:tree-sitter/tree-sitter"."platforms.linux-x64-musl"]
-checksum = "sha256:d00ac0daefc4bf8c4b57842a5c0509927232faad1d83157b64fbad4e2e8d9a8b"
-url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.12/tree-sitter-linux-x64.gz"
-url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/506408040"
+checksum = "sha256:c9c8bef027658d60249ca4fc0663578ceb2e2029346bb8702e091e20d7716475"
+url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.13/tree-sitter-linux-x64.gz"
+url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/526034722"
 provenance = "github-attestations"
 
 [tools."aqua:tree-sitter/tree-sitter"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:d00ac0daefc4bf8c4b57842a5c0509927232faad1d83157b64fbad4e2e8d9a8b"
-url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.12/tree-sitter-linux-x64.gz"
-url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/506408040"
+checksum = "sha256:c9c8bef027658d60249ca4fc0663578ceb2e2029346bb8702e091e20d7716475"
+url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.13/tree-sitter-linux-x64.gz"
+url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/526034722"
 provenance = "github-attestations"
 
 [tools."aqua:tree-sitter/tree-sitter"."platforms.macos-arm64"]
-checksum = "sha256:a7ddeff2507391ebdfd0b8fa0dfe91babed291ea00d86426cb0e6cfade891697"
-url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.12/tree-sitter-macos-arm64.gz"
-url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/506408052"
+checksum = "sha256:0a13c53d178d4cca22d2da220d5841c76cba0c39c220b789b64d752ae5d31864"
+url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.13/tree-sitter-macos-arm64.gz"
+url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/526034751"
 provenance = "github-attestations"
 
 [tools."aqua:tree-sitter/tree-sitter"."platforms.macos-x64"]
-checksum = "sha256:6827b218bce4d5403cb76ae3c269bc836d3124b75bb3477197ee9a8c8f6e79dc"
-url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.12/tree-sitter-macos-x64.gz"
-url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/506408053"
+checksum = "sha256:41fa2bdfb77fa76d0f821d47bdc9c52285adb61a4c41ed21a902aee65d8de2b5"
+url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.13/tree-sitter-macos-x64.gz"
+url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/526034752"
 provenance = "github-attestations"
 
 [tools."aqua:tree-sitter/tree-sitter"."platforms.macos-x64-baseline"]
-checksum = "sha256:6827b218bce4d5403cb76ae3c269bc836d3124b75bb3477197ee9a8c8f6e79dc"
-url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.12/tree-sitter-macos-x64.gz"
-url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/506408053"
+checksum = "sha256:41fa2bdfb77fa76d0f821d47bdc9c52285adb61a4c41ed21a902aee65d8de2b5"
+url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.13/tree-sitter-macos-x64.gz"
+url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/526034752"
 provenance = "github-attestations"
 
 [tools."aqua:tree-sitter/tree-sitter"."platforms.windows-x64"]
-checksum = "sha256:3445cf022efbc3ffcc391a55ccb29a3ce277eea91c719247c2dad4dd9dac70f6"
-url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.12/tree-sitter-windows-x64.gz"
-url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/506408056"
+checksum = "sha256:99ddf495f73763419f60727e8eb79d8361aad12589e214ab82e44a80730d2e8a"
+url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.13/tree-sitter-windows-x64.gz"
+url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/526034754"
 provenance = "github-attestations"
 
 [tools."aqua:tree-sitter/tree-sitter"."platforms.windows-x64-baseline"]
-checksum = "sha256:3445cf022efbc3ffcc391a55ccb29a3ce277eea91c719247c2dad4dd9dac70f6"
-url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.12/tree-sitter-windows-x64.gz"
-url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/506408056"
+checksum = "sha256:99ddf495f73763419f60727e8eb79d8361aad12589e214ab82e44a80730d2e8a"
+url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.26.13/tree-sitter-windows-x64.gz"
+url_api = "https://api.github.com/repos/tree-sitter/tree-sitter/releases/assets/526034754"
 provenance = "github-attestations"
 
 [[tools.bat]]
