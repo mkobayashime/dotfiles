@@ -11,7 +11,7 @@
 "aqua:neovim/neovim" = "0.12.5"
 "aqua:ogulcancelik/herdr" = "0.7.5"
 "aqua:sharkdp/bat" = "0.26.1"
-"aqua:sharkdp/fd" = "10.4.2"
+"aqua:sharkdp/fd" = "10.5.0"
 "aqua:tmux/tmux-builds" = "3.7b"
 "aqua:tree-sitter/tree-sitter" = "0.26.12"
 "conda:imagemagick" = "7.1.2_27"
