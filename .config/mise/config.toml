@@ -16,7 +16,7 @@
 "aqua:tree-sitter/tree-sitter" = "0.26.12"
 "conda:imagemagick" = "7.1.2_27"
 "core:bun" = "1.4.0"
-"core:deno" = "2.9.5"
+"core:deno" = "2.9.6"
 "core:ffmpeg" = "8.1.2"
 "core:node" = "26.7.0"
 "github:yt-dlp/yt-dlp" = { version = "2026.07.04", rename_exe = "yt-dlp" }
