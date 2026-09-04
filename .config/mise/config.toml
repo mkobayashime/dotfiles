@@ -18,7 +18,7 @@
 "core:bun" = "1.4.0"
 "core:deno" = "2.9.5"
 "core:ffmpeg" = "8.1.2"
-"core:node" = "26.7.0"
+"core:node" = "26.8.1"
 "github:yt-dlp/yt-dlp" = { version = "2026.07.04", rename_exe = "yt-dlp" }
 "npm:@playwright/cli" = "0.1.18"
 "npm:@tailwindcss/language-server" = "0.16.0"
