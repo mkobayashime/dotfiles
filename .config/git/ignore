@@ -4,4 +4,7 @@
 .DS_Store
 .direnv
 
+.worktreeinclude
+
 **/.claude/settings.local.json
+CLAUDE.local.md
