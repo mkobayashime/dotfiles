@@ -1,7 +1,5 @@
 ## Commands
 
-- 必ず `gh` の代わりに `gh-auto-account` を使用する
-  - repository が見つからないなど権限系のエラーが出た場合、一度作業を中断してユーザーに確認を取る
 - linter/formatter/typechecker など
   - 必ず以下のフローで適切なコマンドを探す
   - プロジェクトの `Makefile` 内に似たコマンドがないか探す
