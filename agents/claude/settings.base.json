@@ -36,5 +36,8 @@
 	"skipDangerousModePermissionPrompt": true,
 	"editorMode": "vim",
 	"skipAutoPermissionPrompt": true,
-	"autoMemoryEnabled": false
+	"autoMemoryEnabled": false,
+	"env": {
+		"CLAUDE_CODE_THRIFTY_SONIC": "false"
+	}
 }
