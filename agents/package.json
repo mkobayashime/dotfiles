@@ -1,8 +1,0 @@
-{
-	"name": "@dotfiles/agents",
-	"type": "module",
-	"private": true,
-	"devDependencies": {
-		"@opencode-ai/plugin": "1.18.3"
-	}
-}

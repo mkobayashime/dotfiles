@@ -30,13 +30,6 @@ tools: PHONY
 packages: PHONY
 	zsh -ci 'source ./install-packages.zsh'
 
-agents.sync.all: PHONY
-	agents/sync.ts all
-	git status agents
-
-agents.deploy: PHONY
-	agents/deploy.ts
-
 setup: deploy tools PHONY
 
 PHONY:
