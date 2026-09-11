@@ -10,6 +10,11 @@ void (async () => {
 
 	const [url] = positionals;
 
+	if (!url) {
+		console.error("Error: No URL provided");
+		process.exit(1);
+	}
+
 	const tryFetch = async ({ url, count }: { url: string; count: number }) => {
 		if (count > 19) {
 			console.error("Error: Max number of redirection exceeded");

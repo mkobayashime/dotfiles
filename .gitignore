@@ -1,2 +1,7 @@
 node_modules
 *.local.json
+
+# deploy.sh generates extensionless aliases next to the *.ts sources
+.bin/typescript/*
+!.bin/typescript/*/
+!.bin/typescript/*.ts
