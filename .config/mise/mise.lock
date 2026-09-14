@@ -5750,6 +5750,10 @@ url = "https://github.com/cli/cli/releases/download/v2.96.0/gh_2.96.0_windows_am
 url_api = "https://api.github.com/repos/cli/cli/releases/assets/464728577"
 provenance = "github-attestations"
 
+[[tools."github:openai/codex"]]
+version = "rust-v0.153.3"
+backend = "github:openai/codex"
+
 [[tools."github:yt-dlp/yt-dlp"]]
 version = "2026.07.04"
 backend = "github:yt-dlp/yt-dlp"
