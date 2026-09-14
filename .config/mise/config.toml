@@ -12,6 +12,7 @@
 "aqua:ogulcancelik/herdr" = "0.8.2"
 "aqua:sharkdp/bat" = "0.26.1"
 "aqua:sharkdp/fd" = "10.5.0"
+"aqua:suzuki-shunsuke/ghtkn" = "0.4.0"
 "aqua:tmux/tmux-builds" = "3.7b"
 "aqua:tree-sitter/tree-sitter" = "0.27.0"
 "conda:imagemagick" = "7.1.2_27"
@@ -33,6 +34,9 @@
 lockfile = true
 minimum_release_age = "7d"
 pin = true
+
+[settings.github]
+credential_command = "ghtkn get -m 1h"
 
 [settings.npm]
 package_manager = "bun"

@@ -4220,6 +4220,76 @@ checksum = "sha256:a227701b8551c35a9931d9f6da75503cf86d88e182d71fb849a70864c5d57
 url = "https://github.com/sharkdp/fd/releases/download/v10.5.0/fd-v10.5.0-x86_64-pc-windows-msvc.zip"
 url_api = "https://api.github.com/repos/sharkdp/fd/releases/assets/530482901"
 
+[[tools."aqua:suzuki-shunsuke/ghtkn"]]
+version = "0.4.0"
+backend = "aqua:suzuki-shunsuke/ghtkn"
+
+[tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-arm64"]
+checksum = "sha256:33a0e1f91535fc0a900ddc08e2c182b1debd5656124153c408c2c96a9afc4238"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166604"
+provenance = "github-attestations"
+
+[tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-arm64-musl"]
+checksum = "sha256:33a0e1f91535fc0a900ddc08e2c182b1debd5656124153c408c2c96a9afc4238"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166604"
+provenance = "github-attestations"
+
+[tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-x64"]
+checksum = "sha256:2dbcdcd0d40966fda13522b23c6522b8c6682f0e71930131967e0f5d70f12526"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166607"
+provenance = "github-attestations"
+
+[tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-x64-baseline"]
+checksum = "sha256:2dbcdcd0d40966fda13522b23c6522b8c6682f0e71930131967e0f5d70f12526"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166607"
+provenance = "github-attestations"
+
+[tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-x64-musl"]
+checksum = "sha256:2dbcdcd0d40966fda13522b23c6522b8c6682f0e71930131967e0f5d70f12526"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166607"
+provenance = "github-attestations"
+
+[tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:2dbcdcd0d40966fda13522b23c6522b8c6682f0e71930131967e0f5d70f12526"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166607"
+provenance = "github-attestations"
+
+[tools."aqua:suzuki-shunsuke/ghtkn"."platforms.macos-arm64"]
+checksum = "sha256:b52aba47d9c777e1eeb205ed4b43d282ebe072a76f33ebd1e5c6690187df3af7"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166583"
+provenance = "github-attestations"
+
+[tools."aqua:suzuki-shunsuke/ghtkn"."platforms.macos-x64"]
+checksum = "sha256:44707ea42eefbccbf4d82609fd1b9829d8bf95832a310a4f5f84e7fee1acfc29"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166586"
+provenance = "github-attestations"
+
+[tools."aqua:suzuki-shunsuke/ghtkn"."platforms.macos-x64-baseline"]
+checksum = "sha256:44707ea42eefbccbf4d82609fd1b9829d8bf95832a310a4f5f84e7fee1acfc29"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166586"
+provenance = "github-attestations"
+
+[tools."aqua:suzuki-shunsuke/ghtkn"."platforms.windows-x64"]
+checksum = "sha256:8e12491956a3b503fecfad50de7a8e0f244318e260d2a3abc3628314f7d6be48"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_windows_amd64.zip"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166610"
+provenance = "github-attestations"
+
+[tools."aqua:suzuki-shunsuke/ghtkn"."platforms.windows-x64-baseline"]
+checksum = "sha256:8e12491956a3b503fecfad50de7a8e0f244318e260d2a3abc3628314f7d6be48"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_windows_amd64.zip"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166610"
+provenance = "github-attestations"
+
 [[tools."aqua:tmux/tmux-builds"]]
 version = "3.7b"
 backend = "aqua:tmux/tmux-builds"
@@ -5753,6 +5823,61 @@ provenance = "github-attestations"
 [[tools."github:openai/codex"]]
 version = "rust-v0.153.3"
 backend = "github:openai/codex"
+
+[tools."github:openai/codex"."platforms.linux-arm64"]
+checksum = "sha256:405b7308955c89779db1cf6a34fdec62c2670d0aa970e021fb9012c86137d45b"
+url = "https://github.com/openai/codex/releases/download/rust-v0.153.3/argument-comment-lint-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/544769593"
+
+[tools."github:openai/codex"."platforms.linux-arm64-musl"]
+checksum = "sha256:68ff7eb22937de4f6b44a30d66ba893daf280d21347408ffbf2501a28136bf19"
+url = "https://github.com/openai/codex/releases/download/rust-v0.153.3/codex-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/544769586"
+
+[tools."github:openai/codex"."platforms.linux-x64"]
+checksum = "sha256:f0c71b31ce230dac8ed38d62d029094fffa41229232d86ec7780877ed339b843"
+url = "https://github.com/openai/codex/releases/download/rust-v0.153.3/argument-comment-lint-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/544769553"
+
+[tools."github:openai/codex"."platforms.linux-x64-baseline"]
+checksum = "sha256:6ff9674bb00e14734c2748bc8788eab3cb6e5ac53ebde7e1e780b4ed7af48cba"
+url = "https://github.com/openai/codex/releases/download/rust-v0.153.3/codex-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/544769482"
+
+[tools."github:openai/codex"."platforms.linux-x64-musl"]
+checksum = "sha256:6ff9674bb00e14734c2748bc8788eab3cb6e5ac53ebde7e1e780b4ed7af48cba"
+url = "https://github.com/openai/codex/releases/download/rust-v0.153.3/codex-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/544769482"
+
+[tools."github:openai/codex"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:6ff9674bb00e14734c2748bc8788eab3cb6e5ac53ebde7e1e780b4ed7af48cba"
+url = "https://github.com/openai/codex/releases/download/rust-v0.153.3/codex-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/544769482"
+
+[tools."github:openai/codex"."platforms.macos-arm64"]
+checksum = "sha256:02cdcbd874c1616f2cab6f602580329de1b00b26bf216d384b348519a9b356cd"
+url = "https://github.com/openai/codex/releases/download/rust-v0.153.3/codex-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/544769614"
+
+[tools."github:openai/codex"."platforms.macos-x64"]
+checksum = "sha256:c619db0c38da110acf7dd7eb400cf8672f78b665a17fb9a555418cea4b74f218"
+url = "https://github.com/openai/codex/releases/download/rust-v0.153.3/codex-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/544769527"
+
+[tools."github:openai/codex"."platforms.macos-x64-baseline"]
+checksum = "sha256:c619db0c38da110acf7dd7eb400cf8672f78b665a17fb9a555418cea4b74f218"
+url = "https://github.com/openai/codex/releases/download/rust-v0.153.3/codex-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/544769527"
+
+[tools."github:openai/codex"."platforms.windows-x64"]
+checksum = "sha256:e5ef3c4b81d2fb861f3731c91a773d45a1973c6a0b480d6449f80bc8fd749e96"
+url = "https://github.com/openai/codex/releases/download/rust-v0.153.3/codex-x86_64-pc-windows-msvc.exe"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/544769496"
+
+[tools."github:openai/codex"."platforms.windows-x64-baseline"]
+checksum = "sha256:5313f2644d348190904cb7ff66baeda11ed2174e30071a455bfdf48d21059d29"
+url = "https://github.com/openai/codex/releases/download/rust-v0.153.3/codex-npm-win32-x64-0.153.3.tgz"
+url_api = "https://api.github.com/repos/openai/codex/releases/assets/544769544"
 
 [[tools."github:yt-dlp/yt-dlp"]]
 version = "2026.07.04"
