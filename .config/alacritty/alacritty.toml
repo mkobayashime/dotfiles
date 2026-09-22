@@ -1,5 +1,2 @@
 [general]
-import = [
-  "~/.config/alacritty/default.toml",
-  "~/.config/alacritty/local.toml"
-]
+import = ["~/.config/alacritty/default.toml", "~/.config/alacritty/local.toml"]
