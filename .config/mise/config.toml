@@ -2,7 +2,7 @@
 "aqua:BurntSushi/ripgrep" = "15.2.0"
 "aqua:LuaLS/lua-language-server" = "3.19.1"
 "aqua:antonmedv/fx" = "39.2.0"
-"aqua:cli/cli" = "2.100.0"
+"aqua:cli/cli" = "2.101.0"
 "aqua:dandavison/delta" = "0.19.2"
 "aqua:google-antigravity/antigravity-cli" = "1.2.0"
 "aqua:jqlang/jq" = "1.8.2"
