@@ -1,4 +1,5 @@
-biome = bunx biome
+oxlint = bunx oxlint
+oxfmt = bunx oxfmt
 typecheck = bunx --bun tsc --noEmit
 
 all:
@@ -7,10 +8,12 @@ deps: PHONY
 	bun install
 
 lint: deps PHONY
-	$(biome) check .
+	$(oxlint) --type-aware
+	$(oxfmt) --check
 
 lint.fix: deps PHONY
-	$(biome) check --write .
+	$(oxlint) --fix --type-aware
+	$(oxfmt)
 
 typecheck: deps PHONY
 	$(typecheck)

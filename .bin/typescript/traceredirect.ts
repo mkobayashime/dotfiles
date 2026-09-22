@@ -33,7 +33,7 @@ void (async () => {
 				return;
 			}
 
-			tryFetch({ url: new URL(location, url).toString(), count: count + 1 });
+			await tryFetch({ url: new URL(location, url).toString(), count: count + 1 });
 		}
 	};
 
