@@ -6650,7 +6650,7 @@ version = "5.8.0"
 backend = "npm:bash-language-server"
 
 [[tools."npm:cspell"]]
-version = "10.3.0"
+version = "10.3.3"
 backend = "npm:cspell"
 
 [[tools."npm:typescript-language-server"]]
