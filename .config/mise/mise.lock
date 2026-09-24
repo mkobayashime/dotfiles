@@ -6646,7 +6646,7 @@ version = "0.16.0"
 backend = "npm:@tailwindcss/language-server"
 
 [[tools."npm:bash-language-server"]]
-version = "5.6.0"
+version = "5.8.0"
 backend = "npm:bash-language-server"
 
 [[tools."npm:cspell"]]
