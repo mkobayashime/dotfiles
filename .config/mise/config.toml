@@ -10,7 +10,7 @@
 "aqua:koalaman/shellcheck" = "0.11.0"
 "aqua:mvdan/sh" = "3.14.0"
 "aqua:neovim/neovim" = "0.12.5"
-"aqua:ogulcancelik/herdr" = "0.9.0"
+"aqua:ogulcancelik/herdr" = "0.9.1"
 "aqua:sharkdp/bat" = "0.26.1"
 "aqua:sharkdp/fd" = "10.5.0"
 "aqua:suzuki-shunsuke/ghtkn" = "0.4.0"
