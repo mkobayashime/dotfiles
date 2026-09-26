@@ -4,7 +4,7 @@
 "aqua:antonmedv/fx" = "39.2.0"
 "aqua:cli/cli" = "2.101.0"
 "aqua:dandavison/delta" = "0.19.2"
-"aqua:google-antigravity/antigravity-cli" = "1.2.0"
+"aqua:google-antigravity/antigravity-cli" = "1.2.7"
 "aqua:jqlang/jq" = "1.8.2"
 "aqua:junegunn/fzf" = "0.74.3"
 "aqua:koalaman/shellcheck" = "0.11.0"
