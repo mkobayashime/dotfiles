@@ -6,7 +6,7 @@
 "aqua:dandavison/delta" = "0.19.2"
 "aqua:google-antigravity/antigravity-cli" = "1.2.0"
 "aqua:jqlang/jq" = "1.8.2"
-"aqua:junegunn/fzf" = "0.74.3"
+"aqua:junegunn/fzf" = "0.74.4"
 "aqua:koalaman/shellcheck" = "0.11.0"
 "aqua:mvdan/sh" = "3.14.0"
 "aqua:neovim/neovim" = "0.12.5"
