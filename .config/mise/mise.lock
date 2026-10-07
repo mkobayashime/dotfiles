@@ -4280,73 +4280,73 @@ url = "https://github.com/sharkdp/fd/releases/download/v10.5.0/fd-v10.5.0-x86_64
 url_api = "https://api.github.com/repos/sharkdp/fd/releases/assets/530482901"
 
 [[tools."aqua:suzuki-shunsuke/ghtkn"]]
-version = "0.4.0"
+version = "0.4.1"
 backend = "aqua:suzuki-shunsuke/ghtkn"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-arm64"]
-checksum = "sha256:33a0e1f91535fc0a900ddc08e2c182b1debd5656124153c408c2c96a9afc4238"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166604"
+checksum = "sha256:e985b7634c49447bd540f13ab12509b8f57bf98bae6721aaaec562d7bdfb6264"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.1/ghtkn_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/595288950"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-arm64-musl"]
-checksum = "sha256:33a0e1f91535fc0a900ddc08e2c182b1debd5656124153c408c2c96a9afc4238"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166604"
+checksum = "sha256:e985b7634c49447bd540f13ab12509b8f57bf98bae6721aaaec562d7bdfb6264"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.1/ghtkn_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/595288950"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-x64"]
-checksum = "sha256:2dbcdcd0d40966fda13522b23c6522b8c6682f0e71930131967e0f5d70f12526"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166607"
+checksum = "sha256:1bd1328d46ac32d55e1f2271b10ef123a6ff50d10087f46adeb7e1d2e386ca53"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.1/ghtkn_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/595288942"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-x64-baseline"]
-checksum = "sha256:2dbcdcd0d40966fda13522b23c6522b8c6682f0e71930131967e0f5d70f12526"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166607"
+checksum = "sha256:1bd1328d46ac32d55e1f2271b10ef123a6ff50d10087f46adeb7e1d2e386ca53"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.1/ghtkn_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/595288942"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-x64-musl"]
-checksum = "sha256:2dbcdcd0d40966fda13522b23c6522b8c6682f0e71930131967e0f5d70f12526"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166607"
+checksum = "sha256:1bd1328d46ac32d55e1f2271b10ef123a6ff50d10087f46adeb7e1d2e386ca53"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.1/ghtkn_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/595288942"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:2dbcdcd0d40966fda13522b23c6522b8c6682f0e71930131967e0f5d70f12526"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166607"
+checksum = "sha256:1bd1328d46ac32d55e1f2271b10ef123a6ff50d10087f46adeb7e1d2e386ca53"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.1/ghtkn_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/595288942"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.macos-arm64"]
-checksum = "sha256:b52aba47d9c777e1eeb205ed4b43d282ebe072a76f33ebd1e5c6690187df3af7"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_darwin_arm64.tar.gz"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166583"
+checksum = "sha256:4d440021b013b18163c2163585466557a5d324ee742d07b70eb04eb023ce8d2a"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.1/ghtkn_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/595288927"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.macos-x64"]
-checksum = "sha256:44707ea42eefbccbf4d82609fd1b9829d8bf95832a310a4f5f84e7fee1acfc29"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_darwin_amd64.tar.gz"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166586"
+checksum = "sha256:e88257b6f9079dc75da7bb45d608b550606b38e83e0e4aefa4f8eeb0c7b91cf5"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.1/ghtkn_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/595288924"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.macos-x64-baseline"]
-checksum = "sha256:44707ea42eefbccbf4d82609fd1b9829d8bf95832a310a4f5f84e7fee1acfc29"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_darwin_amd64.tar.gz"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166586"
+checksum = "sha256:e88257b6f9079dc75da7bb45d608b550606b38e83e0e4aefa4f8eeb0c7b91cf5"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.1/ghtkn_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/595288924"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.windows-x64"]
-checksum = "sha256:8e12491956a3b503fecfad50de7a8e0f244318e260d2a3abc3628314f7d6be48"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_windows_amd64.zip"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166610"
+checksum = "sha256:d1298bc4569790d8b0194b5f25f650f2300d47aaa5a8cd27cce65a6972bfdd9d"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.1/ghtkn_windows_amd64.zip"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/595288956"
 provenance = "github-attestations"
 
 [tools."aqua:suzuki-shunsuke/ghtkn"."platforms.windows-x64-baseline"]
-checksum = "sha256:8e12491956a3b503fecfad50de7a8e0f244318e260d2a3abc3628314f7d6be48"
-url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.0/ghtkn_windows_amd64.zip"
-url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/515166610"
+checksum = "sha256:d1298bc4569790d8b0194b5f25f650f2300d47aaa5a8cd27cce65a6972bfdd9d"
+url = "https://github.com/suzuki-shunsuke/ghtkn/releases/download/v0.4.1/ghtkn_windows_amd64.zip"
+url_api = "https://api.github.com/repos/suzuki-shunsuke/ghtkn/releases/assets/595288956"
 provenance = "github-attestations"
 
 [[tools."aqua:tmux/tmux-builds"]]
