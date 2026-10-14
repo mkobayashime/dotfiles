@@ -63,7 +63,9 @@ fi
 
 # alias
 
-source "$HOME/.config/zsh/alias/index.zsh"
+if [[ -z "$CLAUDECODE" ]]; then
+  source "$HOME/.config/zsh/alias/index.zsh"
+fi
 
 autoload -Uz expandGlobalAlias
 zle -N expandGlobalAlias
