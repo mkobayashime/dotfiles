@@ -1,0 +1,18 @@
+notify-on() {
+  autoload -Uz add-zsh-hook
+
+  _notify_preexec() { _notify_armed=1 }
+  _notify_precmd() {
+    local st=$?
+    (( _notify_armed )) || return
+    _notify_armed=0
+    if (( st == 0 )); then
+      afplay /System/Library/Sounds/Glass.aiff &!
+    else
+      afplay /System/Library/Sounds/Basso.aiff &!
+    fi
+  }
+
+  add-zsh-hook preexec _notify_preexec
+  add-zsh-hook precmd _notify_precmd
+}

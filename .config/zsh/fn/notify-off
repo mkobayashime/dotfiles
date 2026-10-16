@@ -1,0 +1,6 @@
+notify-off() {
+  autoload -Uz add-zsh-hook
+
+  add-zsh-hook -d preexec _notify_preexec
+  add-zsh-hook -d precmd _notify_precmd
+}
