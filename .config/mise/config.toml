@@ -17,7 +17,7 @@
 "aqua:tree-sitter/tree-sitter" = "0.27.0"
 "conda:imagemagick" = "7.1.2_27"
 "core:bun" = "1.4.4"
-"core:deno" = "2.9.7"
+"core:deno" = "2.9.8"
 "core:ffmpeg" = "8.1.2"
 "core:node" = "26.12.1"
 "github:openai/codex" = { version = "rust-v0.153.3", rename_exe = "cox" }
