@@ -4252,67 +4252,56 @@ backend = "aqua:junegunn/fzf"
 
 [tools."aqua:junegunn/fzf"."platforms.linux-arm64"]
 checksum = "sha256:cf058001da21724a469b714a29cf4aab9cbe860d218a0d6c1b5b661efad7784c"
-checksum_source = "mise-versions"
 url = "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-linux_arm64.tar.gz"
 url_api = "https://api.github.com/repos/junegunn/fzf/releases/assets/629581759"
 
 [tools."aqua:junegunn/fzf"."platforms.linux-arm64-musl"]
 checksum = "sha256:cf058001da21724a469b714a29cf4aab9cbe860d218a0d6c1b5b661efad7784c"
-checksum_source = "mise-versions"
 url = "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-linux_arm64.tar.gz"
 url_api = "https://api.github.com/repos/junegunn/fzf/releases/assets/629581759"
 
 [tools."aqua:junegunn/fzf"."platforms.linux-x64"]
 checksum = "sha256:d47d7f882972c7d674dbbba998ffa4116e68379616ffac7695d0671e9a722c5f"
-checksum_source = "mise-versions"
 url = "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-linux_amd64.tar.gz"
 url_api = "https://api.github.com/repos/junegunn/fzf/releases/assets/629581740"
 
 [tools."aqua:junegunn/fzf"."platforms.linux-x64-baseline"]
 checksum = "sha256:d47d7f882972c7d674dbbba998ffa4116e68379616ffac7695d0671e9a722c5f"
-checksum_source = "mise-versions"
 url = "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-linux_amd64.tar.gz"
 url_api = "https://api.github.com/repos/junegunn/fzf/releases/assets/629581740"
 
 [tools."aqua:junegunn/fzf"."platforms.linux-x64-musl"]
 checksum = "sha256:d47d7f882972c7d674dbbba998ffa4116e68379616ffac7695d0671e9a722c5f"
-checksum_source = "mise-versions"
 url = "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-linux_amd64.tar.gz"
 url_api = "https://api.github.com/repos/junegunn/fzf/releases/assets/629581740"
 
 [tools."aqua:junegunn/fzf"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:d47d7f882972c7d674dbbba998ffa4116e68379616ffac7695d0671e9a722c5f"
-checksum_source = "mise-versions"
 url = "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-linux_amd64.tar.gz"
 url_api = "https://api.github.com/repos/junegunn/fzf/releases/assets/629581740"
 
 [tools."aqua:junegunn/fzf"."platforms.macos-arm64"]
 checksum = "sha256:ada808c7401b9949ce8842274ac16a6b6193fd32dcada396884a6a9a89e5985a"
-checksum_source = "mise-versions"
 url = "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-darwin_arm64.tar.gz"
 url_api = "https://api.github.com/repos/junegunn/fzf/releases/assets/629581702"
 
 [tools."aqua:junegunn/fzf"."platforms.macos-x64"]
 checksum = "sha256:aca6cab692e6c069e724a43070a448e18586c7c0fdd1139f6d487ec1680599ed"
-checksum_source = "mise-versions"
 url = "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-darwin_amd64.tar.gz"
 url_api = "https://api.github.com/repos/junegunn/fzf/releases/assets/629581774"
 
 [tools."aqua:junegunn/fzf"."platforms.macos-x64-baseline"]
 checksum = "sha256:aca6cab692e6c069e724a43070a448e18586c7c0fdd1139f6d487ec1680599ed"
-checksum_source = "mise-versions"
 url = "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-darwin_amd64.tar.gz"
 url_api = "https://api.github.com/repos/junegunn/fzf/releases/assets/629581774"
 
 [tools."aqua:junegunn/fzf"."platforms.windows-x64"]
 checksum = "sha256:01f854ec8b9b47c99a7d78023638f7d2056cfb0af56b72dabd112032eed3993e"
-checksum_source = "mise-versions"
 url = "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-windows_amd64.zip"
 url_api = "https://api.github.com/repos/junegunn/fzf/releases/assets/629581724"
 
 [tools."aqua:junegunn/fzf"."platforms.windows-x64-baseline"]
 checksum = "sha256:01f854ec8b9b47c99a7d78023638f7d2056cfb0af56b72dabd112032eed3993e"
-checksum_source = "mise-versions"
 url = "https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-windows_amd64.zip"
 url_api = "https://api.github.com/repos/junegunn/fzf/releases/assets/629581724"
 
@@ -4381,67 +4370,56 @@ backend = "aqua:mvdan/sh"
 
 [tools."aqua:mvdan/sh"."platforms.linux-arm64"]
 checksum = "sha256:5f2db09dae91fca848f7adbdd014632e921a383863a2ad7e0450ad3aba0c6489"
-checksum_source = "mise-versions"
 url = "https://github.com/mvdan/sh/releases/download/v3.14.1/shfmt_v3.14.1_linux_arm64"
 url_api = "https://api.github.com/repos/mvdan/sh/releases/assets/547320869"
 
 [tools."aqua:mvdan/sh"."platforms.linux-arm64-musl"]
 checksum = "sha256:5f2db09dae91fca848f7adbdd014632e921a383863a2ad7e0450ad3aba0c6489"
-checksum_source = "mise-versions"
 url = "https://github.com/mvdan/sh/releases/download/v3.14.1/shfmt_v3.14.1_linux_arm64"
 url_api = "https://api.github.com/repos/mvdan/sh/releases/assets/547320869"
 
 [tools."aqua:mvdan/sh"."platforms.linux-x64"]
 checksum = "sha256:76e77641faa025814b77f153b29796b8e6fa2fca03e0c76a691608b86c7ea7bf"
-checksum_source = "mise-versions"
 url = "https://github.com/mvdan/sh/releases/download/v3.14.1/shfmt_v3.14.1_linux_amd64"
 url_api = "https://api.github.com/repos/mvdan/sh/releases/assets/547320883"
 
 [tools."aqua:mvdan/sh"."platforms.linux-x64-baseline"]
 checksum = "sha256:76e77641faa025814b77f153b29796b8e6fa2fca03e0c76a691608b86c7ea7bf"
-checksum_source = "mise-versions"
 url = "https://github.com/mvdan/sh/releases/download/v3.14.1/shfmt_v3.14.1_linux_amd64"
 url_api = "https://api.github.com/repos/mvdan/sh/releases/assets/547320883"
 
 [tools."aqua:mvdan/sh"."platforms.linux-x64-musl"]
 checksum = "sha256:76e77641faa025814b77f153b29796b8e6fa2fca03e0c76a691608b86c7ea7bf"
-checksum_source = "mise-versions"
 url = "https://github.com/mvdan/sh/releases/download/v3.14.1/shfmt_v3.14.1_linux_amd64"
 url_api = "https://api.github.com/repos/mvdan/sh/releases/assets/547320883"
 
 [tools."aqua:mvdan/sh"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:76e77641faa025814b77f153b29796b8e6fa2fca03e0c76a691608b86c7ea7bf"
-checksum_source = "mise-versions"
 url = "https://github.com/mvdan/sh/releases/download/v3.14.1/shfmt_v3.14.1_linux_amd64"
 url_api = "https://api.github.com/repos/mvdan/sh/releases/assets/547320883"
 
 [tools."aqua:mvdan/sh"."platforms.macos-arm64"]
 checksum = "sha256:b7c872db63553ccffc7253aba3ed7d4885a27d83f1ba567b1138c6315a5847e5"
-checksum_source = "mise-versions"
 url = "https://github.com/mvdan/sh/releases/download/v3.14.1/shfmt_v3.14.1_darwin_arm64"
 url_api = "https://api.github.com/repos/mvdan/sh/releases/assets/547320930"
 
 [tools."aqua:mvdan/sh"."platforms.macos-x64"]
 checksum = "sha256:d33eee0da0f92835b3562e9767a05cee7e4eaeef47daa03bfd09da17b4b590a6"
-checksum_source = "mise-versions"
 url = "https://github.com/mvdan/sh/releases/download/v3.14.1/shfmt_v3.14.1_darwin_amd64"
 url_api = "https://api.github.com/repos/mvdan/sh/releases/assets/547320946"
 
 [tools."aqua:mvdan/sh"."platforms.macos-x64-baseline"]
 checksum = "sha256:d33eee0da0f92835b3562e9767a05cee7e4eaeef47daa03bfd09da17b4b590a6"
-checksum_source = "mise-versions"
 url = "https://github.com/mvdan/sh/releases/download/v3.14.1/shfmt_v3.14.1_darwin_amd64"
 url_api = "https://api.github.com/repos/mvdan/sh/releases/assets/547320946"
 
 [tools."aqua:mvdan/sh"."platforms.windows-x64"]
 checksum = "sha256:13629ce28442ca80b6b5a819f7574ab39e1c28c6e26734ca816c9714e04851df"
-checksum_source = "mise-versions"
 url = "https://github.com/mvdan/sh/releases/download/v3.14.1/shfmt_v3.14.1_windows_amd64.exe"
 url_api = "https://api.github.com/repos/mvdan/sh/releases/assets/547320827"
 
 [tools."aqua:mvdan/sh"."platforms.windows-x64-baseline"]
 checksum = "sha256:13629ce28442ca80b6b5a819f7574ab39e1c28c6e26734ca816c9714e04851df"
-checksum_source = "mise-versions"
 url = "https://github.com/mvdan/sh/releases/download/v3.14.1/shfmt_v3.14.1_windows_amd64.exe"
 url_api = "https://api.github.com/repos/mvdan/sh/releases/assets/547320827"
 
@@ -4510,67 +4488,56 @@ backend = "aqua:ogulcancelik/herdr"
 
 [tools."aqua:ogulcancelik/herdr"."platforms.linux-arm64"]
 checksum = "sha256:17d7536f2da50859523680ef279dffcac8e4a235f4e46fe8da6c2ec44141897c"
-checksum_source = "mise-versions"
 url = "https://github.com/herdrdev/herdr/releases/download/v0.9.5/herdr-linux-aarch64"
 url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/640898231"
 
 [tools."aqua:ogulcancelik/herdr"."platforms.linux-arm64-musl"]
 checksum = "sha256:17d7536f2da50859523680ef279dffcac8e4a235f4e46fe8da6c2ec44141897c"
-checksum_source = "mise-versions"
 url = "https://github.com/herdrdev/herdr/releases/download/v0.9.5/herdr-linux-aarch64"
 url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/640898231"
 
 [tools."aqua:ogulcancelik/herdr"."platforms.linux-x64"]
 checksum = "sha256:14d9e8bc8b4a9e0118d77c32266f76d461f09b40342eb23752960bd89f59929d"
-checksum_source = "mise-versions"
 url = "https://github.com/herdrdev/herdr/releases/download/v0.9.5/herdr-linux-x86_64"
 url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/640898235"
 
 [tools."aqua:ogulcancelik/herdr"."platforms.linux-x64-baseline"]
 checksum = "sha256:14d9e8bc8b4a9e0118d77c32266f76d461f09b40342eb23752960bd89f59929d"
-checksum_source = "mise-versions"
 url = "https://github.com/herdrdev/herdr/releases/download/v0.9.5/herdr-linux-x86_64"
 url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/640898235"
 
 [tools."aqua:ogulcancelik/herdr"."platforms.linux-x64-musl"]
 checksum = "sha256:14d9e8bc8b4a9e0118d77c32266f76d461f09b40342eb23752960bd89f59929d"
-checksum_source = "mise-versions"
 url = "https://github.com/herdrdev/herdr/releases/download/v0.9.5/herdr-linux-x86_64"
 url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/640898235"
 
 [tools."aqua:ogulcancelik/herdr"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:14d9e8bc8b4a9e0118d77c32266f76d461f09b40342eb23752960bd89f59929d"
-checksum_source = "mise-versions"
 url = "https://github.com/herdrdev/herdr/releases/download/v0.9.5/herdr-linux-x86_64"
 url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/640898235"
 
 [tools."aqua:ogulcancelik/herdr"."platforms.macos-arm64"]
 checksum = "sha256:fb77c2232a05a8035421382c894392f4174e4e38a18e48af3dd0290157c3a7e2"
-checksum_source = "mise-versions"
 url = "https://github.com/herdrdev/herdr/releases/download/v0.9.5/herdr-macos-aarch64"
 url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/640898230"
 
 [tools."aqua:ogulcancelik/herdr"."platforms.macos-x64"]
 checksum = "sha256:5fb0a908ec7f6745e3e245738b06bfad56c46391c391ab3c0955fbead01f1369"
-checksum_source = "mise-versions"
 url = "https://github.com/herdrdev/herdr/releases/download/v0.9.5/herdr-macos-x86_64"
 url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/640898229"
 
 [tools."aqua:ogulcancelik/herdr"."platforms.macos-x64-baseline"]
 checksum = "sha256:5fb0a908ec7f6745e3e245738b06bfad56c46391c391ab3c0955fbead01f1369"
-checksum_source = "mise-versions"
 url = "https://github.com/herdrdev/herdr/releases/download/v0.9.5/herdr-macos-x86_64"
 url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/640898229"
 
 [tools."aqua:ogulcancelik/herdr"."platforms.windows-x64"]
 checksum = "sha256:d2c6c9c971c43a0bfdde8c692a9a1a7a45c3e4807cd01ae45662b4734fac1cbf"
-checksum_source = "mise-versions"
 url = "https://github.com/herdrdev/herdr/releases/download/v0.9.5/herdr-windows-x86_64.zip"
 url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/640898234"
 
 [tools."aqua:ogulcancelik/herdr"."platforms.windows-x64-baseline"]
 checksum = "sha256:d2c6c9c971c43a0bfdde8c692a9a1a7a45c3e4807cd01ae45662b4734fac1cbf"
-checksum_source = "mise-versions"
 url = "https://github.com/herdrdev/herdr/releases/download/v0.9.5/herdr-windows-x86_64.zip"
 url_api = "https://api.github.com/repos/herdrdev/herdr/releases/assets/640898234"
 
