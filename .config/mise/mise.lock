@@ -3999,63 +3999,74 @@ url = "https://github.com/LuaLS/lua-language-server/releases/download/3.19.1/lua
 url_api = "https://api.github.com/repos/LuaLS/lua-language-server/releases/assets/513572668"
 
 [[tools."aqua:antonmedv/fx"]]
-version = "40.0.0"
+version = "40.0.1"
 backend = "aqua:antonmedv/fx"
 
 [tools."aqua:antonmedv/fx"."platforms.linux-arm64"]
-checksum = "sha256:1200eb9c7e78aae2108c84809a90e361193b2859c2ea528ad49f2e8b690620c9"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_linux_arm64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037499"
+checksum = "sha256:90377fbdbe3a01f791032a289986867ff1f8fe20ce94b45f20ecb399f7b69411"
+checksum_source = "mise-versions"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_linux_arm64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017521"
 
 [tools."aqua:antonmedv/fx"."platforms.linux-arm64-musl"]
-checksum = "sha256:1200eb9c7e78aae2108c84809a90e361193b2859c2ea528ad49f2e8b690620c9"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_linux_arm64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037499"
+checksum = "sha256:90377fbdbe3a01f791032a289986867ff1f8fe20ce94b45f20ecb399f7b69411"
+checksum_source = "mise-versions"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_linux_arm64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017521"
 
 [tools."aqua:antonmedv/fx"."platforms.linux-x64"]
-checksum = "sha256:c5cf146137d3d1819384356366913f1f98bcf5b334e5f100e4705c081f65ed8e"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_linux_amd64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037517"
+checksum = "sha256:9f0cc5a29d2940dd28fdc7df7b5e19bf16856d388e60d1c9f1116890967c604a"
+checksum_source = "mise-versions"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_linux_amd64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017503"
 
 [tools."aqua:antonmedv/fx"."platforms.linux-x64-baseline"]
-checksum = "sha256:c5cf146137d3d1819384356366913f1f98bcf5b334e5f100e4705c081f65ed8e"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_linux_amd64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037517"
+checksum = "sha256:9f0cc5a29d2940dd28fdc7df7b5e19bf16856d388e60d1c9f1116890967c604a"
+checksum_source = "mise-versions"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_linux_amd64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017503"
 
 [tools."aqua:antonmedv/fx"."platforms.linux-x64-musl"]
-checksum = "sha256:c5cf146137d3d1819384356366913f1f98bcf5b334e5f100e4705c081f65ed8e"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_linux_amd64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037517"
+checksum = "sha256:9f0cc5a29d2940dd28fdc7df7b5e19bf16856d388e60d1c9f1116890967c604a"
+checksum_source = "mise-versions"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_linux_amd64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017503"
 
 [tools."aqua:antonmedv/fx"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:c5cf146137d3d1819384356366913f1f98bcf5b334e5f100e4705c081f65ed8e"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_linux_amd64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037517"
+checksum = "sha256:9f0cc5a29d2940dd28fdc7df7b5e19bf16856d388e60d1c9f1116890967c604a"
+checksum_source = "mise-versions"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_linux_amd64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017503"
 
 [tools."aqua:antonmedv/fx"."platforms.macos-arm64"]
-checksum = "sha256:d3a93b9e78d77ebc2c8cfc9b7101e20d6e46317d5b41ee149d8ff8b6c1899d66"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_darwin_arm64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037515"
+checksum = "sha256:c03fead7e2d5ccedbe54e905b0b7ad4b38042d89829a766744bce0c9600f4d80"
+checksum_source = "mise-versions"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_darwin_arm64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017507"
 
 [tools."aqua:antonmedv/fx"."platforms.macos-x64"]
-checksum = "sha256:b071f677c13b25aa8576d7af3a7b8e8c16488c430f5a8360a370b5cbeec94ec2"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_darwin_amd64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037527"
+checksum = "sha256:40b8b253cf578b69ab0b6464918ddb14a66a45ee1d87320a58611141721ae511"
+checksum_source = "mise-versions"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_darwin_amd64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017508"
 
 [tools."aqua:antonmedv/fx"."platforms.macos-x64-baseline"]
-checksum = "sha256:b071f677c13b25aa8576d7af3a7b8e8c16488c430f5a8360a370b5cbeec94ec2"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_darwin_amd64"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037527"
+checksum = "sha256:40b8b253cf578b69ab0b6464918ddb14a66a45ee1d87320a58611141721ae511"
+checksum_source = "mise-versions"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_darwin_amd64"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017508"
 
 [tools."aqua:antonmedv/fx"."platforms.windows-x64"]
-checksum = "sha256:95ad6b786a435c7e06e15c7090f4fe0d6e92ef6f47e9a5e76f493a9626629f70"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_windows_amd64.exe"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037500"
+checksum = "sha256:6482626d21f8f09e3b89836651e7fbac4d612e2e699abc7b324aab9bb0915e94"
+checksum_source = "mise-versions"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_windows_amd64.exe"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017512"
 
 [tools."aqua:antonmedv/fx"."platforms.windows-x64-baseline"]
-checksum = "sha256:95ad6b786a435c7e06e15c7090f4fe0d6e92ef6f47e9a5e76f493a9626629f70"
-url = "https://github.com/antonmedv/fx/releases/download/40.0.0/fx_windows_amd64.exe"
-url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/613037500"
+checksum = "sha256:6482626d21f8f09e3b89836651e7fbac4d612e2e699abc7b324aab9bb0915e94"
+checksum_source = "mise-versions"
+url = "https://github.com/antonmedv/fx/releases/download/40.0.1/fx_windows_amd64.exe"
+url_api = "https://api.github.com/repos/antonmedv/fx/releases/assets/666017512"
 
 [[tools."aqua:cli/cli"]]
 version = "2.103.2"
