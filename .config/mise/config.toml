@@ -22,6 +22,7 @@
 "core:node" = "26.12.1"
 "github:openai/codex" = { version = "rust-v0.153.3", rename_exe = "cox" }
 "github:yt-dlp/yt-dlp" = { version = "2026.08.19", rename_exe = "yt-dlp" }
+"github:k1LoW/mo" = { version = "1.8.0", rename_exe = "mo" }
 "npm:@playwright/cli" = "0.1.22"
 "npm:@tailwindcss/language-server" = "0.16.0"
 "npm:bash-language-server" = "5.8.1"
